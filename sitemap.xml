@@ -58,6 +58,11 @@
   </url>
   
   <url>
+    <loc>/about/</loc>
+    <lastmod>2017-08-05T11:52:53+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/wonderland-ghost-theme/</loc>
     <lastmod>2017-08-01T20:48:43+08:00</lastmod>
   </url>
@@ -105,6 +110,12 @@
   <url>
     <loc>/post/ss-module-for-surge/</loc>
     <lastmod>2017-04-23T22:23:28+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/about/</loc>
+    <lastmod>2017-08-05T11:52:53+08:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -246,7 +257,7 @@
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2017-07-31T16:09:35+08:00</lastmod>
+    <lastmod>2017-08-05T11:52:53+08:00</lastmod>
     <priority>0</priority>
   </url>
   

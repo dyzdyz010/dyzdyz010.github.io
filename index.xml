@@ -157,6 +157,20 @@ sudo yum update sudo yum -y install httpd sudo systemctl enable httpd.service  T
     </item>
     
     <item>
+      <title>About</title>
+      <link>/about/</link>
+      <pubDate>Sat, 05 Aug 2017 11:52:53 +0800</pubDate>
+      
+      <guid>/about/</guid>
+      <description>About whoami dyzdyz010, 不是程序员的程序员。计划改名为 Etern1ty。
+About Wonderland 从&amp;rsquo;14年到现在，爱折腾的我总想自己写一个博客系统出来。然而在经历了几个不完整的项目之后，我放弃了，于是使用了现在的 Ghost（虽然不怎么会写文章就是了）。
+Wonderland
+主题灵感来自一位不愿意透露姓名的热心朋友(Tusen takk!)。
+What is this for？ 不保证任何更新频率，自己的心情也不是每一天都想记录下来的😌
+也许会偶尔有一篇学习笔记发上来，也有可能是某些东西的使用教程哦。</description>
+    </item>
+    
+    <item>
       <title>Wonderland - 一个简单整洁的 Ghost 主题</title>
       <link>/post/wonderland-ghost-theme/</link>
       <pubDate>Tue, 01 Aug 2017 20:48:43 +0800</pubDate>
