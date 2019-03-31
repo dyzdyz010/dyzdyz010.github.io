@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Theroy on Wonderland</title>
+    <link>/tags/theroy/</link>
+    <description>Recent content in Theroy on Wonderland</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 11 Jun 2017 19:31:22 +0800</lastBuildDate>
+    
+	<atom:link href="/tags/theroy/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>乐理基础学习笔记——五声调式</title>
+      <link>/post/music-theory-pentatonic-scale/</link>
+      <pubDate>Sun, 11 Jun 2017 19:31:22 +0800</pubDate>
+      
+      <guid>/post/music-theory-pentatonic-scale/</guid>
+      <description>五声调式即只有五个音不断循环的调式。如果从C开始，五声调式的音阶为：
+C - D - E - G - A
+即我们常说的宫商角徵羽，唱作
+do - re - mi - sol - la
+是什么调式，哪个音就是主音：
+ C宫调式的主音为C，唱名为do； D角调式的主音为D，唱名为mi； G羽调式的主音为G，唱名为la； ……  从音阶可以看出，相比我们熟知的do re mi fa sol la si，五声调式缺少了IV级和VII级音(即fa和si)，缺少半音和增四度减五度，由大二度(do-re, sol-la, etc.)和小三度(mi-sol, la-do)构成了基础的五声音调。
+宫商角徴羽五种五声调式在作曲上有不同的编排和特点：
+宫调式的特征是主音上方的大三度(即do-mi)，强调do-mi(mi-do)的进行，sol-la-do三个音经常成组出现，但是do-mi-sol三个音经常不成组出现，即不出现mi-do/sol-mi-do这样的进行，而是通过加入re或la来过渡，最终回归到主音do，如la-sol-mi-re-do。
+徵调式的特征是主音上方的的纯四度和大六度(即so-do，so-mi)，常以宫和弦(主音为宫音)开头，前半句通常停止在re，但最后还是会停止在主音sol；徵调式还经常出现do-la-sol的下行进行，同时也常常出现re-mi-la的乐句。
+商调式的特征是主音上方的的大二度和小七度(即re-me，re-do)，起音和尾音都是re，re-mi-sol的进行经常出现，结尾通常通过mi或do解决到最终的尾音re。
+羽调式的特征是主音上的小三度和纯五度(即la-do，la-mi)，同样是以主音la开头，以la结尾，强调la-do-mi的进行，同时也会经常出现mi-re-do(-la)的进行。
+角调式的特征是主音上的小六度(即mi-do)，起于宫和弦，止于角大三和弦(mi-升sol-si)；强调mi的出现，经常停止在mi上；经常出现la-sol-mi的进行。
+五声调式中，I级音(主音)是最稳定的，在旋律中应当强调I级音；IV级和V级音是次稳定的，对主音有支持的作用；其余的音级是不稳定的，有进行到以上稳定音级的倾向，这种由不稳定到稳定的进行过程构成了旋律的雏形。</description>
+    </item>
+    
+  </channel>
+</rss>
