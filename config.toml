@@ -19,6 +19,10 @@ disqusShortname = "blog-disqus-com-1"
     identifier = "github"
     name = "Github"
     url = "https://github.com/dyzdyz010"
+  [[menu.main]]
+    identifier = "sarahah"
+    name = "Leave me a message!"
+    url = "https://dyzdyz010.sarahah.com/"
 
 [params]
   subtitle = "Personal Blog"
