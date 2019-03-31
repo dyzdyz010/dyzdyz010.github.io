@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Game on Wonderland</title>
+    <link>/tags/game/</link>
+    <description>Recent content in Game on Wonderland</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 18 Nov 2018 09:09:19 +0800</lastBuildDate>
+    
+	<atom:link href="/tags/game/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>国内Origin下载加速</title>
+      <link>/post/origin-download-speedup/</link>
+      <pubDate>Sun, 18 Nov 2018 09:09:19 +0800</pubDate>
+      
+      <guid>/post/origin-download-speedup/</guid>
+      <description>打开 Origin 安装目录下（默认C:\Program Files(x86)\Origin）的 EACore.ini 文件，复制粘贴如下内容：
+[connection] EnvironmentName=production [Feature] CdnOverride=akamai  保存并关闭，重启Origin，本人测试下载可以达到满速。</description>
+    </item>
+    
+    <item>
+      <title>在 Ubuntu 18.04 LTS 上安装并运行 KBEngine</title>
+      <link>/post/install-kbengine-on-ubuntu-18-04-lts/</link>
+      <pubDate>Sat, 05 May 2018 09:52:42 +0800</pubDate>
+      
+      <guid>/post/install-kbengine-on-ubuntu-18-04-lts/</guid>
+      <description>本文用到的组件和系统版本：
+ OS: Ubuntu 18.04 LTS MySQL: 5.7.22 gcc: 7.3.0 g++: 7.3.0 Python: 3.6.5  首先安装各种依赖：
+sudo apt-get update sudo apt-get install libssl-dev mysql-server libmysqld-dev mysql-client libmysqlclient-dev gcc g++ python3  编译引擎 下面从官方仓库下载引擎源码，本人下载的是当时最新版本1.1.8：
+wget https://github.com/kbengine/kbengine/archive/v1.1.8.tar.gz tar -xzvf v1.1.8.tar.gz  接着就可以对代码进行编译了：
+cd kbengine-1.1.8/kbe/src chmod -R 755 . make  我在编译过程中出现了以下错误：
+/usr/lib/gcc/x86_64-linux-gnu/7/include/mm_malloc.h:34:16: error: declaration of ‘int posix_memalign(void**, size_t, size_t) throw ()’ has a different exception specifier extern &amp;quot;C&amp;quot; int posix_memalign (void **, size_t, size_t) throw (); ^~~~~~~~~~~~~~ In file included from /home/dyz/kbengine-1.</description>
+    </item>
+    
+  </channel>
+</rss>

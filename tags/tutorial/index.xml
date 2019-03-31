@@ -22,5 +22,36 @@ Prerequisites  Github &amp;amp; CircleCI account Newly-generated SSH key pair fo
 hugo new site &amp;lt;SITE_NAME&amp;gt;  Create a repo for your site: &amp;lt;SITE_NAME&amp;gt;.github.io(Be aware: this tutorial uses User/Organization Pages rather than Project Pages, see here), clone it, and create a new branch called source(whatever you like):</description>
     </item>
     
+    <item>
+      <title>国内Origin下载加速</title>
+      <link>/post/origin-download-speedup/</link>
+      <pubDate>Sun, 18 Nov 2018 09:09:19 +0800</pubDate>
+      
+      <guid>/post/origin-download-speedup/</guid>
+      <description>打开 Origin 安装目录下（默认C:\Program Files(x86)\Origin）的 EACore.ini 文件，复制粘贴如下内容：
+[connection] EnvironmentName=production [Feature] CdnOverride=akamai  保存并关闭，重启Origin，本人测试下载可以达到满速。</description>
+    </item>
+    
+    <item>
+      <title>Using virtualenv in Jupyter Notebook</title>
+      <link>/post/using-virtualenv-in-jupyter-notebook/</link>
+      <pubDate>Wed, 09 May 2018 08:09:33 +0800</pubDate>
+      
+      <guid>/post/using-virtualenv-in-jupyter-notebook/</guid>
+      <description>OS: macOS High Sierra 10.13.4 Default Python version: 3.6.5  Prerequisites  Have your Jupyter Notebook and virtualenv installed with your default python version Have one virtual env created which you want to use  Walkthrough Activate your virtualenv source &amp;lt;envpath&amp;gt;/bin/activate  Install ipykernel inside your env $(yourenv)&amp;gt; pip install ipykernel  Create kernel using your env $(yourenv)&amp;gt; python -m ipykernel install --user --name myenv --display-name &amp;quot;Python (myenv)&amp;quot;  Go ahead and enjoy Now open your jupyter notebook and you&amp;rsquo;ll notice your kernel just created appears along with your default kernel.</description>
+    </item>
+    
+    <item>
+      <title>Set Up Flarum From Scratch</title>
+      <link>/post/set-up-flarum-from-scratch/</link>
+      <pubDate>Sat, 06 Jan 2018 22:37:18 +0800</pubDate>
+      
+      <guid>/post/set-up-flarum-from-scratch/</guid>
+      <description>Befor you continue
+1. Get a VPS from Linode/Vultr/whatever 2. Pick a linux distribution and make it running(I use CentOS 7). 3. Install Apache/MySQL/PHP 7.1 Get yourself a non-root sudo user adduser USERNAME passwd USERNAME usermod -aG wheel USERNAME su USERNAME  Install and configure Apache Check this out
+First install it.
+sudo yum update sudo yum -y install httpd sudo systemctl enable httpd.service  Then create directory structure.</description>
+    </item>
+    
   </channel>
 </rss>

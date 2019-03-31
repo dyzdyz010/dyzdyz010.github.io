@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Theme on Wonderland</title>
+    <link>/tags/theme/</link>
+    <description>Recent content in Theme on Wonderland</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 01 Aug 2017 20:48:43 +0800</lastBuildDate>
+    
+	<atom:link href="/tags/theme/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Wonderland - 一个简单整洁的 Ghost 主题</title>
+      <link>/post/wonderland-ghost-theme/</link>
+      <pubDate>Tue, 01 Aug 2017 20:48:43 +0800</pubDate>
+      
+      <guid>/post/wonderland-ghost-theme/</guid>
+      <description>灵感来自于一个朋友，特此实现为 Ghost 主题。目前具备的功能有：
+ 首页 文章页 标签归档页  欢迎喜欢的朋友下载使用，顺便再加个 star 就更好了。
+项目地址：Wonderland</description>
+    </item>
+    
+  </channel>
+</rss>

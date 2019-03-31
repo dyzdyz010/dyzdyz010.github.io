@@ -13,6 +13,76 @@
   </url>
   
   <url>
+    <loc>/post/origin-download-speedup/</loc>
+    <lastmod>2018-11-18T09:09:19+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/wwdc-2018-keynot-review/</loc>
+    <lastmod>2018-06-06T15:44:01+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/quicksort-review/</loc>
+    <lastmod>2018-05-18T10:15:21+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/enable-latex-export-logging-in-org-mode/</loc>
+    <lastmod>2018-05-11T07:50:12+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/using-virtualenv-in-jupyter-notebook/</loc>
+    <lastmod>2018-05-09T08:09:33+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/install-kbengine-on-ubuntu-18-04-lts/</loc>
+    <lastmod>2018-05-05T09:52:42+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/set-up-flarum-from-scratch/</loc>
+    <lastmod>2018-01-06T22:37:18+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2017-year-review/</loc>
+    <lastmod>2017-12-31T20:38:22+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/check-in-20171027/</loc>
+    <lastmod>2017-10-27T12:47:39+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/wonderland-ghost-theme/</loc>
+    <lastmod>2017-08-01T20:48:43+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/europe-folk-music-playlist/</loc>
+    <lastmod>2017-08-01T11:34:50+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/acg-wallpaper-recommendation-0/</loc>
+    <lastmod>2017-07-31T16:09:35+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/migrating-ghost-to-1-0-on-centos7/</loc>
+    <lastmod>2017-07-29T17:31:01+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/ml-course-summary-review/</loc>
+    <lastmod>2017-07-19T21:13:59+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/logistic-regression-model-with-tensorflow-from-scratch/</loc>
     <lastmod>2017-06-28T07:49:11+08:00</lastmod>
   </url>
@@ -38,13 +108,61 @@
   </url>
   
   <url>
+    <loc>/tags/acg/</loc>
+    <lastmod>2017-07-31T16:09:35+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/algorithm/</loc>
+    <lastmod>2018-05-18T10:15:21+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/apple/</loc>
+    <lastmod>2018-06-06T15:44:01+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>/tags/centos/</loc>
+    <lastmod>2017-07-29T17:31:01+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/code/</loc>
-    <lastmod>2017-06-28T07:49:11+08:00</lastmod>
+    <lastmod>2018-05-18T10:15:21+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/emacs/</loc>
+    <lastmod>2018-05-11T07:50:12+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/flarum/</loc>
+    <lastmod>2018-01-06T22:37:18+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/game/</loc>
+    <lastmod>2018-11-18T09:09:19+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/general/</loc>
+    <lastmod>2018-11-18T09:09:19+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -55,14 +173,38 @@
   </url>
   
   <url>
+    <loc>/tags/ghost/</loc>
+    <lastmod>2017-08-01T20:48:43+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/latex/</loc>
+    <lastmod>2018-05-11T07:50:12+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/linux/</loc>
+    <lastmod>2018-05-05T09:52:42+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/ml/</loc>
-    <lastmod>2017-06-28T07:49:11+08:00</lastmod>
+    <lastmod>2017-07-19T21:13:59+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/music/</loc>
-    <lastmod>2017-06-11T19:31:22+08:00</lastmod>
+    <lastmod>2017-08-01T11:34:50+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/nonsense/</loc>
+    <lastmod>2017-10-27T12:47:39+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -74,7 +216,7 @@
   
   <url>
     <loc>/tags/python/</loc>
-    <lastmod>2017-06-28T07:49:11+08:00</lastmod>
+    <lastmod>2018-05-09T08:09:33+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -86,7 +228,13 @@
   
   <url>
     <loc>/tags/review/</loc>
-    <lastmod>2017-05-17T08:37:37+08:00</lastmod>
+    <lastmod>2017-07-19T21:13:59+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/share/</loc>
+    <lastmod>2017-08-01T11:34:50+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -98,13 +246,19 @@
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2017-06-28T07:49:11+08:00</lastmod>
+    <lastmod>2017-07-31T16:09:35+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/tensorflow/</loc>
     <lastmod>2017-06-28T07:49:11+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/theme/</loc>
+    <lastmod>2017-08-01T20:48:43+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -129,6 +283,12 @@
   <url>
     <loc>/</loc>
     <lastmod>2019-03-28T22:04:19+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/wwdc/</loc>
+    <lastmod>2018-06-06T15:44:01+08:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Flarum on Wonderland</title>
+    <link>/tags/flarum/</link>
+    <description>Recent content in Flarum on Wonderland</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 06 Jan 2018 22:37:18 +0800</lastBuildDate>
+    
+	<atom:link href="/tags/flarum/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Set Up Flarum From Scratch</title>
+      <link>/post/set-up-flarum-from-scratch/</link>
+      <pubDate>Sat, 06 Jan 2018 22:37:18 +0800</pubDate>
+      
+      <guid>/post/set-up-flarum-from-scratch/</guid>
+      <description>Befor you continue
+1. Get a VPS from Linode/Vultr/whatever 2. Pick a linux distribution and make it running(I use CentOS 7). 3. Install Apache/MySQL/PHP 7.1 Get yourself a non-root sudo user adduser USERNAME passwd USERNAME usermod -aG wheel USERNAME su USERNAME  Install and configure Apache Check this out
+First install it.
+sudo yum update sudo yum -y install httpd sudo systemctl enable httpd.service  Then create directory structure.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,10 +6,79 @@
     <description>Recent content in Code on Wonderland</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 28 Jun 2017 07:49:11 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 18 May 2018 10:15:21 +0800</lastBuildDate>
     
 	<atom:link href="/tags/code/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>快速排序算法理解</title>
+      <link>/post/quicksort-review/</link>
+      <pubDate>Fri, 18 May 2018 10:15:21 +0800</pubDate>
+      
+      <guid>/post/quicksort-review/</guid>
+      <description>从本科到现在一直没有搞懂快排的原理，直到今天学习 Haskell 看到一张图，很直观地解释了快速排序的原理，这里我将以自己的理解向各位解释快排的工作原理。
+快速排序的理念非常简单：
+ 从列表中取出一个元素，在剩下的元素中，选出所有比它小的元素放在它的左边，其余的放在右边。
+ 此时我们会遇到一个显而易见的问题：分别在被“选中”的元素左边和右边的两个列表，各自内部依然是乱序（未经过排序）的，因为这一步可以理解为对原列表的遍历，因此元素的顺序并没有变。
+在这里，才是快速排序算法的真正体现——
+ 对各个列表，重复第一步的操作，直到选定元素两边的列表只剩至多一个元素。
+ 可以看出，这是一个递归操作。以数组 [5, 1, 9, 4, 6, 7, 3] 和排序函数 quicksort 为例：
+quicksort 开始 为了简化算法，我们直接在开始处理数组的时候，直接选择第一个元素作为被选定元素。经过筛选后，我们的结果此时变成了这样：
+quicksort([1, 4, 3]) ++ [5] ++ quicksort([9, 6, 7])  中间的[5]是我们选定的元素，左边是比它小的元素数组[1, 4, 3]，右边是比它大的[9, 6, 7]。可以看出，元素两侧的数组依然是乱序状态，仍然需要对其进行排序，因此上面的伪代码中写作 quicksort(Array)，即对两个数组继续应用排序操作。
+这里以左边的数组为例，看看递归是如何工作的：
+quicksort 第一层递归 对新的数组 [1, 4, 3] 重复上面的操作，选定第一个元素 1 作为被选定元素，并筛选其两边的数组，结果变成这样：
+quicksort([]) ++ [1] ++ quicksort([4, 3])  左边已经成为空数组，意味着我们选定的 1 就是整个数组最小的元素了，因此没有比它更小的元素存在于它的左边位置了。这样就只剩右侧比它大的 [4, 3] 了，我们依然需要对其应用排序操作 quicksort：
+quicksort 第二层递归 对新的数组 [4, 3] 重复上面的操作，变成下面这样：</description>
+    </item>
+    
+    <item>
+      <title>Enable latex-export-logging in org-mode</title>
+      <link>/post/enable-latex-export-logging-in-org-mode/</link>
+      <pubDate>Fri, 11 May 2018 07:50:12 +0800</pubDate>
+      
+      <guid>/post/enable-latex-export-logging-in-org-mode/</guid>
+      <description>Emacs version: GNU Emacs 26.1(Also works in Emacs 24 or maybe even in earlier versions)
+By default, when exporting latex and PDF file from emacs org-mode, log files are removed when the process finishes, you may want to reserve it.
+To make emacs stop removing log files, do as below:
+M-x -&amp;gt; customize-variable, RET -&amp;gt; org-latex-remove-logfiles
+By default this variable is set to true, means log files are removed automatically, then you just need to toggle it to false, save, restart Emacs, and you&amp;rsquo;re good to go 😀</description>
+    </item>
+    
+    <item>
+      <title>Using virtualenv in Jupyter Notebook</title>
+      <link>/post/using-virtualenv-in-jupyter-notebook/</link>
+      <pubDate>Wed, 09 May 2018 08:09:33 +0800</pubDate>
+      
+      <guid>/post/using-virtualenv-in-jupyter-notebook/</guid>
+      <description>OS: macOS High Sierra 10.13.4 Default Python version: 3.6.5  Prerequisites  Have your Jupyter Notebook and virtualenv installed with your default python version Have one virtual env created which you want to use  Walkthrough Activate your virtualenv source &amp;lt;envpath&amp;gt;/bin/activate  Install ipykernel inside your env $(yourenv)&amp;gt; pip install ipykernel  Create kernel using your env $(yourenv)&amp;gt; python -m ipykernel install --user --name myenv --display-name &amp;quot;Python (myenv)&amp;quot;  Go ahead and enjoy Now open your jupyter notebook and you&amp;rsquo;ll notice your kernel just created appears along with your default kernel.</description>
+    </item>
+    
+    <item>
+      <title>Wonderland - 一个简单整洁的 Ghost 主题</title>
+      <link>/post/wonderland-ghost-theme/</link>
+      <pubDate>Tue, 01 Aug 2017 20:48:43 +0800</pubDate>
+      
+      <guid>/post/wonderland-ghost-theme/</guid>
+      <description>灵感来自于一个朋友，特此实现为 Ghost 主题。目前具备的功能有：
+ 首页 文章页 标签归档页  欢迎喜欢的朋友下载使用，顺便再加个 star 就更好了。
+项目地址：Wonderland</description>
+    </item>
+    
+    <item>
+      <title>机器学习课程结束总结</title>
+      <link>/post/ml-course-summary-review/</link>
+      <pubDate>Wed, 19 Jul 2017 21:13:59 +0800</pubDate>
+      
+      <guid>/post/ml-course-summary-review/</guid>
+      <description>不知不觉，我在Coursera上跟随Andrew大神的机器学习课程在断断续续的节奏中，终于完结了。从对机器学习只是单纯的感兴趣、不了解，到现在对机器学习在脑中有了大概的概念和思路，这门课程帮助我一路走到现在。
+Andrew大神用非常浅显易懂的方式使我明白了各种机器学习模型的大概思路和简单的实现方法，这么易懂的教程我在国内从未发现过，现在的各种教程基本都是从数学推理和定义入手，各种公式定理推导让我这种人看了简直一脸懵逼，可能还没开始入门就已经放弃了。
+课程内容基本分为三部分：
+ 监督学习 无监督学习 算法问题排查和优化（debug）  在监督学习中，介绍的模型和算法有：
+ 线性回归&amp;amp;梯度下降&amp;amp;正规方程 逻辑回归（二分类&amp;amp;多分类） 神经网络&amp;amp;反向传播 支持向量机&amp;amp;核函数  在无监督学习中，介绍的模型和算法有：
+ K-均值算法&amp;amp;主成分分析（PCA） 异常检测&amp;amp;正态分布/联合正态分布 推荐系统&amp;amp;协同过滤算法  在讲解这些内容的过程中，课程中还讲到了很多有用/常用的技巧和方法；
+ 使用正规化防止过拟合（Regularization） 在神经网络和K-均值算法中使用随机初始化（Random Initialization） 通过画出各种关系曲线（迭代次数-代价函数等）来评估模型当前的效果和存在的问题 使用precision/recall评估模型的训练效果 使用随机梯度下降/小批量梯度下降来减少计算量 使用map reduce等方法使得模型能够运行在分布式架构上 如何选取特征 在特定情况下如何选取合适的算法/模型（正态分布的乘积 vs 联合正态分布）  在学习的过程中，我把逻辑回归和神经网络用Tensorflow自己实现了一遍，踩了又填了一些坑，对这些内容有了更深的理解。希望自己能够继续坚持下去，向着真正的人工智能前进。</description>
+    </item>
     
     <item>
       <title>从零开始使用TensorFlow建立简单的逻辑回归模型</title>

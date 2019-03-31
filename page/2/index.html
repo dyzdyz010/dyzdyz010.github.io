@@ -119,10 +119,10 @@
 
     
     <div class="post on-list">
-      <h1 class="post-title"><a href="/post/ml-logistic-regression-review/">机器学习-逻辑回归学习总结</a></h1>
+      <h1 class="post-title"><a href="/post/enable-latex-export-logging-in-org-mode/">Enable latex-export-logging in org-mode</a></h1>
       <div class="post-meta">
         <span class="post-date">
-          2017-04-26
+          2018-05-11
         </span>
         <span class="post-author">:: dyzdyz010</span>
       </div>
@@ -130,9 +130,11 @@
       
         <span class="post-tags">
           
-            #<a href="/tags/ml/">ml</a>&nbsp;
+            #<a href="/tags/emacs/">emacs</a>&nbsp;
           
-            #<a href="/tags/review/">review</a>&nbsp;
+            #<a href="/tags/code/">code</a>&nbsp;
+          
+            #<a href="/tags/latex/">latex</a>&nbsp;
           
         </span>
       
@@ -142,29 +144,16 @@
       <div class="post-content">
         
           
-            终于把Coursera上Andrew的机器学习课第三周完成了😌
-第三周主要讲了逻辑回归(Logistic Regression)的概念和实现方法。
-在课程中，Andrew讲到逻辑回归主要是为了解决分类问题(Classification)，即最终我们需要得到的结果是几个离散的值，例如*是/不是*的二分类问题，就可以看作是对其取值——是：(y=1)，不是：(y=0)
-在这种情境下，区别于上一章的线性回归(Linear Regression)，这里的假设函数(Hypothesis)采用Sigmoid函数，意在表示某一样本属于其中一个分类的概率：
-$$P(y=1|x;\theta) = h<em>\theta(x) = g(\theta^Tx)$$
-$$g(z) = \frac{1}{1+e^{-z}}$$
-(g(z))的函数图像如下： 可以看出，这个函数的取值范围是([0, 1])，正好符合概率的定义，即一个事件发生的概率最大为1（绝对发生），最小为0（绝不发生）。而在分类中，一个样本总是属于一个类别（(y=1 || y=0))，不存在中间值，因此我们规定：
-$$ y=\begin {cases} 1, &amp; h</em>\theta(x) \geq 0.5 \ 0, &amp; h<em>\theta(x) &lt; 0.5 \end {cases} $$
-由上图可知，当(h</em>\theta(x) \geq 0.5)时，(z \geq 0)，即(\theta^Tx \geq 0)。
-为了满足这个条件(即(\theta^Tx \geq 0))，引入决策边界(Decision Boundary)的概念。以课程中的例子为例：
-在有两个特征((x_1, x_2))的情况下，令(z = \theta_0 + \theta_1x_1 + \theta_2x_2 = 0)，可以在上图中得到一条直线(决策边界)，将分别取属于两个类别的样本划分开来。
-在这个例子中，根据上面的公式，我们可以规定：当(\theta_0 + \theta_1x_1 + \theta_2x_2 \geq 0)时，我们预测(y = 1)；当(\theta_0 + \theta_1x_1 + \theta_2x_2 &lt; 0)时，我们预测(y = 0);
-          
         
       </div>
-      <div><a class="read-more button" href="/post/ml-logistic-regression-review/">Read more →</a></div>
+      <div><a class="read-more button" href="/post/enable-latex-export-logging-in-org-mode/">Read more →</a></div>
     </div>
     
     <div class="post on-list">
-      <h1 class="post-title"><a href="/post/ss-module-for-surge/">Shadowsocks Module for Surge</a></h1>
+      <h1 class="post-title"><a href="/post/using-virtualenv-in-jupyter-notebook/">Using virtualenv in Jupyter Notebook</a></h1>
       <div class="post-meta">
         <span class="post-date">
-          2017-04-23
+          2018-05-09
         </span>
         <span class="post-author">:: dyzdyz010</span>
       </div>
@@ -172,11 +161,114 @@ $$ y=\begin {cases} 1, &amp; h</em>\theta(x) \geq 0.5 \ 0, &amp; h<em>\theta(x) 
       
         <span class="post-tags">
           
-            #<a href="/tags/ss/">ss</a>&nbsp;
+            #<a href="/tags/python/">python</a>&nbsp;
           
-            #<a href="/tags/gfw/">gfw</a>&nbsp;
+            #<a href="/tags/code/">code</a>&nbsp;
           
-            #<a href="/tags/resource/">resource</a>&nbsp;
+            #<a href="/tags/tutorial/">tutorial</a>&nbsp;
+          
+        </span>
+      
+
+      
+
+      <div class="post-content">
+        
+          
+            OS: macOS High Sierra 10.13.4 Default Python version: 3.6.5  Prerequisites  Have your Jupyter Notebook and virtualenv installed with your default python version Have one virtual env created which you want to use  Walkthrough Activate your virtualenv source &lt;envpath&gt;/bin/activate  Install ipykernel inside your env $(yourenv)&gt; pip install ipykernel  Create kernel using your env $(yourenv)&gt; python -m ipykernel install &ndash;user &ndash;name myenv &ndash;display-name &quot;Python (myenv)&quot;  Go ahead and enjoy Now open your jupyter notebook and you&rsquo;ll notice your kernel just created appears along with your default kernel.
+          
+        
+      </div>
+      <div><a class="read-more button" href="/post/using-virtualenv-in-jupyter-notebook/">Read more →</a></div>
+    </div>
+    
+    <div class="post on-list">
+      <h1 class="post-title"><a href="/post/install-kbengine-on-ubuntu-18-04-lts/">在 Ubuntu 18.04 LTS 上安装并运行 KBEngine</a></h1>
+      <div class="post-meta">
+        <span class="post-date">
+          2018-05-05
+        </span>
+        <span class="post-author">:: dyzdyz010</span>
+      </div>
+
+      
+        <span class="post-tags">
+          
+            #<a href="/tags/linux/">linux</a>&nbsp;
+          
+            #<a href="/tags/game/">game</a>&nbsp;
+          
+        </span>
+      
+
+      
+
+      <div class="post-content">
+        
+          
+            本文用到的组件和系统版本：
+ OS: Ubuntu 18.04 LTS MySQL: 5.7.22 gcc: 7.3.0 g++: 7.3.0 Python: 3.6.5  首先安装各种依赖：
+sudo apt-get update sudo apt-get install libssl-dev mysql-server libmysqld-dev mysql-client libmysqlclient-dev gcc g++ python3  编译引擎 下面从官方仓库下载引擎源码，本人下载的是当时最新版本1.1.8：
+wget <a href="https://github.com/kbengine/kbengine/archive/v1.1.8.tar.gz">https://github.com/kbengine/kbengine/archive/v1.1.8.tar.gz</a> tar -xzvf v1.1.8.tar.gz  接着就可以对代码进行编译了：
+cd kbengine-1.1.8/kbe/src chmod -R 755 . make  我在编译过程中出现了以下错误：
+/usr/lib/gcc/x86_64-linux-gnu/7/include/mm_malloc.h:34:16: error: declaration of ‘int posix_memalign(void**, size_t, size_t) throw ()’ has a different exception specifier extern &quot;C&quot; int posix_memalign (void **, size_t, size_t) throw (); ^~~~~~~~~~~~~~ In file included from /home/dyz/kbengine-1.
+          
+        
+      </div>
+      <div><a class="read-more button" href="/post/install-kbengine-on-ubuntu-18-04-lts/">Read more →</a></div>
+    </div>
+    
+    <div class="post on-list">
+      <h1 class="post-title"><a href="/post/set-up-flarum-from-scratch/">Set Up Flarum From Scratch</a></h1>
+      <div class="post-meta">
+        <span class="post-date">
+          2018-01-06
+        </span>
+        <span class="post-author">:: dyzdyz010</span>
+      </div>
+
+      
+        <span class="post-tags">
+          
+            #<a href="/tags/web/">web</a>&nbsp;
+          
+            #<a href="/tags/flarum/">flarum</a>&nbsp;
+          
+            #<a href="/tags/linux/">linux</a>&nbsp;
+          
+            #<a href="/tags/tutorial/">tutorial</a>&nbsp;
+          
+        </span>
+      
+
+      
+
+      <div class="post-content">
+        
+          
+            Befor you continue
+1. Get a VPS from Linode/Vultr/whatever 2. Pick a linux distribution and make it running(I use CentOS 7). 3. Install Apache/MySQL/PHP 7.1 Get yourself a non-root sudo user adduser USERNAME passwd USERNAME usermod -aG wheel USERNAME su USERNAME  Install and configure Apache Check this out
+First install it.
+sudo yum update sudo yum -y install httpd sudo systemctl enable httpd.service  Then create directory structure.
+          
+        
+      </div>
+      <div><a class="read-more button" href="/post/set-up-flarum-from-scratch/">Read more →</a></div>
+    </div>
+    
+    <div class="post on-list">
+      <h1 class="post-title"><a href="/post/2017-year-review/">2017 - 2018</a></h1>
+      <div class="post-meta">
+        <span class="post-date">
+          2017-12-31
+        </span>
+        <span class="post-author">:: dyzdyz010</span>
+      </div>
+
+      
+        <span class="post-tags">
+          
+            #<a href="/tags/general/">general</a>&nbsp;
           
         </span>
       
@@ -188,7 +280,7 @@ $$ y=\begin {cases} 1, &amp; h</em>\theta(x) \geq 0.5 \ 0, &amp; h<em>\theta(x) 
           
         
       </div>
-      <div><a class="read-more button" href="/post/ss-module-for-surge/">Read more →</a></div>
+      <div><a class="read-more button" href="/post/2017-year-review/">Read more →</a></div>
     </div>
     
     <div class="pagination">
@@ -201,6 +293,13 @@ $$ y=\begin {cases} 1, &amp; h</em>\theta(x) \geq 0.5 \ 0, &amp; h<em>\theta(x) 
         </a>
       </span>
     
+    
+      <span class="button next">
+        <a href="/page/3/">
+          <span class="button__text">Older posts</span>
+          <span class="button__icon">→</span>
+        </a>
+      </span>
     
   </div>
 </div>

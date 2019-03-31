@@ -6,17 +6,89 @@
     <description>Recent content in Tags on Wonderland</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 28 Jun 2017 07:49:11 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 31 Jul 2017 16:09:35 +0800</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Acg</title>
+      <link>/tags/acg/</link>
+      <pubDate>Mon, 31 Jul 2017 16:09:35 +0800</pubDate>
+      
+      <guid>/tags/acg/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Algorithm</title>
+      <link>/tags/algorithm/</link>
+      <pubDate>Fri, 18 May 2018 10:15:21 +0800</pubDate>
+      
+      <guid>/tags/algorithm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Apple</title>
+      <link>/tags/apple/</link>
+      <pubDate>Wed, 06 Jun 2018 15:44:01 +0800</pubDate>
+      
+      <guid>/tags/apple/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Centos</title>
+      <link>/tags/centos/</link>
+      <pubDate>Sat, 29 Jul 2017 17:31:01 +0800</pubDate>
+      
+      <guid>/tags/centos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Code</title>
       <link>/tags/code/</link>
-      <pubDate>Wed, 28 Jun 2017 07:49:11 +0800</pubDate>
+      <pubDate>Fri, 18 May 2018 10:15:21 +0800</pubDate>
       
       <guid>/tags/code/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Emacs</title>
+      <link>/tags/emacs/</link>
+      <pubDate>Fri, 11 May 2018 07:50:12 +0800</pubDate>
+      
+      <guid>/tags/emacs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Flarum</title>
+      <link>/tags/flarum/</link>
+      <pubDate>Sat, 06 Jan 2018 22:37:18 +0800</pubDate>
+      
+      <guid>/tags/flarum/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Game</title>
+      <link>/tags/game/</link>
+      <pubDate>Sun, 18 Nov 2018 09:09:19 +0800</pubDate>
+      
+      <guid>/tags/game/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>General</title>
+      <link>/tags/general/</link>
+      <pubDate>Sun, 18 Nov 2018 09:09:19 +0800</pubDate>
+      
+      <guid>/tags/general/</guid>
       <description></description>
     </item>
     
@@ -30,9 +102,36 @@
     </item>
     
     <item>
+      <title>Ghost</title>
+      <link>/tags/ghost/</link>
+      <pubDate>Tue, 01 Aug 2017 20:48:43 +0800</pubDate>
+      
+      <guid>/tags/ghost/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Latex</title>
+      <link>/tags/latex/</link>
+      <pubDate>Fri, 11 May 2018 07:50:12 +0800</pubDate>
+      
+      <guid>/tags/latex/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>/tags/linux/</link>
+      <pubDate>Sat, 05 May 2018 09:52:42 +0800</pubDate>
+      
+      <guid>/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Ml</title>
       <link>/tags/ml/</link>
-      <pubDate>Wed, 28 Jun 2017 07:49:11 +0800</pubDate>
+      <pubDate>Wed, 19 Jul 2017 21:13:59 +0800</pubDate>
       
       <guid>/tags/ml/</guid>
       <description></description>
@@ -41,16 +140,25 @@
     <item>
       <title>Music</title>
       <link>/tags/music/</link>
-      <pubDate>Sun, 11 Jun 2017 19:31:22 +0800</pubDate>
+      <pubDate>Tue, 01 Aug 2017 11:34:50 +0800</pubDate>
       
       <guid>/tags/music/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>Nonsense</title>
+      <link>/tags/nonsense/</link>
+      <pubDate>Fri, 27 Oct 2017 12:47:39 +0800</pubDate>
+      
+      <guid>/tags/nonsense/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Python</title>
       <link>/tags/python/</link>
-      <pubDate>Wed, 28 Jun 2017 07:49:11 +0800</pubDate>
+      <pubDate>Wed, 09 May 2018 08:09:33 +0800</pubDate>
       
       <guid>/tags/python/</guid>
       <description></description>
@@ -68,9 +176,18 @@
     <item>
       <title>Review</title>
       <link>/tags/review/</link>
-      <pubDate>Wed, 17 May 2017 08:37:37 +0800</pubDate>
+      <pubDate>Wed, 19 Jul 2017 21:13:59 +0800</pubDate>
       
       <guid>/tags/review/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Share</title>
+      <link>/tags/share/</link>
+      <pubDate>Tue, 01 Aug 2017 11:34:50 +0800</pubDate>
+      
+      <guid>/tags/share/</guid>
       <description></description>
     </item>
     
@@ -89,6 +206,15 @@
       <pubDate>Wed, 28 Jun 2017 07:49:11 +0800</pubDate>
       
       <guid>/tags/tensorflow/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Theme</title>
+      <link>/tags/theme/</link>
+      <pubDate>Tue, 01 Aug 2017 20:48:43 +0800</pubDate>
+      
+      <guid>/tags/theme/</guid>
       <description></description>
     </item>
     
@@ -116,6 +242,15 @@
       <pubDate>Thu, 28 Mar 2019 22:04:19 +0800</pubDate>
       
       <guid>/tags/web/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Wwdc</title>
+      <link>/tags/wwdc/</link>
+      <pubDate>Wed, 06 Jun 2018 15:44:01 +0800</pubDate>
+      
+      <guid>/tags/wwdc/</guid>
       <description></description>
     </item>
     

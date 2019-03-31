@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>机器学习课程结束总结 :: Wonderland — Personal Blog</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="不知不觉，我在Coursera上跟随Andrew大神的机器学习课程在断断续续的节奏中，终于完结了。从对机器学习只是单纯的感兴趣、不了解，到现在对机器学习在脑中有了大概的概念和思路，这门课程帮助我一路走到现在。
+Andrew大神用非常浅显易懂的方式使我明白了各种机器学习模型的大概思路和简单的实现方法，这么易懂的教程我在国内从未发现过，现在的各种教程基本都是从数学推理和定义入手，各种公式定理推导让我这种人看了简直一脸懵逼，可能还没开始入门就已经放弃了。
+课程内容基本分为三部分：
+ 监督学习 无监督学习 算法问题排查和优化（debug）  在监督学习中，介绍的模型和算法有：
+ 线性回归&amp;amp;梯度下降&amp;amp;正规方程 逻辑回归（二分类&amp;amp;多分类） 神经网络&amp;amp;反向传播 支持向量机&amp;amp;核函数  在无监督学习中，介绍的模型和算法有：
+ K-均值算法&amp;amp;主成分分析（PCA） 异常检测&amp;amp;正态分布/联合正态分布 推荐系统&amp;amp;协同过滤算法  在讲解这些内容的过程中，课程中还讲到了很多有用/常用的技巧和方法；
+ 使用正规化防止过拟合（Regularization） 在神经网络和K-均值算法中使用随机初始化（Random Initialization） 通过画出各种关系曲线（迭代次数-代价函数等）来评估模型当前的效果和存在的问题 使用precision/recall评估模型的训练效果 使用随机梯度下降/小批量梯度下降来减少计算量 使用map reduce等方法使得模型能够运行在分布式架构上 如何选取特征 在特定情况下如何选取合适的算法/模型（正态分布的乘积 vs 联合正态分布）  在学习的过程中，我把逻辑回归和神经网络用Tensorflow自己实现了一遍，踩了又填了一些坑，对这些内容有了更深的理解。希望自己能够继续坚持下去，向着真正的人工智能前进。"/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="/post/ml-course-summary-review/" />
+
+
+<link rel="stylesheet" href="/assets/style.css">
+
+
+
+<link rel="stylesheet" href="/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144-precomposed.png">
+
+<link rel="shortcut icon" href="/img/favicon/orange.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="机器学习课程结束总结 :: Wonderland — Personal Blog" />
+<meta name="twitter:description" content="不知不觉，我在Coursera上跟随Andrew大神的机器学习课程在断断续续的节奏中，终于完结了。从对机器学习只是单纯的感兴趣、不了解，到现在对机器学习在脑中有了大概的概念和思路，这门课程帮助我一路走到现在。
+Andrew大神用非常浅显易懂的方式使我明白了各种机器学习模型的大概思路和简单的实现方法，这么易懂的教程我在国内从未发现过，现在的各种教程基本都是从数学推理和定义入手，各种公式定理推导让我这种人看了简直一脸懵逼，可能还没开始入门就已经放弃了。
+课程内容基本分为三部分：
+ 监督学习 无监督学习 算法问题排查和优化（debug）  在监督学习中，介绍的模型和算法有：
+ 线性回归&amp;amp;梯度下降&amp;amp;正规方程 逻辑回归（二分类&amp;amp;多分类） 神经网络&amp;amp;反向传播 支持向量机&amp;amp;核函数  在无监督学习中，介绍的模型和算法有：
+ K-均值算法&amp;amp;主成分分析（PCA） 异常检测&amp;amp;正态分布/联合正态分布 推荐系统&amp;amp;协同过滤算法  在讲解这些内容的过程中，课程中还讲到了很多有用/常用的技巧和方法；
+ 使用正规化防止过拟合（Regularization） 在神经网络和K-均值算法中使用随机初始化（Random Initialization） 通过画出各种关系曲线（迭代次数-代价函数等）来评估模型当前的效果和存在的问题 使用precision/recall评估模型的训练效果 使用随机梯度下降/小批量梯度下降来减少计算量 使用map reduce等方法使得模型能够运行在分布式架构上 如何选取特征 在特定情况下如何选取合适的算法/模型（正态分布的乘积 vs 联合正态分布）  在学习的过程中，我把逻辑回归和神经网络用Tensorflow自己实现了一遍，踩了又填了一些坑，对这些内容有了更深的理解。希望自己能够继续坚持下去，向着真正的人工智能前进。" />
+<meta name="twitter:site" content="/" />
+<meta name="twitter:creator" content="dyzdyz010" />
+<meta name="twitter:image" content="">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="机器学习课程结束总结 :: Wonderland — Personal Blog">
+<meta property="og:description" content="不知不觉，我在Coursera上跟随Andrew大神的机器学习课程在断断续续的节奏中，终于完结了。从对机器学习只是单纯的感兴趣、不了解，到现在对机器学习在脑中有了大概的概念和思路，这门课程帮助我一路走到现在。
+Andrew大神用非常浅显易懂的方式使我明白了各种机器学习模型的大概思路和简单的实现方法，这么易懂的教程我在国内从未发现过，现在的各种教程基本都是从数学推理和定义入手，各种公式定理推导让我这种人看了简直一脸懵逼，可能还没开始入门就已经放弃了。
+课程内容基本分为三部分：
+ 监督学习 无监督学习 算法问题排查和优化（debug）  在监督学习中，介绍的模型和算法有：
+ 线性回归&amp;amp;梯度下降&amp;amp;正规方程 逻辑回归（二分类&amp;amp;多分类） 神经网络&amp;amp;反向传播 支持向量机&amp;amp;核函数  在无监督学习中，介绍的模型和算法有：
+ K-均值算法&amp;amp;主成分分析（PCA） 异常检测&amp;amp;正态分布/联合正态分布 推荐系统&amp;amp;协同过滤算法  在讲解这些内容的过程中，课程中还讲到了很多有用/常用的技巧和方法；
+ 使用正规化防止过拟合（Regularization） 在神经网络和K-均值算法中使用随机初始化（Random Initialization） 通过画出各种关系曲线（迭代次数-代价函数等）来评估模型当前的效果和存在的问题 使用precision/recall评估模型的训练效果 使用随机梯度下降/小批量梯度下降来减少计算量 使用map reduce等方法使得模型能够运行在分布式架构上 如何选取特征 在特定情况下如何选取合适的算法/模型（正态分布的乘积 vs 联合正态分布）  在学习的过程中，我把逻辑回归和神经网络用Tensorflow自己实现了一遍，踩了又填了一些坑，对这些内容有了更深的理解。希望自己能够继续坚持下去，向着真正的人工智能前进。" />
+<meta property="og:url" content="/post/ml-course-summary-review/" />
+<meta property="og:site_name" content="机器学习课程结束总结" />
+<meta property="og:image" content="">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2017-07-19 21:13:59 &#43;0800 &#43;0800" />
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="">
+
+
+<div class="container center">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    Wonderland
+  </div>
+</a>
+
+    </div>
+    <div class="menu-trigger">menu</div>
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="https://github.com/dyzdyz010">Github</a></li>
+        
+      
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="https://github.com/dyzdyz010">Github</a></li>
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+  <div class="post">
+    <h1 class="post-title"><a href="/post/ml-course-summary-review/">机器学习课程结束总结</a></h1>
+    <div class="post-meta">
+      <span class="post-date">
+        2017-07-19
+      </span>
+      <span class="post-author">:: dyzdyz010</span>
+    </div>
+
+    
+      <span class="post-tags">
+        
+          #<a href="/tags/code/">code</a>&nbsp;
+        
+          #<a href="/tags/review/">review</a>&nbsp;
+        
+          #<a href="/tags/ml/">ml</a>&nbsp;
+        
+      </span>
+    
+
+    
+
+    <div class="post-content">
+      <p>不知不觉，我在Coursera上跟随Andrew大神的机器学习课程在断断续续的节奏中，终于完结了。从对机器学习只是单纯的感兴趣、不了解，到现在对机器学习在脑中有了大概的概念和思路，这门课程帮助我一路走到现在。</p>
+
+<p>Andrew大神用非常浅显易懂的方式使我明白了各种机器学习模型的大概思路和简单的实现方法，这么易懂的教程我在国内从未发现过，现在的各种教程基本都是从数学推理和定义入手，各种公式定理推导让我这种人看了简直一脸懵逼，可能还没开始入门就已经放弃了。</p>
+
+<p>课程内容基本分为三部分：</p>
+
+<ul>
+<li>监督学习</li>
+<li>无监督学习</li>
+<li>算法问题排查和优化（debug）</li>
+</ul>
+
+<p>在<code>监督学习</code>中，介绍的模型和算法有：</p>
+
+<ul>
+<li>线性回归&amp;梯度下降&amp;正规方程</li>
+<li>逻辑回归（二分类&amp;多分类）</li>
+<li>神经网络&amp;反向传播</li>
+<li>支持向量机&amp;核函数</li>
+</ul>
+
+<p>在<code>无监督学习</code>中，介绍的模型和算法有：</p>
+
+<ul>
+<li>K-均值算法&amp;主成分分析（PCA）</li>
+<li>异常检测&amp;正态分布/联合正态分布</li>
+<li>推荐系统&amp;协同过滤算法</li>
+</ul>
+
+<p>在讲解这些内容的过程中，课程中还讲到了很多有用/常用的技巧和方法；</p>
+
+<ul>
+<li>使用正规化防止过拟合（Regularization）</li>
+<li>在神经网络和K-均值算法中使用随机初始化（Random Initialization）</li>
+<li>通过画出各种关系曲线（迭代次数-代价函数等）来评估模型当前的效果和存在的问题</li>
+<li>使用precision/recall评估模型的训练效果</li>
+<li>使用随机梯度下降/小批量梯度下降来减少计算量</li>
+<li>使用map reduce等方法使得模型能够运行在分布式架构上</li>
+<li>如何选取特征</li>
+<li>在特定情况下如何选取合适的算法/模型（正态分布的乘积 vs 联合正态分布）</li>
+</ul>
+
+<p>在学习的过程中，我把逻辑回归和神经网络用Tensorflow自己实现了一遍，踩了又填了一些坑，对这些内容有了更深的理解。希望自己能够继续坚持下去，向着真正的人工智能前进。</p>
+
+    </div>
+    
+      <div class="pagination">
+        <div class="pagination__title">
+          <span class="pagination__title-h">Read other posts</span>
+          <hr />
+        </div>
+        <div class="pagination__buttons">
+          
+            <span class="button previous">
+              <a href="/post/migrating-ghost-to-1-0-on-centos7/">
+                <span class="button__icon">←</span>
+                <span class="button__text">Migrating Ghost to 1.0 from 0.11.x on CentOS 7</span>
+              </a>
+            </span>
+          
+          
+            <span class="button next">
+              <a href="/post/logistic-regression-model-with-tensorflow-from-scratch/">
+                <span class="button__text">从零开始使用TensorFlow建立简单的逻辑回归模型</span>
+                <span class="button__icon">→</span>
+              </a>
+            </span>
+          
+        </div>
+      </div>
+    
+
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "blog-disqus-com-1" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css" integrity="sha384-dbVIfZGuN1Yq7/1Ocstc1lUEm+AT+/rCkibIcC/OmWo5f0EA48Vf8CytHzGrSwbQ" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js" integrity="sha384-2BKqo+exmr9su6dir+qCw08N2ZKRucY4PrGQPPWU1A7FtlCGjmEGFqXCv5nyM5Ij" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+  </div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2019 Powered by <a href="http://gohugo.io">Hugo</a></span>
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+    
+  </div>
+</footer>
+
+<script src="/assets/main.js"></script>
+<script src="/assets/prism.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>
