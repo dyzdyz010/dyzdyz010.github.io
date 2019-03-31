@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Wonderland</title>
+    <link>/post/</link>
+    <description>Recent content in Posts on Wonderland</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 28 Mar 2019 22:04:19 +0800</lastBuildDate>
+    
+	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Use Hugo with Github Pages and CircleCI</title>
+      <link>/post/hugo-with-github-pages/</link>
+      <pubDate>Thu, 28 Mar 2019 22:04:19 +0800</pubDate>
+      
+      <guid>/post/hugo-with-github-pages/</guid>
+      <description>This tutorial is to teach you how to make youre own hugo-generated static site served by Github Pages, within a single repo.
+Prerequisites  Github &amp;amp; CircleCI account Newly-generated SSH key pair for safety reasons(see here) Hugo installed locally  Dive in Generate site source with hugo command:
+hugo new site &amp;lt;SITE_NAME&amp;gt;  Create a repo for your site: &amp;lt;SITE_NAME&amp;gt;.github.io(Be aware: this tutorial uses User/Organization Pages rather than Project Pages, see here), clone it, and create a new branch called source(whatever you like):</description>
+    </item>
+    
+    <item>
+      <title>Hello</title>
+      <link>/post/hello/</link>
+      <pubDate>Thu, 28 Mar 2019 20:15:56 +0800</pubDate>
+      
+      <guid>/post/hello/</guid>
+      <description>$$ \begin{aligned} a&amp;amp;=b+c\\ d+e&amp;amp;=f \end{aligned} $$</description>
+    </item>
+    
+    <item>
+      <title>乐理基础学习笔记——五声调式</title>
+      <link>/post/music-theory-pentatonic-scale/</link>
+      <pubDate>Sun, 11 Jun 2017 19:31:22 +0800</pubDate>
+      
+      <guid>/post/music-theory-pentatonic-scale/</guid>
+      <description>五声调式即只有五个音不断循环的调式。如果从C开始，五声调式的音阶为：
+C - D - E - G - A
+即我们常说的宫商角徵羽，唱作
+do - re - mi - sol - la
+是什么调式，哪个音就是主音：
+ C宫调式的主音为C，唱名为do； D角调式的主音为D，唱名为mi； G羽调式的主音为G，唱名为la； ……  从音阶可以看出，相比我们熟知的do re mi fa sol la si，五声调式缺少了IV级和VII级音(即fa和si)，缺少半音和增四度减五度，由大二度(do-re, sol-la, etc.)和小三度(mi-sol, la-do)构成了基础的五声音调。
+宫商角徴羽五种五声调式在作曲上有不同的编排和特点：
+宫调式的特征是主音上方的大三度(即do-mi)，强调do-mi(mi-do)的进行，sol-la-do三个音经常成组出现，但是do-mi-sol三个音经常不成组出现，即不出现mi-do/sol-mi-do这样的进行，而是通过加入re或la来过渡，最终回归到主音do，如la-sol-mi-re-do。
+徵调式的特征是主音上方的的纯四度和大六度(即so-do，so-mi)，常以宫和弦(主音为宫音)开头，前半句通常停止在re，但最后还是会停止在主音sol；徵调式还经常出现do-la-sol的下行进行，同时也常常出现re-mi-la的乐句。
+商调式的特征是主音上方的的大二度和小七度(即re-me，re-do)，起音和尾音都是re，re-mi-sol的进行经常出现，结尾通常通过mi或do解决到最终的尾音re。
+羽调式的特征是主音上的小三度和纯五度(即la-do，la-mi)，同样是以主音la开头，以la结尾，强调la-do-mi的进行，同时也会经常出现mi-re-do(-la)的进行。
+角调式的特征是主音上的小六度(即mi-do)，起于宫和弦，止于角大三和弦(mi-升sol-si)；强调mi的出现，经常停止在mi上；经常出现la-sol-mi的进行。
+五声调式中，I级音(主音)是最稳定的，在旋律中应当强调I级音；IV级和V级音是次稳定的，对主音有支持的作用；其余的音级是不稳定的，有进行到以上稳定音级的倾向，这种由不稳定到稳定的进行过程构成了旋律的雏形。</description>
+    </item>
+    
+    <item>
+      <title>机器学习-神经网络（反向传播算法）学习总结</title>
+      <link>/post/ml-bp-neural-network-review/</link>
+      <pubDate>Wed, 17 May 2017 08:37:37 +0800</pubDate>
+      
+      <guid>/post/ml-bp-neural-network-review/</guid>
+      <description>今天下午完成了Andrew Ng的机器学习课程第五周的课程，完成了自己实现一个基本神经网络的编程作业，不得不说神经网络的运算量真大啊，我的CPU温度都快上100了……
+第四周与第五周共两周的内容讲了神经网络的由来和表示方法以及实现方法。
+为什么要使用神经网络 与之前学过的逻辑回归相比，在逻辑回归的假设函数 \(h_\theta(x)\) 中：
+$$ g(z) = \frac{1}{1+e^{-z}} $$
+$$ z = \theta^Tx $$
+可以看到，\(z\)的形式是线性的，这意味着你只能拟合这样的数据：
+即：决策边界只用一次方程就可以表示
+或者是这样的数据：
+即：特征数量不多，可以通过添加高次项的方法形成不规则的决策边界。
+但是如果你需要识别一张图片中是否有车辆出现：
+假设用作样本的图片只有 \(50\times50\) 像素大小，这样的话你可能输入的特征数量就是 \(50\times50=2500\) 个（只用灰度值，如果用RGB表示的话特征数量会变成 \(2500\times3=7500\) 个），这还只是全部是一次方项的情况，但如果需要的决策边界是形如这样的：
+你需要一个不规则的决策边界表示方法，这时你可能会引入高次项，即使只增加二次项：
+$$ x_ix_j $$
+这样的话特征数量就会变成：
+$$ \frac{(1+2500)\times2500}{2} \approx 3,000,000 $$
+用这个数量级的特征去做逻辑回归，计算量是非常恐怖的。因此需要一种能够降低运算量的模型来避免这种问题的出现。
+神经网络(Neural Network)受启发于人类大脑。我们知道，人类的大脑就是通过无数的神经元之间互相传递信息来工作的。神经元(Neuron)是这其中的信号传递单元，形如下图：
+可以看到，神经元可以接收与其相连接的神经元的信号，自身对其进行处理，然后将信号再发送给其他与自己相连的神经元。受此启发，我们得到了工作方式类似的神经元模型：
+可以看到，橙色的节点接受左边三个节点的输入，并计算出我们需要的输出值 \(h_\theta(x)\)。其中 \(x_0\) 是所谓的偏置单元(bias unit)。我们把输入表示为：
+$$ x = \begin{bmatrix} x_0 \\ x_1 \\ x_2 \\ x_3 \end{bmatrix} \qquad \theta = \begin{bmatrix} \theta_0 \\ \theta_1 \\ \theta_2 \\ \theta_3 \end{bmatrix} $$</description>
+    </item>
+    
+    <item>
+      <title>机器学习-逻辑回归学习总结</title>
+      <link>/post/ml-logistic-regression-review/</link>
+      <pubDate>Wed, 26 Apr 2017 16:55:49 +0800</pubDate>
+      
+      <guid>/post/ml-logistic-regression-review/</guid>
+      <description>终于把Coursera上Andrew的机器学习课第三周完成了😌
+第三周主要讲了逻辑回归(Logistic Regression)的概念和实现方法。
+在课程中，Andrew讲到逻辑回归主要是为了解决分类问题(Classification)，即最终我们需要得到的结果是几个离散的值，例如*是/不是*的二分类问题，就可以看作是对其取值——是：\(y=1\)，不是：\(y=0\)
+在这种情境下，区别于上一章的线性回归(Linear Regression)，这里的假设函数(Hypothesis)采用Sigmoid函数，意在表示某一样本属于其中一个分类的概率：
+$$P(y=1|x;\theta) = h_\theta(x) = g(\theta^Tx)$$
+$$g(z) = \frac{1}{1+e^{-z}}$$
+\(g(z)\)的函数图像如下： 可以看出，这个函数的取值范围是\([0, 1]\)，正好符合概率的定义，即一个事件发生的概率最大为1（绝对发生），最小为0（绝不发生）。而在分类中，一个样本总是属于一个类别（\(y=1 || y=0\))，不存在中间值，因此我们规定：
+$$ y=\begin {cases} 1, &amp;amp; h_\theta(x) \geq 0.5 \\ 0, &amp;amp; h_\theta(x) &amp;lt; 0.5 \end {cases} $$
+由上图可知，当\(h_\theta(x) \geq 0.5\)时，\(z \geq 0\)，即\(\theta^Tx \geq 0\)。
+为了满足这个条件(即\(\theta^Tx \geq 0\))，引入决策边界(Decision Boundary)的概念。以课程中的例子为例：
+在有两个特征(\(x_1, x_2\))的情况下，令\(z = \theta_0 + \theta_1x_1 + \theta_2x_2 = 0\)，可以在上图中得到一条直线(决策边界)，将分别取属于两个类别的样本划分开来。
+在这个例子中，根据上面的公式，我们可以规定：当\(\theta_0 + \theta_1x_1 + \theta_2x_2 \geq 0\)时，我们预测\(y = 1\)；当\(\theta_0 + \theta_1x_1 + \theta_2x_2 &amp;lt; 0\)时，我们预测\(y = 0\);</description>
+    </item>
+    
+    <item>
+      <title>Shadowsocks Module for Surge</title>
+      <link>/post/ss-module-for-surge/</link>
+      <pubDate>Sun, 23 Apr 2017 22:23:28 +0800</pubDate>
+      
+      <guid>/post/ss-module-for-surge/</guid>
+      <description>Just an ss module for Surge app.
+https://github.com/dyzdyz010/SSModule/raw/master/ss.module</description>
+    </item>
+    
+  </channel>
+</rss>

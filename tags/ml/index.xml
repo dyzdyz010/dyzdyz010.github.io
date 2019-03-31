@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ml on Wonderland</title>
+    <link>/tags/ml/</link>
+    <description>Recent content in Ml on Wonderland</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 17 May 2017 08:37:37 +0800</lastBuildDate>
+    
+	<atom:link href="/tags/ml/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>机器学习-神经网络（反向传播算法）学习总结</title>
+      <link>/post/ml-bp-neural-network-review/</link>
+      <pubDate>Wed, 17 May 2017 08:37:37 +0800</pubDate>
+      
+      <guid>/post/ml-bp-neural-network-review/</guid>
+      <description>今天下午完成了Andrew Ng的机器学习课程第五周的课程，完成了自己实现一个基本神经网络的编程作业，不得不说神经网络的运算量真大啊，我的CPU温度都快上100了……
+第四周与第五周共两周的内容讲了神经网络的由来和表示方法以及实现方法。
+为什么要使用神经网络 与之前学过的逻辑回归相比，在逻辑回归的假设函数 \(h_\theta(x)\) 中：
+$$ g(z) = \frac{1}{1+e^{-z}} $$
+$$ z = \theta^Tx $$
+可以看到，\(z\)的形式是线性的，这意味着你只能拟合这样的数据：
+即：决策边界只用一次方程就可以表示
+或者是这样的数据：
+即：特征数量不多，可以通过添加高次项的方法形成不规则的决策边界。
+但是如果你需要识别一张图片中是否有车辆出现：
+假设用作样本的图片只有 \(50\times50\) 像素大小，这样的话你可能输入的特征数量就是 \(50\times50=2500\) 个（只用灰度值，如果用RGB表示的话特征数量会变成 \(2500\times3=7500\) 个），这还只是全部是一次方项的情况，但如果需要的决策边界是形如这样的：
+你需要一个不规则的决策边界表示方法，这时你可能会引入高次项，即使只增加二次项：
+$$ x_ix_j $$
+这样的话特征数量就会变成：
+$$ \frac{(1+2500)\times2500}{2} \approx 3,000,000 $$
+用这个数量级的特征去做逻辑回归，计算量是非常恐怖的。因此需要一种能够降低运算量的模型来避免这种问题的出现。
+神经网络(Neural Network)受启发于人类大脑。我们知道，人类的大脑就是通过无数的神经元之间互相传递信息来工作的。神经元(Neuron)是这其中的信号传递单元，形如下图：
+可以看到，神经元可以接收与其相连接的神经元的信号，自身对其进行处理，然后将信号再发送给其他与自己相连的神经元。受此启发，我们得到了工作方式类似的神经元模型：
+可以看到，橙色的节点接受左边三个节点的输入，并计算出我们需要的输出值 \(h_\theta(x)\)。其中 \(x_0\) 是所谓的偏置单元(bias unit)。我们把输入表示为：
+$$ x = \begin{bmatrix} x_0 \\ x_1 \\ x_2 \\ x_3 \end{bmatrix} \qquad \theta = \begin{bmatrix} \theta_0 \\ \theta_1 \\ \theta_2 \\ \theta_3 \end{bmatrix} $$</description>
+    </item>
+    
+    <item>
+      <title>机器学习-逻辑回归学习总结</title>
+      <link>/post/ml-logistic-regression-review/</link>
+      <pubDate>Wed, 26 Apr 2017 16:55:49 +0800</pubDate>
+      
+      <guid>/post/ml-logistic-regression-review/</guid>
+      <description>终于把Coursera上Andrew的机器学习课第三周完成了😌
+第三周主要讲了逻辑回归(Logistic Regression)的概念和实现方法。
+在课程中，Andrew讲到逻辑回归主要是为了解决分类问题(Classification)，即最终我们需要得到的结果是几个离散的值，例如*是/不是*的二分类问题，就可以看作是对其取值——是：\(y=1\)，不是：\(y=0\)
+在这种情境下，区别于上一章的线性回归(Linear Regression)，这里的假设函数(Hypothesis)采用Sigmoid函数，意在表示某一样本属于其中一个分类的概率：
+$$P(y=1|x;\theta) = h_\theta(x) = g(\theta^Tx)$$
+$$g(z) = \frac{1}{1+e^{-z}}$$
+\(g(z)\)的函数图像如下： 可以看出，这个函数的取值范围是\([0, 1]\)，正好符合概率的定义，即一个事件发生的概率最大为1（绝对发生），最小为0（绝不发生）。而在分类中，一个样本总是属于一个类别（\(y=1 || y=0\))，不存在中间值，因此我们规定：
+$$ y=\begin {cases} 1, &amp;amp; h_\theta(x) \geq 0.5 \\ 0, &amp;amp; h_\theta(x) &amp;lt; 0.5 \end {cases} $$
+由上图可知，当\(h_\theta(x) \geq 0.5\)时，\(z \geq 0\)，即\(\theta^Tx \geq 0\)。
+为了满足这个条件(即\(\theta^Tx \geq 0\))，引入决策边界(Decision Boundary)的概念。以课程中的例子为例：
+在有两个特征(\(x_1, x_2\))的情况下，令\(z = \theta_0 + \theta_1x_1 + \theta_2x_2 = 0\)，可以在上图中得到一条直线(决策边界)，将分别取属于两个类别的样本划分开来。
+在这个例子中，根据上面的公式，我们可以规定：当\(\theta_0 + \theta_1x_1 + \theta_2x_2 \geq 0\)时，我们预测\(y = 1\)；当\(\theta_0 + \theta_1x_1 + \theta_2x_2 &amp;lt; 0\)时，我们预测\(y = 0\);</description>
+    </item>
+    
+  </channel>
+</rss>
