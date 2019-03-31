@@ -173,6 +173,51 @@ hugo new site &lt;SITE_NAME&gt;  Create a repo for your site: &lt;SITE_NAME&gt;.
     </div>
     
     <div class="post on-list">
+      <h1 class="post-title"><a href="/post/logistic-regression-model-with-tensorflow-from-scratch/">从零开始使用TensorFlow建立简单的逻辑回归模型</a></h1>
+      <div class="post-meta">
+        <span class="post-date">
+          2017-06-28
+        </span>
+        <span class="post-author">:: dyzdyz010</span>
+      </div>
+
+      
+        <span class="post-tags">
+          
+            #<a href="/tags/ml/">ml</a>&nbsp;
+          
+            #<a href="/tags/code/">code</a>&nbsp;
+          
+            #<a href="/tags/python/">python</a>&nbsp;
+          
+            #<a href="/tags/tensorflow/">tensorflow</a>&nbsp;
+          
+        </span>
+      
+
+      
+
+      <div class="post-content">
+        
+          
+            TensorFlow 是一个基于 python 的机器学习框架。在 Coursera 上学习了逻辑回归的课程内容后，想把在 MATLAB 中实现了的内容用 TensorFlow 重新实现一遍，当做学习 Python 和框架的敲门砖。
+目标读者 知道逻辑回归是什么，懂一点 Python，听说过 TensorFlow
+数据集 来自 Coursera 上 Andrew 的机器学习课程中的ex2data1.txt，根据学生的两次考试成绩判断该学生是否会被录取。
+环境 Python 2.7 - 3.x
+pandas, matplotlib, numpy
+安装 TensorFlow 在自己的电脑上安装 TensorFlow 框架，安装方法过程不赘述，CPU 版相对更容易一点，GPU 版需要 CUDA 支持，各位看官看情况安装就好。
+开始 创建一个文件夹（比如就叫做tensorflow），在文件夹中创建一个 Python 文件main.py，并将数据集文件放到这个文件夹下：
+数据形式:
+前两列分别为两次考试成绩（x1, x2），最后一列为是否被录取（y），1代表被录取，0则反之。
+在源文件main.py中，我们首先引入需要的包：
+import pandas as pd # 用于读取数据文件 import tensorflow as tf import matplotlib.pyplot as plt # 用于画图 import numpy as np # 用于后续计算  pandas是一个数据处理相关的包，可以对数据集进行读取和其他各种操作；matplotlib可以用来把我们的数据集绘成图表展示出来。
+          
+        
+      </div>
+      <div><a class="read-more button" href="/post/logistic-regression-model-with-tensorflow-from-scratch/">Read more →</a></div>
+    </div>
+    
+    <div class="post on-list">
       <h1 class="post-title"><a href="/post/music-theory-pentatonic-scale/">乐理基础学习笔记——五声调式</a></h1>
       <div class="post-meta">
         <span class="post-date">
@@ -249,48 +294,6 @@ $$ x = \begin{bmatrix} x_0 \ x_1 \ x_2 \ x_3 \end{bmatrix} \qquad \theta = \begi
         
       </div>
       <div><a class="read-more button" href="/post/ml-bp-neural-network-review/">Read more →</a></div>
-    </div>
-    
-    <div class="post on-list">
-      <h1 class="post-title"><a href="/post/ml-logistic-regression-review/">机器学习-逻辑回归学习总结</a></h1>
-      <div class="post-meta">
-        <span class="post-date">
-          2017-04-26
-        </span>
-        <span class="post-author">:: dyzdyz010</span>
-      </div>
-
-      
-        <span class="post-tags">
-          
-            #<a href="/tags/ml/">ml</a>&nbsp;
-          
-            #<a href="/tags/review/">review</a>&nbsp;
-          
-        </span>
-      
-
-      
-
-      <div class="post-content">
-        
-          
-            终于把Coursera上Andrew的机器学习课第三周完成了😌
-第三周主要讲了逻辑回归(Logistic Regression)的概念和实现方法。
-在课程中，Andrew讲到逻辑回归主要是为了解决分类问题(Classification)，即最终我们需要得到的结果是几个离散的值，例如*是/不是*的二分类问题，就可以看作是对其取值——是：(y=1)，不是：(y=0)
-在这种情境下，区别于上一章的线性回归(Linear Regression)，这里的假设函数(Hypothesis)采用Sigmoid函数，意在表示某一样本属于其中一个分类的概率：
-$$P(y=1|x;\theta) = h<em>\theta(x) = g(\theta^Tx)$$
-$$g(z) = \frac{1}{1+e^{-z}}$$
-(g(z))的函数图像如下： 可以看出，这个函数的取值范围是([0, 1])，正好符合概率的定义，即一个事件发生的概率最大为1（绝对发生），最小为0（绝不发生）。而在分类中，一个样本总是属于一个类别（(y=1 || y=0))，不存在中间值，因此我们规定：
-$$ y=\begin {cases} 1, &amp; h</em>\theta(x) \geq 0.5 \ 0, &amp; h<em>\theta(x) &lt; 0.5 \end {cases} $$
-由上图可知，当(h</em>\theta(x) \geq 0.5)时，(z \geq 0)，即(\theta^Tx \geq 0)。
-为了满足这个条件(即(\theta^Tx \geq 0))，引入决策边界(Decision Boundary)的概念。以课程中的例子为例：
-在有两个特征((x_1, x_2))的情况下，令(z = \theta_0 + \theta_1x_1 + \theta_2x_2 = 0)，可以在上图中得到一条直线(决策边界)，将分别取属于两个类别的样本划分开来。
-在这个例子中，根据上面的公式，我们可以规定：当(\theta_0 + \theta_1x_1 + \theta_2x_2 \geq 0)时，我们预测(y = 1)；当(\theta_0 + \theta_1x_1 + \theta_2x_2 &lt; 0)时，我们预测(y = 0);
-          
-        
-      </div>
-      <div><a class="read-more button" href="/post/ml-logistic-regression-review/">Read more →</a></div>
     </div>
     
     <div class="pagination">

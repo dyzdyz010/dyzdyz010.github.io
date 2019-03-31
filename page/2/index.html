@@ -119,6 +119,48 @@
 
     
     <div class="post on-list">
+      <h1 class="post-title"><a href="/post/ml-logistic-regression-review/">机器学习-逻辑回归学习总结</a></h1>
+      <div class="post-meta">
+        <span class="post-date">
+          2017-04-26
+        </span>
+        <span class="post-author">:: dyzdyz010</span>
+      </div>
+
+      
+        <span class="post-tags">
+          
+            #<a href="/tags/ml/">ml</a>&nbsp;
+          
+            #<a href="/tags/review/">review</a>&nbsp;
+          
+        </span>
+      
+
+      
+
+      <div class="post-content">
+        
+          
+            终于把Coursera上Andrew的机器学习课第三周完成了😌
+第三周主要讲了逻辑回归(Logistic Regression)的概念和实现方法。
+在课程中，Andrew讲到逻辑回归主要是为了解决分类问题(Classification)，即最终我们需要得到的结果是几个离散的值，例如*是/不是*的二分类问题，就可以看作是对其取值——是：(y=1)，不是：(y=0)
+在这种情境下，区别于上一章的线性回归(Linear Regression)，这里的假设函数(Hypothesis)采用Sigmoid函数，意在表示某一样本属于其中一个分类的概率：
+$$P(y=1|x;\theta) = h<em>\theta(x) = g(\theta^Tx)$$
+$$g(z) = \frac{1}{1+e^{-z}}$$
+(g(z))的函数图像如下： 可以看出，这个函数的取值范围是([0, 1])，正好符合概率的定义，即一个事件发生的概率最大为1（绝对发生），最小为0（绝不发生）。而在分类中，一个样本总是属于一个类别（(y=1 || y=0))，不存在中间值，因此我们规定：
+$$ y=\begin {cases} 1, &amp; h</em>\theta(x) \geq 0.5 \ 0, &amp; h<em>\theta(x) &lt; 0.5 \end {cases} $$
+由上图可知，当(h</em>\theta(x) \geq 0.5)时，(z \geq 0)，即(\theta^Tx \geq 0)。
+为了满足这个条件(即(\theta^Tx \geq 0))，引入决策边界(Decision Boundary)的概念。以课程中的例子为例：
+在有两个特征((x_1, x_2))的情况下，令(z = \theta_0 + \theta_1x_1 + \theta_2x_2 = 0)，可以在上图中得到一条直线(决策边界)，将分别取属于两个类别的样本划分开来。
+在这个例子中，根据上面的公式，我们可以规定：当(\theta_0 + \theta_1x_1 + \theta_2x_2 \geq 0)时，我们预测(y = 1)；当(\theta_0 + \theta_1x_1 + \theta_2x_2 &lt; 0)时，我们预测(y = 0);
+          
+        
+      </div>
+      <div><a class="read-more button" href="/post/ml-logistic-regression-review/">Read more →</a></div>
+    </div>
+    
+    <div class="post on-list">
       <h1 class="post-title"><a href="/post/ss-module-for-surge/">Shadowsocks Module for Surge</a></h1>
       <div class="post-meta">
         <span class="post-date">

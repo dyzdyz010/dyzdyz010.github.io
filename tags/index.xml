@@ -6,10 +6,19 @@
     <description>Recent content in Tags on Wonderland</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 23 Apr 2017 22:23:28 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 28 Jun 2017 07:49:11 +0800</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Code</title>
+      <link>/tags/code/</link>
+      <pubDate>Wed, 28 Jun 2017 07:49:11 +0800</pubDate>
+      
+      <guid>/tags/code/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Gfw</title>
@@ -23,7 +32,7 @@
     <item>
       <title>Ml</title>
       <link>/tags/ml/</link>
-      <pubDate>Wed, 17 May 2017 08:37:37 +0800</pubDate>
+      <pubDate>Wed, 28 Jun 2017 07:49:11 +0800</pubDate>
       
       <guid>/tags/ml/</guid>
       <description></description>
@@ -35,6 +44,15 @@
       <pubDate>Sun, 11 Jun 2017 19:31:22 +0800</pubDate>
       
       <guid>/tags/music/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>/tags/python/</link>
+      <pubDate>Wed, 28 Jun 2017 07:49:11 +0800</pubDate>
+      
+      <guid>/tags/python/</guid>
       <description></description>
     </item>
     
@@ -62,6 +80,15 @@
       <pubDate>Sun, 23 Apr 2017 22:23:28 +0800</pubDate>
       
       <guid>/tags/ss/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tensorflow</title>
+      <link>/tags/tensorflow/</link>
+      <pubDate>Wed, 28 Jun 2017 07:49:11 +0800</pubDate>
+      
+      <guid>/tags/tensorflow/</guid>
       <description></description>
     </item>
     
