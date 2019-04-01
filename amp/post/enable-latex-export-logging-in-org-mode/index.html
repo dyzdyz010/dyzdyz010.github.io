@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Enable latex-export-logging in org-mode :: Wonderland — Personal Blog</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="Emacs version: GNU Emacs 26.1(Also works in Emacs 24 or maybe even in earlier versions)
+By default, when exporting latex and PDF file from emacs org-mode, log files are removed when the process finishes, you may want to reserve it.
+To make emacs stop removing log files, do as below:
+M-x -&amp;gt; customize-variable, RET -&amp;gt; org-latex-remove-logfiles
+By default this variable is set to true, means log files are removed automatically, then you just need to toggle it to false, save, restart Emacs, and you&amp;rsquo;re good to go 😀"/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="/post/enable-latex-export-logging-in-org-mode/" />
+
+
+<link rel="stylesheet" href="/assets/style.css">
+
+
+
+<link rel="stylesheet" href="/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144-precomposed.png">
+
+<link rel="shortcut icon" href="/img/favicon/orange.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Enable latex-export-logging in org-mode :: Wonderland — Personal Blog" />
+<meta name="twitter:description" content="Emacs version: GNU Emacs 26.1(Also works in Emacs 24 or maybe even in earlier versions)
+By default, when exporting latex and PDF file from emacs org-mode, log files are removed when the process finishes, you may want to reserve it.
+To make emacs stop removing log files, do as below:
+M-x -&amp;gt; customize-variable, RET -&amp;gt; org-latex-remove-logfiles
+By default this variable is set to true, means log files are removed automatically, then you just need to toggle it to false, save, restart Emacs, and you&amp;rsquo;re good to go 😀" />
+<meta name="twitter:site" content="/" />
+<meta name="twitter:creator" content="dyzdyz010" />
+<meta name="twitter:image" content="">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Enable latex-export-logging in org-mode :: Wonderland — Personal Blog">
+<meta property="og:description" content="Emacs version: GNU Emacs 26.1(Also works in Emacs 24 or maybe even in earlier versions)
+By default, when exporting latex and PDF file from emacs org-mode, log files are removed when the process finishes, you may want to reserve it.
+To make emacs stop removing log files, do as below:
+M-x -&amp;gt; customize-variable, RET -&amp;gt; org-latex-remove-logfiles
+By default this variable is set to true, means log files are removed automatically, then you just need to toggle it to false, save, restart Emacs, and you&amp;rsquo;re good to go 😀" />
+<meta property="og:url" content="/post/enable-latex-export-logging-in-org-mode/" />
+<meta property="og:site_name" content="Enable latex-export-logging in org-mode" />
+<meta property="og:image" content="">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2018-05-11 07:50:12 &#43;0800 &#43;0800" />
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="">
+
+
+<div class="container center">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    Wonderland
+  </div>
+</a>
+
+    </div>
+    <div class="menu-trigger">menu</div>
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="https://github.com/dyzdyz010">Github</a></li>
+        
+      
+        
+          <li><a href="https://dyzdyz010.sarahah.com/">Leave me a message!</a></li>
+        
+      
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="https://github.com/dyzdyz010">Github</a></li>
+      
+    
+      
+        <li><a href="https://dyzdyz010.sarahah.com/">Leave me a message!</a></li>
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+  <div class="post">
+    <h1 class="post-title"><a href="/post/enable-latex-export-logging-in-org-mode/">Enable latex-export-logging in org-mode</a></h1>
+    <div class="post-meta">
+      <span class="post-date">
+        2018-05-11
+      </span>
+      <span class="post-author">:: dyzdyz010</span>
+    </div>
+
+    
+      <span class="post-tags">
+        
+          #<a href="/tags/emacs/">emacs</a>&nbsp;
+        
+          #<a href="/tags/code/">code</a>&nbsp;
+        
+          #<a href="/tags/latex/">latex</a>&nbsp;
+        
+      </span>
+    
+
+    
+
+    <div class="post-content">
+      <p>Emacs version: GNU Emacs 26.1(Also works in Emacs 24 or maybe even in earlier versions)</p>
+
+<p>By default, when exporting latex and PDF file from emacs org-mode, log files are removed when the process finishes, you may want to reserve it.</p>
+
+<p>To make emacs stop removing log files, do as below:</p>
+
+<p><code>M-x</code> -&gt; <code>customize-variable</code>, <code>RET</code> -&gt; <code>org-latex-remove-logfiles</code></p>
+
+<p>By default this variable is set to <code>true</code>, means log files are removed automatically, then you just need to toggle it to <code>false</code>, save, restart Emacs, and you&rsquo;re good to go 😀</p>
+
+    </div>
+    
+      <div class="pagination">
+        <div class="pagination__title">
+          <span class="pagination__title-h">Read other posts</span>
+          <hr />
+        </div>
+        <div class="pagination__buttons">
+          
+            <span class="button previous">
+              <a href="/post/quicksort-review/">
+                <span class="button__icon">←</span>
+                <span class="button__text">快速排序算法理解</span>
+              </a>
+            </span>
+          
+          
+            <span class="button next">
+              <a href="/post/using-virtualenv-in-jupyter-notebook/">
+                <span class="button__text">Using virtualenv in Jupyter Notebook</span>
+                <span class="button__icon">→</span>
+              </a>
+            </span>
+          
+        </div>
+      </div>
+    
+
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "blog-disqus-com-1" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css" integrity="sha384-dbVIfZGuN1Yq7/1Ocstc1lUEm+AT+/rCkibIcC/OmWo5f0EA48Vf8CytHzGrSwbQ" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js" integrity="sha384-2BKqo+exmr9su6dir+qCw08N2ZKRucY4PrGQPPWU1A7FtlCGjmEGFqXCv5nyM5Ij" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+  </div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2019 Powered by <a href="http://gohugo.io">Hugo</a></span>
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+    
+  </div>
+</footer>
+
+<script src="/assets/main.js"></script>
+<script src="/assets/prism.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

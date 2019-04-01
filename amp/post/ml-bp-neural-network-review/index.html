@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>机器学习-神经网络（反向传播算法）学习总结 :: Wonderland — Personal Blog</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="今天下午完成了Andrew Ng的机器学习课程第五周的课程，完成了自己实现一个基本神经网络的编程作业，不得不说神经网络的运算量真大啊，我的CPU温度都快上100了……
+第四周与第五周共两周的内容讲了神经网络的由来和表示方法以及实现方法。
+为什么要使用神经网络 与之前学过的逻辑回归相比，在逻辑回归的假设函数 \(h_\theta(x)\) 中：
+$$ g(z) = \frac{1}{1&#43;e^{-z}} $$
+$$ z = \theta^Tx $$
+可以看到，\(z\)的形式是线性的，这意味着你只能拟合这样的数据：
+即：决策边界只用一次方程就可以表示
+或者是这样的数据：
+即：特征数量不多，可以通过添加高次项的方法形成不规则的决策边界。
+但是如果你需要识别一张图片中是否有车辆出现：
+假设用作样本的图片只有 \(50\times50\) 像素大小，这样的话你可能输入的特征数量就是 \(50\times50=2500\) 个（只用灰度值，如果用RGB表示的话特征数量会变成 \(2500\times3=7500\) 个），这还只是全部是一次方项的情况，但如果需要的决策边界是形如这样的：
+你需要一个不规则的决策边界表示方法，这时你可能会引入高次项，即使只增加二次项：
+$$ x_ix_j $$
+这样的话特征数量就会变成：
+$$ \frac{(1&#43;2500)\times2500}{2} \approx 3,000,000 $$
+用这个数量级的特征去做逻辑回归，计算量是非常恐怖的。因此需要一种能够降低运算量的模型来避免这种问题的出现。
+神经网络(Neural Network)受启发于人类大脑。我们知道，人类的大脑就是通过无数的神经元之间互相传递信息来工作的。神经元(Neuron)是这其中的信号传递单元，形如下图：
+可以看到，神经元可以接收与其相连接的神经元的信号，自身对其进行处理，然后将信号再发送给其他与自己相连的神经元。受此启发，我们得到了工作方式类似的神经元模型：
+可以看到，橙色的节点接受左边三个节点的输入，并计算出我们需要的输出值 \(h_\theta(x)\)。其中 \(x_0\) 是所谓的偏置单元(bias unit)。我们把输入表示为：
+$$ x = \begin{bmatrix} x_0 \\ x_1 \\ x_2 \\ x_3 \end{bmatrix} \qquad \theta = \begin{bmatrix} \theta_0 \\ \theta_1 \\ \theta_2 \\ \theta_3 \end{bmatrix} $$"/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="/post/ml-bp-neural-network-review/" />
+
+
+<link rel="stylesheet" href="/assets/style.css">
+
+
+
+<link rel="stylesheet" href="/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144-precomposed.png">
+
+<link rel="shortcut icon" href="/img/favicon/orange.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="机器学习-神经网络（反向传播算法）学习总结 :: Wonderland — Personal Blog" />
+<meta name="twitter:description" content="今天下午完成了Andrew Ng的机器学习课程第五周的课程，完成了自己实现一个基本神经网络的编程作业，不得不说神经网络的运算量真大啊，我的CPU温度都快上100了……
+第四周与第五周共两周的内容讲了神经网络的由来和表示方法以及实现方法。
+为什么要使用神经网络 与之前学过的逻辑回归相比，在逻辑回归的假设函数 \(h_\theta(x)\) 中：
+$$ g(z) = \frac{1}{1&#43;e^{-z}} $$
+$$ z = \theta^Tx $$
+可以看到，\(z\)的形式是线性的，这意味着你只能拟合这样的数据：
+即：决策边界只用一次方程就可以表示
+或者是这样的数据：
+即：特征数量不多，可以通过添加高次项的方法形成不规则的决策边界。
+但是如果你需要识别一张图片中是否有车辆出现：
+假设用作样本的图片只有 \(50\times50\) 像素大小，这样的话你可能输入的特征数量就是 \(50\times50=2500\) 个（只用灰度值，如果用RGB表示的话特征数量会变成 \(2500\times3=7500\) 个），这还只是全部是一次方项的情况，但如果需要的决策边界是形如这样的：
+你需要一个不规则的决策边界表示方法，这时你可能会引入高次项，即使只增加二次项：
+$$ x_ix_j $$
+这样的话特征数量就会变成：
+$$ \frac{(1&#43;2500)\times2500}{2} \approx 3,000,000 $$
+用这个数量级的特征去做逻辑回归，计算量是非常恐怖的。因此需要一种能够降低运算量的模型来避免这种问题的出现。
+神经网络(Neural Network)受启发于人类大脑。我们知道，人类的大脑就是通过无数的神经元之间互相传递信息来工作的。神经元(Neuron)是这其中的信号传递单元，形如下图：
+可以看到，神经元可以接收与其相连接的神经元的信号，自身对其进行处理，然后将信号再发送给其他与自己相连的神经元。受此启发，我们得到了工作方式类似的神经元模型：
+可以看到，橙色的节点接受左边三个节点的输入，并计算出我们需要的输出值 \(h_\theta(x)\)。其中 \(x_0\) 是所谓的偏置单元(bias unit)。我们把输入表示为：
+$$ x = \begin{bmatrix} x_0 \\ x_1 \\ x_2 \\ x_3 \end{bmatrix} \qquad \theta = \begin{bmatrix} \theta_0 \\ \theta_1 \\ \theta_2 \\ \theta_3 \end{bmatrix} $$" />
+<meta name="twitter:site" content="/" />
+<meta name="twitter:creator" content="dyzdyz010" />
+<meta name="twitter:image" content="">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="机器学习-神经网络（反向传播算法）学习总结 :: Wonderland — Personal Blog">
+<meta property="og:description" content="今天下午完成了Andrew Ng的机器学习课程第五周的课程，完成了自己实现一个基本神经网络的编程作业，不得不说神经网络的运算量真大啊，我的CPU温度都快上100了……
+第四周与第五周共两周的内容讲了神经网络的由来和表示方法以及实现方法。
+为什么要使用神经网络 与之前学过的逻辑回归相比，在逻辑回归的假设函数 \(h_\theta(x)\) 中：
+$$ g(z) = \frac{1}{1&#43;e^{-z}} $$
+$$ z = \theta^Tx $$
+可以看到，\(z\)的形式是线性的，这意味着你只能拟合这样的数据：
+即：决策边界只用一次方程就可以表示
+或者是这样的数据：
+即：特征数量不多，可以通过添加高次项的方法形成不规则的决策边界。
+但是如果你需要识别一张图片中是否有车辆出现：
+假设用作样本的图片只有 \(50\times50\) 像素大小，这样的话你可能输入的特征数量就是 \(50\times50=2500\) 个（只用灰度值，如果用RGB表示的话特征数量会变成 \(2500\times3=7500\) 个），这还只是全部是一次方项的情况，但如果需要的决策边界是形如这样的：
+你需要一个不规则的决策边界表示方法，这时你可能会引入高次项，即使只增加二次项：
+$$ x_ix_j $$
+这样的话特征数量就会变成：
+$$ \frac{(1&#43;2500)\times2500}{2} \approx 3,000,000 $$
+用这个数量级的特征去做逻辑回归，计算量是非常恐怖的。因此需要一种能够降低运算量的模型来避免这种问题的出现。
+神经网络(Neural Network)受启发于人类大脑。我们知道，人类的大脑就是通过无数的神经元之间互相传递信息来工作的。神经元(Neuron)是这其中的信号传递单元，形如下图：
+可以看到，神经元可以接收与其相连接的神经元的信号，自身对其进行处理，然后将信号再发送给其他与自己相连的神经元。受此启发，我们得到了工作方式类似的神经元模型：
+可以看到，橙色的节点接受左边三个节点的输入，并计算出我们需要的输出值 \(h_\theta(x)\)。其中 \(x_0\) 是所谓的偏置单元(bias unit)。我们把输入表示为：
+$$ x = \begin{bmatrix} x_0 \\ x_1 \\ x_2 \\ x_3 \end{bmatrix} \qquad \theta = \begin{bmatrix} \theta_0 \\ \theta_1 \\ \theta_2 \\ \theta_3 \end{bmatrix} $$" />
+<meta property="og:url" content="/post/ml-bp-neural-network-review/" />
+<meta property="og:site_name" content="机器学习-神经网络（反向传播算法）学习总结" />
+<meta property="og:image" content="">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2017-05-17 08:37:37 &#43;0800 &#43;0800" />
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="">
+
+
+<div class="container center">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    Wonderland
+  </div>
+</a>
+
+    </div>
+    <div class="menu-trigger">menu</div>
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="https://github.com/dyzdyz010">Github</a></li>
+        
+      
+        
+          <li><a href="https://dyzdyz010.sarahah.com/">Leave me a message!</a></li>
+        
+      
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="https://github.com/dyzdyz010">Github</a></li>
+      
+    
+      
+        <li><a href="https://dyzdyz010.sarahah.com/">Leave me a message!</a></li>
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+  <div class="post">
+    <h1 class="post-title"><a href="/post/ml-bp-neural-network-review/">机器学习-神经网络（反向传播算法）学习总结</a></h1>
+    <div class="post-meta">
+      <span class="post-date">
+        2017-05-17
+      </span>
+      <span class="post-author">:: dyzdyz010</span>
+    </div>
+
+    
+      <span class="post-tags">
+        
+          #<a href="/tags/ml/">ml</a>&nbsp;
+        
+          #<a href="/tags/review/">review</a>&nbsp;
+        
+      </span>
+    
+
+    
+
+    <div class="post-content">
+      
+
+<p>今天下午完成了Andrew Ng的机器学习课程第五周的课程，完成了自己实现一个基本神经网络的编程作业，不得不说神经网络的运算量真大啊，我的CPU温度都快上100了……</p>
+
+<p>第四周与第五周共两周的内容讲了神经网络的由来和表示方法以及实现方法。</p>
+
+<h2 id="为什么要使用神经网络">为什么要使用神经网络</h2>
+
+<p>与之前学过的逻辑回归相比，在逻辑回归的假设函数 \(h_\theta(x)\) 中：</p>
+
+<p>$$
+g(z) = \frac{1}{1+e^{-z}}
+$$</p>
+
+<p>$$
+z = \theta^Tx
+$$</p>
+
+<p>可以看到，\(z\)的形式是线性的，这意味着你只能拟合这样的数据：</p>
+
+<p><img src="http://ww1.sinaimg.cn/large/006tNc79ly1fezv6qgjh4j30ik0fw0uz.jpg" alt="" /></p>
+
+<p><strong>即：</strong>决策边界只用一次方程就可以表示</p>
+
+<p>或者是这样的数据：</p>
+
+<p><img src="http://ww3.sinaimg.cn/large/006tNc79ly1ff07vikxvbj30si0m6dhz.jpg" alt="" /></p>
+
+<p><strong>即：</strong>特征数量不多，可以通过添加高次项的方法形成不规则的决策边界。</p>
+
+<p>但是如果你需要识别一张图片中是否有车辆出现：</p>
+
+<p><img src="http://ww4.sinaimg.cn/large/006tKfTcly1ffgddiiuihj31bs0oi78s.jpg" alt="" /></p>
+
+<p>假设用作样本的图片只有 \(50\times50\) 像素大小，这样的话你可能输入的特征数量就是 \(50\times50=2500\) 个（只用灰度值，如果用RGB表示的话特征数量会变成 \(2500\times3=7500\) 个），这还只是<strong>全部是一次方项</strong>的情况，但如果需要的决策边界是形如这样的：</p>
+
+<p><img src="http://ww1.sinaimg.cn/large/006tKfTcly1ffgdhtx31oj30tg0l0abd.jpg" alt="" /></p>
+
+<p>你需要一个不规则的决策边界表示方法，这时你可能会引入高次项，即使只增加二次项：</p>
+
+<p>$$
+x_ix_j
+$$</p>
+
+<p>这样的话特征数量就会变成：</p>
+
+<p>$$
+\frac{(1+2500)\times2500}{2} \approx 3,000,000
+$$</p>
+
+<p>用这个数量级的特征去做逻辑回归，计算量是非常恐怖的。因此需要一种能够降低运算量的模型来避免这种问题的出现。</p>
+
+<p><strong>神经网络(Neural Network)</strong>受启发于人类大脑。我们知道，人类的大脑就是通过无数的神经元之间互相传递信息来工作的。<strong>神经元(Neuron)</strong>是这其中的信号传递单元，形如下图：</p>
+
+<p><img src="http://ww1.sinaimg.cn/large/006tKfTcly1ffgduhpdk7j31800qcq76.jpg" alt="" /></p>
+
+<p>可以看到，神经元可以接收与其相连接的神经元的信号，自身对其进行处理，然后将信号再发送给其他与自己相连的神经元。受此启发，我们得到了工作方式类似的神经元模型：</p>
+
+<p><img src="http://ww4.sinaimg.cn/large/006tKfTcly1ffge177ljfj30ue0jg410.jpg" alt="" /></p>
+
+<p>可以看到，橙色的节点接受左边三个节点的输入，并计算出我们需要的输出值 \(h_\theta(x)\)。其中 \(x_0\) 是所谓的<strong>偏置单元(bias unit)</strong>。我们把输入表示为：</p>
+
+<p>$$
+x = \begin{bmatrix}
+x_0 \\
+x_1 \\
+x_2 \\
+x_3
+\end{bmatrix} \qquad
+\theta = \begin{bmatrix}
+\theta_0 \\
+\theta_1 \\
+\theta_2 \\
+\theta_3
+\end{bmatrix}
+$$</p>
+
+<p>其中，\(x\) 代表左侧四个单元的值，用于输入到下一个单元中，而 \(\theta) 代表每个输入值进行输入时的<strong>权重(weight)</strong>，即上图中的线条，你可以简单地理解为每个输入值进行传递时的<strong>重要性/优先级/影响力</strong>；对于输出 \(h_\theta(x)\)，即神经元自身的计算方式，我们依然使用之前的激活函数(Sigmoid)。</p>
+
+<p>有了神经元的模型后，我们就可以以此为基础，对其进行复制和组合，就得到了我们现在使用的分层神经网络(三层)：</p>
+
+<p><img src="http://ww3.sinaimg.cn/large/006tKfTcly1ffgeqy8sd4j31f60teq9m.jpg" alt="" /></p>
+
+<p>左边的<strong>第一层</strong>依然是用于输入特征\(x\)的单元组合；中间的<strong>第二层</strong>叫做<strong>隐含层(hidden layer)</strong>，这一层接受上一层的输入，经过计算(激活函数)，并将计算结果传递给下一层；右边的<strong>第三层</strong>用于计算出最终结果 \(h_\theta(x)\)。从图上可以看出，前两层的偏执单元只有在当作输入进行下一层的计算时才会使用，从图上可以看出，\(x_0\) 与第二层并没有线(权值)相连，意味着当第一层在计算时，只会输出 \(a_1, a_2, a_3\)，而并没有 \(a_0\)。</p>
+
+<p>有了这样的神经网络模型，我们就可以通过这样的计算来获取假设函数 \(h_\theta(x)\) 的值：</p>
+
+<p>$$
+\begin{aligned}
+a^{(2)}_1 &amp;=&amp; g(\Theta^{(1)}_{10} x_0 + \Theta^{(1)}_{11} x_1 + \Theta^{(1)}_{12} x_2 + \Theta^{(1)}_{13} x_3) \\
+a^{(2)}_2 &amp;=&amp; g(\Theta^{(1)}_{20} x_0 + \Theta^{(1)}_{21} x_1 + \Theta^{(1)}_{22} x_2 + \Theta^{(1)}_{23} x_3) \\
+a^{(2)}_3 &amp;=&amp; g(\Theta^{(1)}_{30} x_0 + \Theta^{(1)}_{21} x_1 + \Theta^{(1)}_{32} x_2 + \Theta^{(1)}_{33} x_3) \\
+h_\Theta(x) &amp;=&amp; a^{(3)}_1 = g(\Theta^{(2)}_{10} a^{(2)}_0 + \Theta^{(2)}_{11} a^{(2)}_1 + \Theta^{(2)}_{12} a^{(2)}_2 + \Theta^{(2)}_{13} a^{(3)}_0)
+\end{aligned}
+$$</p>
+
+<p>其中：\(g(z)\) 就是我们的激活函数Sigmoid， \(a^{(l)}_i\) 为网络中第 \(l\) 层中第 \(i\) 个节点的<strong>激活值(Activation)</strong>，\(\Theta^{(l)}\) 为网络中第 \(l\) 层的节点值向第 \(l+1\) 层节点变换时的权值矩阵。如果在第 \(l\)层有 \(S_l\) 个节点，在第 \(l+1\) 层有 \(S_{l+1}\) 个节点，那么第 \(l\) 层的权值矩阵 \(\Theta\) 的大小为 \(S_{j+1} \times S_j + 1\)，即：行数代表 \(j+1\) 层的节点个数，列数代表 \(l\) 层的节点个数，列数<strong>+1</strong>的原因是在计算 \(l+1\) 层时，\(l\)层增加了一个偏置单元 \(x_0\)。</p>
+
+<p>我们进一步对上面的公式向量化：</p>
+
+<p>$$
+\begin{aligned}
+z^{(2)} &amp;= \Theta^{(1)} a^{(1)} &amp; (a^{(1)} = x) \\
+a^{(2)} &amp;= g(z^{(2)}) &amp; (a^{(2)}_{3 \times 1}) \\
+Add \ a^{(2)}_0 &amp;= 1 &amp; (a^{(2)}_{4 \times 1}) \\
+z^{(3)} &amp;= \Theta^{(2)} a^{(2)} \\
+h_\Theta(x) &amp;= a^{(3)} = g(z^{(3)})
+\end{aligned}
+$$</p>
+
+<p>需要注意的是，上面的例子只是神经网络中最简单的结构，只有一层<strong>隐含层</strong>，一个<strong>输出单元</strong>，而这些包括<strong>输入层的节点数量</strong>都可以根据问题的不同而变得更复杂，比如下面这个：</p>
+
+<p><img src="http://ww2.sinaimg.cn/large/006tKfTcgy1ffialq260ej30yq0audiq.jpg" alt="" /></p>
+
+<p>可以看到，这里面有2个隐含层，每层5个节点，输出层有4个节点。在这里，如果我们是在拟合一个多分类问题，那么输出层的每个节点就可以看作是一个目标分类，节点的值(Sigmoid)看作输入样例属于这个分类的概率，那么我们最终得到的假设函数就是这样的：</p>
+
+<p>$$
+h_\Theta(x) \approx \begin{bmatrix}
+1 \\
+0 \\
+0 \\
+0 \end{bmatrix}, \quad
+h_\Theta(x) \approx \begin{bmatrix}
+0 \\
+1 \\
+0 \\
+0 \end{bmatrix}, \quad
+h_\Theta(x) \approx \begin{bmatrix}
+0 \\
+0 \\
+1 \\
+0 \end{bmatrix}, \quad
+h_\Theta(x) \approx \begin{bmatrix}
+0 \\
+0 \\
+0 \\
+1 \end{bmatrix}, etc.
+$$</p>
+
+<p>其表示为一个列向量，为1的位置就是最终得到的所属分类。</p>
+
+<p>设样本集为：</p>
+
+<p>$$
+{(x^{(1)}, y^{(1)}), (x^{(1)}, y^{(1)}), \ldots, (x^{(m)}, y^{(m)})}
+$$</p>
+
+<p>其中，\(m\) 为样本数量。我们再设 \(L\) 为神经网络的总层数，\(S_l\) 为第 \(l\) 层包含的节点数量<strong>(不包括偏执单元)</strong>。对于输出层 \(y\)，如果只有一个节点，即<strong>只将样本分为两类</strong>，那么有 \(y=0 \parallel y=1\)；如果有多个节点，即<strong>最终要将样本分入多个类别中的一个</strong>，那么就有 \(y \in \mathbb{R}^K\) (\(K\) 为总分类数)，即上图中的 \(h_\Theta(x)\)。</p>
+
+<p>根据逻辑回归中的代价函数：</p>
+
+<p>$$
+J(\theta) = -\frac{1}{m} \left[\sum_{i=1}^{m} y^{(i)} \log h_\theta(x^{(i)}) + (1 - y^{(i)}) \log (1 - h_\theta(x^{(i)}))\right] + \frac{\lambda}{2m} \sum_{j=1}^{n} \theta^2_j
+$$</p>
+
+<p>类似地，神经网络的代价函数(正规化后)为：</p>
+
+<p>$$
+\begin{aligned}
+J(\Theta) = -&amp;\frac{1}{m} \left[ \sum_{i=1}^{m} \sum_{k=1}^{K} y_k^{(i)} \log (h_\Theta(x^{(i)}))_k + (1 - y_k^{(i)}) \log (1 - (h_\Theta(x^{(i)}))_k) \right] \\
++&amp; \frac{\lambda}{2m} \sum_{l=1}^{L-1} \sum_{i=1}^{S_l} \sum_{j=1}^{S_{l+1}} (\Theta_{ji}^{(l)})^2
+\end{aligned}
+$$</p>
+
+<p>其中，在前一部分(非正规化的代价函数)中，\(m\) 为样本数量，\(K\) 为输出层的节点数(即总共的类别数)；在后一部分(正规化项)中，\(i\) 为第 \(l\) 层的节点数量，\(j\) 为第 \(l+1\) 层的节点数量。<strong>注意：此处的正规化项中的 \(\Theta\) 不包含每层和偏置单元相连的权值，即 \(\Theta^{(l)}\) 矩阵中的第一列。</strong></p>
+
+<p>可以看出，两个代价函数的形式基本一致。<strong>不同的地方在于</strong>，由于神经网络的代价函数针对多个分类的情况一般化了，所以在公式中多一个求和的符号(即 \(\sum_{k=1}^{K}\))，意味着需要将最终得出的概率向量 \(y\) 的各分量进行求和。</p>
+
+<p>有了代价函数，为了利用梯度下降等方法对 \(\Theta\) 进行更新，我们还需要求得各个 \(\Theta\) 分量的偏导数，即：</p>
+
+<p>$$
+\frac{\partial}{\partial \ \Theta_{ij}^{(l)}} J(\Theta)
+$$</p>
+
+<p>要想计算偏导数，给定下面的神经网络：</p>
+
+<p><img src="http://7vztwe.com1.z0.glb.clouddn.com/20170512149457918939786.jpg?imageView2/0/format/jpg" alt="" /></p>
+
+<p>给定一条训练样本 \((x, y)\)，首先需要计算 \(h_\Theta(x)\) (即<strong>前向传播(Forward propagation)</strong>)：</p>
+
+<p>$$
+\begin{aligned}
+a^{(1)} &amp;= x \\
+z^{(2)} &amp;= \Theta^{(1)}a^{(1)} \\
+a^{(2)} &amp;= g(z^{(2)}) \quad (add \ a_0^{(2)}) \\
+z^{(3)} &amp;= \Theta^{(2)}a^{(2)} \\
+a^{(3)} &amp;= g(z^{(3)}) \quad (add \ a_0^{(3)}) \\
+z^{(4)} &amp;= \Theta^{(3)}a^{(3)} \\
+a^{(4)} &amp;= h_\Theta(x) = g(z^{(4)})
+\end{aligned}
+$$</p>
+
+<p>计算出 \(h_\Theta(x)\) 后，我们就可以使用<strong>反向传播算法(Back propagation)</strong>来计算偏导数了。在这里我们引入一个<strong>误差值(error)</strong>的概念，顾名思义，就是我们计算得出的结果与实际样本中给定的结果之间的误差。例如对于上面的网络结构中的输出层来说，误差值的计算方法为：</p>
+
+<p>$$
+\delta^{(4)} = a^{(4)} - y
+$$</p>
+
+<p>依此类推，向输入层的方向计算各层的误差值：</p>
+
+<p>$$
+\begin{aligned}
+\delta^{(3)} &amp;= (\Theta^{(3)})^T \delta^{(4)} \ .* \ g&rsquo;(z^{(3)}), \qquad g&rsquo;(z^{(3)}) = a^{(3)} \ .* \ (1 - a^{(3)}) \\
+\delta^{(2)} &amp;= (\Theta^{(2)})^T \delta^{(3)} \ .* \ g&rsquo;(z^{(2)})
+\end{aligned}
+$$</p>
+
+<p>对于每个样例 \((x, y)\)，反向传播算法的流程如下：</p>
+
+<ul>
+<li>设 \(\Delta^{(l)}_{ij} = 0\)</li>
+<li>令 \(a^{(1)} = x\)</li>
+<li>利用前向传播为后面的每一层 \(l = 2, 3, \ldots, L\) 计算 \(a^{(l)}\)</li>
+<li>计算输出层的误差值 \(\delta^{(L)} = a^{(L)} - y\)</li>
+<li>计算前面<strong>除了输入层</strong>外每一层的误差值 \(\delta^{(l)} \ (l = 2, 3, \ldots, L-1)\)</li>
+<li>\(\Delta^{(l)}_{ij} = \Delta^{(l)}_{ij} + a^{(l)}_j \delta^{(l+1)}_i\)</li>
+</ul>
+
+<p>此时的 \(\frac{1}{m} \Delta^{(l)}_{ij}\) 就是偏导数 \(\frac{\partial}{\partial \ \Theta_{ij}^{(l)}} J(\Theta)\)(未正规化)。</p>
+
+<p>对其进行正规化后的形式为：</p>
+
+<p>$$
+\begin{aligned}
+\left\{
+\begin{array}{l}
+D^{(l)}_{ij} &amp;=&amp; \frac{1}{m} \Delta^{(l)}_{ij} + \lambda \Theta^{(l)}_{ij} \quad &amp; if \ j \neq 0&amp; \\
+D^{(l)}_{ij} &amp;=&amp; \frac{1}{m} \Delta^{(l)}_{ij} &amp; if \ j = 0&amp;
+\end{array}
+\right.
+\end{aligned}
+$$</p>
+
+<p>最终偏导数为：</p>
+
+<p>$$
+\frac{\partial}{\partial \ \Theta_{ij}^{(l)}} J(\Theta) = D^{(l)}_{ij}
+$$</p>
+
+<p>至此，神经网络的训练及使用方法就讲完了。在用 Matlab 实现的过程中，由于其自带的迭代函数<code>fminunc(@costFun, initialTheta, options)</code>中的<code>initialTheta</code>，以及需要的代价函数<code>function [jval, gradientVec] = costFun(thetaVec)</code>中的<code>gradientVec</code>被要求是向量(Vector)形式，但是在神经网络计算的 \(\Theta\)、\(D^{(l)}\)都是矩阵，因此需要将其转换为一维形式，在需要的时候再将其转换回矩阵：</p>
+
+<pre><code>% 转换为一维向量
+thetaVec = [Theta1(:); Theta2(:); Theta3(:)];
+DVec = [D1(:); D2(:); D3(:)];
+
+% 转换回矩阵形式
+Theta1 = reshape(thetaVec(1:x1*y1), row1, col1);
+Theta1 = reshape(thetaVec(x1*y1+1:x2*y2), row2, col2);
+Theta1 = reshape(thetaVec(x2*y2+1:x3*y3), row3, col3);
+</code></pre>
+
+<p>为了保证你实现的反向传播算法(即求偏导)是对的，我们可以将实现的算法计算出的偏导数同用从定义实现的偏导数结果进行比较，如果两者非常接近，那么说明你的实现就是正确的。导数的定义公式为：</p>
+
+<p>$$
+\frac{\partial}{\partial \theta} J(\theta) = \frac{J(\theta+\varepsilon) - J(\theta-\varepsilon)}{2\varepsilon}
+$$</p>
+
+<p>对于 \(\theta = [\theta_1, \theta_2, \ldots, \theta_n]\)，你需要计算每个 \(\theta_n\)的偏导数：</p>
+
+<p>$$
+\begin{aligned}
+\frac{\partial}{\partial \theta_1} J(\theta) &amp;=&amp; \frac{J(\theta_1+\varepsilon, \theta_2, \ldots, \theta_n) - J(\theta_1-\varepsilon, \theta_2, \ldots, \theta_n)}{2\varepsilon} \\
+\frac{\partial}{\partial \theta_2} J(\theta) &amp;=&amp; \frac{J(\theta_1, \theta_2+\varepsilon, \ldots, \theta_n) - J(\theta_1, \theta_2-\varepsilon, \ldots, \theta_n)}{2\varepsilon} \\
+\vdots \\
+\frac{\partial}{\partial \theta_n} J(\theta) &amp;=&amp; \frac{J(\theta_1, \theta_2, \ldots, \theta_n+\varepsilon) - J(\theta_1, \theta_2, \ldots, \theta_n-\varepsilon)}{2\varepsilon}
+\end{aligned}
+$$</p>
+
+<p>之后将其与由反向传播计算出的偏导数相比较，两者应非常接近。这个方法叫做<strong>梯度检测(Gradient checking)</strong></p>
+
+<p>在神经网络中，我们要优化的参数 \(\Theta^{(l)}\) 是不能全部初始化为0的。原因在于如果初始权值全部为0，则隐含层的所有节点的激活值 \(a^{(l)}_i\) 将全部相等，在进行反向传播时将同步更新，不会出现差异，此时隐含层的节点数量虽然有多个，但是并没有起到相应的作用，相当于浪费了。因此，在初始化权值矩阵时，需要对每个单一的权值 \(\Theta^{(l)}_{ij}\)进行<strong>随机赋值(Random initialization)</strong>，使得每个权值都不会相同，避免有同一层多个节点同步更新的问题(Symmetry breaking)。</p>
+
+<p>具体的方法，是将每个 \(\Theta^{(l)}_{ij}\) 随机赋值到 \([-\varepsilon, \varepsilon]\) 区间内，在Matlab中实现如下：</p>
+
+<pre><code>Theta1 = rand(row1, col1)*(2*INIT_EPSILON) - INIT_EPSILON
+Theta2 = rand(row2, col2)*(2*INIT_EPSILON) - INIT_EPSILON
+</code></pre>
+
+<p>总结一下，实现一个神经网络的步骤是：</p>
+
+<ol>
+<li>随机初始化权值矩阵 \(\Theta\)</li>
+<li>实现前向传播来计算假设函数 \(h_\Theta(x)\)</li>
+<li>实现函数计算代价函数 \(J(\Theta)\)</li>
+<li>实现反向传播来计算偏导数 \(\frac{\partial}{\partial \Theta^{(l)}_{ij}} J(\Theta)\)</li>
+<li>使用梯度检测方法验证自己实现的反向传播算法是否正确</li>
+<li>使用梯度下降等算法最小化代价函数 \(J(\Theta)\) 的值(即训练 \(\Theta\))</li>
+</ol>
+
+    </div>
+    
+      <div class="pagination">
+        <div class="pagination__title">
+          <span class="pagination__title-h">Read other posts</span>
+          <hr />
+        </div>
+        <div class="pagination__buttons">
+          
+            <span class="button previous">
+              <a href="/post/music-theory-pentatonic-scale/">
+                <span class="button__icon">←</span>
+                <span class="button__text">乐理基础学习笔记——五声调式</span>
+              </a>
+            </span>
+          
+          
+            <span class="button next">
+              <a href="/post/ml-logistic-regression-review/">
+                <span class="button__text">机器学习-逻辑回归学习总结</span>
+                <span class="button__icon">→</span>
+              </a>
+            </span>
+          
+        </div>
+      </div>
+    
+
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "blog-disqus-com-1" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css" integrity="sha384-dbVIfZGuN1Yq7/1Ocstc1lUEm+AT+/rCkibIcC/OmWo5f0EA48Vf8CytHzGrSwbQ" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js" integrity="sha384-2BKqo+exmr9su6dir+qCw08N2ZKRucY4PrGQPPWU1A7FtlCGjmEGFqXCv5nyM5Ij" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+  </div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2019 Powered by <a href="http://gohugo.io">Hugo</a></span>
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+    
+  </div>
+</footer>
+
+<script src="/assets/main.js"></script>
+<script src="/assets/prism.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>快速排序算法理解 :: Wonderland — Personal Blog</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="从本科到现在一直没有搞懂快排的原理，直到今天学习 Haskell 看到一张图，很直观地解释了快速排序的原理，这里我将以自己的理解向各位解释快排的工作原理。
+快速排序的理念非常简单：
+ 从列表中取出一个元素，在剩下的元素中，选出所有比它小的元素放在它的左边，其余的放在右边。
+ 此时我们会遇到一个显而易见的问题：分别在被“选中”的元素左边和右边的两个列表，各自内部依然是乱序（未经过排序）的，因为这一步可以理解为对原列表的遍历，因此元素的顺序并没有变。
+在这里，才是快速排序算法的真正体现——
+ 对各个列表，重复第一步的操作，直到选定元素两边的列表只剩至多一个元素。
+ 可以看出，这是一个递归操作。以数组 [5, 1, 9, 4, 6, 7, 3] 和排序函数 quicksort 为例：
+quicksort 开始 为了简化算法，我们直接在开始处理数组的时候，直接选择第一个元素作为被选定元素。经过筛选后，我们的结果此时变成了这样：
+quicksort([1, 4, 3]) &#43;&#43; [5] &#43;&#43; quicksort([9, 6, 7])  中间的[5]是我们选定的元素，左边是比它小的元素数组[1, 4, 3]，右边是比它大的[9, 6, 7]。可以看出，元素两侧的数组依然是乱序状态，仍然需要对其进行排序，因此上面的伪代码中写作 quicksort(Array)，即对两个数组继续应用排序操作。
+这里以左边的数组为例，看看递归是如何工作的：
+quicksort 第一层递归 对新的数组 [1, 4, 3] 重复上面的操作，选定第一个元素 1 作为被选定元素，并筛选其两边的数组，结果变成这样：
+quicksort([]) &#43;&#43; [1] &#43;&#43; quicksort([4, 3])  左边已经成为空数组，意味着我们选定的 1 就是整个数组最小的元素了，因此没有比它更小的元素存在于它的左边位置了。这样就只剩右侧比它大的 [4, 3] 了，我们依然需要对其应用排序操作 quicksort：
+quicksort 第二层递归 对新的数组 [4, 3] 重复上面的操作，变成下面这样："/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="/post/quicksort-review/" />
+
+
+<link rel="stylesheet" href="/assets/style.css">
+
+
+
+<link rel="stylesheet" href="/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144-precomposed.png">
+
+<link rel="shortcut icon" href="/img/favicon/orange.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="快速排序算法理解 :: Wonderland — Personal Blog" />
+<meta name="twitter:description" content="从本科到现在一直没有搞懂快排的原理，直到今天学习 Haskell 看到一张图，很直观地解释了快速排序的原理，这里我将以自己的理解向各位解释快排的工作原理。
+快速排序的理念非常简单：
+ 从列表中取出一个元素，在剩下的元素中，选出所有比它小的元素放在它的左边，其余的放在右边。
+ 此时我们会遇到一个显而易见的问题：分别在被“选中”的元素左边和右边的两个列表，各自内部依然是乱序（未经过排序）的，因为这一步可以理解为对原列表的遍历，因此元素的顺序并没有变。
+在这里，才是快速排序算法的真正体现——
+ 对各个列表，重复第一步的操作，直到选定元素两边的列表只剩至多一个元素。
+ 可以看出，这是一个递归操作。以数组 [5, 1, 9, 4, 6, 7, 3] 和排序函数 quicksort 为例：
+quicksort 开始 为了简化算法，我们直接在开始处理数组的时候，直接选择第一个元素作为被选定元素。经过筛选后，我们的结果此时变成了这样：
+quicksort([1, 4, 3]) &#43;&#43; [5] &#43;&#43; quicksort([9, 6, 7])  中间的[5]是我们选定的元素，左边是比它小的元素数组[1, 4, 3]，右边是比它大的[9, 6, 7]。可以看出，元素两侧的数组依然是乱序状态，仍然需要对其进行排序，因此上面的伪代码中写作 quicksort(Array)，即对两个数组继续应用排序操作。
+这里以左边的数组为例，看看递归是如何工作的：
+quicksort 第一层递归 对新的数组 [1, 4, 3] 重复上面的操作，选定第一个元素 1 作为被选定元素，并筛选其两边的数组，结果变成这样：
+quicksort([]) &#43;&#43; [1] &#43;&#43; quicksort([4, 3])  左边已经成为空数组，意味着我们选定的 1 就是整个数组最小的元素了，因此没有比它更小的元素存在于它的左边位置了。这样就只剩右侧比它大的 [4, 3] 了，我们依然需要对其应用排序操作 quicksort：
+quicksort 第二层递归 对新的数组 [4, 3] 重复上面的操作，变成下面这样：" />
+<meta name="twitter:site" content="/" />
+<meta name="twitter:creator" content="dyzdyz010" />
+<meta name="twitter:image" content="">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="快速排序算法理解 :: Wonderland — Personal Blog">
+<meta property="og:description" content="从本科到现在一直没有搞懂快排的原理，直到今天学习 Haskell 看到一张图，很直观地解释了快速排序的原理，这里我将以自己的理解向各位解释快排的工作原理。
+快速排序的理念非常简单：
+ 从列表中取出一个元素，在剩下的元素中，选出所有比它小的元素放在它的左边，其余的放在右边。
+ 此时我们会遇到一个显而易见的问题：分别在被“选中”的元素左边和右边的两个列表，各自内部依然是乱序（未经过排序）的，因为这一步可以理解为对原列表的遍历，因此元素的顺序并没有变。
+在这里，才是快速排序算法的真正体现——
+ 对各个列表，重复第一步的操作，直到选定元素两边的列表只剩至多一个元素。
+ 可以看出，这是一个递归操作。以数组 [5, 1, 9, 4, 6, 7, 3] 和排序函数 quicksort 为例：
+quicksort 开始 为了简化算法，我们直接在开始处理数组的时候，直接选择第一个元素作为被选定元素。经过筛选后，我们的结果此时变成了这样：
+quicksort([1, 4, 3]) &#43;&#43; [5] &#43;&#43; quicksort([9, 6, 7])  中间的[5]是我们选定的元素，左边是比它小的元素数组[1, 4, 3]，右边是比它大的[9, 6, 7]。可以看出，元素两侧的数组依然是乱序状态，仍然需要对其进行排序，因此上面的伪代码中写作 quicksort(Array)，即对两个数组继续应用排序操作。
+这里以左边的数组为例，看看递归是如何工作的：
+quicksort 第一层递归 对新的数组 [1, 4, 3] 重复上面的操作，选定第一个元素 1 作为被选定元素，并筛选其两边的数组，结果变成这样：
+quicksort([]) &#43;&#43; [1] &#43;&#43; quicksort([4, 3])  左边已经成为空数组，意味着我们选定的 1 就是整个数组最小的元素了，因此没有比它更小的元素存在于它的左边位置了。这样就只剩右侧比它大的 [4, 3] 了，我们依然需要对其应用排序操作 quicksort：
+quicksort 第二层递归 对新的数组 [4, 3] 重复上面的操作，变成下面这样：" />
+<meta property="og:url" content="/post/quicksort-review/" />
+<meta property="og:site_name" content="快速排序算法理解" />
+<meta property="og:image" content="">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2018-05-18 10:15:21 &#43;0800 &#43;0800" />
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="">
+
+
+<div class="container center">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    Wonderland
+  </div>
+</a>
+
+    </div>
+    <div class="menu-trigger">menu</div>
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="https://github.com/dyzdyz010">Github</a></li>
+        
+      
+        
+          <li><a href="https://dyzdyz010.sarahah.com/">Leave me a message!</a></li>
+        
+      
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="https://github.com/dyzdyz010">Github</a></li>
+      
+    
+      
+        <li><a href="https://dyzdyz010.sarahah.com/">Leave me a message!</a></li>
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+  <div class="post">
+    <h1 class="post-title"><a href="/post/quicksort-review/">快速排序算法理解</a></h1>
+    <div class="post-meta">
+      <span class="post-date">
+        2018-05-18
+      </span>
+      <span class="post-author">:: dyzdyz010</span>
+    </div>
+
+    
+      <span class="post-tags">
+        
+          #<a href="/tags/code/">code</a>&nbsp;
+        
+          #<a href="/tags/algorithm/">algorithm</a>&nbsp;
+        
+      </span>
+    
+
+    
+
+    <div class="post-content">
+      
+
+<p>从本科到现在一直没有搞懂快排的原理，直到今天学习 Haskell 看到一张图，很直观地解释了快速排序的原理，这里我将以自己的理解向各位解释快排的工作原理。</p>
+
+<p>快速排序的理念非常简单：</p>
+
+<blockquote>
+<p>从列表中取出一个元素，在剩下的元素中，选出所有比它小的元素放在它的左边，其余的放在右边。</p>
+</blockquote>
+
+<p>此时我们会遇到一个显而易见的问题：分别在被“选中”的元素左边和右边的两个列表，各自内部依然是乱序（未经过排序）的，因为这一步可以理解为对原列表的遍历，因此元素的顺序并没有变。</p>
+
+<p>在这里，才是快速排序算法的真正体现——</p>
+
+<blockquote>
+<p>对各个列表，重复第一步的操作，直到选定元素两边的列表只剩至多一个元素。</p>
+</blockquote>
+
+<p>可以看出，这是一个递归操作。以数组 <code>[5, 1, 9, 4, 6, 7, 3]</code> 和排序函数 <code>quicksort</code> 为例：</p>
+
+<h3 id="quicksort-开始">quicksort 开始</h3>
+
+<p>为了简化算法，我们直接在开始处理数组的时候，直接选择第一个元素作为被选定元素。经过筛选后，我们的结果此时变成了这样：</p>
+
+<pre><code class="language-haskell">quicksort([1, 4, 3]) ++ [5] ++ quicksort([9, 6, 7])
+</code></pre>
+
+<p>中间的<code>[5]</code>是我们选定的元素，左边是比它小的元素数组<code>[1, 4, 3]</code>，右边是比它大的<code>[9, 6, 7]</code>。可以看出，元素两侧的数组依然是乱序状态，仍然需要对其进行排序，因此上面的伪代码中写作 <code>quicksort(Array)</code>，即对两个数组继续应用排序操作。</p>
+
+<p>这里以左边的数组为例，看看递归是如何工作的：</p>
+
+<h3 id="quicksort-第一层递归">quicksort 第一层递归</h3>
+
+<p>对新的数组 <code>[1, 4, 3]</code> 重复上面的操作，选定第一个元素 <code>1</code> 作为被选定元素，并筛选其两边的数组，结果变成这样：</p>
+
+<pre><code class="language-haskell">quicksort([]) ++ [1] ++ quicksort([4, 3])
+</code></pre>
+
+<p>左边已经成为空数组，意味着我们选定的 <code>1</code> 就是整个数组最小的元素了，因此没有比它更小的元素存在于它的左边位置了。这样就只剩右侧比它大的 <code>[4, 3]</code> 了，我们依然需要对其应用排序操作 quicksort：</p>
+
+<h3 id="quicksort-第二层递归">quicksort 第二层递归</h3>
+
+<p>对新的数组 <code>[4, 3]</code> 重复上面的操作，变成下面这样：</p>
+
+<pre><code class="language-haskell">quicksort([3]) ++ [4] + quicksort([])
+</code></pre>
+
+<p>至此，可以说递归的深度就到此为止了，左侧的 <code>quicksort([3])</code> 只剩一个元素不需要继续排序，将直接返回 3，右侧将直接返回空，此时上面的式子就完成了排序：</p>
+
+<pre><code class="language-haskell">quicksort([3]) ++ [4] ++ quicksort([])
+= [3, 4]
+</code></pre>
+
+<h3 id="quicksort-第一层递归-1">quicksort 第一层递归</h3>
+
+<p>将这个结果继续返回：</p>
+
+<pre><code class="language-haskell">quicksort([]) ++ [1] ++ quicksort([4, 3])
+= [1] ++ [3, 4]
+= [1, 3, 4]
+</code></pre>
+
+<h3 id="quicksort-顶层">quicksort 顶层</h3>
+
+<p>继续返回：</p>
+
+<pre><code class="language-haskell">quicksort([1, 4, 3]) ++ [5] ++ quicksort([9, 6, 7])
+= [1, 3, 4] ++ [5] ++ quicksort([9, 6, 7])
+= [1, 3, 4, 5] ++ quicksort([9, 6, 7])
+</code></pre>
+
+<p>对最开始时候的式子的右边的 <code>quicksort([9, 6, 7])</code> 进行相同的操作，最终将得到排好序的数组：<code>[6, 7, 9]</code>。带入上式：</p>
+
+<pre><code class="language-haskell">[1, 3, 4, 5] ++ quicksort([9, 6, 7])
+= [1, 3, 4, 5, 6, 7, 9]
+</code></pre>
+
+<p>大功告成！</p>
+
+<p>到这里，整个快速排序算法过程就结束了。最后放上帮助我理解算法的图示和我写的 Haskell 实现，希望大家通过这篇文章，都能够轻松掌握快速排序😃</p>
+
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1frf9rccic9j30m7098ta9.jpg" alt="" /></p>
+
+<pre><code class="language-haskell">quicksort :: (Ord a) =&gt; [a] -&gt; [a]
+quicksort [] = []
+quicksort (x:xs) =
+  lessthan ++ [x] ++ largerthan
+  where lessthan = quicksort [a | a &lt;- xs, a &lt; x]
+        largerthan = quicksort [a | a &lt;- xs, a &gt;= x]
+</code></pre>
+
+    </div>
+    
+      <div class="pagination">
+        <div class="pagination__title">
+          <span class="pagination__title-h">Read other posts</span>
+          <hr />
+        </div>
+        <div class="pagination__buttons">
+          
+            <span class="button previous">
+              <a href="/post/wwdc-2018-keynot-review/">
+                <span class="button__icon">←</span>
+                <span class="button__text">WWDC 2018 Keynot 个人总结</span>
+              </a>
+            </span>
+          
+          
+            <span class="button next">
+              <a href="/post/enable-latex-export-logging-in-org-mode/">
+                <span class="button__text">Enable latex-export-logging in org-mode</span>
+                <span class="button__icon">→</span>
+              </a>
+            </span>
+          
+        </div>
+      </div>
+    
+
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "blog-disqus-com-1" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css" integrity="sha384-dbVIfZGuN1Yq7/1Ocstc1lUEm+AT+/rCkibIcC/OmWo5f0EA48Vf8CytHzGrSwbQ" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js" integrity="sha384-2BKqo+exmr9su6dir+qCw08N2ZKRucY4PrGQPPWU1A7FtlCGjmEGFqXCv5nyM5Ij" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+  </div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2019 Powered by <a href="http://gohugo.io">Hugo</a></span>
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+    
+  </div>
+</footer>
+
+<script src="/assets/main.js"></script>
+<script src="/assets/prism.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>
