@@ -6,8 +6,6 @@ tags:
 author: dyzdyz010
 ---
 
-# About
-
 ## whoami
 
 dyzdyz010, 不是程序员的程序员。计划改名为 `Etern1ty`。

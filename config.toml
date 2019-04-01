@@ -24,6 +24,11 @@ disqusShortname = "blog-disqus-com-1"
     name = "Leave me a message!"
     url = "https://dyzdyz010.sarahah.com/"
 
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
 [params]
   subtitle = "Personal Blog"
   readMore = "Read more"
