@@ -10,6 +10,10 @@ paginate = 5
 
 disqusShortname = "blog-disqus-com-1"
 
+[outputs]
+  home = ["HTML", "AMP", "RSS"]
+  page = ["HTML", "AMP"]
+
 [menu]
   [[menu.main]]
     identifier = "about"
