@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux on Wonderland</title>
-    <link>/tags/linux/</link>
+    <link>https://duyizhuo.com/tags/linux/</link>
     <description>Recent content in Linux on Wonderland</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 05 May 2018 09:52:42 +0800</lastBuildDate>
     
-	<atom:link href="/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://duyizhuo.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>在 Ubuntu 18.04 LTS 上安装并运行 KBEngine</title>
-      <link>/post/install-kbengine-on-ubuntu-18-04-lts/</link>
+      <link>https://duyizhuo.com/post/install-kbengine-on-ubuntu-18-04-lts/</link>
       <pubDate>Sat, 05 May 2018 09:52:42 +0800</pubDate>
       
-      <guid>/post/install-kbengine-on-ubuntu-18-04-lts/</guid>
+      <guid>https://duyizhuo.com/post/install-kbengine-on-ubuntu-18-04-lts/</guid>
       <description>本文用到的组件和系统版本：
  OS: Ubuntu 18.04 LTS MySQL: 5.7.22 gcc: 7.3.0 g++: 7.3.0 Python: 3.6.5  首先安装各种依赖：
 sudo apt-get update sudo apt-get install libssl-dev mysql-server libmysqld-dev mysql-client libmysqlclient-dev gcc g++ python3  编译引擎 下面从官方仓库下载引擎源码，本人下载的是当时最新版本1.1.8：
@@ -27,10 +27,10 @@ cd kbengine-1.1.8/kbe/src chmod -R 755 . make  我在编译过程中出现了以
     
     <item>
       <title>Set Up Flarum From Scratch</title>
-      <link>/post/set-up-flarum-from-scratch/</link>
+      <link>https://duyizhuo.com/post/set-up-flarum-from-scratch/</link>
       <pubDate>Sat, 06 Jan 2018 22:37:18 +0800</pubDate>
       
-      <guid>/post/set-up-flarum-from-scratch/</guid>
+      <guid>https://duyizhuo.com/post/set-up-flarum-from-scratch/</guid>
       <description>Befor you continue
 1. Get a VPS from Linode/Vultr/whatever 2. Pick a linux distribution and make it running(I use CentOS 7). 3. Install Apache/MySQL/PHP 7.1 Get yourself a non-root sudo user adduser USERNAME passwd USERNAME usermod -aG wheel USERNAME su USERNAME  Install and configure Apache Check this out
 First install it.
@@ -39,10 +39,10 @@ sudo yum update sudo yum -y install httpd sudo systemctl enable httpd.service  T
     
     <item>
       <title>Migrating Ghost to 1.0 from 0.11.x on CentOS 7</title>
-      <link>/post/migrating-ghost-to-1-0-on-centos7/</link>
+      <link>https://duyizhuo.com/post/migrating-ghost-to-1-0-on-centos7/</link>
       <pubDate>Sat, 29 Jul 2017 17:31:01 +0800</pubDate>
       
-      <guid>/post/migrating-ghost-to-1-0-on-centos7/</guid>
+      <guid>https://duyizhuo.com/post/migrating-ghost-to-1-0-on-centos7/</guid>
       <description>Ghost has released 1.0, with breaking changes so there&amp;rsquo;s no smooth upgrading method but to take a fresh install. Here&amp;rsquo;s my migration of this blog to Ghost 1.0.
 There&amp;rsquo;s already an official tutorial to help you walk this through, but since it only supports Ubuntu officially, so I have to explore my own way on my CentOS 7 server. It turns out that there&amp;rsquo;s not much modifications compared to Ubuntu version, so I&amp;rsquo;m just writing this down as a record of my migration.</description>
     </item>

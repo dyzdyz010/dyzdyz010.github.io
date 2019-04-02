@@ -2,264 +2,264 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Wonderland</title>
-    <link>/tags/</link>
+    <link>https://duyizhuo.com/tags/</link>
     <description>Recent content in Tags on Wonderland</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 05 Aug 2017 11:52:53 +0800</lastBuildDate>
     
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://duyizhuo.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>About</title>
-      <link>/tags/about/</link>
+      <link>https://duyizhuo.com/tags/about/</link>
       <pubDate>Sat, 05 Aug 2017 11:52:53 +0800</pubDate>
       
-      <guid>/tags/about/</guid>
+      <guid>https://duyizhuo.com/tags/about/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Acg</title>
-      <link>/tags/acg/</link>
+      <link>https://duyizhuo.com/tags/acg/</link>
       <pubDate>Mon, 31 Jul 2017 16:09:35 +0800</pubDate>
       
-      <guid>/tags/acg/</guid>
+      <guid>https://duyizhuo.com/tags/acg/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Algorithm</title>
-      <link>/tags/algorithm/</link>
+      <link>https://duyizhuo.com/tags/algorithm/</link>
       <pubDate>Fri, 18 May 2018 10:15:21 +0800</pubDate>
       
-      <guid>/tags/algorithm/</guid>
+      <guid>https://duyizhuo.com/tags/algorithm/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Apple</title>
-      <link>/tags/apple/</link>
+      <link>https://duyizhuo.com/tags/apple/</link>
       <pubDate>Wed, 06 Jun 2018 15:44:01 +0800</pubDate>
       
-      <guid>/tags/apple/</guid>
+      <guid>https://duyizhuo.com/tags/apple/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Centos</title>
-      <link>/tags/centos/</link>
+      <link>https://duyizhuo.com/tags/centos/</link>
       <pubDate>Sat, 29 Jul 2017 17:31:01 +0800</pubDate>
       
-      <guid>/tags/centos/</guid>
+      <guid>https://duyizhuo.com/tags/centos/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Code</title>
-      <link>/tags/code/</link>
+      <link>https://duyizhuo.com/tags/code/</link>
       <pubDate>Fri, 18 May 2018 10:15:21 +0800</pubDate>
       
-      <guid>/tags/code/</guid>
+      <guid>https://duyizhuo.com/tags/code/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Emacs</title>
-      <link>/tags/emacs/</link>
+      <link>https://duyizhuo.com/tags/emacs/</link>
       <pubDate>Fri, 11 May 2018 07:50:12 +0800</pubDate>
       
-      <guid>/tags/emacs/</guid>
+      <guid>https://duyizhuo.com/tags/emacs/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Flarum</title>
-      <link>/tags/flarum/</link>
+      <link>https://duyizhuo.com/tags/flarum/</link>
       <pubDate>Sat, 06 Jan 2018 22:37:18 +0800</pubDate>
       
-      <guid>/tags/flarum/</guid>
+      <guid>https://duyizhuo.com/tags/flarum/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Game</title>
-      <link>/tags/game/</link>
+      <link>https://duyizhuo.com/tags/game/</link>
       <pubDate>Sun, 18 Nov 2018 09:09:19 +0800</pubDate>
       
-      <guid>/tags/game/</guid>
+      <guid>https://duyizhuo.com/tags/game/</guid>
       <description></description>
     </item>
     
     <item>
       <title>General</title>
-      <link>/tags/general/</link>
+      <link>https://duyizhuo.com/tags/general/</link>
       <pubDate>Sun, 18 Nov 2018 09:09:19 +0800</pubDate>
       
-      <guid>/tags/general/</guid>
+      <guid>https://duyizhuo.com/tags/general/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Gfw</title>
-      <link>/tags/gfw/</link>
+      <link>https://duyizhuo.com/tags/gfw/</link>
       <pubDate>Sun, 23 Apr 2017 22:23:28 +0800</pubDate>
       
-      <guid>/tags/gfw/</guid>
+      <guid>https://duyizhuo.com/tags/gfw/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ghost</title>
-      <link>/tags/ghost/</link>
+      <link>https://duyizhuo.com/tags/ghost/</link>
       <pubDate>Tue, 01 Aug 2017 20:48:43 +0800</pubDate>
       
-      <guid>/tags/ghost/</guid>
+      <guid>https://duyizhuo.com/tags/ghost/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Latex</title>
-      <link>/tags/latex/</link>
+      <link>https://duyizhuo.com/tags/latex/</link>
       <pubDate>Fri, 11 May 2018 07:50:12 +0800</pubDate>
       
-      <guid>/tags/latex/</guid>
+      <guid>https://duyizhuo.com/tags/latex/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Linux</title>
-      <link>/tags/linux/</link>
+      <link>https://duyizhuo.com/tags/linux/</link>
       <pubDate>Sat, 05 May 2018 09:52:42 +0800</pubDate>
       
-      <guid>/tags/linux/</guid>
+      <guid>https://duyizhuo.com/tags/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ml</title>
-      <link>/tags/ml/</link>
+      <link>https://duyizhuo.com/tags/ml/</link>
       <pubDate>Wed, 19 Jul 2017 21:13:59 +0800</pubDate>
       
-      <guid>/tags/ml/</guid>
+      <guid>https://duyizhuo.com/tags/ml/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Music</title>
-      <link>/tags/music/</link>
+      <link>https://duyizhuo.com/tags/music/</link>
       <pubDate>Tue, 01 Aug 2017 11:34:50 +0800</pubDate>
       
-      <guid>/tags/music/</guid>
+      <guid>https://duyizhuo.com/tags/music/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Nonsense</title>
-      <link>/tags/nonsense/</link>
+      <link>https://duyizhuo.com/tags/nonsense/</link>
       <pubDate>Fri, 27 Oct 2017 12:47:39 +0800</pubDate>
       
-      <guid>/tags/nonsense/</guid>
+      <guid>https://duyizhuo.com/tags/nonsense/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Python</title>
-      <link>/tags/python/</link>
+      <link>https://duyizhuo.com/tags/python/</link>
       <pubDate>Wed, 09 May 2018 08:09:33 +0800</pubDate>
       
-      <guid>/tags/python/</guid>
+      <guid>https://duyizhuo.com/tags/python/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Resource</title>
-      <link>/tags/resource/</link>
+      <link>https://duyizhuo.com/tags/resource/</link>
       <pubDate>Sun, 23 Apr 2017 22:23:28 +0800</pubDate>
       
-      <guid>/tags/resource/</guid>
+      <guid>https://duyizhuo.com/tags/resource/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Review</title>
-      <link>/tags/review/</link>
+      <link>https://duyizhuo.com/tags/review/</link>
       <pubDate>Wed, 19 Jul 2017 21:13:59 +0800</pubDate>
       
-      <guid>/tags/review/</guid>
+      <guid>https://duyizhuo.com/tags/review/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Share</title>
-      <link>/tags/share/</link>
+      <link>https://duyizhuo.com/tags/share/</link>
       <pubDate>Tue, 01 Aug 2017 11:34:50 +0800</pubDate>
       
-      <guid>/tags/share/</guid>
+      <guid>https://duyizhuo.com/tags/share/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ss</title>
-      <link>/tags/ss/</link>
+      <link>https://duyizhuo.com/tags/ss/</link>
       <pubDate>Sun, 23 Apr 2017 22:23:28 +0800</pubDate>
       
-      <guid>/tags/ss/</guid>
+      <guid>https://duyizhuo.com/tags/ss/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Tensorflow</title>
-      <link>/tags/tensorflow/</link>
+      <link>https://duyizhuo.com/tags/tensorflow/</link>
       <pubDate>Wed, 28 Jun 2017 07:49:11 +0800</pubDate>
       
-      <guid>/tags/tensorflow/</guid>
+      <guid>https://duyizhuo.com/tags/tensorflow/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Theme</title>
-      <link>/tags/theme/</link>
+      <link>https://duyizhuo.com/tags/theme/</link>
       <pubDate>Tue, 01 Aug 2017 20:48:43 +0800</pubDate>
       
-      <guid>/tags/theme/</guid>
+      <guid>https://duyizhuo.com/tags/theme/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Theroy</title>
-      <link>/tags/theroy/</link>
+      <link>https://duyizhuo.com/tags/theroy/</link>
       <pubDate>Sun, 11 Jun 2017 19:31:22 +0800</pubDate>
       
-      <guid>/tags/theroy/</guid>
+      <guid>https://duyizhuo.com/tags/theroy/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Tutorial</title>
-      <link>/tags/tutorial/</link>
+      <link>https://duyizhuo.com/tags/tutorial/</link>
       <pubDate>Thu, 28 Mar 2019 22:04:19 +0800</pubDate>
       
-      <guid>/tags/tutorial/</guid>
+      <guid>https://duyizhuo.com/tags/tutorial/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Web</title>
-      <link>/tags/web/</link>
+      <link>https://duyizhuo.com/tags/web/</link>
       <pubDate>Thu, 28 Mar 2019 22:04:19 +0800</pubDate>
       
-      <guid>/tags/web/</guid>
+      <guid>https://duyizhuo.com/tags/web/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Wwdc</title>
-      <link>/tags/wwdc/</link>
+      <link>https://duyizhuo.com/tags/wwdc/</link>
       <pubDate>Wed, 06 Jun 2018 15:44:01 +0800</pubDate>
       
-      <guid>/tags/wwdc/</guid>
+      <guid>https://duyizhuo.com/tags/wwdc/</guid>
       <description></description>
     </item>
     
