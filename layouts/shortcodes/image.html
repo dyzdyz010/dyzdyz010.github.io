@@ -1,0 +1,14 @@
+{{ if .IsNamedParams }}
+  {{ $img := .Get "name" }}
+  <img 
+    {{with $.Page.Resources.GetMatch $img }} src="{{ .RelPermalink }}" {{ end }} 
+    {{ with .Get "alt" }} alt="{{ . | plainify }}" {{ end }} 
+    class="{{ with .Get "position"}}{{ . }}{{ else -}} left {{- end }}" {{ with .Get "style" }} 
+    style="{{ . | safeCSS }}" {{ end }} 
+  />
+{{ else }}
+  {{ $img := .Get 0 }}
+  {{ with $.Page.Resources.GetMatch $img }}
+  <img {{with $.Page.Resources.GetMatch $img }} src="{{ .RelPermalink }}" {{ end }} />
+  {{ end }}
+{{ end }}
