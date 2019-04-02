@@ -17,7 +17,7 @@ jobs:
             - run:
                 name: Generate site
                 working_directory: ~/dyzdyz010.github.io
-                command: HUGO_ENV=production hugo -d ~/public
+                command: HUGO_ENV=production hugo --config=config.prod.toml -d ~/public
             - deploy:
                 name: Deploy to Github Pages
                 working_directory: ~/public
