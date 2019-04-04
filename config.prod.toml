@@ -10,7 +10,7 @@ paginate = 5
 
 disqusShortname = "blog-disqus-com-1"
 
-googleAnalytics = "UA-123-45"
+googleAnalytics = "UA-33561194-4"
 
 [outputs]
   home = ["HTML", "AMP", "RSS"]
