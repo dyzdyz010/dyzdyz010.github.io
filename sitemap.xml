@@ -3,6 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://duyizhuo.com/post/2019-year-review/</loc>
+    <lastmod>2020-01-03T19:29:14+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://duyizhuo.com/post/hugo-with-github-pages/</loc>
     <lastmod>2019-03-28T22:04:19+08:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -227,7 +234,7 @@
   
   <url>
     <loc>https://duyizhuo.com/tags/general/</loc>
-    <lastmod>2018-11-18T09:09:19+08:00</lastmod>
+    <lastmod>2020-01-03T19:29:14+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
@@ -283,7 +290,7 @@
   
   <url>
     <loc>https://duyizhuo.com/post/</loc>
-    <lastmod>2019-03-28T22:04:19+08:00</lastmod>
+    <lastmod>2020-01-03T19:29:14+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
@@ -367,7 +374,7 @@
   
   <url>
     <loc>https://duyizhuo.com/</loc>
-    <lastmod>2019-03-28T22:04:19+08:00</lastmod>
+    <lastmod>2020-01-03T19:29:14+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
