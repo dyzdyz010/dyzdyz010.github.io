@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tensorflow on Wonderland</title>
-    <link>https://duyizhuo.com/tags/tensorflow/</link>
-    <description>Recent content in Tensorflow on Wonderland</description>
+    <title>tensorflow on Wonderland</title>
+    <link>/tags/tensorflow/</link>
+    <description>Recent content in tensorflow on Wonderland</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 28 Jun 2017 07:49:11 +0800</lastBuildDate>
     
-	<atom:link href="https://duyizhuo.com/tags/tensorflow/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/tensorflow/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>从零开始使用TensorFlow建立简单的逻辑回归模型</title>
-      <link>https://duyizhuo.com/post/logistic-regression-model-with-tensorflow-from-scratch/</link>
+      <link>/post/logistic-regression-model-with-tensorflow-from-scratch/</link>
       <pubDate>Wed, 28 Jun 2017 07:49:11 +0800</pubDate>
       
-      <guid>https://duyizhuo.com/post/logistic-regression-model-with-tensorflow-from-scratch/</guid>
+      <guid>/post/logistic-regression-model-with-tensorflow-from-scratch/</guid>
       <description>TensorFlow 是一个基于 python 的机器学习框架。在 Coursera 上学习了逻辑回归的课程内容后，想把在 MATLAB 中实现了的内容用 TensorFlow 重新实现一遍，当做学习 Python 和框架的敲门砖。
 目标读者 知道逻辑回归是什么，懂一点 Python，听说过 TensorFlow
 数据集 来自 Coursera 上 Andrew 的机器学习课程中的ex2data1.txt，根据学生的两次考试成绩判断该学生是否会被录取。

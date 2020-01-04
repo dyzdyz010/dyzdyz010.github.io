@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Wwdc on Wonderland</title>
-    <link>https://duyizhuo.com/tags/wwdc/</link>
-    <description>Recent content in Wwdc on Wonderland</description>
+    <title>wwdc on Wonderland</title>
+    <link>/tags/wwdc/</link>
+    <description>Recent content in wwdc on Wonderland</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 06 Jun 2018 15:44:01 +0800</lastBuildDate>
     
-	<atom:link href="https://duyizhuo.com/tags/wwdc/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/wwdc/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>WWDC 2018 Keynot 个人总结</title>
-      <link>https://duyizhuo.com/post/wwdc-2018-keynot-review/</link>
+      <link>/post/wwdc-2018-keynot-review/</link>
       <pubDate>Wed, 06 Jun 2018 15:44:01 +0800</pubDate>
       
-      <guid>https://duyizhuo.com/post/wwdc-2018-keynot-review/</guid>
+      <guid>/post/wwdc-2018-keynot-review/</guid>
       <description>文中图片来自爱范儿——苹果 WWDC 2018：最全总结在这里，不错过任何重点
 开场就说 Today is all about software，本来期待一些硬件更新的我有点小失望，但问题不大🙄
 iOS 12 Hotfix 首先是系统提速，确实 iPhone 感觉越用越慢，看来苹果也真正开始重视这个问题了，同时也解决了设备降速的问题，而且支持到了 5s，在我看来是有起码的诚意的。

@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Share on Wonderland</title>
-    <link>https://duyizhuo.com/tags/share/</link>
-    <description>Recent content in Share on Wonderland</description>
+    <title>share on Wonderland</title>
+    <link>/tags/share/</link>
+    <description>Recent content in share on Wonderland</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 01 Aug 2017 11:34:50 +0800</lastBuildDate>
     
-	<atom:link href="https://duyizhuo.com/tags/share/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/share/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>欧洲民谣歌单</title>
-      <link>https://duyizhuo.com/post/europe-folk-music-playlist/</link>
+      <link>/post/europe-folk-music-playlist/</link>
       <pubDate>Tue, 01 Aug 2017 11:34:50 +0800</pubDate>
       
-      <guid>https://duyizhuo.com/post/europe-folk-music-playlist/</guid>
+      <guid>/post/europe-folk-music-playlist/</guid>
       <description> </description>
     </item>
     
     <item>
       <title>ACG Wallpaper Recommendation(0)</title>
-      <link>https://duyizhuo.com/post/acg-wallpaper-recommendation-0/</link>
+      <link>/post/acg-wallpaper-recommendation-0/</link>
       <pubDate>Mon, 31 Jul 2017 16:09:35 +0800</pubDate>
       
-      <guid>https://duyizhuo.com/post/acg-wallpaper-recommendation-0/</guid>
+      <guid>/post/acg-wallpaper-recommendation-0/</guid>
       <description>君の名は。 by Masabodo on pixiv</description>
     </item>
     

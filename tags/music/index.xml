@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Music on Wonderland</title>
-    <link>https://duyizhuo.com/tags/music/</link>
-    <description>Recent content in Music on Wonderland</description>
+    <title>music on Wonderland</title>
+    <link>/tags/music/</link>
+    <description>Recent content in music on Wonderland</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 01 Aug 2017 11:34:50 +0800</lastBuildDate>
     
-	<atom:link href="https://duyizhuo.com/tags/music/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/music/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>欧洲民谣歌单</title>
-      <link>https://duyizhuo.com/post/europe-folk-music-playlist/</link>
+      <link>/post/europe-folk-music-playlist/</link>
       <pubDate>Tue, 01 Aug 2017 11:34:50 +0800</pubDate>
       
-      <guid>https://duyizhuo.com/post/europe-folk-music-playlist/</guid>
+      <guid>/post/europe-folk-music-playlist/</guid>
       <description> </description>
     </item>
     
     <item>
       <title>乐理基础学习笔记——五声调式</title>
-      <link>https://duyizhuo.com/post/music-theory-pentatonic-scale/</link>
+      <link>/post/music-theory-pentatonic-scale/</link>
       <pubDate>Sun, 11 Jun 2017 19:31:22 +0800</pubDate>
       
-      <guid>https://duyizhuo.com/post/music-theory-pentatonic-scale/</guid>
+      <guid>/post/music-theory-pentatonic-scale/</guid>
       <description>五声调式即只有五个音不断循环的调式。如果从C开始，五声调式的音阶为：
 C - D - E - G - A
 即我们常说的宫商角徵羽，唱作

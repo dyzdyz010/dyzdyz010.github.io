@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Resource on Wonderland</title>
-    <link>https://duyizhuo.com/tags/resource/</link>
-    <description>Recent content in Resource on Wonderland</description>
+    <title>resource on Wonderland</title>
+    <link>/tags/resource/</link>
+    <description>Recent content in resource on Wonderland</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 23 Apr 2017 22:23:28 +0800</lastBuildDate>
     
-	<atom:link href="https://duyizhuo.com/tags/resource/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/resource/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Shadowsocks Module for Surge</title>
-      <link>https://duyizhuo.com/post/ss-module-for-surge/</link>
+      <link>/post/ss-module-for-surge/</link>
       <pubDate>Sun, 23 Apr 2017 22:23:28 +0800</pubDate>
       
-      <guid>https://duyizhuo.com/post/ss-module-for-surge/</guid>
+      <guid>/post/ss-module-for-surge/</guid>
       <description>Just an ss module for Surge app.
 https://github.com/dyzdyz010/SSModule/raw/master/ss.module</description>
     </item>
