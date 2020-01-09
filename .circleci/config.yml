@@ -13,7 +13,10 @@ jobs:
             - run:
                 name: Get current site
                 working_directory: ~/
-                command: git clone -b master git@github.com:dyzdyz010/dyzdyz010.github.io.git public
+                command: |
+                    git clone -b master git@github.com:dyzdyz010/dyzdyz010.github.io.git public
+                    cd public
+                    git rm -rf .
             - run:
                 name: Generate site
                 working_directory: ~/dyzdyz010.github.io
