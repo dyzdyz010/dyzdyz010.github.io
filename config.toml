@@ -5,8 +5,19 @@ copyright = ""
 
 baseurl = "/"
 languageCode = "en-us"
-theme = "terminal"
+theme = "wonderland"
 paginate = 5
+
+[markup]
+  [markup.highlight]
+    # codeFences = true
+    # guessSyntax = true
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = false
+    # tabWidth = 4
 
 disqusShortname = "blog-disqus-com-1"
 

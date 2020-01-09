@@ -23,7 +23,7 @@ Generate site source with `hugo` command:
 hugo new site <SITE_NAME>
 ```
 
-Create a repo for your site: `<SITE_NAME>.github.io`**(Be aware: this tutorial uses *User/Organization Pages* rather than *Project Pages*, [see here](https://help.github.com/en/articles/user-organization-and-project-pages))**, clone it, and create a new branch called `source`(whatever you like):
+Create a repo for your site: `<SITE_NAME>.github.io` **(Be aware: this tutorial uses *User/Organization Pages* rather than *Project Pages*, [see here](https://help.github.com/en/articles/user-organization-and-project-pages))**, clone it, and create a new branch called `source`(whatever you like):
 
 ```bash
 git clone https://github.com/<USERNAME/ORGANIZATION>/<SITE_NAME>.github.io.git
