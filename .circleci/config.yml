@@ -1,5 +1,17 @@
 version: 2.0
 
+workflows:
+    version: 2
+    build-and-deploy:
+        jobs:
+            - build
+            - deploy:
+                requires:
+                    - build
+                filters:
+                    branches:
+                        only: source
+
 jobs:
     build:
         docker:
@@ -32,15 +44,3 @@ jobs:
             git add .
             git commit --allow-empty -m "Trigger deployment"
             git push -q git@github.com:dyzdyz010/dyzdyz010.github.io.git master
-
-workflows:
-  version: 2
-  build-and-deploy:
-    jobs:
-        - build
-        - deploy:
-            requires:
-                - build
-            filters:
-                branches:
-                only: source
