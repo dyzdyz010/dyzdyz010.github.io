@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ghost on Wonderland</title>
+    <title>ghost on Wonderland</title>
     <link>https://duyizhuo.com/tags/ghost/</link>
-    <description>Recent content in Ghost on Wonderland</description>
+    <description>Recent content in ghost on Wonderland</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 01 Aug 2017 20:48:43 +0800</lastBuildDate>
@@ -28,8 +28,8 @@
       <pubDate>Sat, 29 Jul 2017 17:31:01 +0800</pubDate>
       
       <guid>https://duyizhuo.com/post/migrating-ghost-to-1-0-on-centos7/</guid>
-      <description>Ghost has released 1.0, with breaking changes so there&amp;rsquo;s no smooth upgrading method but to take a fresh install. Here&amp;rsquo;s my migration of this blog to Ghost 1.0.
-There&amp;rsquo;s already an official tutorial to help you walk this through, but since it only supports Ubuntu officially, so I have to explore my own way on my CentOS 7 server. It turns out that there&amp;rsquo;s not much modifications compared to Ubuntu version, so I&amp;rsquo;m just writing this down as a record of my migration.</description>
+      <description>Ghost has released 1.0, with breaking changes so there&#39;s no smooth upgrading method but to take a fresh install. Here&#39;s my migration of this blog to Ghost 1.0.
+There&#39;s already an official tutorial to help you walk this through, but since it only supports Ubuntu officially, so I have to explore my own way on my CentOS 7 server. It turns out that there&#39;s not much modifications compared to Ubuntu version, so I&#39;m just writing this down as a record of my migration.</description>
     </item>
     
   </channel>

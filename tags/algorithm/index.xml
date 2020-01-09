@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Algorithm on Wonderland</title>
+    <title>algorithm on Wonderland</title>
     <link>https://duyizhuo.com/tags/algorithm/</link>
-    <description>Recent content in Algorithm on Wonderland</description>
+    <description>Recent content in algorithm on Wonderland</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 18 May 2018 10:15:21 +0800</lastBuildDate>
@@ -25,10 +25,10 @@
  对各个列表，重复第一步的操作，直到选定元素两边的列表只剩至多一个元素。
  可以看出，这是一个递归操作。以数组 [5, 1, 9, 4, 6, 7, 3] 和排序函数 quicksort 为例：
 quicksort 开始 为了简化算法，我们直接在开始处理数组的时候，直接选择第一个元素作为被选定元素。经过筛选后，我们的结果此时变成了这样：
-quicksort([1, 4, 3]) ++ [5] ++ quicksort([9, 6, 7])  中间的[5]是我们选定的元素，左边是比它小的元素数组[1, 4, 3]，右边是比它大的[9, 6, 7]。可以看出，元素两侧的数组依然是乱序状态，仍然需要对其进行排序，因此上面的伪代码中写作 quicksort(Array)，即对两个数组继续应用排序操作。
+quicksort([1, 4, 3]) ++ [5] ++ quicksort([9, 6, 7]) 中间的[5]是我们选定的元素，左边是比它小的元素数组[1, 4, 3]，右边是比它大的[9, 6, 7]。可以看出，元素两侧的数组依然是乱序状态，仍然需要对其进行排序，因此上面的伪代码中写作 quicksort(Array)，即对两个数组继续应用排序操作。
 这里以左边的数组为例，看看递归是如何工作的：
 quicksort 第一层递归 对新的数组 [1, 4, 3] 重复上面的操作，选定第一个元素 1 作为被选定元素，并筛选其两边的数组，结果变成这样：
-quicksort([]) ++ [1] ++ quicksort([4, 3])  左边已经成为空数组，意味着我们选定的 1 就是整个数组最小的元素了，因此没有比它更小的元素存在于它的左边位置了。这样就只剩右侧比它大的 [4, 3] 了，我们依然需要对其应用排序操作 quicksort：
+quicksort([]) ++ [1] ++ quicksort([4, 3]) 左边已经成为空数组，意味着我们选定的 1 就是整个数组最小的元素了，因此没有比它更小的元素存在于它的左边位置了。这样就只剩右侧比它大的 [4, 3] 了，我们依然需要对其应用排序操作 quicksort：
 quicksort 第二层递归 对新的数组 [4, 3] 重复上面的操作，变成下面这样：</description>
     </item>
     

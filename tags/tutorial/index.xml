@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tutorial on Wonderland</title>
+    <title>tutorial on Wonderland</title>
     <link>https://duyizhuo.com/tags/tutorial/</link>
-    <description>Recent content in Tutorial on Wonderland</description>
+    <description>Recent content in tutorial on Wonderland</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 28 Mar 2019 22:04:19 +0800</lastBuildDate>
@@ -19,7 +19,7 @@
       <guid>https://duyizhuo.com/post/hugo-with-github-pages/</guid>
       <description>This tutorial is to teach you how to make youre own hugo-generated static site served by Github Pages, within a single repo.
 Prerequisites  Github &amp;amp; CircleCI account Newly-generated SSH key pair for safety reasons(see here) Hugo installed locally  Dive in Generate site source with hugo command:
-hugo new site &amp;lt;SITE_NAME&amp;gt;  Create a repo for your site: &amp;lt;SITE_NAME&amp;gt;.github.io(Be aware: this tutorial uses User/Organization Pages rather than Project Pages, see here), clone it, and create a new branch called source(whatever you like):</description>
+hugo new site &amp;lt;SITE_NAME&amp;gt; Create a repo for your site: &amp;lt;SITE_NAME&amp;gt;.github.io**(Be aware: this tutorial uses *User/Organization Pages* rather than *Project Pages*, see here)**, clone it, and create a new branch called source(whatever you like):</description>
     </item>
     
     <item>
@@ -29,7 +29,7 @@ hugo new site &amp;lt;SITE_NAME&amp;gt;  Create a repo for your site: &amp;lt;SI
       
       <guid>https://duyizhuo.com/post/origin-download-speedup/</guid>
       <description>打开 Origin 安装目录下（默认C:\Program Files(x86)\Origin）的 EACore.ini 文件，复制粘贴如下内容：
-[connection] EnvironmentName=production [Feature] CdnOverride=akamai  保存并关闭，重启Origin，本人测试下载可以达到满速。</description>
+[connection] EnvironmentName=production [Feature] CdnOverride=akamai 保存并关闭，重启Origin，本人测试下载可以达到满速。</description>
     </item>
     
     <item>
@@ -38,7 +38,7 @@ hugo new site &amp;lt;SITE_NAME&amp;gt;  Create a repo for your site: &amp;lt;SI
       <pubDate>Wed, 09 May 2018 08:09:33 +0800</pubDate>
       
       <guid>https://duyizhuo.com/post/using-virtualenv-in-jupyter-notebook/</guid>
-      <description>OS: macOS High Sierra 10.13.4 Default Python version: 3.6.5  Prerequisites  Have your Jupyter Notebook and virtualenv installed with your default python version Have one virtual env created which you want to use  Walkthrough Activate your virtualenv source &amp;lt;envpath&amp;gt;/bin/activate  Install ipykernel inside your env $(yourenv)&amp;gt; pip install ipykernel  Create kernel using your env $(yourenv)&amp;gt; python -m ipykernel install --user --name myenv --display-name &amp;quot;Python (myenv)&amp;quot;  Go ahead and enjoy Now open your jupyter notebook and you&amp;rsquo;ll notice your kernel just created appears along with your default kernel.</description>
+      <description>OS: macOS High Sierra 10.13.4 Default Python version: 3.6.5  Prerequisites  Have your Jupyter Notebook and virtualenv installed with your default python version Have one virtual env created which you want to use  Walkthrough Activate your virtualenv source &amp;lt;envpath&amp;gt;/bin/activate Install ipykernel inside your env $(yourenv)&amp;gt; pip install ipykernel Create kernel using your env $(yourenv)&amp;gt; python -m ipykernel install --user --name myenv --display-name &amp;#34;Python (myenv)&amp;#34; Go ahead and enjoy Now open your jupyter notebook and you&#39;ll notice your kernel just created appears along with your default kernel.</description>
     </item>
     
     <item>
@@ -48,9 +48,10 @@ hugo new site &amp;lt;SITE_NAME&amp;gt;  Create a repo for your site: &amp;lt;SI
       
       <guid>https://duyizhuo.com/post/set-up-flarum-from-scratch/</guid>
       <description>Befor you continue
-1. Get a VPS from Linode/Vultr/whatever 2. Pick a linux distribution and make it running(I use CentOS 7). 3. Install Apache/MySQL/PHP 7.1 Get yourself a non-root sudo user adduser USERNAME passwd USERNAME usermod -aG wheel USERNAME su USERNAME  Install and configure Apache Check this out
+1. Get a VPS from Linode/Vultr/whatever 2. Pick a linux distribution and make it running(I use CentOS 7). 3. Install Apache/MySQL/PHP 7.1 Get yourself a non-root sudo user adduser USERNAME passwd USERNAME usermod -aG wheel USERNAME su USERNAME Install and configure Apache Check this out
 First install it.
-sudo yum update sudo yum -y install httpd sudo systemctl enable httpd.service  Then create directory structure.</description>
+sudo yum update sudo yum -y install httpd sudo systemctl enable httpd.service Then create directory structure.
+sudo mkdir /etc/httpd/sites-available sudo mkdir /etc/httpd/sites-enabled Open config file:</description>
     </item>
     
   </channel>

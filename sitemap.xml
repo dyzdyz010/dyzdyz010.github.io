@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
@@ -10,7 +10,49 @@
   </url>
   
   <url>
+    <loc>https://duyizhuo.com/tags/general/</loc>
+    <lastmod>2020-01-03T19:29:14+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://duyizhuo.com/post/</loc>
+    <lastmod>2020-01-03T19:29:14+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://duyizhuo.com/tags/</loc>
+    <lastmod>2020-01-03T19:29:14+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://duyizhuo.com/</loc>
+    <lastmod>2020-01-03T19:29:14+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://duyizhuo.com/tags/tutorial/</loc>
+    <lastmod>2019-03-28T22:04:19+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://duyizhuo.com/post/hugo-with-github-pages/</loc>
+    <lastmod>2019-03-28T22:04:19+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://duyizhuo.com/tags/web/</loc>
     <lastmod>2019-03-28T22:04:19+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -24,8 +66,29 @@
   </url>
   
   <url>
+    <loc>https://duyizhuo.com/tags/game/</loc>
+    <lastmod>2018-11-18T09:09:19+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://duyizhuo.com/post/origin-download-speedup/</loc>
     <lastmod>2018-11-18T09:09:19+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://duyizhuo.com/tags/apple/</loc>
+    <lastmod>2018-06-06T15:44:01+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://duyizhuo.com/tags/wwdc/</loc>
+    <lastmod>2018-06-06T15:44:01+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -38,8 +101,29 @@
   </url>
   
   <url>
+    <loc>https://duyizhuo.com/tags/algorithm/</loc>
+    <lastmod>2018-05-18T10:15:21+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://duyizhuo.com/tags/code/</loc>
+    <lastmod>2018-05-18T10:15:21+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://duyizhuo.com/post/quicksort-review/</loc>
     <lastmod>2018-05-18T10:15:21+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://duyizhuo.com/tags/emacs/</loc>
+    <lastmod>2018-05-11T07:50:12+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -52,6 +136,20 @@
   </url>
   
   <url>
+    <loc>https://duyizhuo.com/tags/latex/</loc>
+    <lastmod>2018-05-11T07:50:12+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://duyizhuo.com/tags/python/</loc>
+    <lastmod>2018-05-09T08:09:33+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://duyizhuo.com/post/using-virtualenv-in-jupyter-notebook/</loc>
     <lastmod>2018-05-09T08:09:33+08:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -59,8 +157,22 @@
   </url>
   
   <url>
+    <loc>https://duyizhuo.com/tags/linux/</loc>
+    <lastmod>2018-05-05T09:52:42+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://duyizhuo.com/post/install-kbengine-on-ubuntu-18-04-lts/</loc>
     <lastmod>2018-05-05T09:52:42+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://duyizhuo.com/tags/flarum/</loc>
+    <lastmod>2018-01-06T22:37:18+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -80,6 +192,13 @@
   </url>
   
   <url>
+    <loc>https://duyizhuo.com/tags/nonsense/</loc>
+    <lastmod>2017-10-27T12:47:39+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://duyizhuo.com/post/check-in-20171027/</loc>
     <lastmod>2017-10-27T12:47:39+08:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -94,8 +213,43 @@
   </url>
   
   <url>
+    <loc>https://duyizhuo.com/tags/about/</loc>
+    <lastmod>2017-08-05T11:52:53+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://duyizhuo.com/tags/ghost/</loc>
+    <lastmod>2017-08-01T20:48:43+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://duyizhuo.com/tags/theme/</loc>
+    <lastmod>2017-08-01T20:48:43+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://duyizhuo.com/post/wonderland-ghost-theme/</loc>
     <lastmod>2017-08-01T20:48:43+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://duyizhuo.com/tags/music/</loc>
+    <lastmod>2017-08-01T11:34:50+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://duyizhuo.com/tags/share/</loc>
+    <lastmod>2017-08-01T11:34:50+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -108,8 +262,22 @@
   </url>
   
   <url>
+    <loc>https://duyizhuo.com/tags/acg/</loc>
+    <lastmod>2017-07-31T16:09:35+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://duyizhuo.com/post/acg-wallpaper-recommendation-0/</loc>
     <lastmod>2017-07-31T16:09:35+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://duyizhuo.com/tags/centos/</loc>
+    <lastmod>2017-07-29T17:31:01+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -122,6 +290,20 @@
   </url>
   
   <url>
+    <loc>https://duyizhuo.com/tags/ml/</loc>
+    <lastmod>2017-07-19T21:13:59+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://duyizhuo.com/tags/review/</loc>
+    <lastmod>2017-07-19T21:13:59+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://duyizhuo.com/post/ml-course-summary-review/</loc>
     <lastmod>2017-07-19T21:13:59+08:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -129,8 +311,22 @@
   </url>
   
   <url>
+    <loc>https://duyizhuo.com/tags/tensorflow/</loc>
+    <lastmod>2017-06-28T07:49:11+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://duyizhuo.com/post/logistic-regression-model-with-tensorflow-from-scratch/</loc>
     <lastmod>2017-06-28T07:49:11+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://duyizhuo.com/tags/theroy/</loc>
+    <lastmod>2017-06-11T19:31:22+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -157,6 +353,20 @@
   </url>
   
   <url>
+    <loc>https://duyizhuo.com/tags/gfw/</loc>
+    <lastmod>2017-04-23T22:23:28+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://duyizhuo.com/tags/resource/</loc>
+    <lastmod>2017-04-23T22:23:28+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://duyizhuo.com/post/ss-module-for-surge/</loc>
     <lastmod>2017-04-23T22:23:28+08:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -164,226 +374,16 @@
   </url>
   
   <url>
-    <loc>https://duyizhuo.com/tags/about/</loc>
-    <lastmod>2017-08-05T11:52:53+08:00</lastmod>
+    <loc>https://duyizhuo.com/tags/ss/</loc>
+    <lastmod>2017-04-23T22:23:28+08:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://duyizhuo.com/tags/acg/</loc>
-    <lastmod>2017-07-31T16:09:35+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://duyizhuo.com/tags/algorithm/</loc>
-    <lastmod>2018-05-18T10:15:21+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://duyizhuo.com/tags/apple/</loc>
-    <lastmod>2018-06-06T15:44:01+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0</priority>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://duyizhuo.com/categories/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://duyizhuo.com/tags/centos/</loc>
-    <lastmod>2017-07-29T17:31:01+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://duyizhuo.com/tags/code/</loc>
-    <lastmod>2018-05-18T10:15:21+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://duyizhuo.com/tags/emacs/</loc>
-    <lastmod>2018-05-11T07:50:12+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://duyizhuo.com/tags/flarum/</loc>
-    <lastmod>2018-01-06T22:37:18+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://duyizhuo.com/tags/game/</loc>
-    <lastmod>2018-11-18T09:09:19+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://duyizhuo.com/tags/general/</loc>
-    <lastmod>2020-01-03T19:29:14+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://duyizhuo.com/tags/gfw/</loc>
-    <lastmod>2017-04-23T22:23:28+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://duyizhuo.com/tags/ghost/</loc>
-    <lastmod>2017-08-01T20:48:43+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://duyizhuo.com/tags/latex/</loc>
-    <lastmod>2018-05-11T07:50:12+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://duyizhuo.com/tags/linux/</loc>
-    <lastmod>2018-05-05T09:52:42+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://duyizhuo.com/tags/ml/</loc>
-    <lastmod>2017-07-19T21:13:59+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://duyizhuo.com/tags/music/</loc>
-    <lastmod>2017-08-01T11:34:50+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://duyizhuo.com/tags/nonsense/</loc>
-    <lastmod>2017-10-27T12:47:39+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://duyizhuo.com/post/</loc>
-    <lastmod>2020-01-03T19:29:14+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://duyizhuo.com/tags/python/</loc>
-    <lastmod>2018-05-09T08:09:33+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://duyizhuo.com/tags/resource/</loc>
-    <lastmod>2017-04-23T22:23:28+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://duyizhuo.com/tags/review/</loc>
-    <lastmod>2017-07-19T21:13:59+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://duyizhuo.com/tags/share/</loc>
-    <lastmod>2017-08-01T11:34:50+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://duyizhuo.com/tags/ss/</loc>
-    <lastmod>2017-04-23T22:23:28+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://duyizhuo.com/tags/</loc>
-    <lastmod>2017-08-05T11:52:53+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://duyizhuo.com/tags/tensorflow/</loc>
-    <lastmod>2017-06-28T07:49:11+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://duyizhuo.com/tags/theme/</loc>
-    <lastmod>2017-08-01T20:48:43+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://duyizhuo.com/tags/theroy/</loc>
-    <lastmod>2017-06-11T19:31:22+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://duyizhuo.com/tags/tutorial/</loc>
-    <lastmod>2019-03-28T22:04:19+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://duyizhuo.com/tags/web/</loc>
-    <lastmod>2019-03-28T22:04:19+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://duyizhuo.com/</loc>
-    <lastmod>2020-01-03T19:29:14+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://duyizhuo.com/tags/wwdc/</loc>
-    <lastmod>2018-06-06T15:44:01+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0</priority>
+    <priority>0.5</priority>
   </url>
   
 </urlset>

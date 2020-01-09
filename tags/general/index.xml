@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>General on Wonderland</title>
+    <title>general on Wonderland</title>
     <link>https://duyizhuo.com/tags/general/</link>
-    <description>Recent content in General on Wonderland</description>
+    <description>Recent content in general on Wonderland</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 03 Jan 2020 19:29:14 +0800</lastBuildDate>
@@ -17,7 +17,7 @@
       <pubDate>Fri, 03 Jan 2020 19:29:14 +0800</pubDate>
       
       <guid>https://duyizhuo.com/post/2019-year-review/</guid>
-      <description> 又一年过去了，我依然一事无成。
+      <description>又一年过去了，我依然一事无成。
 拿了一个没什么用的硕士学历。曾经满怀希望地想，也许可以出国留学，现在看来也只是一个无法实现的美好梦想罢了。
 工作？既不喜欢也不擅长，恐怕也就只有对制度的恐惧感驱使着我把工作做好了。是的，恐惧感，自从工作之后，我从未为了“想做某一件事”而行动，而是全部都是为了避免某个“坏的结果”发生而被驱使着去做一件事。
 生活？由于工作环境的不稳定，任何需要坚持的事情都无法延续下去。久而久之，对于“坚持做”某一件事，产生了无力感和抗拒感。可能这就是所谓的“习得性无助”？
@@ -33,7 +33,7 @@
       
       <guid>https://duyizhuo.com/post/origin-download-speedup/</guid>
       <description>打开 Origin 安装目录下（默认C:\Program Files(x86)\Origin）的 EACore.ini 文件，复制粘贴如下内容：
-[connection] EnvironmentName=production [Feature] CdnOverride=akamai  保存并关闭，重启Origin，本人测试下载可以达到满速。</description>
+[connection] EnvironmentName=production [Feature] CdnOverride=akamai 保存并关闭，重启Origin，本人测试下载可以达到满速。</description>
     </item>
     
     <item>

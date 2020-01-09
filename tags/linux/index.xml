@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Linux on Wonderland</title>
+    <title>linux on Wonderland</title>
     <link>https://duyizhuo.com/tags/linux/</link>
-    <description>Recent content in Linux on Wonderland</description>
+    <description>Recent content in linux on Wonderland</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 05 May 2018 09:52:42 +0800</lastBuildDate>
@@ -19,10 +19,10 @@
       <guid>https://duyizhuo.com/post/install-kbengine-on-ubuntu-18-04-lts/</guid>
       <description>本文用到的组件和系统版本：
  OS: Ubuntu 18.04 LTS MySQL: 5.7.22 gcc: 7.3.0 g++: 7.3.0 Python: 3.6.5  首先安装各种依赖：
-sudo apt-get update sudo apt-get install libssl-dev mysql-server libmysqld-dev mysql-client libmysqlclient-dev gcc g++ python3  编译引擎 下面从官方仓库下载引擎源码，本人下载的是当时最新版本1.1.8：
-wget https://github.com/kbengine/kbengine/archive/v1.1.8.tar.gz tar -xzvf v1.1.8.tar.gz  接着就可以对代码进行编译了：
-cd kbengine-1.1.8/kbe/src chmod -R 755 . make  我在编译过程中出现了以下错误：
-/usr/lib/gcc/x86_64-linux-gnu/7/include/mm_malloc.h:34:16: error: declaration of ‘int posix_memalign(void**, size_t, size_t) throw ()’ has a different exception specifier extern &amp;quot;C&amp;quot; int posix_memalign (void **, size_t, size_t) throw (); ^~~~~~~~~~~~~~ In file included from /home/dyz/kbengine-1.</description>
+sudo apt-get update sudo apt-get install libssl-dev mysql-server libmysqld-dev mysql-client libmysqlclient-dev gcc g++ python3 编译引擎 下面从官方仓库下载引擎源码，本人下载的是当时最新版本1.1.8：
+wget https://github.com/kbengine/kbengine/archive/v1.1.8.tar.gz tar -xzvf v1.1.8.tar.gz 接着就可以对代码进行编译了：
+cd kbengine-1.1.8/kbe/src chmod -R 755 . make 我在编译过程中出现了以下错误：
+/usr/lib/gcc/x86_64-linux-gnu/7/include/mm_malloc.h:34:16: error: declaration of ‘int posix_memalign(void**, size_t, size_t) throw ()’ has a different exception specifier extern &amp;#34;C&amp;#34; int posix_memalign (void **, size_t, size_t) throw (); ^~~~~~~~~~~~~~ In file included from /home/dyz/kbengine-1.</description>
     </item>
     
     <item>
@@ -32,9 +32,10 @@ cd kbengine-1.1.8/kbe/src chmod -R 755 . make  我在编译过程中出现了以
       
       <guid>https://duyizhuo.com/post/set-up-flarum-from-scratch/</guid>
       <description>Befor you continue
-1. Get a VPS from Linode/Vultr/whatever 2. Pick a linux distribution and make it running(I use CentOS 7). 3. Install Apache/MySQL/PHP 7.1 Get yourself a non-root sudo user adduser USERNAME passwd USERNAME usermod -aG wheel USERNAME su USERNAME  Install and configure Apache Check this out
+1. Get a VPS from Linode/Vultr/whatever 2. Pick a linux distribution and make it running(I use CentOS 7). 3. Install Apache/MySQL/PHP 7.1 Get yourself a non-root sudo user adduser USERNAME passwd USERNAME usermod -aG wheel USERNAME su USERNAME Install and configure Apache Check this out
 First install it.
-sudo yum update sudo yum -y install httpd sudo systemctl enable httpd.service  Then create directory structure.</description>
+sudo yum update sudo yum -y install httpd sudo systemctl enable httpd.service Then create directory structure.
+sudo mkdir /etc/httpd/sites-available sudo mkdir /etc/httpd/sites-enabled Open config file:</description>
     </item>
     
     <item>
@@ -43,8 +44,8 @@ sudo yum update sudo yum -y install httpd sudo systemctl enable httpd.service  T
       <pubDate>Sat, 29 Jul 2017 17:31:01 +0800</pubDate>
       
       <guid>https://duyizhuo.com/post/migrating-ghost-to-1-0-on-centos7/</guid>
-      <description>Ghost has released 1.0, with breaking changes so there&amp;rsquo;s no smooth upgrading method but to take a fresh install. Here&amp;rsquo;s my migration of this blog to Ghost 1.0.
-There&amp;rsquo;s already an official tutorial to help you walk this through, but since it only supports Ubuntu officially, so I have to explore my own way on my CentOS 7 server. It turns out that there&amp;rsquo;s not much modifications compared to Ubuntu version, so I&amp;rsquo;m just writing this down as a record of my migration.</description>
+      <description>Ghost has released 1.0, with breaking changes so there&#39;s no smooth upgrading method but to take a fresh install. Here&#39;s my migration of this blog to Ghost 1.0.
+There&#39;s already an official tutorial to help you walk this through, but since it only supports Ubuntu officially, so I have to explore my own way on my CentOS 7 server. It turns out that there&#39;s not much modifications compared to Ubuntu version, so I&#39;m just writing this down as a record of my migration.</description>
     </item>
     
   </channel>

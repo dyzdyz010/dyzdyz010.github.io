@@ -4,289 +4,220 @@
   
     <title>Set Up Flarum From Scratch :: Wonderland — Personal Blog</title>
   
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="description" content="Befor you continue
-1. Get a VPS from Linode/Vultr/whatever 2. Pick a linux distribution and make it running(I use CentOS 7). 3. Install Apache/MySQL/PHP 7.1 Get yourself a non-root sudo user adduser USERNAME passwd USERNAME usermod -aG wheel USERNAME su USERNAME  Install and configure Apache Check this out
-First install it.
-sudo yum update sudo yum -y install httpd sudo systemctl enable httpd.service  Then create directory structure."/>
-<meta name="keywords" content=""/>
-<meta name="robots" content="noodp"/>
-<link rel="canonical" href="/post/set-up-flarum-from-scratch/" />
-
-
-<link rel="stylesheet" href="/assets/style.css">
-
-
-
-<link rel="stylesheet" href="/style.css">
-
-
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144-precomposed.png">
-
-<link rel="shortcut icon" href="/img/favicon/orange.png">
-
-
-
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Set Up Flarum From Scratch :: Wonderland — Personal Blog" />
-<meta name="twitter:description" content="Befor you continue
-1. Get a VPS from Linode/Vultr/whatever 2. Pick a linux distribution and make it running(I use CentOS 7). 3. Install Apache/MySQL/PHP 7.1 Get yourself a non-root sudo user adduser USERNAME passwd USERNAME usermod -aG wheel USERNAME su USERNAME  Install and configure Apache Check this out
-First install it.
-sudo yum update sudo yum -y install httpd sudo systemctl enable httpd.service  Then create directory structure." />
-<meta name="twitter:site" content="/" />
-<meta name="twitter:creator" content="dyzdyz010" />
-<meta name="twitter:image" content="">
-
-
-<meta property="og:locale" content="en" />
-<meta property="og:type" content="article" />
-<meta property="og:title" content="Set Up Flarum From Scratch :: Wonderland — Personal Blog">
-<meta property="og:description" content="Befor you continue
-1. Get a VPS from Linode/Vultr/whatever 2. Pick a linux distribution and make it running(I use CentOS 7). 3. Install Apache/MySQL/PHP 7.1 Get yourself a non-root sudo user adduser USERNAME passwd USERNAME usermod -aG wheel USERNAME su USERNAME  Install and configure Apache Check this out
-First install it.
-sudo yum update sudo yum -y install httpd sudo systemctl enable httpd.service  Then create directory structure." />
-<meta property="og:url" content="/post/set-up-flarum-from-scratch/" />
-<meta property="og:site_name" content="Set Up Flarum From Scratch" />
-<meta property="og:image" content="">
-<meta property="og:image:width" content="2048">
-<meta property="og:image:height" content="1024">
-
-<meta property="article:published_time" content="2018-01-06 22:37:18 &#43;0800 CST" />
-
-
-
-
-
-
-
-
-
-
-
+  <meta charset="utf-8">
+<link href="https://duyizhuo.com/fontawesome-free-5.12.0-web/css/all.css" rel="stylesheet"> 
+<link rel="stylesheet" href="https://duyizhuo.com/css/bulma.min.css">
+<link rel="stylesheet" href="https://duyizhuo.com/css/highlight.css">
+<link rel="stylesheet" href="https://duyizhuo.com/css/style.css">
 </head>
 <body class="">
 
-
-<div class="container center">
-
-  <header class="header">
-  <div class="header__inner">
-    <div class="header__logo">
-      <a href="/">
+<section class="hero is-success is-medium is-bold">
+  
+  <div class="hero-head">
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="/">
   <div class="logo">
     Wonderland
   </div>
 </a>
-
-    </div>
-    <div class="menu-trigger">menu</div>
+          <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+            <span>Home</span>
+            <span>Examples</span>
+            <span>Documentation</span>
+          </span>
+        </div>
+        <div id="navbarMenuHeroA" class="navbar-menu">
+          <div class="navbar-end">
+            <a class="navbar-item is-active">
+              Home
+            </a>
+            <a class="navbar-item">
+              Examples
+            </a>
+            <a class="navbar-item">
+              Documentation
+            </a>
+            <span class="navbar-item">
+              <a class="button is-primary is-inverted">
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span>
+                <span>Download</span>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </nav>
   </div>
   
-    <nav class="menu">
-  <ul class="menu__inner menu__inner--desktop">
-    
-      
-        
-          <li><a href="/about">About</a></li>
-        
-      
-        
-          <li><a href="https://github.com/dyzdyz010">Github</a></li>
-        
-      
-        
-          <li><a href="https://dyzdyz010.sarahah.com/">Leave me a message!</a></li>
-        
-      
-      
-    
-
-    
-  </ul>
-
-  <ul class="menu__inner menu__inner--mobile">
-    
-      
-        <li><a href="/about">About</a></li>
-      
-    
-      
-        <li><a href="https://github.com/dyzdyz010">Github</a></li>
-      
-    
-      
-        <li><a href="https://dyzdyz010.sarahah.com/">Leave me a message!</a></li>
-      
-    
-    
-  </ul>
-</nav>
-
   
-</header>
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title">
+          Wonderland
+      </h1>
+      <h2 class="subtitle">
+          Personal Blog
+      </h2>
+    </div>
+  </div>
+  
+  
+  <div class="hero-foot">
+    <nav class="tabs is-boxed">
+      <div class="container">
+        <ul>
+          <li class="is-active"><a>Posts</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</section>
 
+
+<div class="container">
 
   <div class="content">
     
-<div class="post">
-  <h1 class="post-title">
-    <a href="/post/set-up-flarum-from-scratch/">Set Up Flarum From Scratch</a></h1>
-  <div class="post-meta">
-      
-    <span class="post-date">
-      2018-01-06
-    </span>
+<section class="section">
+  <div class="post container">
+    <h2 class="post-title title is-3">
+      <a class="has-text-grey-dark" href="https://duyizhuo.com/post/set-up-flarum-from-scratch/">Set Up Flarum From Scratch</a>
+    </h2>
+    <div class="post-meta">
+      <span class="post-date">
+        <span class="icon has-text-danger">
+          <i class="fas fa-calendar"></i>
+        </span>
+        <a class="has-text-grey">Sat, Jan 6, 2018</a>
+      </span>
+      &nbsp;
+      <span class="post-author">
+        <span class="icon has-text-info">
+          <i class="fas fa-user"></i>
+        </span>
+        <a class="has-text-grey">
+          
+            dyzdyz010
+          
+        </a>
+      </span>
+    </div>
+
     
+    <div class="post-tags">
+      <div class="field is-grouped is-grouped-multiline">
+        
+        <div class="control">
+          <div class="tags has-addons">
+              <span class="tag is-dark">#</span>
+              <span class="tag is-success">
+                <a class="is-success" href="https://duyizhuo.com/tags/web/">web</a>
+              </span>
+          </div>
+        </div>
+        
+        <div class="control">
+          <div class="tags has-addons">
+              <span class="tag is-dark">#</span>
+              <span class="tag is-success">
+                <a class="is-success" href="https://duyizhuo.com/tags/flarum/">flarum</a>
+              </span>
+          </div>
+        </div>
+        
+        <div class="control">
+          <div class="tags has-addons">
+              <span class="tag is-dark">#</span>
+              <span class="tag is-success">
+                <a class="is-success" href="https://duyizhuo.com/tags/linux/">linux</a>
+              </span>
+          </div>
+        </div>
+        
+        <div class="control">
+          <div class="tags has-addons">
+              <span class="tag is-dark">#</span>
+              <span class="tag is-success">
+                <a class="is-success" href="https://duyizhuo.com/tags/tutorial/">tutorial</a>
+              </span>
+          </div>
+        </div>
+        
+      </div>
+    </div>
     
-    <span class="post-author">::
-      dyzdyz010
-    </span>
-    
-  </div>
 
-  
-  <span class="post-tags">
-    
-    #<a href="/tags/web/">web</a>&nbsp;
-    
-    #<a href="/tags/flarum/">flarum</a>&nbsp;
-    
-    #<a href="/tags/linux/">linux</a>&nbsp;
-    
-    #<a href="/tags/tutorial/">tutorial</a>&nbsp;
-    
-  </span>
-  
-
-  
-
-  <div class="post-content">
     
 
-<p><a href="https://flarum.org/docs/install.html">Befor you continue</a></p>
-
-<h2 id="1-get-a-vps-from-linode-vultr-whatever">1. Get a VPS from Linode/Vultr/whatever</h2>
-
-<p><img src="https://ws2.sinaimg.cn/large/006tNc79gy1fn61zqmlx2j30a208sq3e.jpg" alt="" /></p>
-
-<p><img src="https://ws4.sinaimg.cn/large/006tNc79gy1fn6207rsfhj309c0360sq.jpg" alt="" /></p>
-
-<h2 id="2-pick-a-linux-distribution-and-make-it-running-i-use-centos-7">2. Pick a linux distribution and make it running(I use CentOS 7).</h2>
-
-<p><img src="https://ws1.sinaimg.cn/large/006tNc79gy1fn628gjiafj31ie0fwjto.jpg" alt="" /></p>
-
-<h2 id="3-install-apache-mysql-php-7-1">3. Install Apache/MySQL/PHP 7.1</h2>
-
+    <div class="post-content">
+      <p><a href="https://flarum.org/docs/install.html">Befor you continue</a></p>
+<h2 id="1-get-a-vps-from-linodevultrwhatever">1. Get a VPS from Linode/Vultr/whatever</h2>
+<p><img src="https://ws2.sinaimg.cn/large/006tNc79gy1fn61zqmlx2j30a208sq3e.jpg" alt=""></p>
+<p><img src="https://ws4.sinaimg.cn/large/006tNc79gy1fn6207rsfhj309c0360sq.jpg" alt=""></p>
+<h2 id="2-pick-a-linux-distribution-and-make-it-runningi-use-centos-7">2. Pick a linux distribution and make it running(I use CentOS 7).</h2>
+<p><img src="https://ws1.sinaimg.cn/large/006tNc79gy1fn628gjiafj31ie0fwjto.jpg" alt=""></p>
+<h2 id="3-install-apachemysqlphp-71">3. Install Apache/MySQL/PHP 7.1</h2>
 <h3 id="get-yourself-a-non-root-sudo-user">Get yourself a non-root sudo user</h3>
-
-<pre><code class="language-bash">adduser USERNAME
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">adduser USERNAME
 passwd USERNAME
 usermod -aG wheel USERNAME
 su USERNAME
-</code></pre>
-
-<h3 id="install-and-configure-apache">Install and configure Apache</h3>
-
+</code></pre></div><h3 id="install-and-configure-apache">Install and configure Apache</h3>
 <p><a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-hosts-on-centos-7">Check this out</a></p>
-
 <p>First install it.</p>
-
-<pre><code class="language-bash">sudo yum update
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo yum update
 sudo yum -y install httpd
-sudo systemctl enable httpd.service
-</code></pre>
-
-<p>Then create directory structure.</p>
-
-<pre><code class="language-bash">sudo mkdir /etc/httpd/sites-available
+sudo systemctl <span class="nb">enable</span> httpd.service
+</code></pre></div><p>Then create directory structure.</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo mkdir /etc/httpd/sites-available
 sudo mkdir /etc/httpd/sites-enabled
-</code></pre>
-
-<p>Open config file:</p>
-
-<pre><code class="language-bash">sudo vim /etc/httpd/conf/httpd.conf
-</code></pre>
-
-<p>Add this to the end of the file:</p>
-
-<pre><code class="language-conf">IncludeOptional sites-enabled/*.conf
-</code></pre>
-
-<h3 id="install-mysql">Install MySQL</h3>
-
-<p>CentOS 7 by default uses <code>MariaDB</code> rather than MySQL, but there&rsquo;s no difference using it.</p>
-
-<p><strong>Note:</strong> yum installs MariaDB 5.5 by default, which no longer satisfies flarum&rsquo;s requirements. <a href="https://mariadb.com/resources/blog/installing-mariadb-10-on-centos-7-rhel-7/">See here</a> for instructions on installing MariaDB 10.</p>
-
-<pre><code class="language-bash">sudo mysql_secure_installation
-</code></pre>
-
-<p>Then create a <code>user</code> and a <code>database</code> in <code>MySQL</code> for flarum.</p>
-
+</code></pre></div><p>Open config file:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo vim /etc/httpd/conf/httpd.conf
+</code></pre></div><p>Add this to the end of the file:</p>
+<pre><code class="language-conf" data-lang="conf">IncludeOptional sites-enabled/*.conf
+</code></pre><h3 id="install-mysql">Install MySQL</h3>
+<p>CentOS 7 by default uses <code>MariaDB</code> rather than MySQL, but there's no difference using it.</p>
+<p><strong>Note:</strong> yum installs MariaDB 5.5 by default, which no longer satisfies flarum's requirements. <a href="https://mariadb.com/resources/blog/installing-mariadb-10-on-centos-7-rhel-7/">See here</a> for instructions on installing MariaDB 10.</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo mysql_secure_installation
+</code></pre></div><p>Then create a <code>user</code> and a <code>database</code> in <code>MySQL</code> for flarum.</p>
 <h3 id="install-and-configure-php">Install and configure PHP</h3>
-
-<p>I&rsquo;m using php 7.1 here.</p>
-
+<p>I'm using php 7.1 here.</p>
 <p><a href="https://webtatic.com/packages/php70/">Take a look at this</a></p>
-
 <p>First add needed yum repo:</p>
-
-<pre><code class="language-bash">sudo rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 sudo rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
-</code></pre>
-
-<p>Install php</p>
-
-<pre><code class="language-bash">sudo yum install mod_php71w php71w-cli php71w-xml php71w-mbstring php71w-mysql php71w-gd
-</code></pre>
-
-<h2 id="4-install-flarum">4. Install Flarum</h2>
-
+</code></pre></div><p>Install php</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo yum install mod_php71w php71w-cli php71w-xml php71w-mbstring php71w-mysql php71w-gd
+</code></pre></div><h2 id="4-install-flarum">4. Install Flarum</h2>
 <h3 id="create-site-directory">Create site directory</h3>
-
-<p>Name your site directory whatever you like, I&rsquo;ll just stick with <code>flarum</code>.</p>
-
-<pre><code class="language-bash">sudo mkdir /var/www/flarum
-</code></pre>
-
-<h3 id="install-composer">Install composer</h3>
-
-<pre><code class="language-bash">cd /tmp
-sudo curl -sS https://getcomposer.org/installer | php
+<p>Name your site directory whatever you like, I'll just stick with <code>flarum</code>.</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo mkdir /var/www/flarum
+</code></pre></div><h3 id="install-composer">Install composer</h3>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> /tmp
+sudo curl -sS https://getcomposer.org/installer <span class="p">|</span> php
 sudo mv composer.phar /usr/local/bin/composer
-</code></pre>
-
-<h3 id="fetch-flarum-content">Fetch flarum content</h3>
-
-<pre><code class="language-bash">cd /var/www
+</code></pre></div><h3 id="fetch-flarum-content">Fetch flarum content</h3>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> /var/www
 sudo yum install unzip
 sudo chown USERNAME:GROUPNAME flarum
-cd flarum
-composer create-project flarum/flarum . --stability=beta
-</code></pre>
-
-<h3 id="adjust-ownership-and-permissions">Adjust ownership and permissions</h3>
-
-<p>Change directory&rsquo;s ower to <code>apache</code> for apache to operate:</p>
-
-<pre><code class="language-bash">cd ..
+<span class="nb">cd</span> flarum
+composer create-project flarum/flarum . --stability<span class="o">=</span>beta
+</code></pre></div><h3 id="adjust-ownership-and-permissions">Adjust ownership and permissions</h3>
+<p>Change directory's ower to <code>apache</code> for apache to operate:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> ..
 sudo chown -R apache:apache flarum
-</code></pre>
-
-<h2 id="5-make-it-up-and-running">5. Make it up and running</h2>
-
+</code></pre></div><h2 id="5-make-it-up-and-running">5. Make it up and running</h2>
 <h3 id="create-virtual-host-in-apache-for-flarum">Create virtual host in apache for flarum</h3>
-
 <p>Name configuration file whatever you like:</p>
-
-<pre><code class="language-bash">cd /etc/httpd/sites-available
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> /etc/httpd/sites-available
 sudo vim flarum.conf
-</code></pre>
-
-<p>Fill in content below(<strong>Don&rsquo;t forget the url rewrite block!</strong>):</p>
-
-<pre><code class="language-conf">&lt;VirtualHost *:80&gt;
+</code></pre></div><p>Fill in content below(<strong>Don't forget the url rewrite block!</strong>):</p>
+<pre><code class="language-conf" data-lang="conf">&lt;VirtualHost *:80&gt;
     ServerName YOURDOMAIN
     ServerAlias ALIAS
     DocumentRoot /var/www/flarum/public
@@ -299,54 +230,52 @@ sudo vim flarum.conf
         allow from all
     &lt;/Directory&gt;
 &lt;/VirtualHost&gt;
-</code></pre>
-
-<p>Make your config go live</p>
-
-<pre><code class="language-bash">sudo ln -s /etc/httpd/sites-available/flarum.conf /etc/httpd/sites-enabled/flarum.conf
-</code></pre>
-
-<h3 id="configure-firewalld-and-restart-apache-server">Configure firewalld and restart Apache server</h3>
-
-<pre><code class="language-bash">sudo firewall-cmd --add-service=http --permanent &amp;&amp; sudo firewall-cmd --add-service=https --permanent
+</code></pre><p>Make your config go live</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo ln -s /etc/httpd/sites-available/flarum.conf /etc/httpd/sites-enabled/flarum.conf
+</code></pre></div><h3 id="configure-firewalld-and-restart-apache-server">Configure firewalld and restart Apache server</h3>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo firewall-cmd --add-service<span class="o">=</span>http --permanent <span class="o">&amp;&amp;</span> sudo firewall-cmd --add-service<span class="o">=</span>https --permanent
 sudo systemctl restart firewalld
 sudo apachectl restart
-</code></pre>
+</code></pre></div><h2 id="6-visit-your-flarum-site-and-enjoy">6. Visit your flarum site and enjoy!</h2>
+<h3 id="notewrote-this-down-based-on-my-memory-if-there-are-any-missing-pieces-post-a-comment-below-">Note:Wrote this down based on my memory, if there are any missing pieces, post a comment below 😃</h3>
 
-<h2 id="6-visit-your-flarum-site-and-enjoy">6. Visit your flarum site and enjoy!</h2>
-
-<h3 id="note-wrote-this-down-based-on-my-memory-if-there-are-any-missing-pieces-post-a-comment-below">Note:Wrote this down based on my memory, if there are any missing pieces, post a comment below 😃</h3>
-
-  </div>
-  
-  <div class="pagination">
-    <div class="pagination__title">
-      <span
-        class="pagination__title-h">Read other posts</span>
-      <hr />
     </div>
-    <div class="pagination__buttons">
-      
-      <span class="button previous">
-        <a href="/post/install-kbengine-on-ubuntu-18-04-lts/">
-          <span class="button__icon">←</span>
-          <span class="button__text">在 Ubuntu 18.04 LTS 上安装并运行 KBEngine</span>
-        </a>
-      </span>
-      
-      
-      <span class="button next">
-        <a href="/post/2017-year-review/">
-          <span class="button__text">2017 - 2018</span>
-          <span class="button__icon">→</span>
-        </a>
-      </span>
-      
-    </div>
-  </div>
-  
 
-  <div id="disqus_thread"></div>
+    <aside><nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-get-a-vps-from-linodevultrwhatever">1. Get a VPS from Linode/Vultr/whatever</a></li>
+    <li><a href="#2-pick-a-linux-distribution-and-make-it-runningi-use-centos-7">2. Pick a linux distribution and make it running(I use CentOS 7).</a></li>
+    <li><a href="#3-install-apachemysqlphp-71">3. Install Apache/MySQL/PHP 7.1</a>
+      <ul>
+        <li><a href="#get-yourself-a-non-root-sudo-user">Get yourself a non-root sudo user</a></li>
+        <li><a href="#install-and-configure-apache">Install and configure Apache</a></li>
+        <li><a href="#install-mysql">Install MySQL</a></li>
+        <li><a href="#install-and-configure-php">Install and configure PHP</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-install-flarum">4. Install Flarum</a>
+      <ul>
+        <li><a href="#create-site-directory">Create site directory</a></li>
+        <li><a href="#install-composer">Install composer</a></li>
+        <li><a href="#fetch-flarum-content">Fetch flarum content</a></li>
+        <li><a href="#adjust-ownership-and-permissions">Adjust ownership and permissions</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-make-it-up-and-running">5. Make it up and running</a>
+      <ul>
+        <li><a href="#create-virtual-host-in-apache-for-flarum">Create virtual host in apache for flarum</a></li>
+        <li><a href="#configure-firewalld-and-restart-apache-server">Configure firewalld and restart Apache server</a></li>
+      </ul>
+    </li>
+    <li><a href="#6-visit-your-flarum-site-and-enjoy">6. Visit your flarum site and enjoy!</a>
+      <ul>
+        <li><a href="#notewrote-this-down-based-on-my-memory-if-there-are-any-missing-pieces-post-a-comment-below-">Note:Wrote this down based on my memory, if there are any missing pieces, post a comment below 😃</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></aside>
+
+    <div id="disqus_thread"></div>
 <script type="application/javascript">
     var disqus_config = function () {
     
@@ -371,30 +300,47 @@ sudo apachectl restart
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js" integrity="sha384-2BKqo+exmr9su6dir+qCw08N2ZKRucY4PrGQPPWU1A7FtlCGjmEGFqXCv5nyM5Ij" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
     onload="renderMathInElement(document.body);"></script>
-</div>
+  </div>
+</section>
 
   </div>
+</div>
 
-  
-    <footer class="footer">
-  <div class="footer__inner">
-    
-      <div class="copyright">
-        <span>© 2020 Powered by <a href="http://gohugo.io">Hugo</a></span>
-    
-        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
-      </div>
+
+  <footer class="footer">
+  <div class="content has-text-centered">
+    <div class="copyright has-text-centered">
+      <p>
+        © 2020 Powered by <a href="//gohugo.io" class="has-text-danger">Hugo</a>
+      </p>
+      <p>
+        <a class="has-text-success">Wonderland</a>, a theme made by <a href="//github.com/dyzdyz010">dyzdyz010</a>
+      </p>
+      <p>
+        <a href="https://bulma.io" target="_blank">
+          <img src="https://wikiki.github.io/images/made-with-bulma.png" alt="Made with Bulma" width="128" height="24">
+        </a>
+      </p>
+    </div>
   </div>
 </footer>
 
-<script src="/assets/main.js"></script>
-<script src="/assets/prism.js"></script>
+<script src="https://duyizhuo.com/js/main.js"></script>
 
 
 
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-33561194-4', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 
-  
-</div>
+
 
 </body>
 </html>

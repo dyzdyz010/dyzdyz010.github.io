@@ -4,170 +4,140 @@
   
     <title>在 Ubuntu 18.04 LTS 上安装并运行 KBEngine :: Wonderland — Personal Blog</title>
   
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="description" content="本文用到的组件和系统版本：
- OS: Ubuntu 18.04 LTS MySQL: 5.7.22 gcc: 7.3.0 g&#43;&#43;: 7.3.0 Python: 3.6.5  首先安装各种依赖：
-sudo apt-get update sudo apt-get install libssl-dev mysql-server libmysqld-dev mysql-client libmysqlclient-dev gcc g&#43;&#43; python3  编译引擎 下面从官方仓库下载引擎源码，本人下载的是当时最新版本1.1.8：
-wget https://github.com/kbengine/kbengine/archive/v1.1.8.tar.gz tar -xzvf v1.1.8.tar.gz  接着就可以对代码进行编译了：
-cd kbengine-1.1.8/kbe/src chmod -R 755 . make  我在编译过程中出现了以下错误：
-/usr/lib/gcc/x86_64-linux-gnu/7/include/mm_malloc.h:34:16: error: declaration of ‘int posix_memalign(void**, size_t, size_t) throw ()’ has a different exception specifier extern &amp;quot;C&amp;quot; int posix_memalign (void **, size_t, size_t) throw (); ^~~~~~~~~~~~~~ In file included from /home/dyz/kbengine-1."/>
-<meta name="keywords" content=""/>
-<meta name="robots" content="noodp"/>
-<link rel="canonical" href="/amp/post/install-kbengine-on-ubuntu-18-04-lts/" />
-
-
-<link rel="stylesheet" href="/assets/style.css">
-
-
-
-<link rel="stylesheet" href="/style.css">
-
-
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144-precomposed.png">
-
-<link rel="shortcut icon" href="/img/favicon/orange.png">
-
-
-
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="在 Ubuntu 18.04 LTS 上安装并运行 KBEngine :: Wonderland — Personal Blog" />
-<meta name="twitter:description" content="本文用到的组件和系统版本：
- OS: Ubuntu 18.04 LTS MySQL: 5.7.22 gcc: 7.3.0 g&#43;&#43;: 7.3.0 Python: 3.6.5  首先安装各种依赖：
-sudo apt-get update sudo apt-get install libssl-dev mysql-server libmysqld-dev mysql-client libmysqlclient-dev gcc g&#43;&#43; python3  编译引擎 下面从官方仓库下载引擎源码，本人下载的是当时最新版本1.1.8：
-wget https://github.com/kbengine/kbengine/archive/v1.1.8.tar.gz tar -xzvf v1.1.8.tar.gz  接着就可以对代码进行编译了：
-cd kbengine-1.1.8/kbe/src chmod -R 755 . make  我在编译过程中出现了以下错误：
-/usr/lib/gcc/x86_64-linux-gnu/7/include/mm_malloc.h:34:16: error: declaration of ‘int posix_memalign(void**, size_t, size_t) throw ()’ has a different exception specifier extern &amp;quot;C&amp;quot; int posix_memalign (void **, size_t, size_t) throw (); ^~~~~~~~~~~~~~ In file included from /home/dyz/kbengine-1." />
-<meta name="twitter:site" content="/" />
-<meta name="twitter:creator" content="dyzdyz010" />
-<meta name="twitter:image" content="">
-
-
-<meta property="og:locale" content="en" />
-<meta property="og:type" content="article" />
-<meta property="og:title" content="在 Ubuntu 18.04 LTS 上安装并运行 KBEngine :: Wonderland — Personal Blog">
-<meta property="og:description" content="本文用到的组件和系统版本：
- OS: Ubuntu 18.04 LTS MySQL: 5.7.22 gcc: 7.3.0 g&#43;&#43;: 7.3.0 Python: 3.6.5  首先安装各种依赖：
-sudo apt-get update sudo apt-get install libssl-dev mysql-server libmysqld-dev mysql-client libmysqlclient-dev gcc g&#43;&#43; python3  编译引擎 下面从官方仓库下载引擎源码，本人下载的是当时最新版本1.1.8：
-wget https://github.com/kbengine/kbengine/archive/v1.1.8.tar.gz tar -xzvf v1.1.8.tar.gz  接着就可以对代码进行编译了：
-cd kbengine-1.1.8/kbe/src chmod -R 755 . make  我在编译过程中出现了以下错误：
-/usr/lib/gcc/x86_64-linux-gnu/7/include/mm_malloc.h:34:16: error: declaration of ‘int posix_memalign(void**, size_t, size_t) throw ()’ has a different exception specifier extern &amp;quot;C&amp;quot; int posix_memalign (void **, size_t, size_t) throw (); ^~~~~~~~~~~~~~ In file included from /home/dyz/kbengine-1." />
-<meta property="og:url" content="/amp/post/install-kbengine-on-ubuntu-18-04-lts/" />
-<meta property="og:site_name" content="在 Ubuntu 18.04 LTS 上安装并运行 KBEngine" />
-<meta property="og:image" content="">
-<meta property="og:image:width" content="2048">
-<meta property="og:image:height" content="1024">
-
-<meta property="article:published_time" content="2018-05-05 09:52:42 &#43;0800 CST" />
-
-
-
-
-
-
-
-
-
-
-
+  <meta charset="utf-8">
+<link href="https://duyizhuo.com/fontawesome-free-5.12.0-web/css/all.css" rel="stylesheet"> 
+<link rel="stylesheet" href="https://duyizhuo.com/css/bulma.min.css">
+<link rel="stylesheet" href="https://duyizhuo.com/css/highlight.css">
+<link rel="stylesheet" href="https://duyizhuo.com/css/style.css">
 </head>
 <body class="">
 
-
-<div class="container center">
-
-  <header class="header">
-  <div class="header__inner">
-    <div class="header__logo">
-      <a href="/">
+<section class="hero is-success is-medium is-bold">
+  
+  <div class="hero-head">
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="/">
   <div class="logo">
     Wonderland
   </div>
 </a>
-
-    </div>
-    <div class="menu-trigger">menu</div>
+          <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+            <span>Home</span>
+            <span>Examples</span>
+            <span>Documentation</span>
+          </span>
+        </div>
+        <div id="navbarMenuHeroA" class="navbar-menu">
+          <div class="navbar-end">
+            <a class="navbar-item is-active">
+              Home
+            </a>
+            <a class="navbar-item">
+              Examples
+            </a>
+            <a class="navbar-item">
+              Documentation
+            </a>
+            <span class="navbar-item">
+              <a class="button is-primary is-inverted">
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span>
+                <span>Download</span>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </nav>
   </div>
   
-    <nav class="menu">
-  <ul class="menu__inner menu__inner--desktop">
-    
-      
-        
-          <li><a href="/about">About</a></li>
-        
-      
-        
-          <li><a href="https://github.com/dyzdyz010">Github</a></li>
-        
-      
-        
-          <li><a href="https://dyzdyz010.sarahah.com/">Leave me a message!</a></li>
-        
-      
-      
-    
-
-    
-  </ul>
-
-  <ul class="menu__inner menu__inner--mobile">
-    
-      
-        <li><a href="/about">About</a></li>
-      
-    
-      
-        <li><a href="https://github.com/dyzdyz010">Github</a></li>
-      
-    
-      
-        <li><a href="https://dyzdyz010.sarahah.com/">Leave me a message!</a></li>
-      
-    
-    
-  </ul>
-</nav>
-
   
-</header>
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title">
+          Wonderland
+      </h1>
+      <h2 class="subtitle">
+          Personal Blog
+      </h2>
+    </div>
+  </div>
+  
+  
+  <div class="hero-foot">
+    <nav class="tabs is-boxed">
+      <div class="container">
+        <ul>
+          <li class="is-active"><a>Posts</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</section>
 
+
+<div class="container">
 
   <div class="content">
     
-<div class="post">
-  <h1 class="post-title">
-    <a href="/amp/post/install-kbengine-on-ubuntu-18-04-lts/">在 Ubuntu 18.04 LTS 上安装并运行 KBEngine</a></h1>
-  <div class="post-meta">
-      
-    <span class="post-date">
-      2018-05-05
-    </span>
-    
-    
-    <span class="post-author">::
-      dyzdyz010
-    </span>
-    
-  </div>
+<section class="section">
+  <div class="post container">
+    <h2 class="post-title title is-3">
+      <a class="has-text-grey-dark" href="https://duyizhuo.com/amp/post/install-kbengine-on-ubuntu-18-04-lts/">在 Ubuntu 18.04 LTS 上安装并运行 KBEngine</a>
+    </h2>
+    <div class="post-meta">
+      <span class="post-date">
+        <span class="icon has-text-danger">
+          <i class="fas fa-calendar"></i>
+        </span>
+        <a class="has-text-grey">Sat, May 5, 2018</a>
+      </span>
+      &nbsp;
+      <span class="post-author">
+        <span class="icon has-text-info">
+          <i class="fas fa-user"></i>
+        </span>
+        <a class="has-text-grey">
+          
+            dyzdyz010
+          
+        </a>
+      </span>
+    </div>
 
-  
-  <span class="post-tags">
     
-    #<a href="/tags/linux/">linux</a>&nbsp;
+    <div class="post-tags">
+      <div class="field is-grouped is-grouped-multiline">
+        
+        <div class="control">
+          <div class="tags has-addons">
+              <span class="tag is-dark">#</span>
+              <span class="tag is-success">
+                <a class="is-success" href="https://duyizhuo.com/tags/linux/">linux</a>
+              </span>
+          </div>
+        </div>
+        
+        <div class="control">
+          <div class="tags has-addons">
+              <span class="tag is-dark">#</span>
+              <span class="tag is-success">
+                <a class="is-success" href="https://duyizhuo.com/tags/game/">game</a>
+              </span>
+          </div>
+        </div>
+        
+      </div>
+    </div>
     
-    #<a href="/tags/game/">game</a>&nbsp;
-    
-  </span>
-  
 
-  
-
-  <div class="post-content">
     
 
-<p>本文用到的组件和系统版本：</p>
-
+    <div class="post-content">
+      <p>本文用到的组件和系统版本：</p>
 <ul>
 <li><strong>OS</strong>: Ubuntu 18.04 LTS</li>
 <li><strong>MySQL</strong>: 5.7.22</li>
@@ -175,33 +145,21 @@ cd kbengine-1.1.8/kbe/src chmod -R 755 . make  我在编译过程中出现了以
 <li><strong>g++</strong>: 7.3.0</li>
 <li><strong>Python</strong>: 3.6.5</li>
 </ul>
-
 <p>首先安装各种依赖：</p>
-
-<pre><code class="language-bash">sudo apt-get update
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt-get update
 sudo apt-get install libssl-dev mysql-server libmysqld-dev mysql-client libmysqlclient-dev gcc g++ python3
-</code></pre>
-
-<h2 id="编译引擎">编译引擎</h2>
-
+</code></pre></div><h2 id="编译引擎">编译引擎</h2>
 <p>下面从<a href="https://github.com/kbengine/kbengine">官方仓库</a>下载引擎源码，本人下载的是当时最新版本1.1.8：</p>
-
-<pre><code class="language-bash">wget https://github.com/kbengine/kbengine/archive/v1.1.8.tar.gz
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">wget https://github.com/kbengine/kbengine/archive/v1.1.8.tar.gz
 
 tar -xzvf v1.1.8.tar.gz
-</code></pre>
-
-<p>接着就可以对代码进行编译了：</p>
-
-<pre><code class="language-bash">cd kbengine-1.1.8/kbe/src
-chmod -R 755 .
+</code></pre></div><p>接着就可以对代码进行编译了：</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> kbengine-1.1.8/kbe/src
+chmod -R <span class="m">755</span> .
 make
-</code></pre>
-
-<p>我在编译过程中出现了以下错误：</p>
-
-<pre><code class="language-bash">/usr/lib/gcc/x86_64-linux-gnu/7/include/mm_malloc.h:34:16: error: declaration of ‘int posix_memalign(void**, size_t, size_t) throw ()’ has a different exception specifier
- extern &quot;C&quot; int posix_memalign (void **, size_t, size_t) throw ();
+</code></pre></div><p>我在编译过程中出现了以下错误：</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">/usr/lib/gcc/x86_64-linux-gnu/7/include/mm_malloc.h:34:16: error: declaration of ‘int posix_memalign<span class="o">(</span>void**, size_t, size_t<span class="o">)</span> throw <span class="o">(</span><span class="o">)</span>’ has a different exception specifier
+ extern <span class="s2">&#34;C&#34;</span> int posix_memalign <span class="o">(</span>void **, size_t, size_t<span class="o">)</span> throw <span class="o">(</span><span class="o">)</span><span class="p">;</span>
                 ^~~~~~~~~~~~~~
 In file included from /home/dyz/kbengine-1.1.8/kbe/src/lib/common/kbemalloc.h:27:0,
                  from /home/dyz/kbengine-1.1.8/kbe/src/lib/common/common.h:25,
@@ -209,159 +167,94 @@ In file included from /home/dyz/kbengine-1.1.8/kbe/src/lib/common/kbemalloc.h:27
                  from client_interface_macros.h:31,
                  from client_interface.h:33,
                  from client_interface.cpp:22:
-/home/dyz/kbengine-1.1.8/kbe/src/lib/dependencies/jemalloc/include/jemalloc/jemalloc.h:42:29: note: from previous declaration ‘int posix_memalign(void**, size_t, size_t)’
- #  define je_posix_memalign posix_memalign
+/home/dyz/kbengine-1.1.8/kbe/src/lib/dependencies/jemalloc/include/jemalloc/jemalloc.h:42:29: note: from previous declaration ‘int posix_memalign<span class="o">(</span>void**, size_t, size_t<span class="o">)</span>’
+ <span class="c1">#  define je_posix_memalign posix_memalign</span>
                              ^
 /home/dyz/kbengine-1.1.8/kbe/src/lib/dependencies/jemalloc/include/jemalloc/jemalloc.h:140:21: note: in expansion of macro ‘je_posix_memalign’
- JEMALLOC_EXPORT int je_posix_memalign(void **memptr, size_t alignment,
+ JEMALLOC_EXPORT int je_posix_memalign<span class="o">(</span>void **memptr, size_t alignment,
                      ^~~~~~~~~~~~~~~~~
-/home/dyz/kbengine-1.1.8/kbe/src/build/common.mak:533: recipe for target 'Hybrid64/client_interface.o' failed
-make[2]: *** [Hybrid64/client_interface.o] Error 1
-make[2]: Leaving directory '/home/dyz/kbengine-1.1.8/kbe/src/lib/client_lib'
-Makefile:22: recipe for target 'all' failed
-make[1]: *** [all] Error 2
-make[1]: Leaving directory '/home/dyz/kbengine-1.1.8/kbe/src/lib'
-Makefile:7: recipe for target 'all' failed
-make: *** [all] Error 2
-</code></pre>
-
-<p>如果遇到这个错误，请参考这个<a href="https://gist.github.com/johnmurrayvi/5879822">Gist</a>。</p>
-
+/home/dyz/kbengine-1.1.8/kbe/src/build/common.mak:533: recipe <span class="k">for</span> target <span class="s1">&#39;Hybrid64/client_interface.o&#39;</span> failed
+make<span class="o">[</span>2<span class="o">]</span>: *** <span class="o">[</span>Hybrid64/client_interface.o<span class="o">]</span> Error <span class="m">1</span>
+make<span class="o">[</span>2<span class="o">]</span>: Leaving directory <span class="s1">&#39;/home/dyz/kbengine-1.1.8/kbe/src/lib/client_lib&#39;</span>
+Makefile:22: recipe <span class="k">for</span> target <span class="s1">&#39;all&#39;</span> failed
+make<span class="o">[</span>1<span class="o">]</span>: *** <span class="o">[</span>all<span class="o">]</span> Error <span class="m">2</span>
+make<span class="o">[</span>1<span class="o">]</span>: Leaving directory <span class="s1">&#39;/home/dyz/kbengine-1.1.8/kbe/src/lib&#39;</span>
+Makefile:7: recipe <span class="k">for</span> target <span class="s1">&#39;all&#39;</span> failed
+make: *** <span class="o">[</span>all<span class="o">]</span> Error <span class="m">2</span>
+</code></pre></div><p>如果遇到这个错误，请参考这个<a href="https://gist.github.com/johnmurrayvi/5879822">Gist</a>。</p>
 <p>如果编译没有任何错误地结束了，就说明编译成功了，接下来是在运行服务器之前的一些额外配置。</p>
-
 <h2 id="环境变量">环境变量</h2>
-
 <p>根据你的 shell 选择对应的配置文件进行修改，此处我用默认的bash：</p>
-
-<pre><code class="language-bash">vim ~/.bashrc
-</code></pre>
-
-<p>将下面的内容复制到文件最底部：</p>
-
-<pre><code class="language-bash">ulimit -c unlimited
-export KBE_ROOT=引擎文件夹根目录
-export KBE_RES_PATH=$KBE_ROOT/kbe/res/:$KBE_ROOT/assets/:$KBE_ROOT/assets/scripts/:$KBE_ROOT/assets/res/
-export KBE_BIN_PATH=$KBE_ROOT/kbe/bin/server/
-</code></pre>
-
-<p>保存退出并使之生效：</p>
-
-<pre><code class="language-bash">source ~/.bashrc
-</code></pre>
-
-<h2 id="数据库配置">数据库配置</h2>
-
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">vim ~/.bashrc
+</code></pre></div><p>将下面的内容复制到文件最底部：</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">ulimit</span> -c unlimited
+<span class="nb">export</span> <span class="nv">KBE_ROOT</span><span class="o">=</span>引擎文件夹根目录
+<span class="nb">export</span> <span class="nv">KBE_RES_PATH</span><span class="o">=</span><span class="nv">$KBE_ROOT</span>/kbe/res/:<span class="nv">$KBE_ROOT</span>/assets/:<span class="nv">$KBE_ROOT</span>/assets/scripts/:<span class="nv">$KBE_ROOT</span>/assets/res/
+<span class="nb">export</span> <span class="nv">KBE_BIN_PATH</span><span class="o">=</span><span class="nv">$KBE_ROOT</span>/kbe/bin/server/
+</code></pre></div><p>保存退出并使之生效：</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">source</span> ~/.bashrc
+</code></pre></div><h2 id="数据库配置">数据库配置</h2>
 <p>首先创建需要的数据库：</p>
-
 <pre><code>mysql&gt; create database kbe;
-</code></pre>
-
-<p>创建需要的用户：</p>
-
+</code></pre><p>创建需要的用户：</p>
 <pre><code>mysql&gt; grant all privileges on *.* to kbe@'%' identified by 'pwd123456';
-</code></pre>
-
-<p>完成后退出 MySQL 然后用创建好的用户重新登录：</p>
-
-<pre><code class="language-bash">mysql -u kbe -p
-</code></pre>
-
-<p>并输入密码，如果可以进入 MySQL 说明创建成功。</p>
-
+</code></pre><p>完成后退出 MySQL 然后用创建好的用户重新登录：</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">mysql -u kbe -p
+</code></pre></div><p>并输入密码，如果可以进入 MySQL 说明创建成功。</p>
 <p>上面创建的数据库名和用户名密码都是引擎的默认值，如果你按照自己的想法用了别的名字，则需要进入引擎配置文件做相应修改：</p>
-
-<pre><code class="language-bash">vim &lt;引擎根目录&gt;/kbe/res/server/kbengine_defaults.xml
-</code></pre>
-
-<p>在文件中找到以下部分：</p>
-
-<pre><code class="language-xml">&lt;dbmgr&gt; 
-        &lt;databaseInterfaces&gt;
-            &lt;default&gt;&lt;!-- 数据库的默认设置 --&gt;
-                &lt;port&gt; 3306 &lt;/port&gt;&lt;!-- 数据库端口 --&gt;
-                &lt;auth&gt;
-                    &lt;username&gt; kbe &lt;/username&gt;&lt;!-- mysql 用户名 --&gt;
-                    &lt;password&gt; kbe &lt;/password&gt;&lt;!-- mysql 用户密码 --&gt;
-                    &lt;encrypt&gt; false &lt;/encrypt&gt;&lt;!-- 密码是否加密 --&gt;
-                &lt;/auth&gt;
-                &lt;databaseName&gt; kbe &lt;/databaseName&gt;&lt;!-- 数据库名字 --&gt;
-            &lt;/default&gt;
-        &lt;/databaseInterfaces&gt;
-    &lt;/dbmgr&gt;
-</code></pre>
-
-<p>在对应的字段做修改就可以了。</p>
-
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">vim &lt;引擎根目录&gt;/kbe/res/server/kbengine_defaults.xml
+</code></pre></div><p>在文件中找到以下部分：</p>
+<div class="highlight"><pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;dbmgr</span><span class="nt">&gt;</span> 
+        <span class="nt">&lt;databaseInterfaces</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;default</span><span class="nt">&gt;</span><span class="c">&lt;!--</span><span class="c"> 数据库的默认设置 </span><span class="c">--&gt;</span>
+                <span class="nt">&lt;port</span><span class="nt">&gt;</span> 3306 <span class="nt">&lt;/port&gt;</span><span class="c">&lt;!--</span><span class="c"> 数据库端口 </span><span class="c">--&gt;</span>
+                <span class="nt">&lt;auth</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;username</span><span class="nt">&gt;</span> kbe <span class="nt">&lt;/username&gt;</span><span class="c">&lt;!--</span><span class="c"> mysql 用户名 </span><span class="c">--&gt;</span>
+                    <span class="nt">&lt;password</span><span class="nt">&gt;</span> kbe <span class="nt">&lt;/password&gt;</span><span class="c">&lt;!--</span><span class="c"> mysql 用户密码 </span><span class="c">--&gt;</span>
+                    <span class="nt">&lt;encrypt</span><span class="nt">&gt;</span> false <span class="nt">&lt;/encrypt&gt;</span><span class="c">&lt;!--</span><span class="c"> 密码是否加密 </span><span class="c">--&gt;</span>
+                <span class="nt">&lt;/auth&gt;</span>
+                <span class="nt">&lt;databaseName</span><span class="nt">&gt;</span> kbe <span class="nt">&lt;/databaseName&gt;</span><span class="c">&lt;!--</span><span class="c"> 数据库名字 </span><span class="c">--&gt;</span>
+            <span class="nt">&lt;/default&gt;</span>
+        <span class="nt">&lt;/databaseInterfaces&gt;</span>
+    <span class="nt">&lt;/dbmgr&gt;</span>
+</code></pre></div><p>在对应的字段做修改就可以了。</p>
 <h2 id="运行与关闭">运行与关闭</h2>
-
 <p>接下来我们就可以运行服务器了：</p>
-
-<pre><code class="language-bash"># 已经设置环境变量
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"># 已经设置环境变量
 sh &lt;引擎根目录&gt;/assets/start_server.sh
 
-# 未设置环境变量
-cd &lt;引擎根目录&gt;/assets
+<span class="c1"># 未设置环境变量</span>
+<span class="nb">cd</span> &lt;引擎根目录&gt;/assets
 sh start_server.sh
-</code></pre>
-
-<p>启动成功后会有9个进程，用以下方式查看是否启动成功：</p>
-
-<pre><code class="language-bash">ps -aux | grep &lt;引擎根目录&gt;
-</code></pre>
-
-<p>使用以下命令停止服务器：</p>
-
-<pre><code class="language-bash">sh kill_server.sh
-</code></pre>
-
-<p>或者：</p>
-
-<pre><code class="language-bash">sh safe_kill.sh
-</code></pre>
-
-<p><code>注意：</code>使用 <em>safe_kill.sh</em> 的时候需要用 <code>python</code> 命令来运行 py 脚本，而如果只安装了 python3 的话是不能通过 <em>python</em> 命令进入的，因此我们对 python3 进行一个软链接：</p>
-
-<pre><code class="language-bash">sudo ln -s /usr/bin/python3.6 /usr/bin/python
-</code></pre>
-
-<p>至此大功告成！</p>
-
+</code></pre></div><p>启动成功后会有9个进程，用以下方式查看是否启动成功：</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">ps -aux <span class="p">|</span> grep &lt;引擎根目录&gt;
+</code></pre></div><p>使用以下命令停止服务器：</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sh kill_server.sh
+</code></pre></div><p>或者：</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sh safe_kill.sh
+</code></pre></div><p><code>注意：</code>使用 <em>safe_kill.sh</em> 的时候需要用 <code>python</code> 命令来运行 py 脚本，而如果只安装了 python3 的话是不能通过 <em>python</em> 命令进入的，因此我们对 python3 进行一个软链接：</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo ln -s /usr/bin/python3.6 /usr/bin/python
+</code></pre></div><p>至此大功告成！</p>
 <h3 id="参考文章">参考文章：</h3>
-
 <p><a href="https://www.comblockengine.com/docs/1.0/install/index/">官方文档——引擎安装和启动详解</a></p>
-
 <p><a href="https://blog.csdn.net/u012741077/article/details/51296832">[KBEngine]安装及第一次启动</a></p>
 
-  </div>
-  
-  <div class="pagination">
-    <div class="pagination__title">
-      <span
-        class="pagination__title-h">Read other posts</span>
-      <hr />
     </div>
-    <div class="pagination__buttons">
-      
-      <span class="button previous">
-        <a href="/amp/post/using-virtualenv-in-jupyter-notebook/">
-          <span class="button__icon">←</span>
-          <span class="button__text">Using virtualenv in Jupyter Notebook</span>
-        </a>
-      </span>
-      
-      
-      <span class="button next">
-        <a href="/amp/post/set-up-flarum-from-scratch/">
-          <span class="button__text">Set Up Flarum From Scratch</span>
-          <span class="button__icon">→</span>
-        </a>
-      </span>
-      
-    </div>
-  </div>
-  
 
-  <div id="disqus_thread"></div>
+    <aside><nav id="TableOfContents">
+  <ul>
+    <li><a href="#编译引擎">编译引擎</a></li>
+    <li><a href="#环境变量">环境变量</a></li>
+    <li><a href="#数据库配置">数据库配置</a></li>
+    <li><a href="#运行与关闭">运行与关闭</a>
+      <ul>
+        <li><a href="#参考文章">参考文章：</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></aside>
+
+    <div id="disqus_thread"></div>
 <script type="application/javascript">
     var disqus_config = function () {
     
@@ -386,30 +279,47 @@ sh start_server.sh
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js" integrity="sha384-2BKqo+exmr9su6dir+qCw08N2ZKRucY4PrGQPPWU1A7FtlCGjmEGFqXCv5nyM5Ij" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
     onload="renderMathInElement(document.body);"></script>
-</div>
+  </div>
+</section>
 
   </div>
+</div>
 
-  
-    <footer class="footer">
-  <div class="footer__inner">
-    
-      <div class="copyright">
-        <span>© 2020 Powered by <a href="http://gohugo.io">Hugo</a></span>
-    
-        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
-      </div>
+
+  <footer class="footer">
+  <div class="content has-text-centered">
+    <div class="copyright has-text-centered">
+      <p>
+        © 2020 Powered by <a href="//gohugo.io" class="has-text-danger">Hugo</a>
+      </p>
+      <p>
+        <a class="has-text-success">Wonderland</a>, a theme made by <a href="//github.com/dyzdyz010">dyzdyz010</a>
+      </p>
+      <p>
+        <a href="https://bulma.io" target="_blank">
+          <img src="https://wikiki.github.io/images/made-with-bulma.png" alt="Made with Bulma" width="128" height="24">
+        </a>
+      </p>
+    </div>
   </div>
 </footer>
 
-<script src="/assets/main.js"></script>
-<script src="/assets/prism.js"></script>
+<script src="https://duyizhuo.com/js/main.js"></script>
 
 
 
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-33561194-4', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 
-  
-</div>
+
 
 </body>
 </html>

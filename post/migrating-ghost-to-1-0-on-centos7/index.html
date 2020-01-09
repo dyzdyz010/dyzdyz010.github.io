@@ -4,240 +4,190 @@
   
     <title>Migrating Ghost to 1.0 from 0.11.x on CentOS 7 :: Wonderland — Personal Blog</title>
   
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="description" content="Ghost has released 1.0, with breaking changes so there&amp;rsquo;s no smooth upgrading method but to take a fresh install. Here&amp;rsquo;s my migration of this blog to Ghost 1.0.
-There&amp;rsquo;s already an official tutorial to help you walk this through, but since it only supports Ubuntu officially, so I have to explore my own way on my CentOS 7 server. It turns out that there&amp;rsquo;s not much modifications compared to Ubuntu version, so I&amp;rsquo;m just writing this down as a record of my migration."/>
-<meta name="keywords" content=""/>
-<meta name="robots" content="noodp"/>
-<link rel="canonical" href="/post/migrating-ghost-to-1-0-on-centos7/" />
-
-
-<link rel="stylesheet" href="/assets/style.css">
-
-
-
-<link rel="stylesheet" href="/style.css">
-
-
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144-precomposed.png">
-
-<link rel="shortcut icon" href="/img/favicon/orange.png">
-
-
-
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Migrating Ghost to 1.0 from 0.11.x on CentOS 7 :: Wonderland — Personal Blog" />
-<meta name="twitter:description" content="Ghost has released 1.0, with breaking changes so there&amp;rsquo;s no smooth upgrading method but to take a fresh install. Here&amp;rsquo;s my migration of this blog to Ghost 1.0.
-There&amp;rsquo;s already an official tutorial to help you walk this through, but since it only supports Ubuntu officially, so I have to explore my own way on my CentOS 7 server. It turns out that there&amp;rsquo;s not much modifications compared to Ubuntu version, so I&amp;rsquo;m just writing this down as a record of my migration." />
-<meta name="twitter:site" content="/" />
-<meta name="twitter:creator" content="dyzdyz010" />
-<meta name="twitter:image" content="">
-
-
-<meta property="og:locale" content="en" />
-<meta property="og:type" content="article" />
-<meta property="og:title" content="Migrating Ghost to 1.0 from 0.11.x on CentOS 7 :: Wonderland — Personal Blog">
-<meta property="og:description" content="Ghost has released 1.0, with breaking changes so there&amp;rsquo;s no smooth upgrading method but to take a fresh install. Here&amp;rsquo;s my migration of this blog to Ghost 1.0.
-There&amp;rsquo;s already an official tutorial to help you walk this through, but since it only supports Ubuntu officially, so I have to explore my own way on my CentOS 7 server. It turns out that there&amp;rsquo;s not much modifications compared to Ubuntu version, so I&amp;rsquo;m just writing this down as a record of my migration." />
-<meta property="og:url" content="/post/migrating-ghost-to-1-0-on-centos7/" />
-<meta property="og:site_name" content="Migrating Ghost to 1.0 from 0.11.x on CentOS 7" />
-<meta property="og:image" content="">
-<meta property="og:image:width" content="2048">
-<meta property="og:image:height" content="1024">
-
-<meta property="article:published_time" content="2017-07-29 17:31:01 &#43;0800 CST" />
-
-
-
-
-
-
-
-
-
-
-
+  <meta charset="utf-8">
+<link href="https://duyizhuo.com/fontawesome-free-5.12.0-web/css/all.css" rel="stylesheet"> 
+<link rel="stylesheet" href="https://duyizhuo.com/css/bulma.min.css">
+<link rel="stylesheet" href="https://duyizhuo.com/css/highlight.css">
+<link rel="stylesheet" href="https://duyizhuo.com/css/style.css">
 </head>
 <body class="">
 
-
-<div class="container center">
-
-  <header class="header">
-  <div class="header__inner">
-    <div class="header__logo">
-      <a href="/">
+<section class="hero is-success is-medium is-bold">
+  
+  <div class="hero-head">
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="/">
   <div class="logo">
     Wonderland
   </div>
 </a>
-
-    </div>
-    <div class="menu-trigger">menu</div>
+          <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+            <span>Home</span>
+            <span>Examples</span>
+            <span>Documentation</span>
+          </span>
+        </div>
+        <div id="navbarMenuHeroA" class="navbar-menu">
+          <div class="navbar-end">
+            <a class="navbar-item is-active">
+              Home
+            </a>
+            <a class="navbar-item">
+              Examples
+            </a>
+            <a class="navbar-item">
+              Documentation
+            </a>
+            <span class="navbar-item">
+              <a class="button is-primary is-inverted">
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span>
+                <span>Download</span>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </nav>
   </div>
   
-    <nav class="menu">
-  <ul class="menu__inner menu__inner--desktop">
-    
-      
-        
-          <li><a href="/about">About</a></li>
-        
-      
-        
-          <li><a href="https://github.com/dyzdyz010">Github</a></li>
-        
-      
-        
-          <li><a href="https://dyzdyz010.sarahah.com/">Leave me a message!</a></li>
-        
-      
-      
-    
-
-    
-  </ul>
-
-  <ul class="menu__inner menu__inner--mobile">
-    
-      
-        <li><a href="/about">About</a></li>
-      
-    
-      
-        <li><a href="https://github.com/dyzdyz010">Github</a></li>
-      
-    
-      
-        <li><a href="https://dyzdyz010.sarahah.com/">Leave me a message!</a></li>
-      
-    
-    
-  </ul>
-</nav>
-
   
-</header>
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title">
+          Wonderland
+      </h1>
+      <h2 class="subtitle">
+          Personal Blog
+      </h2>
+    </div>
+  </div>
+  
+  
+  <div class="hero-foot">
+    <nav class="tabs is-boxed">
+      <div class="container">
+        <ul>
+          <li class="is-active"><a>Posts</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</section>
 
+
+<div class="container">
 
   <div class="content">
     
-<div class="post">
-  <h1 class="post-title">
-    <a href="/post/migrating-ghost-to-1-0-on-centos7/">Migrating Ghost to 1.0 from 0.11.x on CentOS 7</a></h1>
-  <div class="post-meta">
-      
-    <span class="post-date">
-      2017-07-29
-    </span>
-    
-    
-    <span class="post-author">::
-      dyzdyz010
-    </span>
-    
-  </div>
+<section class="section">
+  <div class="post container">
+    <h2 class="post-title title is-3">
+      <a class="has-text-grey-dark" href="https://duyizhuo.com/post/migrating-ghost-to-1-0-on-centos7/">Migrating Ghost to 1.0 from 0.11.x on CentOS 7</a>
+    </h2>
+    <div class="post-meta">
+      <span class="post-date">
+        <span class="icon has-text-danger">
+          <i class="fas fa-calendar"></i>
+        </span>
+        <a class="has-text-grey">Sat, Jul 29, 2017</a>
+      </span>
+      &nbsp;
+      <span class="post-author">
+        <span class="icon has-text-info">
+          <i class="fas fa-user"></i>
+        </span>
+        <a class="has-text-grey">
+          
+            dyzdyz010
+          
+        </a>
+      </span>
+    </div>
 
-  
-  <span class="post-tags">
     
-    #<a href="/tags/ghost/">ghost</a>&nbsp;
+    <div class="post-tags">
+      <div class="field is-grouped is-grouped-multiline">
+        
+        <div class="control">
+          <div class="tags has-addons">
+              <span class="tag is-dark">#</span>
+              <span class="tag is-success">
+                <a class="is-success" href="https://duyizhuo.com/tags/ghost/">ghost</a>
+              </span>
+          </div>
+        </div>
+        
+        <div class="control">
+          <div class="tags has-addons">
+              <span class="tag is-dark">#</span>
+              <span class="tag is-success">
+                <a class="is-success" href="https://duyizhuo.com/tags/linux/">linux</a>
+              </span>
+          </div>
+        </div>
+        
+        <div class="control">
+          <div class="tags has-addons">
+              <span class="tag is-dark">#</span>
+              <span class="tag is-success">
+                <a class="is-success" href="https://duyizhuo.com/tags/centos/">centos</a>
+              </span>
+          </div>
+        </div>
+        
+      </div>
+    </div>
     
-    #<a href="/tags/linux/">linux</a>&nbsp;
-    
-    #<a href="/tags/centos/">centos</a>&nbsp;
-    
-  </span>
-  
 
-  
-
-  <div class="post-content">
     
 
-<p>Ghost has released 1.0, with breaking changes so there&rsquo;s no smooth upgrading method but to take a fresh install. Here&rsquo;s my migration of this blog to Ghost 1.0.</p>
-
-<p>There&rsquo;s already <a href="https://docs.ghost.org/docs/migrating-to-ghost-1-0-0">an official tutorial</a> to help you walk this through, but since it <strong>only supports Ubuntu officially</strong>, so I have to explore my own way on my <code>CentOS 7</code> server. It turns out that there&rsquo;s not much modifications compared to Ubuntu version, so I&rsquo;m just writing this down as a record of my migration.</p>
-
+    <div class="post-content">
+      <p>Ghost has released 1.0, with breaking changes so there's no smooth upgrading method but to take a fresh install. Here's my migration of this blog to Ghost 1.0.</p>
+<p>There's already <a href="https://docs.ghost.org/docs/migrating-to-ghost-1-0-0">an official tutorial</a> to help you walk this through, but since it <strong>only supports Ubuntu officially</strong>, so I have to explore my own way on my <code>CentOS 7</code> server. It turns out that there's not much modifications compared to Ubuntu version, so I'm just writing this down as a record of my migration.</p>
 <h2 id="backup">Backup</h2>
-
 <p>The new version of Ghost uses almost-the-same data structure as the older version, so backup your content by following:</p>
-
 <ul>
-<li><p>Go to you <code>Admin</code> section, under <code>Labs</code>, click <code>Export</code> to make a backup json file of your posts, custom code injections, etc.</p></li>
-
-<li><p>Go to you site directory on your server to make a copy of <code>content</code> folder, your images lives there.</p></li>
-
-<li><p>Backup your <code>themes</code> folder as well, in case you put custom files in it, <code>highlightjs</code> for myself as an example.</p></li>
+<li>
+<p>Go to you <code>Admin</code> section, under <code>Labs</code>, click <code>Export</code> to make a backup json file of your posts, custom code injections, etc.</p>
+</li>
+<li>
+<p>Go to you site directory on your server to make a copy of <code>content</code> folder, your images lives there.</p>
+</li>
+<li>
+<p>Backup your <code>themes</code> folder as well, in case you put custom files in it, <code>highlightjs</code> for myself as an example.</p>
+</li>
 </ul>
-
 <h2 id="install">Install</h2>
-
-<p>In Ghost 1.0 or later it uses it&rsquo;s own CLI called <code>ghost</code> to manage sites, so install it by npm:</p>
-
-<pre><code class="language-bash">sudo npm i -g ghost-cli
-</code></pre>
-
-<p>Then create you site folder(For myself I created it under <code>/usr/share/nginx/</code>):</p>
-
-<pre><code class="language-bash">sudo mkdir /usr/share/nginx/ghost
-cd /usr/share/nginx/ghost
-</code></pre>
-
-<p>Then start the install process:</p>
-
-<pre><code class="language-bash">ghost install local
-</code></pre>
-
-<p>Here I used <code>ghost install local</code> instead of <code>ghost install</code> to bypass mysql configuration.</p>
-
+<p>In Ghost 1.0 or later it uses it's own CLI called <code>ghost</code> to manage sites, so install it by npm:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo npm i -g ghost-cli
+</code></pre></div><p>Then create you site folder(For myself I created it under <code>/usr/share/nginx/</code>):</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo mkdir /usr/share/nginx/ghost
+<span class="nb">cd</span> /usr/share/nginx/ghost
+</code></pre></div><p>Then start the install process:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">ghost install <span class="nb">local</span>
+</code></pre></div><p>Here I used <code>ghost install local</code> instead of <code>ghost install</code> to bypass mysql configuration.</p>
 <p>When the installation was successfully done, it runs itself immediately. If you used <code>nginx/Apache</code> for your previous version of ghost, you may directly access this new site from your browser.</p>
-
 <p>However, it configures your <code>site url</code> default to <code>http://localhost:2368</code>, you need to change it manually, among with other configurations like <code>mail</code>. Under your site root folder:</p>
-
-<pre><code class="language-bash">vim config.development.json
-</code></pre>
-
-<p>This makes your site runs under development mode, you can just copy it to <code>config.production.json</code> to make your site runs in production.</p>
-
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">vim config.development.json
+</code></pre></div><p>This makes your site runs under development mode, you can just copy it to <code>config.production.json</code> to make your site runs in production.</p>
 <p>After you modifying your config file, run:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">ghost restart
+</code></pre></div><p>Your site will restart with new configurations and ready to roll! 😉</p>
 
-<pre><code class="language-bash">ghost restart
-</code></pre>
-
-<p>Your site will restart with new configurations and ready to roll! 😉</p>
-
-  </div>
-  
-  <div class="pagination">
-    <div class="pagination__title">
-      <span
-        class="pagination__title-h">Read other posts</span>
-      <hr />
     </div>
-    <div class="pagination__buttons">
-      
-      <span class="button previous">
-        <a href="/post/acg-wallpaper-recommendation-0/">
-          <span class="button__icon">←</span>
-          <span class="button__text">ACG Wallpaper Recommendation(0)</span>
-        </a>
-      </span>
-      
-      
-      <span class="button next">
-        <a href="/post/ml-course-summary-review/">
-          <span class="button__text">机器学习课程结束总结</span>
-          <span class="button__icon">→</span>
-        </a>
-      </span>
-      
-    </div>
-  </div>
-  
 
-  <div id="disqus_thread"></div>
+    <aside><nav id="TableOfContents">
+  <ul>
+    <li><a href="#backup">Backup</a></li>
+    <li><a href="#install">Install</a></li>
+  </ul>
+</nav></aside>
+
+    <div id="disqus_thread"></div>
 <script type="application/javascript">
     var disqus_config = function () {
     
@@ -262,30 +212,47 @@ cd /usr/share/nginx/ghost
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js" integrity="sha384-2BKqo+exmr9su6dir+qCw08N2ZKRucY4PrGQPPWU1A7FtlCGjmEGFqXCv5nyM5Ij" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
     onload="renderMathInElement(document.body);"></script>
-</div>
+  </div>
+</section>
 
   </div>
+</div>
 
-  
-    <footer class="footer">
-  <div class="footer__inner">
-    
-      <div class="copyright">
-        <span>© 2020 Powered by <a href="http://gohugo.io">Hugo</a></span>
-    
-        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
-      </div>
+
+  <footer class="footer">
+  <div class="content has-text-centered">
+    <div class="copyright has-text-centered">
+      <p>
+        © 2020 Powered by <a href="//gohugo.io" class="has-text-danger">Hugo</a>
+      </p>
+      <p>
+        <a class="has-text-success">Wonderland</a>, a theme made by <a href="//github.com/dyzdyz010">dyzdyz010</a>
+      </p>
+      <p>
+        <a href="https://bulma.io" target="_blank">
+          <img src="https://wikiki.github.io/images/made-with-bulma.png" alt="Made with Bulma" width="128" height="24">
+        </a>
+      </p>
+    </div>
   </div>
 </footer>
 
-<script src="/assets/main.js"></script>
-<script src="/assets/prism.js"></script>
+<script src="https://duyizhuo.com/js/main.js"></script>
 
 
 
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-33561194-4', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 
-  
-</div>
+
 
 </body>
 </html>

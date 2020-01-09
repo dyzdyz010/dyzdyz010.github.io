@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tensorflow on Wonderland</title>
+    <title>tensorflow on Wonderland</title>
     <link>https://duyizhuo.com/tags/tensorflow/</link>
-    <description>Recent content in Tensorflow on Wonderland</description>
+    <description>Recent content in tensorflow on Wonderland</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 28 Jun 2017 07:49:11 +0800</lastBuildDate>
@@ -27,7 +27,7 @@ pandas, matplotlib, numpy
 数据形式:
 前两列分别为两次考试成绩（x1, x2），最后一列为是否被录取（y），1代表被录取，0则反之。
 在源文件main.py中，我们首先引入需要的包：
-import pandas as pd # 用于读取数据文件 import tensorflow as tf import matplotlib.pyplot as plt # 用于画图 import numpy as np # 用于后续计算  pandas是一个数据处理相关的包，可以对数据集进行读取和其他各种操作；matplotlib可以用来把我们的数据集绘成图表展示出来。</description>
+import pandas as pd # 用于读取数据文件 import tensorflow as tf import matplotlib.pyplot as plt # 用于画图 import numpy as np # 用于后续计算 pandas是一个数据处理相关的包，可以对数据集进行读取和其他各种操作；matplotlib可以用来把我们的数据集绘成图表展示出来。</description>
     </item>
     
   </channel>

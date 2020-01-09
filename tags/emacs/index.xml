@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Emacs on Wonderland</title>
+    <title>emacs on Wonderland</title>
     <link>https://duyizhuo.com/tags/emacs/</link>
-    <description>Recent content in Emacs on Wonderland</description>
+    <description>Recent content in emacs on Wonderland</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 11 May 2018 07:50:12 +0800</lastBuildDate>
@@ -21,7 +21,7 @@
 By default, when exporting latex and PDF file from emacs org-mode, log files are removed when the process finishes, you may want to reserve it.
 To make emacs stop removing log files, do as below:
 M-x -&amp;gt; customize-variable, RET -&amp;gt; org-latex-remove-logfiles
-By default this variable is set to true, means log files are removed automatically, then you just need to toggle it to false, save, restart Emacs, and you&amp;rsquo;re good to go 😀</description>
+By default this variable is set to true, means log files are removed automatically, then you just need to toggle it to false, save, restart Emacs, and you&#39;re good to go 😀</description>
     </item>
     
   </channel>

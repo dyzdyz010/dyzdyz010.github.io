@@ -4,283 +4,213 @@
   
     <title>Use Hugo with Github Pages and CircleCI :: Wonderland — Personal Blog</title>
   
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="description" content="This tutorial is to teach you how to make youre own hugo-generated static site served by Github Pages, within a single repo.
-Prerequisites  Github &amp;amp; CircleCI account Newly-generated SSH key pair for safety reasons(see here) Hugo installed locally  Dive in Generate site source with hugo command:
-hugo new site &amp;lt;SITE_NAME&amp;gt;  Create a repo for your site: &amp;lt;SITE_NAME&amp;gt;.github.io(Be aware: this tutorial uses User/Organization Pages rather than Project Pages, see here), clone it, and create a new branch called source(whatever you like):"/>
-<meta name="keywords" content=""/>
-<meta name="robots" content="noodp"/>
-<link rel="canonical" href="/post/hugo-with-github-pages/" />
-
-
-<link rel="stylesheet" href="/assets/style.css">
-
-
-
-<link rel="stylesheet" href="/style.css">
-
-
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144-precomposed.png">
-
-<link rel="shortcut icon" href="/img/favicon/orange.png">
-
-
-
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Use Hugo with Github Pages and CircleCI :: Wonderland — Personal Blog" />
-<meta name="twitter:description" content="This tutorial is to teach you how to make youre own hugo-generated static site served by Github Pages, within a single repo.
-Prerequisites  Github &amp;amp; CircleCI account Newly-generated SSH key pair for safety reasons(see here) Hugo installed locally  Dive in Generate site source with hugo command:
-hugo new site &amp;lt;SITE_NAME&amp;gt;  Create a repo for your site: &amp;lt;SITE_NAME&amp;gt;.github.io(Be aware: this tutorial uses User/Organization Pages rather than Project Pages, see here), clone it, and create a new branch called source(whatever you like):" />
-<meta name="twitter:site" content="/" />
-<meta name="twitter:creator" content="dyzdyz010" />
-<meta name="twitter:image" content="">
-
-
-<meta property="og:locale" content="en" />
-<meta property="og:type" content="article" />
-<meta property="og:title" content="Use Hugo with Github Pages and CircleCI :: Wonderland — Personal Blog">
-<meta property="og:description" content="This tutorial is to teach you how to make youre own hugo-generated static site served by Github Pages, within a single repo.
-Prerequisites  Github &amp;amp; CircleCI account Newly-generated SSH key pair for safety reasons(see here) Hugo installed locally  Dive in Generate site source with hugo command:
-hugo new site &amp;lt;SITE_NAME&amp;gt;  Create a repo for your site: &amp;lt;SITE_NAME&amp;gt;.github.io(Be aware: this tutorial uses User/Organization Pages rather than Project Pages, see here), clone it, and create a new branch called source(whatever you like):" />
-<meta property="og:url" content="/post/hugo-with-github-pages/" />
-<meta property="og:site_name" content="Use Hugo with Github Pages and CircleCI" />
-<meta property="og:image" content="">
-<meta property="og:image:width" content="2048">
-<meta property="og:image:height" content="1024">
-
-<meta property="article:published_time" content="2019-03-28 22:04:19 &#43;0800 CST" />
-
-
-
-
-
-
-
-
-
-
-
+  <meta charset="utf-8">
+<link href="https://duyizhuo.com/fontawesome-free-5.12.0-web/css/all.css" rel="stylesheet"> 
+<link rel="stylesheet" href="https://duyizhuo.com/css/bulma.min.css">
+<link rel="stylesheet" href="https://duyizhuo.com/css/highlight.css">
+<link rel="stylesheet" href="https://duyizhuo.com/css/style.css">
 </head>
 <body class="">
 
-
-<div class="container center">
-
-  <header class="header">
-  <div class="header__inner">
-    <div class="header__logo">
-      <a href="/">
+<section class="hero is-success is-medium is-bold">
+  
+  <div class="hero-head">
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="/">
   <div class="logo">
     Wonderland
   </div>
 </a>
-
-    </div>
-    <div class="menu-trigger">menu</div>
+          <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+            <span>Home</span>
+            <span>Examples</span>
+            <span>Documentation</span>
+          </span>
+        </div>
+        <div id="navbarMenuHeroA" class="navbar-menu">
+          <div class="navbar-end">
+            <a class="navbar-item is-active">
+              Home
+            </a>
+            <a class="navbar-item">
+              Examples
+            </a>
+            <a class="navbar-item">
+              Documentation
+            </a>
+            <span class="navbar-item">
+              <a class="button is-primary is-inverted">
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span>
+                <span>Download</span>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </nav>
   </div>
   
-    <nav class="menu">
-  <ul class="menu__inner menu__inner--desktop">
-    
-      
-        
-          <li><a href="/about">About</a></li>
-        
-      
-        
-          <li><a href="https://github.com/dyzdyz010">Github</a></li>
-        
-      
-        
-          <li><a href="https://dyzdyz010.sarahah.com/">Leave me a message!</a></li>
-        
-      
-      
-    
-
-    
-  </ul>
-
-  <ul class="menu__inner menu__inner--mobile">
-    
-      
-        <li><a href="/about">About</a></li>
-      
-    
-      
-        <li><a href="https://github.com/dyzdyz010">Github</a></li>
-      
-    
-      
-        <li><a href="https://dyzdyz010.sarahah.com/">Leave me a message!</a></li>
-      
-    
-    
-  </ul>
-</nav>
-
   
-</header>
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title">
+          Wonderland
+      </h1>
+      <h2 class="subtitle">
+          Personal Blog
+      </h2>
+    </div>
+  </div>
+  
+  
+  <div class="hero-foot">
+    <nav class="tabs is-boxed">
+      <div class="container">
+        <ul>
+          <li class="is-active"><a>Posts</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</section>
 
+
+<div class="container">
 
   <div class="content">
     
-<div class="post">
-  <h1 class="post-title">
-    <a href="/post/hugo-with-github-pages/">Use Hugo with Github Pages and CircleCI</a></h1>
-  <div class="post-meta">
-      
-    <span class="post-date">
-      2019-03-28
-    </span>
-    
-    
-    <span class="post-author">::
-      dyzdyz010
-    </span>
-    
-  </div>
+<section class="section">
+  <div class="post container">
+    <h2 class="post-title title is-3">
+      <a class="has-text-grey-dark" href="https://duyizhuo.com/post/hugo-with-github-pages/">Use Hugo with Github Pages and CircleCI</a>
+    </h2>
+    <div class="post-meta">
+      <span class="post-date">
+        <span class="icon has-text-danger">
+          <i class="fas fa-calendar"></i>
+        </span>
+        <a class="has-text-grey">Thu, Mar 28, 2019</a>
+      </span>
+      &nbsp;
+      <span class="post-author">
+        <span class="icon has-text-info">
+          <i class="fas fa-user"></i>
+        </span>
+        <a class="has-text-grey">
+          
+            dyzdyz010
+          
+        </a>
+      </span>
+    </div>
 
-  
-  <span class="post-tags">
     
-    #<a href="/tags/tutorial/">tutorial</a>&nbsp;
+    <div class="post-tags">
+      <div class="field is-grouped is-grouped-multiline">
+        
+        <div class="control">
+          <div class="tags has-addons">
+              <span class="tag is-dark">#</span>
+              <span class="tag is-success">
+                <a class="is-success" href="https://duyizhuo.com/tags/tutorial/">tutorial</a>
+              </span>
+          </div>
+        </div>
+        
+        <div class="control">
+          <div class="tags has-addons">
+              <span class="tag is-dark">#</span>
+              <span class="tag is-success">
+                <a class="is-success" href="https://duyizhuo.com/tags/web/">web</a>
+              </span>
+          </div>
+        </div>
+        
+      </div>
+    </div>
     
-    #<a href="/tags/web/">web</a>&nbsp;
-    
-  </span>
-  
 
-  
-
-  <div class="post-content">
     
 
-<p>This tutorial is to teach you how to make youre own hugo-generated static site served by Github Pages,  within a single repo.</p>
-
+    <div class="post-content">
+      <p>This tutorial is to teach you how to make youre own hugo-generated static site served by Github Pages,  within a single repo.</p>
 <h1 id="prerequisites">Prerequisites</h1>
-
 <ol>
 <li>Github &amp; CircleCI account</li>
 <li>Newly-generated SSH key pair for safety reasons(<a href="https://circleci.com/docs/2.0/add-ssh-key/">see here</a>)</li>
 <li>Hugo installed locally</li>
 </ol>
-
 <h1 id="dive-in">Dive in</h1>
-
 <p>Generate site source with <code>hugo</code> command:</p>
-
-<pre><code class="language-bash">hugo new site &lt;SITE_NAME&gt;
-</code></pre>
-
-<p>Create a repo for your site: <code>&lt;SITE_NAME&gt;.github.io</code><strong>(Be aware: this tutorial uses <em>User/Organization Pages</em> rather than <em>Project Pages</em>, <a href="https://help.github.com/en/articles/user-organization-and-project-pages">see here</a>)</strong>, clone it, and create a new branch called <code>source</code>(whatever you like):</p>
-
-<pre><code class="language-bash">git clone https://github.com/&lt;USERNAME/ORGANIZATION&gt;/&lt;SITE_NAME&gt;.github.io.git
-cd &lt;SITE_NAME&gt;.github.io
-git checkout -b source
-</code></pre>
-
-<p>Copy everything from the folder created by hugo above into repo:</p>
-
-<pre><code class="language-bash">mv ../&lt;SITE_NAME&gt;/* .
-</code></pre>
-
-<p>Go to <a href="https://circleci.com">circleci.com</a> and add your <SITE_NAME>.github.io project. Goto <code>Project Settings</code>, under <code>SSH Permissions</code>, add SSH private key you just generated(<a href="https://circleci.com/docs/2.0/add-ssh-key/">see here</a>), copy the <code>Fingerprint</code> for use below.</p>
-
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">hugo new site &lt;SITE_NAME&gt;
+</code></pre></div><p>Create a repo for your site: <code>&lt;SITE_NAME&gt;.github.io</code>**(Be aware: this tutorial uses *User/Organization Pages* rather than *Project Pages*, <a href="https://help.github.com/en/articles/user-organization-and-project-pages">see here</a>)**, clone it, and create a new branch called <code>source</code>(whatever you like):</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">git clone https://github.com/&lt;USERNAME/ORGANIZATION&gt;/&lt;SITE_NAME&gt;.github.io.git
+<span class="nb">cd</span> &lt;SITE_NAME&gt;.github.io
+git checkout -b <span class="nb">source</span>
+</code></pre></div><p>Copy everything from the folder created by hugo above into repo:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">mv ../&lt;SITE_NAME&gt;/* .
+</code></pre></div><p>Go to <a href="https://circleci.com">circleci.com</a> and add your &lt;SITE_NAME&gt;.github.io project. Goto <code>Project Settings</code>, under <code>SSH Permissions</code>, add SSH private key you just generated(<a href="https://circleci.com/docs/2.0/add-ssh-key/">see here</a>), copy the <code>Fingerprint</code> for use below.</p>
 <p>Go to Github your project settings, under <code>Deploy Key</code>, add SSH public key you just generated.</p>
-
 <p>Create config file for CircleCI:</p>
-
-<pre><code class="language-bash">mkdir .circleci
-cd .circleci
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">mkdir .circleci
+<span class="nb">cd</span> .circleci
 touch config.yml
-</code></pre>
+</code></pre></div><p><code>config.yml</code>(Edit it with your own information):</p>
+<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml">version<span class="p">:</span><span class="w"> </span><span class="m">2.0</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span>jobs<span class="p">:</span><span class="w">
+</span><span class="w">    </span>build<span class="p">:</span><span class="w">
+</span><span class="w">        </span>docker<span class="p">:</span><span class="w">
+</span><span class="w">            </span>-<span class="w"> </span>image<span class="p">:</span><span class="w"> </span>felicianotech/docker-hugo<span class="p">:</span>latest<span class="w">
+</span><span class="w">        </span>working_directory<span class="p">:</span><span class="w"> </span>~/&lt;SITE_NAME&gt;.github.io<span class="w">
+</span><span class="w">        </span>steps<span class="p">:</span><span class="w">
+</span><span class="w">            </span>-<span class="w"> </span>add_ssh_keys<span class="p">:</span><span class="w">
+</span><span class="w">                </span>fingerprints<span class="p">:</span><span class="w">
+</span><span class="w">                    </span>-<span class="w"> </span><span class="s2">&#34;&lt;FINGERPRINT_YOU_JUST_COPIED&#34;</span><span class="w">
+</span><span class="w">            </span>-<span class="w"> </span>checkout<span class="w">
+</span><span class="w">            </span>-<span class="w"> </span>run<span class="p">:</span><span class="w">
+</span><span class="w">                </span>name<span class="p">:</span><span class="w"> </span>Get<span class="w"> </span>current<span class="w"> </span>site<span class="w">
+</span><span class="w">                </span>working_directory<span class="p">:</span><span class="w"> </span>~/<span class="w">
+</span><span class="w">                </span>command<span class="p">:</span><span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>-b<span class="w"> </span>master<span class="w"> </span>git@github.com<span class="p">:</span>&lt;USERNAME/ORGANIZATION&gt;/&lt;SITE_NAME&gt;.github.io.git<span class="w"> </span>public<span class="w">
+</span><span class="w">            </span>-<span class="w"> </span>run<span class="p">:</span><span class="w">
+</span><span class="w">                </span>name<span class="p">:</span><span class="w"> </span>Generate<span class="w"> </span>site<span class="w">
+</span><span class="w">                </span>working_directory<span class="p">:</span><span class="w"> </span>~/&lt;SITE_NAME&gt;.github.io<span class="w">
+</span><span class="w">                </span>command<span class="p">:</span><span class="w"> </span>HUGO_ENV=production<span class="w"> </span>hugo<span class="w"> </span>-d<span class="w"> </span>~/public<span class="w">
+</span><span class="w">            </span>-<span class="w"> </span>deploy<span class="p">:</span><span class="w">
+</span><span class="w">                </span>name<span class="p">:</span><span class="w"> </span>Deploy<span class="w"> </span>to<span class="w"> </span>Github<span class="w"> </span>Pages<span class="w">
+</span><span class="w">                </span>working_directory<span class="p">:</span><span class="w"> </span>~/public<span class="w">
+</span><span class="w">                </span>command<span class="p">:</span><span class="w"> </span><span class="sd">|
+</span><span class="sd">                   </span><span class="sd"> </span><span class="sd">git config credential.helper &#39;cache --timeout=120&#39;</span><span class="w">
+</span><span class="w">                    </span>git<span class="w"> </span>config<span class="w"> </span>user.email<span class="w"> </span><span class="s2">&#34;&lt;YOUR_EMAIL&gt;&#34;</span><span class="w">
+</span><span class="w">                    </span>git<span class="w"> </span>config<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&#34;Deployment Bot&#34;</span><span class="w">
+</span><span class="w">                    </span>git<span class="w"> </span>add<span class="w"> </span>.<span class="w">
+</span><span class="w">                    </span>git<span class="w"> </span>commit<span class="w"> </span>--allow-empty<span class="w"> </span>-m<span class="w"> </span><span class="s2">&#34;Trigger deployment&#34;</span><span class="w">
+</span><span class="w">                    </span>git<span class="w"> </span>push<span class="w"> </span>-q<span class="w"> </span>git@github.com<span class="p">:</span>&lt;USERNAME/ORGANIZATION&gt;/&lt;SITE_NAME&gt;.github.io.git<span class="w"> </span>master<span class="w">
+</span><span class="w">
+</span><span class="w"></span>workflows<span class="p">:</span><span class="w">
+</span><span class="w">  </span>version<span class="p">:</span><span class="w"> </span><span class="m">2</span><span class="w">
+</span><span class="w">  </span>main<span class="p">:</span><span class="w">
+</span><span class="w">    </span>jobs<span class="p">:</span><span class="w">
+</span><span class="w">    </span>-<span class="w"> </span>build<span class="p">:</span><span class="w">
+</span><span class="w">        </span>filters<span class="p">:</span><span class="w">
+</span><span class="w">          </span>branches<span class="p">:</span><span class="w">
+</span><span class="w">            </span>only<span class="p">:</span><span class="w"> </span>source<span class="w">
+</span></code></pre></div><p>Now push your files to Github:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">git add .
+git commit -m <span class="s2">&#34;first commit&#34;</span>
+git push origin <span class="nb">source</span>
+</code></pre></div><p>For every time you push to the <code>source</code> branch, CircleCI will always trigger a hugo generation to the <code>master</code> branch, where the site's static file generated by Hugo is placed.</p>
+<p>Wait for CircleCI's job done, then visit <code>&lt;SITE_NAME&gt;.github.io</code> and enjoy!</p>
 
-<p><code>config.yml</code>(Edit it with your own information):</p>
-
-<pre><code class="language-yaml">version: 2.0
-
-jobs:
-    build:
-        docker:
-            - image: felicianotech/docker-hugo:latest
-        working_directory: ~/&lt;SITE_NAME&gt;.github.io
-        steps:
-            - add_ssh_keys:
-                fingerprints:
-                    - &quot;&lt;FINGERPRINT_YOU_JUST_COPIED&quot;
-            - checkout
-            - run:
-                name: Get current site
-                working_directory: ~/
-                command: git clone -b master git@github.com:&lt;USERNAME/ORGANIZATION&gt;/&lt;SITE_NAME&gt;.github.io.git public
-            - run:
-                name: Generate site
-                working_directory: ~/&lt;SITE_NAME&gt;.github.io
-                command: HUGO_ENV=production hugo -d ~/public
-            - deploy:
-                name: Deploy to Github Pages
-                working_directory: ~/public
-                command: |
-                    git config credential.helper 'cache --timeout=120'
-                    git config user.email &quot;&lt;YOUR_EMAIL&gt;&quot;
-                    git config user.name &quot;Deployment Bot&quot;
-                    git add .
-                    git commit --allow-empty -m &quot;Trigger deployment&quot;
-                    git push -q git@github.com:&lt;USERNAME/ORGANIZATION&gt;/&lt;SITE_NAME&gt;.github.io.git master
-
-workflows:
-  version: 2
-  main:
-    jobs:
-    - build:
-        filters:
-          branches:
-            only: source
-</code></pre>
-
-<p>Now push your files to Github:</p>
-
-<pre><code class="language-bash">git add .
-git commit -m &quot;first commit&quot;
-git push origin source
-</code></pre>
-
-<p>For every time you push to the <code>source</code> branch, CircleCI will always trigger a hugo generation to the <code>master</code> branch, where the site&rsquo;s static file generated by Hugo is placed.</p>
-
-<p>Wait for CircleCI&rsquo;s job done, then visit <code>&lt;SITE_NAME&gt;.github.io</code> and enjoy!</p>
-
-  </div>
-  
-  <div class="pagination">
-    <div class="pagination__title">
-      <span
-        class="pagination__title-h">Read other posts</span>
-      <hr />
     </div>
-    <div class="pagination__buttons">
-      
-      <span class="button previous">
-        <a href="/post/2019-year-review/">
-          <span class="button__icon">←</span>
-          <span class="button__text">2019-2020</span>
-        </a>
-      </span>
-      
-      
-      <span class="button next">
-        <a href="/post/hello/">
-          <span class="button__text">Hello</span>
-          <span class="button__icon">→</span>
-        </a>
-      </span>
-      
-    </div>
-  </div>
-  
 
-  <div id="disqus_thread"></div>
+    <aside><nav id="TableOfContents"></nav></aside>
+
+    <div id="disqus_thread"></div>
 <script type="application/javascript">
     var disqus_config = function () {
     
@@ -305,30 +235,47 @@ git push origin source
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js" integrity="sha384-2BKqo+exmr9su6dir+qCw08N2ZKRucY4PrGQPPWU1A7FtlCGjmEGFqXCv5nyM5Ij" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
     onload="renderMathInElement(document.body);"></script>
-</div>
+  </div>
+</section>
 
   </div>
+</div>
 
-  
-    <footer class="footer">
-  <div class="footer__inner">
-    
-      <div class="copyright">
-        <span>© 2020 Powered by <a href="http://gohugo.io">Hugo</a></span>
-    
-        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
-      </div>
+
+  <footer class="footer">
+  <div class="content has-text-centered">
+    <div class="copyright has-text-centered">
+      <p>
+        © 2020 Powered by <a href="//gohugo.io" class="has-text-danger">Hugo</a>
+      </p>
+      <p>
+        <a class="has-text-success">Wonderland</a>, a theme made by <a href="//github.com/dyzdyz010">dyzdyz010</a>
+      </p>
+      <p>
+        <a href="https://bulma.io" target="_blank">
+          <img src="https://wikiki.github.io/images/made-with-bulma.png" alt="Made with Bulma" width="128" height="24">
+        </a>
+      </p>
+    </div>
   </div>
 </footer>
 
-<script src="/assets/main.js"></script>
-<script src="/assets/prism.js"></script>
+<script src="https://duyizhuo.com/js/main.js"></script>
 
 
 
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-33561194-4', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 
-  
-</div>
+
 
 </body>
 </html>
