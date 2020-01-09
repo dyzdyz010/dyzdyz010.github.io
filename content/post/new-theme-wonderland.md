@@ -1,7 +1,6 @@
 ---
 title: "Wonderland - Blog Theme, Redesigned"
 date: 2020-01-09T17:20:01+08:00
-draft: true
 author: dyzdyz010
 tags:
   - theme
