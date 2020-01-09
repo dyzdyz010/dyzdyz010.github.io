@@ -7,7 +7,7 @@ tags:
   - web
   - programming
 description:
-  新的博客主题：Wonderland
+  使用 Hugo 创建新的博客主题：Wonderland
 ---
 
 我用的博客方案就像我的情绪一样多变，如今又用回了静态网页托管 [Hugo](https://gohugo.io)。果然折腾是一时的，省心才是永远的。
