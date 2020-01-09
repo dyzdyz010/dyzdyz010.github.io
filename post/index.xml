@@ -6,10 +6,23 @@
     <description>Recent content in Posts on Wonderland</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 03 Jan 2020 19:29:14 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 09 Jan 2020 17:20:01 +0800</lastBuildDate>
     
 	<atom:link href="https://duyizhuo.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Wonderland - Blog Theme, Redesigned</title>
+      <link>https://duyizhuo.com/post/new-theme-wonderland/</link>
+      <pubDate>Thu, 09 Jan 2020 17:20:01 +0800</pubDate>
+      
+      <guid>https://duyizhuo.com/post/new-theme-wonderland/</guid>
+      <description>我用的博客方案就像我的情绪一样多变，如今又用回了静态网页托管 Hugo。果然折腾是一时的，省心才是永远的。
+Bulma是一个CSS库，有漂亮的默认风格，以及符合常识的样式组织体系，我很喜欢。所以就以这个库为基础，重新做一个简单的主题。
+由于还没有完全完工，所以还有很多问题，比如在我写下这篇文章的时候，右上角的菜单还是写死的假菜单……
+我也不敢保证这个主题最终能够完工，毕竟折腾的心还没有完全死去，说不定什么时候有新的更好用的博客方案出现，我也丝毫不会犹豫就切换过去，然后重新开始折腾。
+Simple, colorful, clear. 凑合着看吧。</description>
+    </item>
     
     <item>
       <title>2019-2020</title>

@@ -97,6 +97,75 @@
   
   <div class="container post">
     <h2 class="post-title title is-3">
+      <a class="has-text-grey-dark" href="https://duyizhuo.com/amp/post/acg-wallpaper-recommendation-0/">ACG Wallpaper Recommendation(0)</a>
+    </h2>
+    <div class="post-meta">
+      <span class="post-date">
+        <span class="icon has-text-danger">
+          <i class="fas fa-calendar"></i>
+        </span>
+        <a class="has-text-grey">Mon, Jul 31, 2017</a>
+      </span>
+      &nbsp;
+      <span class="post-author">
+        <span class="icon has-text-info">
+          <i class="fas fa-user"></i>
+        </span>
+        <a class="has-text-grey">
+          
+            dyzdyz010
+          
+        </a>
+      </span>
+    </div>
+
+    
+    <div class="post-tags">
+      <div class="field is-grouped is-grouped-multiline">
+        
+        <div class="control">
+          <div class="tags has-addons">
+              <span class="tag is-dark">#</span>
+              <span class="tag is-success">
+                <a class="is-success" href="https://duyizhuo.com/tags/acg/">acg</a>
+              </span>
+          </div>
+        </div>
+        
+        <div class="control">
+          <div class="tags has-addons">
+              <span class="tag is-dark">#</span>
+              <span class="tag is-success">
+                <a class="is-success" href="https://duyizhuo.com/tags/share/">share</a>
+              </span>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+
+    
+
+    <div class="post-content">
+      
+      
+      
+    </div>
+
+    
+    <div>
+      <a class="read-more has-text-danger"
+        href="/amp/post/acg-wallpaper-recommendation-0/">Read more →</a>
+    </div>
+    
+
+  </div>
+
+  <hr class="hr">
+  
+  <div class="container post">
+    <h2 class="post-title title is-3">
       <a class="has-text-grey-dark" href="https://duyizhuo.com/amp/post/migrating-ghost-to-1-0-on-centos7/">Migrating Ghost to 1.0 from 0.11.x on CentOS 7</a>
     </h2>
     <div class="post-meta">
@@ -415,96 +484,6 @@ import pandas as pd # 用于读取数据文件 import tensorflow as tf import ma
     <div>
       <a class="read-more has-text-danger"
         href="/amp/post/music-theory-pentatonic-scale/">Read more →</a>
-    </div>
-    
-
-  </div>
-
-  <hr class="hr">
-  
-  <div class="container post">
-    <h2 class="post-title title is-3">
-      <a class="has-text-grey-dark" href="https://duyizhuo.com/amp/post/ml-bp-neural-network-review/">机器学习-神经网络（反向传播算法）学习总结</a>
-    </h2>
-    <div class="post-meta">
-      <span class="post-date">
-        <span class="icon has-text-danger">
-          <i class="fas fa-calendar"></i>
-        </span>
-        <a class="has-text-grey">Wed, May 17, 2017</a>
-      </span>
-      &nbsp;
-      <span class="post-author">
-        <span class="icon has-text-info">
-          <i class="fas fa-user"></i>
-        </span>
-        <a class="has-text-grey">
-          
-            dyzdyz010
-          
-        </a>
-      </span>
-    </div>
-
-    
-    <div class="post-tags">
-      <div class="field is-grouped is-grouped-multiline">
-        
-        <div class="control">
-          <div class="tags has-addons">
-              <span class="tag is-dark">#</span>
-              <span class="tag is-success">
-                <a class="is-success" href="https://duyizhuo.com/tags/ml/">ml</a>
-              </span>
-          </div>
-        </div>
-        
-        <div class="control">
-          <div class="tags has-addons">
-              <span class="tag is-dark">#</span>
-              <span class="tag is-success">
-                <a class="is-success" href="https://duyizhuo.com/tags/review/">review</a>
-              </span>
-          </div>
-        </div>
-        
-      </div>
-    </div>
-    
-
-    
-
-    <div class="post-content">
-      
-      
-      今天下午完成了Andrew Ng的机器学习课程第五周的课程，完成了自己实现一个基本神经网络的编程作业，不得不说神经网络的运算量真大啊，我的CPU温度都快上100了……
-第四周与第五周共两周的内容讲了神经网络的由来和表示方法以及实现方法。
-为什么要使用神经网络 与之前学过的逻辑回归相比，在逻辑回归的假设函数 (h_\theta(x)) 中：
-$$ g(z) = \frac{1}{1+e^{-z}} $$
-$$ z = \theta^Tx $$
-可以看到，(z)的形式是线性的，这意味着你只能拟合这样的数据：
-**即：**决策边界只用一次方程就可以表示
-或者是这样的数据：
-**即：**特征数量不多，可以通过添加高次项的方法形成不规则的决策边界。
-但是如果你需要识别一张图片中是否有车辆出现：
-假设用作样本的图片只有 (50\times50) 像素大小，这样的话你可能输入的特征数量就是 (50\times50=2500) 个（只用灰度值，如果用RGB表示的话特征数量会变成 (2500\times3=7500) 个），这还只是全部是一次方项的情况，但如果需要的决策边界是形如这样的：
-你需要一个不规则的决策边界表示方法，这时你可能会引入高次项，即使只增加二次项：
-$$ x_ix_j $$
-这样的话特征数量就会变成：
-$$ \frac{(1+2500)\times2500}{2} \approx 3,000,000 $$
-用这个数量级的特征去做逻辑回归，计算量是非常恐怖的。因此需要一种能够降低运算量的模型来避免这种问题的出现。
-**神经网络(Neural Network)**受启发于人类大脑。我们知道，人类的大脑就是通过无数的神经元之间互相传递信息来工作的。**神经元(Neuron)**是这其中的信号传递单元，形如下图：
-可以看到，神经元可以接收与其相连接的神经元的信号，自身对其进行处理，然后将信号再发送给其他与自己相连的神经元。受此启发，我们得到了工作方式类似的神经元模型：
-可以看到，橙色的节点接受左边三个节点的输入，并计算出我们需要的输出值 (h_\theta(x))。其中 (x_0) 是所谓的偏置单元(bias unit)。我们把输入表示为：
-$$ x = \begin{bmatrix} x_0 \ x_1 \ x_2 \ x_3 \end{bmatrix} \qquad \theta = \begin{bmatrix} \theta_0 \ \theta_1 \ \theta_2 \ \theta_3 \end{bmatrix} $$
-      
-      
-    </div>
-
-    
-    <div>
-      <a class="read-more has-text-danger"
-        href="/amp/post/ml-bp-neural-network-review/">Read more →</a>
     </div>
     
 

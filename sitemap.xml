@@ -3,6 +3,55 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://duyizhuo.com/post/</loc>
+    <lastmod>2020-01-09T17:20:01+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://duyizhuo.com/tags/programming/</loc>
+    <lastmod>2020-01-09T17:20:01+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://duyizhuo.com/tags/</loc>
+    <lastmod>2020-01-09T17:20:01+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://duyizhuo.com/tags/theme/</loc>
+    <lastmod>2020-01-09T17:20:01+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://duyizhuo.com/tags/web/</loc>
+    <lastmod>2020-01-09T17:20:01+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://duyizhuo.com/</loc>
+    <lastmod>2020-01-09T17:20:01+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://duyizhuo.com/post/new-theme-wonderland/</loc>
+    <lastmod>2020-01-09T17:20:01+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://duyizhuo.com/post/2019-year-review/</loc>
     <lastmod>2020-01-03T19:29:14+08:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -17,27 +66,6 @@
   </url>
   
   <url>
-    <loc>https://duyizhuo.com/post/</loc>
-    <lastmod>2020-01-03T19:29:14+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://duyizhuo.com/tags/</loc>
-    <lastmod>2020-01-03T19:29:14+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://duyizhuo.com/</loc>
-    <lastmod>2020-01-03T19:29:14+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://duyizhuo.com/tags/tutorial/</loc>
     <lastmod>2019-03-28T22:04:19+08:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -46,13 +74,6 @@
   
   <url>
     <loc>https://duyizhuo.com/post/hugo-with-github-pages/</loc>
-    <lastmod>2019-03-28T22:04:19+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://duyizhuo.com/tags/web/</loc>
     <lastmod>2019-03-28T22:04:19+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -221,13 +242,6 @@
   
   <url>
     <loc>https://duyizhuo.com/tags/ghost/</loc>
-    <lastmod>2017-08-01T20:48:43+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://duyizhuo.com/tags/theme/</loc>
     <lastmod>2017-08-01T20:48:43+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

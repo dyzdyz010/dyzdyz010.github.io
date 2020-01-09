@@ -6,10 +6,37 @@
     <description>Recent content in Tags on Wonderland</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 03 Jan 2020 19:29:14 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 09 Jan 2020 17:20:01 +0800</lastBuildDate>
     
 	<atom:link href="https://duyizhuo.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>programming</title>
+      <link>https://duyizhuo.com/tags/programming/</link>
+      <pubDate>Thu, 09 Jan 2020 17:20:01 +0800</pubDate>
+      
+      <guid>https://duyizhuo.com/tags/programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>theme</title>
+      <link>https://duyizhuo.com/tags/theme/</link>
+      <pubDate>Thu, 09 Jan 2020 17:20:01 +0800</pubDate>
+      
+      <guid>https://duyizhuo.com/tags/theme/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web</title>
+      <link>https://duyizhuo.com/tags/web/</link>
+      <pubDate>Thu, 09 Jan 2020 17:20:01 +0800</pubDate>
+      
+      <guid>https://duyizhuo.com/tags/web/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>general</title>
@@ -26,15 +53,6 @@
       <pubDate>Thu, 28 Mar 2019 22:04:19 +0800</pubDate>
       
       <guid>https://duyizhuo.com/tags/tutorial/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>web</title>
-      <link>https://duyizhuo.com/tags/web/</link>
-      <pubDate>Thu, 28 Mar 2019 22:04:19 +0800</pubDate>
-      
-      <guid>https://duyizhuo.com/tags/web/</guid>
       <description></description>
     </item>
     
@@ -152,15 +170,6 @@
       <pubDate>Tue, 01 Aug 2017 20:48:43 +0800</pubDate>
       
       <guid>https://duyizhuo.com/tags/ghost/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>theme</title>
-      <link>https://duyizhuo.com/tags/theme/</link>
-      <pubDate>Tue, 01 Aug 2017 20:48:43 +0800</pubDate>
-      
-      <guid>https://duyizhuo.com/tags/theme/</guid>
       <description></description>
     </item>
     
