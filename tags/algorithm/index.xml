@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>algorithm on Wonderland</title>
-    <link>/tags/algorithm/</link>
-    <description>Recent content in algorithm on Wonderland</description>
+    <title>Algorithm on Wonderland</title>
+    <link>https://duyizhuo.com/tags/algorithm/</link>
+    <description>Recent content in Algorithm on Wonderland</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 18 May 2018 10:15:21 +0800</lastBuildDate>
     
-	<atom:link href="/tags/algorithm/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://duyizhuo.com/tags/algorithm/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>快速排序算法理解</title>
-      <link>/post/quicksort-review/</link>
+      <link>https://duyizhuo.com/post/quicksort-review/</link>
       <pubDate>Fri, 18 May 2018 10:15:21 +0800</pubDate>
       
-      <guid>/post/quicksort-review/</guid>
+      <guid>https://duyizhuo.com/post/quicksort-review/</guid>
       <description>从本科到现在一直没有搞懂快排的原理，直到今天学习 Haskell 看到一张图，很直观地解释了快速排序的原理，这里我将以自己的理解向各位解释快排的工作原理。
 快速排序的理念非常简单：
  从列表中取出一个元素，在剩下的元素中，选出所有比它小的元素放在它的左边，其余的放在右边。
