@@ -5,12 +5,23 @@ copyright = ""
 
 baseurl = "https://duyizhuo.com"
 languageCode = "en-us"
-theme = "terminal"
+theme = "wonderland"
 paginate = 5
 
 disqusShortname = "blog-disqus-com-1"
 
 googleAnalytics = "UA-33561194-4"
+
+[markup]
+  [markup.highlight]
+    # codeFences = true
+    # guessSyntax = true
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = false
+    # tabWidth = 4
 
 [outputs]
   home = ["HTML", "AMP", "RSS"]
