@@ -17,6 +17,7 @@ jobs:
                     git clone -b master git@github.com:dyzdyz010/dyzdyz010.github.io.git public
                     cd public
                     git rm -rf .
+                    git checkout HEAD -- CNAME
             - run:
                 name: Generate site
                 working_directory: ~/dyzdyz010.github.io
