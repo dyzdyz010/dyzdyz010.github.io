@@ -29,7 +29,11 @@ disqusShortname = "blog-disqus-com-1"
   [[menu.main]]
     identifier = "about"
     name = "About"
-    url = "/about"
+    [[menu.main]]
+    identifier = "twitter"
+    parent = "about"
+    name = "Twitter"
+    url = "https://twitter.com/dyzdyz010"
   [[menu.main]]
     identifier = "github"
     name = "Github"
