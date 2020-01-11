@@ -5,6 +5,15 @@
     <title>Set Up Flarum From Scratch :: Wonderland — Personal Blog</title>
   
   <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="Befor you continue
+1. Get a VPS from Linode/Vultr/whatever 2. Pick a linux distribution and make it running(I use CentOS 7). 3. Install Apache/MySQL/PHP 7.1 Get yourself a non-root sudo user adduser USERNAME passwd USERNAME usermod -aG wheel USERNAME su USERNAME Install and configure Apache Check this out
+First install it.
+sudo yum update sudo yum -y install httpd sudo systemctl enable httpd.service Then create directory structure.
+sudo mkdir /etc/httpd/sites-available sudo mkdir /etc/httpd/sites-enabled Open config file:"/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+
 <link href="https://duyizhuo.com/fontawesome-free-5.12.0-web/css/all.css" rel="stylesheet"> 
 <link rel="stylesheet" href="https://duyizhuo.com/css/bulma.min.css">
 <link rel="stylesheet" href="https://duyizhuo.com/css/highlight.css">
