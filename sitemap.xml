@@ -38,13 +38,6 @@
   </url>
   
   <url>
-    <loc>https://duyizhuo.com/</loc>
-    <lastmod>2020-01-09T17:20:01+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://duyizhuo.com/post/new-theme-wonderland/</loc>
     <lastmod>2020-01-09T17:20:01+08:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -235,6 +228,13 @@
   
   <url>
     <loc>https://duyizhuo.com/tags/about/</loc>
+    <lastmod>2017-08-05T11:52:53+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://duyizhuo.com/</loc>
     <lastmod>2017-08-05T11:52:53+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

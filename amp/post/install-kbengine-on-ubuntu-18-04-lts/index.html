@@ -173,8 +173,8 @@ tar -xzvf v1.1.8.tar.gz
 chmod -R <span class="m">755</span> .
 make
 </code></pre></div><p>我在编译过程中出现了以下错误：</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">/usr/lib/gcc/x86_64-linux-gnu/7/include/mm_malloc.h:34:16: error: declaration of ‘int posix_memalign<span class="o">(</span>void**, size_t, size_t<span class="o">)</span> throw <span class="o">(</span><span class="o">)</span>’ has a different exception specifier
- extern <span class="s2">&#34;C&#34;</span> int posix_memalign <span class="o">(</span>void **, size_t, size_t<span class="o">)</span> throw <span class="o">(</span><span class="o">)</span><span class="p">;</span>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">/usr/lib/gcc/x86_64-linux-gnu/7/include/mm_malloc.h:34:16: error: declaration of ‘int posix_memalign<span class="o">(</span>void**, size_t, size_t<span class="o">)</span> throw <span class="o">()</span>’ has a different exception specifier
+ extern <span class="s2">&#34;C&#34;</span> int posix_memalign <span class="o">(</span>void **, size_t, size_t<span class="o">)</span> throw <span class="o">()</span><span class="p">;</span>
                 ^~~~~~~~~~~~~~
 In file included from /home/dyz/kbengine-1.1.8/kbe/src/lib/common/kbemalloc.h:27:0,
                  from /home/dyz/kbengine-1.1.8/kbe/src/lib/common/common.h:25,
@@ -219,16 +219,16 @@ make: *** <span class="o">[</span>all<span class="o">]</span> Error <span class=
 <p>上面创建的数据库名和用户名密码都是引擎的默认值，如果你按照自己的想法用了别的名字，则需要进入引擎配置文件做相应修改：</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">vim &lt;引擎根目录&gt;/kbe/res/server/kbengine_defaults.xml
 </code></pre></div><p>在文件中找到以下部分：</p>
-<div class="highlight"><pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;dbmgr</span><span class="nt">&gt;</span> 
-        <span class="nt">&lt;databaseInterfaces</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;default</span><span class="nt">&gt;</span><span class="c">&lt;!--</span><span class="c"> 数据库的默认设置 </span><span class="c">--&gt;</span>
-                <span class="nt">&lt;port</span><span class="nt">&gt;</span> 3306 <span class="nt">&lt;/port&gt;</span><span class="c">&lt;!--</span><span class="c"> 数据库端口 </span><span class="c">--&gt;</span>
-                <span class="nt">&lt;auth</span><span class="nt">&gt;</span>
-                    <span class="nt">&lt;username</span><span class="nt">&gt;</span> kbe <span class="nt">&lt;/username&gt;</span><span class="c">&lt;!--</span><span class="c"> mysql 用户名 </span><span class="c">--&gt;</span>
-                    <span class="nt">&lt;password</span><span class="nt">&gt;</span> kbe <span class="nt">&lt;/password&gt;</span><span class="c">&lt;!--</span><span class="c"> mysql 用户密码 </span><span class="c">--&gt;</span>
-                    <span class="nt">&lt;encrypt</span><span class="nt">&gt;</span> false <span class="nt">&lt;/encrypt&gt;</span><span class="c">&lt;!--</span><span class="c"> 密码是否加密 </span><span class="c">--&gt;</span>
+<div class="highlight"><pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;dbmgr&gt;</span> 
+        <span class="nt">&lt;databaseInterfaces&gt;</span>
+            <span class="nt">&lt;default&gt;</span><span class="c">&lt;!-- 数据库的默认设置 --&gt;</span>
+                <span class="nt">&lt;port&gt;</span> 3306 <span class="nt">&lt;/port&gt;</span><span class="c">&lt;!-- 数据库端口 --&gt;</span>
+                <span class="nt">&lt;auth&gt;</span>
+                    <span class="nt">&lt;username&gt;</span> kbe <span class="nt">&lt;/username&gt;</span><span class="c">&lt;!-- mysql 用户名 --&gt;</span>
+                    <span class="nt">&lt;password&gt;</span> kbe <span class="nt">&lt;/password&gt;</span><span class="c">&lt;!-- mysql 用户密码 --&gt;</span>
+                    <span class="nt">&lt;encrypt&gt;</span> false <span class="nt">&lt;/encrypt&gt;</span><span class="c">&lt;!-- 密码是否加密 --&gt;</span>
                 <span class="nt">&lt;/auth&gt;</span>
-                <span class="nt">&lt;databaseName</span><span class="nt">&gt;</span> kbe <span class="nt">&lt;/databaseName&gt;</span><span class="c">&lt;!--</span><span class="c"> 数据库名字 </span><span class="c">--&gt;</span>
+                <span class="nt">&lt;databaseName&gt;</span> kbe <span class="nt">&lt;/databaseName&gt;</span><span class="c">&lt;!-- 数据库名字 --&gt;</span>
             <span class="nt">&lt;/default&gt;</span>
         <span class="nt">&lt;/databaseInterfaces&gt;</span>
     <span class="nt">&lt;/dbmgr&gt;</span>

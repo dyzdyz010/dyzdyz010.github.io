@@ -195,12 +195,12 @@ sudo mkdir /etc/httpd/sites-enabled
 </code></pre></div><p>Add this to the end of the file:</p>
 <pre><code class="language-conf" data-lang="conf">IncludeOptional sites-enabled/*.conf
 </code></pre><h3 id="install-mysql">Install MySQL</h3>
-<p>CentOS 7 by default uses <code>MariaDB</code> rather than MySQL, but there's no difference using it.</p>
-<p><strong>Note:</strong> yum installs MariaDB 5.5 by default, which no longer satisfies flarum's requirements. <a href="https://mariadb.com/resources/blog/installing-mariadb-10-on-centos-7-rhel-7/">See here</a> for instructions on installing MariaDB 10.</p>
+<p>CentOS 7 by default uses <code>MariaDB</code> rather than MySQL, but there&rsquo;s no difference using it.</p>
+<p><strong>Note:</strong> yum installs MariaDB 5.5 by default, which no longer satisfies flarum&rsquo;s requirements. <a href="https://mariadb.com/resources/blog/installing-mariadb-10-on-centos-7-rhel-7/">See here</a> for instructions on installing MariaDB 10.</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo mysql_secure_installation
 </code></pre></div><p>Then create a <code>user</code> and a <code>database</code> in <code>MySQL</code> for flarum.</p>
 <h3 id="install-and-configure-php">Install and configure PHP</h3>
-<p>I'm using php 7.1 here.</p>
+<p>I&rsquo;m using php 7.1 here.</p>
 <p><a href="https://webtatic.com/packages/php70/">Take a look at this</a></p>
 <p>First add needed yum repo:</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
@@ -209,7 +209,7 @@ sudo rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo yum install mod_php71w php71w-cli php71w-xml php71w-mbstring php71w-mysql php71w-gd
 </code></pre></div><h2 id="4-install-flarum">4. Install Flarum</h2>
 <h3 id="create-site-directory">Create site directory</h3>
-<p>Name your site directory whatever you like, I'll just stick with <code>flarum</code>.</p>
+<p>Name your site directory whatever you like, I&rsquo;ll just stick with <code>flarum</code>.</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo mkdir /var/www/flarum
 </code></pre></div><h3 id="install-composer">Install composer</h3>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> /tmp
@@ -222,7 +222,7 @@ sudo chown USERNAME:GROUPNAME flarum
 <span class="nb">cd</span> flarum
 composer create-project flarum/flarum . --stability<span class="o">=</span>beta
 </code></pre></div><h3 id="adjust-ownership-and-permissions">Adjust ownership and permissions</h3>
-<p>Change directory's ower to <code>apache</code> for apache to operate:</p>
+<p>Change directory&rsquo;s ower to <code>apache</code> for apache to operate:</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> ..
 sudo chown -R apache:apache flarum
 </code></pre></div><h2 id="5-make-it-up-and-running">5. Make it up and running</h2>
@@ -230,7 +230,7 @@ sudo chown -R apache:apache flarum
 <p>Name configuration file whatever you like:</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> /etc/httpd/sites-available
 sudo vim flarum.conf
-</code></pre></div><p>Fill in content below(<strong>Don't forget the url rewrite block!</strong>):</p>
+</code></pre></div><p>Fill in content below(<strong>Don&rsquo;t forget the url rewrite block!</strong>):</p>
 <pre><code class="language-conf" data-lang="conf">&lt;VirtualHost *:80&gt;
     ServerName YOURDOMAIN
     ServerAlias ALIAS

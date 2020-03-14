@@ -121,7 +121,7 @@ quicksort 第二层递归 对新的数组 [4, 3] 重复上面的操作，变成�
 By default, when exporting latex and PDF file from emacs org-mode, log files are removed when the process finishes, you may want to reserve it.
 To make emacs stop removing log files, do as below:
 M-x -&amp;gt; customize-variable, RET -&amp;gt; org-latex-remove-logfiles
-By default this variable is set to true, means log files are removed automatically, then you just need to toggle it to false, save, restart Emacs, and you&#39;re good to go 😀</description>
+By default this variable is set to true, means log files are removed automatically, then you just need to toggle it to false, save, restart Emacs, and you&amp;rsquo;re good to go 😀</description>
     </item>
     
     <item>
@@ -130,7 +130,7 @@ By default this variable is set to true, means log files are removed automatical
       <pubDate>Wed, 09 May 2018 08:09:33 +0800</pubDate>
       
       <guid>https://duyizhuo.com/post/using-virtualenv-in-jupyter-notebook/</guid>
-      <description>OS: macOS High Sierra 10.13.4 Default Python version: 3.6.5  Prerequisites  Have your Jupyter Notebook and virtualenv installed with your default python version Have one virtual env created which you want to use  Walkthrough Activate your virtualenv source &amp;lt;envpath&amp;gt;/bin/activate Install ipykernel inside your env $(yourenv)&amp;gt; pip install ipykernel Create kernel using your env $(yourenv)&amp;gt; python -m ipykernel install --user --name myenv --display-name &amp;#34;Python (myenv)&amp;#34; Go ahead and enjoy Now open your jupyter notebook and you&#39;ll notice your kernel just created appears along with your default kernel.</description>
+      <description>OS: macOS High Sierra 10.13.4 Default Python version: 3.6.5  Prerequisites  Have your Jupyter Notebook and virtualenv installed with your default python version Have one virtual env created which you want to use  Walkthrough Activate your virtualenv source &amp;lt;envpath&amp;gt;/bin/activate Install ipykernel inside your env $(yourenv)&amp;gt; pip install ipykernel Create kernel using your env $(yourenv)&amp;gt; python -m ipykernel install --user --name myenv --display-name &amp;#34;Python (myenv)&amp;#34; Go ahead and enjoy Now open your jupyter notebook and you&amp;rsquo;ll notice your kernel just created appears along with your default kernel.</description>
     </item>
     
     <item>
@@ -220,8 +220,8 @@ sudo mkdir /etc/httpd/sites-available sudo mkdir /etc/httpd/sites-enabled Open c
       <pubDate>Sat, 29 Jul 2017 17:31:01 +0800</pubDate>
       
       <guid>https://duyizhuo.com/post/migrating-ghost-to-1-0-on-centos7/</guid>
-      <description>Ghost has released 1.0, with breaking changes so there&#39;s no smooth upgrading method but to take a fresh install. Here&#39;s my migration of this blog to Ghost 1.0.
-There&#39;s already an official tutorial to help you walk this through, but since it only supports Ubuntu officially, so I have to explore my own way on my CentOS 7 server. It turns out that there&#39;s not much modifications compared to Ubuntu version, so I&#39;m just writing this down as a record of my migration.</description>
+      <description>Ghost has released 1.0, with breaking changes so there&amp;rsquo;s no smooth upgrading method but to take a fresh install. Here&amp;rsquo;s my migration of this blog to Ghost 1.0.
+There&amp;rsquo;s already an official tutorial to help you walk this through, but since it only supports Ubuntu officially, so I have to explore my own way on my CentOS 7 server. It turns out that there&amp;rsquo;s not much modifications compared to Ubuntu version, so I&amp;rsquo;m just writing this down as a record of my migration.</description>
     </item>
     
     <item>

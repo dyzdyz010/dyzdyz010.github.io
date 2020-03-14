@@ -172,51 +172,51 @@ git checkout -b <span class="nb">source</span>
 <span class="nb">cd</span> .circleci
 touch config.yml
 </code></pre></div><p><code>config.yml</code>(Edit it with your own information):</p>
-<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml">version<span class="p">:</span><span class="w"> </span><span class="m">2.0</span><span class="w">
+<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="k">version</span><span class="p">:</span><span class="w"> </span><span class="m">2.0</span><span class="w">
 </span><span class="w">
-</span><span class="w"></span>jobs<span class="p">:</span><span class="w">
-</span><span class="w">    </span>build<span class="p">:</span><span class="w">
-</span><span class="w">        </span>docker<span class="p">:</span><span class="w">
-</span><span class="w">            </span>-<span class="w"> </span>image<span class="p">:</span><span class="w"> </span>felicianotech/docker-hugo<span class="p">:</span>latest<span class="w">
-</span><span class="w">        </span>working_directory<span class="p">:</span><span class="w"> </span>~/&lt;SITE_NAME&gt;.github.io<span class="w">
-</span><span class="w">        </span>steps<span class="p">:</span><span class="w">
-</span><span class="w">            </span>-<span class="w"> </span>add_ssh_keys<span class="p">:</span><span class="w">
-</span><span class="w">                </span>fingerprints<span class="p">:</span><span class="w">
-</span><span class="w">                    </span>-<span class="w"> </span><span class="s2">&#34;&lt;FINGERPRINT_YOU_JUST_COPIED&#34;</span><span class="w">
-</span><span class="w">            </span>-<span class="w"> </span>checkout<span class="w">
-</span><span class="w">            </span>-<span class="w"> </span>run<span class="p">:</span><span class="w">
-</span><span class="w">                </span>name<span class="p">:</span><span class="w"> </span>Get<span class="w"> </span>current<span class="w"> </span>site<span class="w">
-</span><span class="w">                </span>working_directory<span class="p">:</span><span class="w"> </span>~/<span class="w">
-</span><span class="w">                </span>command<span class="p">:</span><span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>-b<span class="w"> </span>master<span class="w"> </span>git@github.com<span class="p">:</span>&lt;USERNAME/ORGANIZATION&gt;/&lt;SITE_NAME&gt;.github.io.git<span class="w"> </span>public<span class="w">
-</span><span class="w">            </span>-<span class="w"> </span>run<span class="p">:</span><span class="w">
-</span><span class="w">                </span>name<span class="p">:</span><span class="w"> </span>Generate<span class="w"> </span>site<span class="w">
-</span><span class="w">                </span>working_directory<span class="p">:</span><span class="w"> </span>~/&lt;SITE_NAME&gt;.github.io<span class="w">
-</span><span class="w">                </span>command<span class="p">:</span><span class="w"> </span>HUGO_ENV=production<span class="w"> </span>hugo<span class="w"> </span>-d<span class="w"> </span>~/public<span class="w">
-</span><span class="w">            </span>-<span class="w"> </span>deploy<span class="p">:</span><span class="w">
-</span><span class="w">                </span>name<span class="p">:</span><span class="w"> </span>Deploy<span class="w"> </span>to<span class="w"> </span>Github<span class="w"> </span>Pages<span class="w">
-</span><span class="w">                </span>working_directory<span class="p">:</span><span class="w"> </span>~/public<span class="w">
-</span><span class="w">                </span>command<span class="p">:</span><span class="w"> </span><span class="sd">|
-</span><span class="sd">                   </span><span class="sd"> </span><span class="sd">git config credential.helper &#39;cache --timeout=120&#39;</span><span class="w">
+</span><span class="w"></span><span class="k">jobs</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="k">build</span><span class="p">:</span><span class="w">
+</span><span class="w">        </span><span class="k">docker</span><span class="p">:</span><span class="w">
+</span><span class="w">            </span>- <span class="k">image</span><span class="p">:</span><span class="w"> </span>felicianotech/docker-hugo<span class="p">:</span>latest<span class="w">
+</span><span class="w">        </span><span class="k">working_directory</span><span class="p">:</span><span class="w"> </span>~/&lt;SITE_NAME&gt;.github.io<span class="w">
+</span><span class="w">        </span><span class="k">steps</span><span class="p">:</span><span class="w">
+</span><span class="w">            </span>- <span class="k">add_ssh_keys</span><span class="p">:</span><span class="w">
+</span><span class="w">                </span><span class="k">fingerprints</span><span class="p">:</span><span class="w">
+</span><span class="w">                    </span>- <span class="s2">&#34;&lt;FINGERPRINT_YOU_JUST_COPIED&#34;</span><span class="w">
+</span><span class="w">            </span>- checkout<span class="w">
+</span><span class="w">            </span>- <span class="k">run</span><span class="p">:</span><span class="w">
+</span><span class="w">                </span><span class="k">name</span><span class="p">:</span><span class="w"> </span>Get<span class="w"> </span>current<span class="w"> </span>site<span class="w">
+</span><span class="w">                </span><span class="k">working_directory</span><span class="p">:</span><span class="w"> </span>~/<span class="w">
+</span><span class="w">                </span><span class="k">command</span><span class="p">:</span><span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>-b<span class="w"> </span>master<span class="w"> </span>git@github.com<span class="p">:</span>&lt;USERNAME/ORGANIZATION&gt;/&lt;SITE_NAME&gt;.github.io.git<span class="w"> </span>public<span class="w">
+</span><span class="w">            </span>- <span class="k">run</span><span class="p">:</span><span class="w">
+</span><span class="w">                </span><span class="k">name</span><span class="p">:</span><span class="w"> </span>Generate<span class="w"> </span>site<span class="w">
+</span><span class="w">                </span><span class="k">working_directory</span><span class="p">:</span><span class="w"> </span>~/&lt;SITE_NAME&gt;.github.io<span class="w">
+</span><span class="w">                </span><span class="k">command</span><span class="p">:</span><span class="w"> </span>HUGO_ENV=production<span class="w"> </span>hugo<span class="w"> </span>-d<span class="w"> </span>~/public<span class="w">
+</span><span class="w">            </span>- <span class="k">deploy</span><span class="p">:</span><span class="w">
+</span><span class="w">                </span><span class="k">name</span><span class="p">:</span><span class="w"> </span>Deploy<span class="w"> </span>to<span class="w"> </span>Github<span class="w"> </span>Pages<span class="w">
+</span><span class="w">                </span><span class="k">working_directory</span><span class="p">:</span><span class="w"> </span>~/public<span class="w">
+</span><span class="w">                </span><span class="k">command</span><span class="p">:</span><span class="w"> </span><span class="sd">|
+</span><span class="sd">                    git config credential.helper &#39;cache --timeout=120&#39;</span><span class="w">
 </span><span class="w">                    </span>git<span class="w"> </span>config<span class="w"> </span>user.email<span class="w"> </span><span class="s2">&#34;&lt;YOUR_EMAIL&gt;&#34;</span><span class="w">
 </span><span class="w">                    </span>git<span class="w"> </span>config<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&#34;Deployment Bot&#34;</span><span class="w">
 </span><span class="w">                    </span>git<span class="w"> </span>add<span class="w"> </span>.<span class="w">
 </span><span class="w">                    </span>git<span class="w"> </span>commit<span class="w"> </span>--allow-empty<span class="w"> </span>-m<span class="w"> </span><span class="s2">&#34;Trigger deployment&#34;</span><span class="w">
 </span><span class="w">                    </span>git<span class="w"> </span>push<span class="w"> </span>-q<span class="w"> </span>git@github.com<span class="p">:</span>&lt;USERNAME/ORGANIZATION&gt;/&lt;SITE_NAME&gt;.github.io.git<span class="w"> </span>master<span class="w">
 </span><span class="w">
-</span><span class="w"></span>workflows<span class="p">:</span><span class="w">
-</span><span class="w">  </span>version<span class="p">:</span><span class="w"> </span><span class="m">2</span><span class="w">
-</span><span class="w">  </span>main<span class="p">:</span><span class="w">
-</span><span class="w">    </span>jobs<span class="p">:</span><span class="w">
-</span><span class="w">    </span>-<span class="w"> </span>build<span class="p">:</span><span class="w">
-</span><span class="w">        </span>filters<span class="p">:</span><span class="w">
-</span><span class="w">          </span>branches<span class="p">:</span><span class="w">
-</span><span class="w">            </span>only<span class="p">:</span><span class="w"> </span>source<span class="w">
+</span><span class="w"></span><span class="k">workflows</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="k">version</span><span class="p">:</span><span class="w"> </span><span class="m">2</span><span class="w">
+</span><span class="w">  </span><span class="k">main</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="k">jobs</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span>- <span class="k">build</span><span class="p">:</span><span class="w">
+</span><span class="w">        </span><span class="k">filters</span><span class="p">:</span><span class="w">
+</span><span class="w">          </span><span class="k">branches</span><span class="p">:</span><span class="w">
+</span><span class="w">            </span><span class="k">only</span><span class="p">:</span><span class="w"> </span>source<span class="w">
 </span></code></pre></div><p>Now push your files to Github:</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">git add .
 git commit -m <span class="s2">&#34;first commit&#34;</span>
 git push origin <span class="nb">source</span>
-</code></pre></div><p>For every time you push to the <code>source</code> branch, CircleCI will always trigger a hugo generation to the <code>master</code> branch, where the site's static file generated by Hugo is placed.</p>
-<p>Wait for CircleCI's job done, then visit <code>&lt;SITE_NAME&gt;.github.io</code> and enjoy!</p>
+</code></pre></div><p>For every time you push to the <code>source</code> branch, CircleCI will always trigger a hugo generation to the <code>master</code> branch, where the site&rsquo;s static file generated by Hugo is placed.</p>
+<p>Wait for CircleCI&rsquo;s job done, then visit <code>&lt;SITE_NAME&gt;.github.io</code> and enjoy!</p>
 
     </div>
 

@@ -6,8 +6,8 @@
   
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="description" content="Ghost has released 1.0, with breaking changes so there&#39;s no smooth upgrading method but to take a fresh install. Here&#39;s my migration of this blog to Ghost 1.0.
-There&#39;s already an official tutorial to help you walk this through, but since it only supports Ubuntu officially, so I have to explore my own way on my CentOS 7 server. It turns out that there&#39;s not much modifications compared to Ubuntu version, so I&#39;m just writing this down as a record of my migration."/>
+<meta name="description" content="Ghost has released 1.0, with breaking changes so there&amp;rsquo;s no smooth upgrading method but to take a fresh install. Here&amp;rsquo;s my migration of this blog to Ghost 1.0.
+There&amp;rsquo;s already an official tutorial to help you walk this through, but since it only supports Ubuntu officially, so I have to explore my own way on my CentOS 7 server. It turns out that there&amp;rsquo;s not much modifications compared to Ubuntu version, so I&amp;rsquo;m just writing this down as a record of my migration."/>
 <meta name="keywords" content=""/>
 <meta name="robots" content="noodp"/>
 
@@ -157,8 +157,8 @@ There&#39;s already an official tutorial to help you walk this through, but sinc
     
 
     <div class="post-content">
-      <p>Ghost has released 1.0, with breaking changes so there's no smooth upgrading method but to take a fresh install. Here's my migration of this blog to Ghost 1.0.</p>
-<p>There's already <a href="https://docs.ghost.org/docs/migrating-to-ghost-1-0-0">an official tutorial</a> to help you walk this through, but since it <strong>only supports Ubuntu officially</strong>, so I have to explore my own way on my <code>CentOS 7</code> server. It turns out that there's not much modifications compared to Ubuntu version, so I'm just writing this down as a record of my migration.</p>
+      <p>Ghost has released 1.0, with breaking changes so there&rsquo;s no smooth upgrading method but to take a fresh install. Here&rsquo;s my migration of this blog to Ghost 1.0.</p>
+<p>There&rsquo;s already <a href="https://docs.ghost.org/docs/migrating-to-ghost-1-0-0">an official tutorial</a> to help you walk this through, but since it <strong>only supports Ubuntu officially</strong>, so I have to explore my own way on my <code>CentOS 7</code> server. It turns out that there&rsquo;s not much modifications compared to Ubuntu version, so I&rsquo;m just writing this down as a record of my migration.</p>
 <h2 id="backup">Backup</h2>
 <p>The new version of Ghost uses almost-the-same data structure as the older version, so backup your content by following:</p>
 <ul>
@@ -173,7 +173,7 @@ There&#39;s already an official tutorial to help you walk this through, but sinc
 </li>
 </ul>
 <h2 id="install">Install</h2>
-<p>In Ghost 1.0 or later it uses it's own CLI called <code>ghost</code> to manage sites, so install it by npm:</p>
+<p>In Ghost 1.0 or later it uses it&rsquo;s own CLI called <code>ghost</code> to manage sites, so install it by npm:</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo npm i -g ghost-cli
 </code></pre></div><p>Then create you site folder(For myself I created it under <code>/usr/share/nginx/</code>):</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo mkdir /usr/share/nginx/ghost

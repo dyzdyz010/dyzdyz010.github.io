@@ -38,7 +38,7 @@ hugo new site &amp;lt;SITE_NAME&amp;gt; Create a repo for your site: &amp;lt;SIT
       <pubDate>Wed, 09 May 2018 08:09:33 +0800</pubDate>
       
       <guid>https://duyizhuo.com/post/using-virtualenv-in-jupyter-notebook/</guid>
-      <description>OS: macOS High Sierra 10.13.4 Default Python version: 3.6.5  Prerequisites  Have your Jupyter Notebook and virtualenv installed with your default python version Have one virtual env created which you want to use  Walkthrough Activate your virtualenv source &amp;lt;envpath&amp;gt;/bin/activate Install ipykernel inside your env $(yourenv)&amp;gt; pip install ipykernel Create kernel using your env $(yourenv)&amp;gt; python -m ipykernel install --user --name myenv --display-name &amp;#34;Python (myenv)&amp;#34; Go ahead and enjoy Now open your jupyter notebook and you&#39;ll notice your kernel just created appears along with your default kernel.</description>
+      <description>OS: macOS High Sierra 10.13.4 Default Python version: 3.6.5  Prerequisites  Have your Jupyter Notebook and virtualenv installed with your default python version Have one virtual env created which you want to use  Walkthrough Activate your virtualenv source &amp;lt;envpath&amp;gt;/bin/activate Install ipykernel inside your env $(yourenv)&amp;gt; pip install ipykernel Create kernel using your env $(yourenv)&amp;gt; python -m ipykernel install --user --name myenv --display-name &amp;#34;Python (myenv)&amp;#34; Go ahead and enjoy Now open your jupyter notebook and you&amp;rsquo;ll notice your kernel just created appears along with your default kernel.</description>
     </item>
     
     <item>
