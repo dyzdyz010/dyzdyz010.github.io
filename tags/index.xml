@@ -6,10 +6,37 @@
     <description>Recent content in Tags on Wonderland</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 09 Jan 2020 17:20:01 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 14 Mar 2020 20:32:10 +0800</lastBuildDate>
     
 	<atom:link href="https://duyizhuo.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>code</title>
+      <link>https://duyizhuo.com/tags/code/</link>
+      <pubDate>Sat, 14 Mar 2020 20:32:10 +0800</pubDate>
+      
+      <guid>https://duyizhuo.com/tags/code/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>issue</title>
+      <link>https://duyizhuo.com/tags/issue/</link>
+      <pubDate>Sat, 14 Mar 2020 20:32:10 +0800</pubDate>
+      
+      <guid>https://duyizhuo.com/tags/issue/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>https://duyizhuo.com/tags/linux/</link>
+      <pubDate>Sat, 14 Mar 2020 20:32:10 +0800</pubDate>
+      
+      <guid>https://duyizhuo.com/tags/linux/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>programming</title>
@@ -93,15 +120,6 @@
     </item>
     
     <item>
-      <title>code</title>
-      <link>https://duyizhuo.com/tags/code/</link>
-      <pubDate>Fri, 18 May 2018 10:15:21 +0800</pubDate>
-      
-      <guid>https://duyizhuo.com/tags/code/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>emacs</title>
       <link>https://duyizhuo.com/tags/emacs/</link>
       <pubDate>Fri, 11 May 2018 07:50:12 +0800</pubDate>
@@ -125,15 +143,6 @@
       <pubDate>Wed, 09 May 2018 08:09:33 +0800</pubDate>
       
       <guid>https://duyizhuo.com/tags/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>linux</title>
-      <link>https://duyizhuo.com/tags/linux/</link>
-      <pubDate>Sat, 05 May 2018 09:52:42 +0800</pubDate>
-      
-      <guid>https://duyizhuo.com/tags/linux/</guid>
       <description></description>
     </item>
     

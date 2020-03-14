@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>issue on Wonderland</title>
+    <link>https://duyizhuo.com/tags/issue/</link>
+    <description>Recent content in issue on Wonderland</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 14 Mar 2020 20:32:10 +0800</lastBuildDate>
+    
+	<atom:link href="https://duyizhuo.com/tags/issue/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>解决在 Windows WSL 中使用 Elixir 的 Observer 时遇到的乱码问题</title>
+      <link>https://duyizhuo.com/post/wsl-elixir-observer/</link>
+      <pubDate>Sat, 14 Mar 2020 20:32:10 +0800</pubDate>
+      
+      <guid>https://duyizhuo.com/post/wsl-elixir-observer/</guid>
+      <description>OS: Windows 10 WSL: Ubuntu 18.04 LTS X Server: VcXSrv  在 WSL 下运行 Elixir 的 Observer 时遇到了文字全部变成方框的问题。经查询资料，证实是中文字体的问题，最终的解决方案如下：
+在系统中安装以下三个字体包：
+$ sudo apt install ttf-wqy-microhei $ sudo apt install fonts-wqy-microhei $ sudo apt install ttf-wqy-zenhei 安装之后再次运行 Observer，文字可以正常显示。</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -3,21 +3,49 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://duyizhuo.com/post/</loc>
-    <lastmod>2020-01-09T17:20:01+08:00</lastmod>
+    <loc>https://duyizhuo.com/tags/code/</loc>
+    <lastmod>2020-03-14T20:32:10+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://duyizhuo.com/tags/programming/</loc>
-    <lastmod>2020-01-09T17:20:01+08:00</lastmod>
+    <loc>https://duyizhuo.com/tags/issue/</loc>
+    <lastmod>2020-03-14T20:32:10+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://duyizhuo.com/tags/linux/</loc>
+    <lastmod>2020-03-14T20:32:10+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://duyizhuo.com/post/</loc>
+    <lastmod>2020-03-14T20:32:10+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://duyizhuo.com/tags/</loc>
+    <lastmod>2020-03-14T20:32:10+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://duyizhuo.com/post/wsl-elixir-observer/</loc>
+    <lastmod>2020-03-14T20:32:10+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://duyizhuo.com/tags/programming/</loc>
     <lastmod>2020-01-09T17:20:01+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -122,13 +150,6 @@
   </url>
   
   <url>
-    <loc>https://duyizhuo.com/tags/code/</loc>
-    <lastmod>2018-05-18T10:15:21+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://duyizhuo.com/post/quicksort-review/</loc>
     <lastmod>2018-05-18T10:15:21+08:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -166,13 +187,6 @@
   <url>
     <loc>https://duyizhuo.com/post/using-virtualenv-in-jupyter-notebook/</loc>
     <lastmod>2018-05-09T08:09:33+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://duyizhuo.com/tags/linux/</loc>
-    <lastmod>2018-05-05T09:52:42+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
