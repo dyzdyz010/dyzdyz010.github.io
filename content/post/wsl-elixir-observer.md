@@ -1,7 +1,6 @@
 ---
 title: "解决在 Windows WSL 中使用 Elixir 的 Observer 时遇到的乱码问题"
 date: 2020-03-14T20:32:10+08:00
-draft: true
 tags:
   - code
   - linux
