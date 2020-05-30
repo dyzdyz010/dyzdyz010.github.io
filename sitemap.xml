@@ -38,6 +38,13 @@
   </url>
   
   <url>
+    <loc>https://duyizhuo.com/</loc>
+    <lastmod>2020-03-14T20:32:10+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://duyizhuo.com/post/wsl-elixir-observer/</loc>
     <lastmod>2020-03-14T20:32:10+08:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -242,13 +249,6 @@
   
   <url>
     <loc>https://duyizhuo.com/tags/about/</loc>
-    <lastmod>2017-08-05T11:52:53+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://duyizhuo.com/</loc>
     <lastmod>2017-08-05T11:52:53+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
