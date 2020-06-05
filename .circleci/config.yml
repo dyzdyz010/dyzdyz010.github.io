@@ -7,10 +7,12 @@ workflows:
     - build:
         filters:
           branches:
-            only: source
+            ignore: master
 
 jobs:
     build:
+        branches:
+            ignore: master
         docker:
             - image: cibuilds/hugo:latest
         working_directory: ~/dyzdyz010.github.io
