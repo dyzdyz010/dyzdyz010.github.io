@@ -6,11 +6,14 @@ copyright = ""
 baseurl = "https://duyizhuo.com"
 languageCode = "en-us"
 theme = "wonderland"
-paginate = 5
+paginate = 10
 
 disqusShortname = "blog-disqus-com-1"
 
 googleAnalytics = "UA-33561194-4"
+
+[markup.goldmark.renderer]
+  unsafe= true
 
 [markup]
   [markup.highlight]

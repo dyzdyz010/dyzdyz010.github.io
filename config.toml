@@ -6,9 +6,12 @@ copyright = ""
 baseurl = "/"
 languageCode = "en-us"
 theme = "wonderland"
-paginate = 5
+paginate = 10
 
 disqusShortname = "blog-disqus-com-1"
+
+[markup.goldmark.renderer]
+  unsafe= true
 
 [markup]
   [markup.highlight]
