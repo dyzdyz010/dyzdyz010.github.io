@@ -1,16 +1,12 @@
 version: 2
 
-executors:
-  hugo-executor:
-    docker:
-      - image: cibuilds/hugo:latest
-
 jobs:
     build:
         branches:
             ignore:
                 - master
-        executor: hugo-executor
+        docker:
+            - image: cibuilds/hugo:latest
         working_directory: ~/dyzdyz010.github.io
         steps:
             - add_ssh_keys:
