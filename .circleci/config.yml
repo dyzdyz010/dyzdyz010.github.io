@@ -6,10 +6,10 @@ executors:
       - image: cibuilds/hugo:latest
 
 jobs:
-    build_deploy:
+    build:
         branches:
-            only:
-                - source
+            ignore:
+                - master
         executor: hugo-executor
         working_directory: ~/dyzdyz010.github.io
         steps:
