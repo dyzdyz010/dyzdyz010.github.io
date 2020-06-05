@@ -3,41 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://duyizhuo.com/tags/general/</loc>
-    <lastmod>2020-06-05T20:27:02+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://duyizhuo.com/post/</loc>
-    <lastmod>2020-06-05T20:27:02+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://duyizhuo.com/tags/</loc>
-    <lastmod>2020-06-05T20:27:02+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://duyizhuo.com/</loc>
-    <lastmod>2020-06-05T20:27:02+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://duyizhuo.com/post/write-test/</loc>
-    <lastmod>2020-06-05T20:27:02+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://duyizhuo.com/tags/code/</loc>
     <lastmod>2020-03-14T20:32:10+08:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -53,6 +18,27 @@
   
   <url>
     <loc>https://duyizhuo.com/tags/linux/</loc>
+    <lastmod>2020-03-14T20:32:10+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://duyizhuo.com/post/</loc>
+    <lastmod>2020-03-14T20:32:10+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://duyizhuo.com/tags/</loc>
+    <lastmod>2020-03-14T20:32:10+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://duyizhuo.com/</loc>
     <lastmod>2020-03-14T20:32:10+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -95,6 +81,13 @@
   
   <url>
     <loc>https://duyizhuo.com/post/2019-year-review/</loc>
+    <lastmod>2020-01-03T19:29:14+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://duyizhuo.com/tags/general/</loc>
     <lastmod>2020-01-03T19:29:14+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

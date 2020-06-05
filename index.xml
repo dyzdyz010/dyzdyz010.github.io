@@ -6,19 +6,10 @@
     <description>Recent content on Wonderland</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 05 Jun 2020 20:27:02 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 14 Mar 2020 20:32:10 +0800</lastBuildDate>
     
 	<atom:link href="https://duyizhuo.com/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Write Test</title>
-      <link>https://duyizhuo.com/post/write-test/</link>
-      <pubDate>Fri, 05 Jun 2020 20:27:02 +0800</pubDate>
-      
-      <guid>https://duyizhuo.com/post/write-test/</guid>
-      <description>添加文章测试 Hugo 总给人感觉有些 bug。</description>
-    </item>
     
     <item>
       <title>解决在 Windows WSL 中使用 Elixir 的 Observer 时遇到的乱码问题</title>

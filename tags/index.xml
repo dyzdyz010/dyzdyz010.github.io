@@ -6,19 +6,10 @@
     <description>Recent content in Tags on Wonderland</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 05 Jun 2020 20:27:02 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 14 Mar 2020 20:32:10 +0800</lastBuildDate>
     
 	<atom:link href="https://duyizhuo.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>general</title>
-      <link>https://duyizhuo.com/tags/general/</link>
-      <pubDate>Fri, 05 Jun 2020 20:27:02 +0800</pubDate>
-      
-      <guid>https://duyizhuo.com/tags/general/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>code</title>
@@ -71,6 +62,15 @@
       <pubDate>Thu, 09 Jan 2020 17:20:01 +0800</pubDate>
       
       <guid>https://duyizhuo.com/tags/web/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>general</title>
+      <link>https://duyizhuo.com/tags/general/</link>
+      <pubDate>Fri, 03 Jan 2020 19:29:14 +0800</pubDate>
+      
+      <guid>https://duyizhuo.com/tags/general/</guid>
       <description></description>
     </item>
     
