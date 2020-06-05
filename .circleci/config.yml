@@ -8,7 +8,8 @@ executors:
 jobs:
     build_deploy:
         branches:
-            only: source
+            only:
+                - source
         executor: hugo-executor
         working_directory: ~/dyzdyz010.github.io
         steps:
