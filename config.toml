@@ -29,19 +29,19 @@ disqusShortname = "blog-disqus-com-1"
   [[menu.main]]
     identifier = "about"
     name = "About"
-    [[menu.main]]
+    url = "/about"
+    weight = 1
+    pre = "star"
+  [[menu.main]]
     identifier = "twitter"
-    parent = "about"
     name = "Twitter"
     url = "https://twitter.com/dyzdyz010"
-  [[menu.main]]
-    identifier = "github"
-    name = "Github"
-    url = "https://github.com/dyzdyz010"
+    weight = 2
   [[menu.main]]
     identifier = "sarahah"
     name = "Leave me a message!"
     url = "https://dyzdyz010.sarahah.com/"
+    weight = 3
 
 [sitemap]
   changefreq = "monthly"
@@ -65,6 +65,22 @@ disqusShortname = "blog-disqus-com-1"
   centerTheme = true
   # set a custom favicon (default is a `themeColor` square)
   # favicon = "favicon.ico"
-    [params.logo]
-      logoText = "Wonderland"
-      logoHomeLink = "/"
+  [params.logo]
+    logoText = "Wonderland"
+    logoHomeLink = "/"
+
+[yuque-sync]
+# 用户名
+user = "etern1ty"
+# 知识库路径
+kb = "vheaven"
+# 私密仓库需要token
+token = "PnFwjJHQAgeAahbbUbyayaM3QJo3eSLOPnUdYKY0"
+# api
+api = "https://www.yuque.com/api/v2"
+# port
+port = 8081
+# sync after command
+aftercmd = ""
+# markdown文件目录文件路径为content/${article}
+article = "post"
