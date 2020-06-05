@@ -118,14 +118,14 @@
   
   <div class="container post">
     <h2 class="post-title title is-3">
-      <a class="has-text-grey-dark" href="https://duyizhuo.com/amp/post/origin-download-speedup/">国内Origin下载加速</a>
+      <a class="has-text-grey-dark" href="https://duyizhuo.com/amp/post/install-kbengine-on-ubuntu-18-04-lts/">在 Ubuntu 18.04 LTS 上安装并运行 KBEngine</a>
     </h2>
     <div class="post-meta">
       <span class="post-date">
         <span class="icon has-text-danger">
           <i class="fas fa-calendar"></i>
         </span>
-        <a class="has-text-grey">Sun, Nov 18, 2018</a>
+        <a class="has-text-grey">Sat, May 5, 2018</a>
       </span>
       &nbsp;
       <span class="post-author">
@@ -148,7 +148,7 @@
           <div class="tags has-addons">
               <span class="tag is-dark">#</span>
               <span class="tag is-success">
-                <a class="is-success" href="https://duyizhuo.com/tags/tutorial/">tutorial</a>
+                <a class="is-success" href="https://duyizhuo.com/tags/linux/">linux</a>
               </span>
           </div>
         </div>
@@ -162,15 +162,6 @@
           </div>
         </div>
         
-        <div class="control">
-          <div class="tags has-addons">
-              <span class="tag is-dark">#</span>
-              <span class="tag is-success">
-                <a class="is-success" href="https://duyizhuo.com/tags/general/">general</a>
-              </span>
-          </div>
-        </div>
-        
       </div>
     </div>
     
@@ -180,13 +171,20 @@
     <div class="post-content">
       
       
+      本文用到的组件和系统版本：
+OS: Ubuntu 18.04 LTS MySQL: 5.7.22 gcc: 7.3.0 g++: 7.3.0 Python: 3.6.5  首先安装各种依赖：
+sudo apt-get update sudo apt-get install libssl-dev mysql-server libmysqld-dev mysql-client libmysqlclient-dev gcc g++ python3 编译引擎 下面从官方仓库下载引擎源码，本人下载的是当时最新版本1.1.8：
+wget <a href="https://github.com/kbengine/kbengine/archive/v1.1.8.tar.gz">https://github.com/kbengine/kbengine/archive/v1.1.8.tar.gz</a> tar -xzvf v1.1.8.tar.gz 接着就可以对代码进行编译了：
+cd kbengine-1.1.8/kbe/src chmod -R 755 . make 我在编译过程中出现了以下错误：
+/usr/lib/gcc/x86_64-linux-gnu/7/include/mm_malloc.h:34:16: error: declaration of ‘int posix_memalign(void**, size_t, size_t) throw ()’ has a different exception specifier extern &quot;C&quot; int posix_memalign (void **, size_t, size_t) throw (); ^~~~~~~~~~~~~~ In file included from /home/dyz/kbengine-1.
+      
       
     </div>
 
     
     <div>
       <a class="read-more has-text-danger"
-        href="/amp/post/origin-download-speedup/">Read more →</a>
+        href="/amp/post/install-kbengine-on-ubuntu-18-04-lts/">Read more →</a>
     </div>
     
 
@@ -196,14 +194,14 @@
   
   <div class="container post">
     <h2 class="post-title title is-3">
-      <a class="has-text-grey-dark" href="https://duyizhuo.com/amp/post/wwdc-2018-keynot-review/">WWDC 2018 Keynot 个人总结</a>
+      <a class="has-text-grey-dark" href="https://duyizhuo.com/amp/post/set-up-flarum-from-scratch/">Set Up Flarum From Scratch</a>
     </h2>
     <div class="post-meta">
       <span class="post-date">
         <span class="icon has-text-danger">
           <i class="fas fa-calendar"></i>
         </span>
-        <a class="has-text-grey">Wed, Jun 6, 2018</a>
+        <a class="has-text-grey">Sat, Jan 6, 2018</a>
       </span>
       &nbsp;
       <span class="post-author">
@@ -226,7 +224,7 @@
           <div class="tags has-addons">
               <span class="tag is-dark">#</span>
               <span class="tag is-success">
-                <a class="is-success" href="https://duyizhuo.com/tags/apple/">apple</a>
+                <a class="is-success" href="https://duyizhuo.com/tags/web/">web</a>
               </span>
           </div>
         </div>
@@ -235,10 +233,88 @@
           <div class="tags has-addons">
               <span class="tag is-dark">#</span>
               <span class="tag is-success">
-                <a class="is-success" href="https://duyizhuo.com/tags/wwdc/">wwdc</a>
+                <a class="is-success" href="https://duyizhuo.com/tags/flarum/">flarum</a>
               </span>
           </div>
         </div>
+        
+        <div class="control">
+          <div class="tags has-addons">
+              <span class="tag is-dark">#</span>
+              <span class="tag is-success">
+                <a class="is-success" href="https://duyizhuo.com/tags/linux/">linux</a>
+              </span>
+          </div>
+        </div>
+        
+        <div class="control">
+          <div class="tags has-addons">
+              <span class="tag is-dark">#</span>
+              <span class="tag is-success">
+                <a class="is-success" href="https://duyizhuo.com/tags/tutorial/">tutorial</a>
+              </span>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+
+    
+
+    <div class="post-content">
+      
+      
+      <p>Befor you continue</p>
+<ol>
+<li>Get a VPS from Linode/Vultr/whatever 2. Pick a linux distribution and make it running(I use CentOS 7). 3. Install Apache/MySQL/PHP 7.1 Get yourself a non-root sudo user adduser USERNAME passwd USERNAME usermod -aG wheel USERNAME su USERNAME Install and configure Apache Check this out
+First install it.
+sudo yum update sudo yum -y install httpd sudo systemctl enable httpd.service Then create directory structure.
+sudo mkdir /etc/httpd/sites-available sudo mkdir /etc/httpd/sites-enabled Open config file:</li>
+</ol>
+
+      
+      
+    </div>
+
+    
+    <div>
+      <a class="read-more has-text-danger"
+        href="/amp/post/set-up-flarum-from-scratch/">Read more →</a>
+    </div>
+    
+
+  </div>
+
+  <hr class="hr">
+  
+  <div class="container post">
+    <h2 class="post-title title is-3">
+      <a class="has-text-grey-dark" href="https://duyizhuo.com/amp/post/2017-year-review/">2017 - 2018</a>
+    </h2>
+    <div class="post-meta">
+      <span class="post-date">
+        <span class="icon has-text-danger">
+          <i class="fas fa-calendar"></i>
+        </span>
+        <a class="has-text-grey">Sun, Dec 31, 2017</a>
+      </span>
+      &nbsp;
+      <span class="post-author">
+        <span class="icon has-text-info">
+          <i class="fas fa-user"></i>
+        </span>
+        <a class="has-text-grey">
+          
+            dyzdyz010
+          
+        </a>
+      </span>
+    </div>
+
+    
+    <div class="post-tags">
+      <div class="field is-grouped is-grouped-multiline">
         
         <div class="control">
           <div class="tags has-addons">
@@ -258,27 +334,13 @@
     <div class="post-content">
       
       
-      文中图片来自爱范儿——苹果 WWDC 2018：最全总结在这里，不错过任何重点
-开场就说 Today is all about software，本来期待一些硬件更新的我有点小失望，但问题不大🙄
-iOS 12 Hotfix 首先是系统提速，确实 iPhone 感觉越用越慢，看来苹果也真正开始重视这个问题了，同时也解决了设备降速的问题，而且支持到了 5s，在我看来是有起码的诚意的。
-AR 苹果发布了新的模型格式 USDZ，包含了模型和动画数据，我的猜测是应该类似于目前 Direct X 拥有的 X 文件格式，用来一站式存储单个模型或场景的所有相关数据，用于 3D 应用中的模型数据管理，也算是苹果软件生态的一部分吧，看来 Metal 说不定在游戏领域还是有出头之日的。
-AR 游戏现在有多人和旁观者模式了，同学聚会和团建上又可以多一种项目选择了🤣
-相册 向 Google 学习，相册变得更智能了，意味着更多的自动推荐选项，包括搜索啦，整理归档啦，这些都是小问题，更新颖的是能推荐分享内容，帮你选择比较适合分享的几张照片，而且接收方还能根据收到的照片把自己的相似的照片再分享回去，仔细想想其实这是个挺好的功能，让一次集体活动的记录视角在每个人的手机上更完整。然而在我的 iCloud 照片部分丢失后，我已经对照片这个应用不再感冒了，现在的主力照片存储在 Dropbox 上。
-BTW 照片分享也是端到端加密的，苹果的安全技术我还是比较放心的。
-Siri Siri 作为普遍认同的“人工智障”已经在成为语音指令助手的路上越走越远了……
-这次发布了 Shorcuts 功能，按照我的理解，就是把一个特定的功能创建成一条语音指令特例，这样在用 siri 呼出的时候，就可以基本跳过语义分析之类的流程，直接输出结果，和函数调用有点类似。
-除此之外，苹果还允许用户自己创建 Workflow，说白了就是用一条指令把一系列功能捆绑到一起，方便一次性调用。
-这两个功能基本是属于 Siri 自己的功能，所以像 HomePod 和 Apple Watch 这样能呼出 Siri 的设备都可以使用这项功能。我猜测这个功能在未来的智能家居上应该能有大作为。
-Built-in Apps 苹果更新了自带的四个应用——新闻、股票、语音备忘录和 iBooks（已经改名为 Apple Books）——对我来说实在是鸡肋，属于从来不开的那种应用。不过值得一提的是股票应用结合了新闻，可以看到某支股票相关的财经新闻，可能方便炒股的人了解行情吧。
-CarPlay CarPlay 开放了第三方导航软件，可喜可贺🎉 然而我还是没有车😶
-      
       
     </div>
 
     
     <div>
       <a class="read-more has-text-danger"
-        href="/amp/post/wwdc-2018-keynot-review/">Read more →</a>
+        href="/amp/post/2017-year-review/">Read more →</a>
     </div>
     
 
@@ -288,14 +350,83 @@ CarPlay CarPlay 开放了第三方导航软件，可喜可贺🎉 然而我还�
   
   <div class="container post">
     <h2 class="post-title title is-3">
-      <a class="has-text-grey-dark" href="https://duyizhuo.com/amp/post/quicksort-review/">快速排序算法理解</a>
+      <a class="has-text-grey-dark" href="https://duyizhuo.com/amp/post/check-in-20171027/">冒个泡证明自己还活着</a>
     </h2>
     <div class="post-meta">
       <span class="post-date">
         <span class="icon has-text-danger">
           <i class="fas fa-calendar"></i>
         </span>
-        <a class="has-text-grey">Fri, May 18, 2018</a>
+        <a class="has-text-grey">Fri, Oct 27, 2017</a>
+      </span>
+      &nbsp;
+      <span class="post-author">
+        <span class="icon has-text-info">
+          <i class="fas fa-user"></i>
+        </span>
+        <a class="has-text-grey">
+          
+            dyzdyz010
+          
+        </a>
+      </span>
+    </div>
+
+    
+    <div class="post-tags">
+      <div class="field is-grouped is-grouped-multiline">
+        
+        <div class="control">
+          <div class="tags has-addons">
+              <span class="tag is-dark">#</span>
+              <span class="tag is-success">
+                <a class="is-success" href="https://duyizhuo.com/tags/general/">general</a>
+              </span>
+          </div>
+        </div>
+        
+        <div class="control">
+          <div class="tags has-addons">
+              <span class="tag is-dark">#</span>
+              <span class="tag is-success">
+                <a class="is-success" href="https://duyizhuo.com/tags/nonsense/">nonsense</a>
+              </span>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+
+    
+
+    <div class="post-content">
+      
+      
+      
+    </div>
+
+    
+    <div>
+      <a class="read-more has-text-danger"
+        href="/amp/post/check-in-20171027/">Read more →</a>
+    </div>
+    
+
+  </div>
+
+  <hr class="hr">
+  
+  <div class="container post">
+    <h2 class="post-title title is-3">
+      <a class="has-text-grey-dark" href="https://duyizhuo.com/amp/post/wonderland-ghost-theme/">Wonderland - 一个简单整洁的 Ghost 主题</a>
+    </h2>
+    <div class="post-meta">
+      <span class="post-date">
+        <span class="icon has-text-danger">
+          <i class="fas fa-calendar"></i>
+        </span>
+        <a class="has-text-grey">Tue, Aug 1, 2017</a>
       </span>
       &nbsp;
       <span class="post-author">
@@ -327,7 +458,25 @@ CarPlay CarPlay 开放了第三方导航软件，可喜可贺🎉 然而我还�
           <div class="tags has-addons">
               <span class="tag is-dark">#</span>
               <span class="tag is-success">
-                <a class="is-success" href="https://duyizhuo.com/tags/algorithm/">algorithm</a>
+                <a class="is-success" href="https://duyizhuo.com/tags/web/">web</a>
+              </span>
+          </div>
+        </div>
+        
+        <div class="control">
+          <div class="tags has-addons">
+              <span class="tag is-dark">#</span>
+              <span class="tag is-success">
+                <a class="is-success" href="https://duyizhuo.com/tags/ghost/">ghost</a>
+              </span>
+          </div>
+        </div>
+        
+        <div class="control">
+          <div class="tags has-addons">
+              <span class="tag is-dark">#</span>
+              <span class="tag is-success">
+                <a class="is-success" href="https://duyizhuo.com/tags/theme/">theme</a>
               </span>
           </div>
         </div>
@@ -341,27 +490,13 @@ CarPlay CarPlay 开放了第三方导航软件，可喜可贺🎉 然而我还�
     <div class="post-content">
       
       
-      从本科到现在一直没有搞懂快排的原理，直到今天学习 Haskell 看到一张图，很直观地解释了快速排序的原理，这里我将以自己的理解向各位解释快排的工作原理。
-快速排序的理念非常简单：
-从列表中取出一个元素，在剩下的元素中，选出所有比它小的元素放在它的左边，其余的放在右边。
-此时我们会遇到一个显而易见的问题：分别在被“选中”的元素左边和右边的两个列表，各自内部依然是乱序（未经过排序）的，因为这一步可以理解为对原列表的遍历，因此元素的顺序并没有变。
-在这里，才是快速排序算法的真正体现——
-对各个列表，重复第一步的操作，直到选定元素两边的列表只剩至多一个元素。
-可以看出，这是一个递归操作。以数组 [5, 1, 9, 4, 6, 7, 3] 和排序函数 quicksort 为例：
-quicksort 开始 为了简化算法，我们直接在开始处理数组的时候，直接选择第一个元素作为被选定元素。经过筛选后，我们的结果此时变成了这样：
-quicksort([1, 4, 3]) ++ [5] ++ quicksort([9, 6, 7]) 中间的[5]是我们选定的元素，左边是比它小的元素数组[1, 4, 3]，右边是比它大的[9, 6, 7]。可以看出，元素两侧的数组依然是乱序状态，仍然需要对其进行排序，因此上面的伪代码中写作 quicksort(Array)，即对两个数组继续应用排序操作。
-这里以左边的数组为例，看看递归是如何工作的：
-quicksort 第一层递归 对新的数组 [1, 4, 3] 重复上面的操作，选定第一个元素 1 作为被选定元素，并筛选其两边的数组，结果变成这样：
-quicksort([]) ++ [1] ++ quicksort([4, 3]) 左边已经成为空数组，意味着我们选定的 1 就是整个数组最小的元素了，因此没有比它更小的元素存在于它的左边位置了。这样就只剩右侧比它大的 [4, 3] 了，我们依然需要对其应用排序操作 quicksort：
-quicksort 第二层递归 对新的数组 [4, 3] 重复上面的操作，变成下面这样：
-      
       
     </div>
 
     
     <div>
       <a class="read-more has-text-danger"
-        href="/amp/post/quicksort-review/">Read more →</a>
+        href="/amp/post/wonderland-ghost-theme/">Read more →</a>
     </div>
     
 
@@ -371,14 +506,14 @@ quicksort 第二层递归 对新的数组 [4, 3] 重复上面的操作，变成�
   
   <div class="container post">
     <h2 class="post-title title is-3">
-      <a class="has-text-grey-dark" href="https://duyizhuo.com/amp/post/enable-latex-export-logging-in-org-mode/">Enable latex-export-logging in org-mode</a>
+      <a class="has-text-grey-dark" href="https://duyizhuo.com/amp/post/europe-folk-music-playlist/">欧洲民谣歌单</a>
     </h2>
     <div class="post-meta">
       <span class="post-date">
         <span class="icon has-text-danger">
           <i class="fas fa-calendar"></i>
         </span>
-        <a class="has-text-grey">Fri, May 11, 2018</a>
+        <a class="has-text-grey">Tue, Aug 1, 2017</a>
       </span>
       &nbsp;
       <span class="post-author">
@@ -401,10 +536,220 @@ quicksort 第二层递归 对新的数组 [4, 3] 重复上面的操作，变成�
           <div class="tags has-addons">
               <span class="tag is-dark">#</span>
               <span class="tag is-success">
-                <a class="is-success" href="https://duyizhuo.com/tags/emacs/">emacs</a>
+                <a class="is-success" href="https://duyizhuo.com/tags/music/">music</a>
               </span>
           </div>
         </div>
+        
+        <div class="control">
+          <div class="tags has-addons">
+              <span class="tag is-dark">#</span>
+              <span class="tag is-success">
+                <a class="is-success" href="https://duyizhuo.com/tags/share/">share</a>
+              </span>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+
+    
+
+    <div class="post-content">
+      
+      
+      
+    </div>
+
+    
+    <div>
+      <a class="read-more has-text-danger"
+        href="/amp/post/europe-folk-music-playlist/">Read more →</a>
+    </div>
+    
+
+  </div>
+
+  <hr class="hr">
+  
+  <div class="container post">
+    <h2 class="post-title title is-3">
+      <a class="has-text-grey-dark" href="https://duyizhuo.com/amp/post/acg-wallpaper-recommendation-0/">ACG Wallpaper Recommendation(0)</a>
+    </h2>
+    <div class="post-meta">
+      <span class="post-date">
+        <span class="icon has-text-danger">
+          <i class="fas fa-calendar"></i>
+        </span>
+        <a class="has-text-grey">Mon, Jul 31, 2017</a>
+      </span>
+      &nbsp;
+      <span class="post-author">
+        <span class="icon has-text-info">
+          <i class="fas fa-user"></i>
+        </span>
+        <a class="has-text-grey">
+          
+            dyzdyz010
+          
+        </a>
+      </span>
+    </div>
+
+    
+    <div class="post-tags">
+      <div class="field is-grouped is-grouped-multiline">
+        
+        <div class="control">
+          <div class="tags has-addons">
+              <span class="tag is-dark">#</span>
+              <span class="tag is-success">
+                <a class="is-success" href="https://duyizhuo.com/tags/acg/">acg</a>
+              </span>
+          </div>
+        </div>
+        
+        <div class="control">
+          <div class="tags has-addons">
+              <span class="tag is-dark">#</span>
+              <span class="tag is-success">
+                <a class="is-success" href="https://duyizhuo.com/tags/share/">share</a>
+              </span>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+
+    
+
+    <div class="post-content">
+      
+      
+      
+    </div>
+
+    
+    <div>
+      <a class="read-more has-text-danger"
+        href="/amp/post/acg-wallpaper-recommendation-0/">Read more →</a>
+    </div>
+    
+
+  </div>
+
+  <hr class="hr">
+  
+  <div class="container post">
+    <h2 class="post-title title is-3">
+      <a class="has-text-grey-dark" href="https://duyizhuo.com/amp/post/migrating-ghost-to-1-0-on-centos7/">Migrating Ghost to 1.0 from 0.11.x on CentOS 7</a>
+    </h2>
+    <div class="post-meta">
+      <span class="post-date">
+        <span class="icon has-text-danger">
+          <i class="fas fa-calendar"></i>
+        </span>
+        <a class="has-text-grey">Sat, Jul 29, 2017</a>
+      </span>
+      &nbsp;
+      <span class="post-author">
+        <span class="icon has-text-info">
+          <i class="fas fa-user"></i>
+        </span>
+        <a class="has-text-grey">
+          
+            dyzdyz010
+          
+        </a>
+      </span>
+    </div>
+
+    
+    <div class="post-tags">
+      <div class="field is-grouped is-grouped-multiline">
+        
+        <div class="control">
+          <div class="tags has-addons">
+              <span class="tag is-dark">#</span>
+              <span class="tag is-success">
+                <a class="is-success" href="https://duyizhuo.com/tags/ghost/">ghost</a>
+              </span>
+          </div>
+        </div>
+        
+        <div class="control">
+          <div class="tags has-addons">
+              <span class="tag is-dark">#</span>
+              <span class="tag is-success">
+                <a class="is-success" href="https://duyizhuo.com/tags/linux/">linux</a>
+              </span>
+          </div>
+        </div>
+        
+        <div class="control">
+          <div class="tags has-addons">
+              <span class="tag is-dark">#</span>
+              <span class="tag is-success">
+                <a class="is-success" href="https://duyizhuo.com/tags/centos/">centos</a>
+              </span>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+
+    
+
+    <div class="post-content">
+      
+      
+      Ghost has released 1.0, with breaking changes so there’s no smooth upgrading method but to take a fresh install. Here’s my migration of this blog to Ghost 1.0.
+There’s already an official tutorial to help you walk this through, but since it only supports Ubuntu officially, so I have to explore my own way on my CentOS 7 server. It turns out that there’s not much modifications compared to Ubuntu version, so I’m just writing this down as a record of my migration.
+      
+      
+    </div>
+
+    
+    <div>
+      <a class="read-more has-text-danger"
+        href="/amp/post/migrating-ghost-to-1-0-on-centos7/">Read more →</a>
+    </div>
+    
+
+  </div>
+
+  <hr class="hr">
+  
+  <div class="container post">
+    <h2 class="post-title title is-3">
+      <a class="has-text-grey-dark" href="https://duyizhuo.com/amp/post/ml-course-summary-review/">机器学习课程结束总结</a>
+    </h2>
+    <div class="post-meta">
+      <span class="post-date">
+        <span class="icon has-text-danger">
+          <i class="fas fa-calendar"></i>
+        </span>
+        <a class="has-text-grey">Wed, Jul 19, 2017</a>
+      </span>
+      &nbsp;
+      <span class="post-author">
+        <span class="icon has-text-info">
+          <i class="fas fa-user"></i>
+        </span>
+        <a class="has-text-grey">
+          
+            dyzdyz010
+          
+        </a>
+      </span>
+    </div>
+
+    
+    <div class="post-tags">
+      <div class="field is-grouped is-grouped-multiline">
         
         <div class="control">
           <div class="tags has-addons">
@@ -419,7 +764,16 @@ quicksort 第二层递归 对新的数组 [4, 3] 重复上面的操作，变成�
           <div class="tags has-addons">
               <span class="tag is-dark">#</span>
               <span class="tag is-success">
-                <a class="is-success" href="https://duyizhuo.com/tags/latex/">latex</a>
+                <a class="is-success" href="https://duyizhuo.com/tags/review/">review</a>
+              </span>
+          </div>
+        </div>
+        
+        <div class="control">
+          <div class="tags has-addons">
+              <span class="tag is-dark">#</span>
+              <span class="tag is-success">
+                <a class="is-success" href="https://duyizhuo.com/tags/ml/">ml</a>
               </span>
           </div>
         </div>
@@ -439,7 +793,7 @@ quicksort 第二层递归 对新的数组 [4, 3] 重复上面的操作，变成�
     
     <div>
       <a class="read-more has-text-danger"
-        href="/amp/post/enable-latex-export-logging-in-org-mode/">Read more →</a>
+        href="/amp/post/ml-course-summary-review/">Read more →</a>
     </div>
     
 
@@ -449,14 +803,14 @@ quicksort 第二层递归 对新的数组 [4, 3] 重复上面的操作，变成�
   
   <div class="container post">
     <h2 class="post-title title is-3">
-      <a class="has-text-grey-dark" href="https://duyizhuo.com/amp/post/using-virtualenv-in-jupyter-notebook/">Using virtualenv in Jupyter Notebook</a>
+      <a class="has-text-grey-dark" href="https://duyizhuo.com/amp/post/logistic-regression-model-with-tensorflow-from-scratch/">从零开始使用TensorFlow建立简单的逻辑回归模型</a>
     </h2>
     <div class="post-meta">
       <span class="post-date">
         <span class="icon has-text-danger">
           <i class="fas fa-calendar"></i>
         </span>
-        <a class="has-text-grey">Wed, May 9, 2018</a>
+        <a class="has-text-grey">Wed, Jun 28, 2017</a>
       </span>
       &nbsp;
       <span class="post-author">
@@ -474,6 +828,24 @@ quicksort 第二层递归 对新的数组 [4, 3] 重复上面的操作，变成�
     
     <div class="post-tags">
       <div class="field is-grouped is-grouped-multiline">
+        
+        <div class="control">
+          <div class="tags has-addons">
+              <span class="tag is-dark">#</span>
+              <span class="tag is-success">
+                <a class="is-success" href="https://duyizhuo.com/tags/ml/">ml</a>
+              </span>
+          </div>
+        </div>
+        
+        <div class="control">
+          <div class="tags has-addons">
+              <span class="tag is-dark">#</span>
+              <span class="tag is-success">
+                <a class="is-success" href="https://duyizhuo.com/tags/code/">code</a>
+              </span>
+          </div>
+        </div>
         
         <div class="control">
           <div class="tags has-addons">
@@ -488,16 +860,7 @@ quicksort 第二层递归 对新的数组 [4, 3] 重复上面的操作，变成�
           <div class="tags has-addons">
               <span class="tag is-dark">#</span>
               <span class="tag is-success">
-                <a class="is-success" href="https://duyizhuo.com/tags/code/">code</a>
-              </span>
-          </div>
-        </div>
-        
-        <div class="control">
-          <div class="tags has-addons">
-              <span class="tag is-dark">#</span>
-              <span class="tag is-success">
-                <a class="is-success" href="https://duyizhuo.com/tags/tutorial/">tutorial</a>
+                <a class="is-success" href="https://duyizhuo.com/tags/tensorflow/">tensorflow</a>
               </span>
           </div>
         </div>
@@ -511,7 +874,17 @@ quicksort 第二层递归 对新的数组 [4, 3] 重复上面的操作，变成�
     <div class="post-content">
       
       
-      OS: macOS High Sierra 10.13.4 Default Python version: 3.6.5  Prerequisites  Have your Jupyter Notebook and virtualenv installed with your default python version Have one virtual env created which you want to use  Walkthrough Activate your virtualenv source &lt;envpath&gt;/bin/activate Install ipykernel inside your env $(yourenv)&gt; pip install ipykernel Create kernel using your env $(yourenv)&gt; python -m ipykernel install &ndash;user &ndash;name myenv &ndash;display-name &quot;Python (myenv)&quot; Go ahead and enjoy Now open your jupyter notebook and you’ll notice your kernel just created appears along with your default kernel.
+      TensorFlow 是一个基于 python 的机器学习框架。在 Coursera 上学习了逻辑回归的课程内容后，想把在 MATLAB 中实现了的内容用 TensorFlow 重新实现一遍，当做学习 Python 和框架的敲门砖。
+目标读者 知道逻辑回归是什么，懂一点 Python，听说过 TensorFlow
+数据集 来自 Coursera 上 Andrew 的机器学习课程中的ex2data1.txt，根据学生的两次考试成绩判断该学生是否会被录取。
+环境 Python 2.7 - 3.x
+pandas, matplotlib, numpy
+安装 TensorFlow 在自己的电脑上安装 TensorFlow 框架，安装方法过程不赘述，CPU 版相对更容易一点，GPU 版需要 CUDA 支持，各位看官看情况安装就好。
+开始 创建一个文件夹（比如就叫做tensorflow），在文件夹中创建一个 Python 文件main.py，并将数据集文件放到这个文件夹下：
+数据形式:
+前两列分别为两次考试成绩（x1, x2），最后一列为是否被录取（y），1代表被录取，0则反之。
+在源文件main.py中，我们首先引入需要的包：
+import pandas as pd # 用于读取数据文件 import tensorflow as tf import matplotlib.pyplot as plt # 用于画图 import numpy as np # 用于后续计算 pandas是一个数据处理相关的包，可以对数据集进行读取和其他各种操作；matplotlib可以用来把我们的数据集绘成图表展示出来。
       
       
     </div>
@@ -519,7 +892,7 @@ quicksort 第二层递归 对新的数组 [4, 3] 重复上面的操作，变成�
     
     <div>
       <a class="read-more has-text-danger"
-        href="/amp/post/using-virtualenv-in-jupyter-notebook/">Read more →</a>
+        href="/amp/post/logistic-regression-model-with-tensorflow-from-scratch/">Read more →</a>
     </div>
     
 
