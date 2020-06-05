@@ -1,18 +1,15 @@
-version: 2.0
+version: 2.1
 
-workflows:
-  version: 2
-  main:
-    jobs:
-    - build:
-        filters:
-          branches:
-            ignore: master
+executors:
+  hugo-executor:
+    docker:
+      - image: cibuilds/hugo:latest
 
 jobs:
-    build:
-        docker:
-            - image: cibuilds/hugo:latest
+    build_deploy:
+        branches:
+            only: source
+        executor: hugo-executor
         working_directory: ~/dyzdyz010.github.io
         steps:
             - add_ssh_keys:
