@@ -23,7 +23,7 @@
             {{ else }}
                 <a class="navbar-item" href="{{ .URL }}">
                     {{ if .Pre }}
-                        <i class="fas fa-{{ .Pre }}"></i>
+                        <i class="{{ .Pre }}" style="margin-right: 2px;"></i>
                     {{ end }}
                     {{ .Name }}
                 </a>

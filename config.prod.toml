@@ -36,17 +36,27 @@ googleAnalytics = "UA-33561194-4"
     name = "About"
     url = "/about"
     weight = 1
-    pre = "star"
+    pre = "fas fa-star"
   [[menu.main]]
     identifier = "twitter"
     name = "Twitter"
     url = "https://twitter.com/dyzdyz010"
     weight = 2
+    pre = "fab fa-twitter"
   [[menu.main]]
     identifier = "sarahah"
     name = "Leave me a message!"
     url = "https://dyzdyz010.sarahah.com/"
     weight = 3
+  [[menu.main]]
+    identifier = "more"
+    name = "More"
+    weight = 4
+  [[menu.main]]
+    identifier = "hemifuture"
+    name = "Hemifuture"
+    url = "https://forum.hemifuture.cn"
+    parent = "more"
 
 [sitemap]
   changefreq = "monthly"
