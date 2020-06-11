@@ -23,7 +23,9 @@
             {{ else }}
                 <a class="navbar-item" href="{{ .URL }}">
                     {{ if .Pre }}
-                        <i class="{{ .Pre }}" style="margin-right: 2px;"></i>
+                        <span class="icon is-small mx-1">
+                            <i class="{{ .Pre }}"></i>
+                        </span>
                     {{ end }}
                     {{ .Name }}
                 </a>
