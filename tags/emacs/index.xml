@@ -6,11 +6,7 @@
     <description>Recent content in emacs on Wonderland</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 11 May 2018 07:50:12 +0800</lastBuildDate>
-    
-	<atom:link href="https://duyizhuo.com/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 11 May 2018 07:50:12 +0800</lastBuildDate><atom:link href="https://duyizhuo.com/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Enable latex-export-logging in org-mode</title>
       <link>https://duyizhuo.com/post/enable-latex-export-logging-in-org-mode/</link>

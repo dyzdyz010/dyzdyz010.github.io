@@ -6,11 +6,7 @@
     <description>Recent content in algorithm on Wonderland</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 18 May 2018 10:15:21 +0800</lastBuildDate>
-    
-	<atom:link href="https://duyizhuo.com/tags/algorithm/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 18 May 2018 10:15:21 +0800</lastBuildDate><atom:link href="https://duyizhuo.com/tags/algorithm/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>快速排序算法理解</title>
       <link>https://duyizhuo.com/post/quicksort-review/</link>

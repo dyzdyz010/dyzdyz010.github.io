@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>重建 Bulletproof Task Management in Notion 中的 Priority Formula :: Wonderland — Personal Blog</title>
+  
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="昨天看了 Bulletproof Task Management in Notion，其中 Tasks 数据库中有一个字段叫做 Priority，用于根据 Urgency, Impact, Workload, Enjoyment 四个字段来计算一项任务的优先级：
+根据视频及原文中提到的The Eisenhower Matrix可以知道，作者将 Matrix 中的两个维度共四种情况分为 4 个优先级：1, 2, 3, 4，数字越小优先级越高：
+根据Task Database中的设置，优先级共分为四个维度：
+ Urgency Impact Workload Enjoyment  每个维度均有 High, Medium, Low 三种程度。四个维度各有权重，最终计算出 Priority 项的值。
+原文及视频中没有给出具体的计算方式，但根据视频中已有的 5 条记录，我们可以利用解方程的方式计算出每个维度的权重：
+假设 High的优先级为 1，Medium的优先级为 2，Low的优先级为 3，设四个维度的权重分别为\(a, b, c, d\)。我们可以看到图中有几个特殊的Priority值：1.67、1.83、2.67，显然这是分数没有除尽而造成的截取误差。我们可以得到：
+$$ \begin{aligned} \begin{array}{l} 1.67 &amp;amp;\approx&amp;amp; 1.6666666666&amp;hellip; &amp;amp;=&amp;amp; \frac{5}{3} \\[2ex] 1.83 &amp;amp;\approx&amp;amp; 1.8333333333&amp;hellip; &amp;amp;=&amp;amp; \frac{11}{6} \\[2ex] 2.67 &amp;amp;\approx&amp;amp; 2.6666666666&amp;hellip; &amp;amp;=&amp;amp; \frac{8}{3} \end{array} \end{aligned} $$"/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+
+<link href="https://duyizhuo.com/fontawesome-free-5.12.0-web/css/all.css" rel="stylesheet"> 
+<link rel="stylesheet" href="https://duyizhuo.com/css/bulma.min.css">
+<link rel="stylesheet" href="https://duyizhuo.com/css/highlight.css">
+<link rel="stylesheet" href="https://duyizhuo.com/css/style.css">
+</head>
+<body class="">
+
+<section class="hero is-success is-medium is-bold">
+  
+  <div class="hero-head">
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="/">
+  <div class="logo">
+    Wonderland
+  </div>
+</a>
+          <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+            <span>Home</span>
+            <span>Examples</span>
+            <span>Documentation</span>
+          </span>
+        </div>
+        <div id="navbarMenuHeroA" class="navbar-menu">
+    <div class="navbar-end">
+        
+        
+            
+                <a class="navbar-item" href="/about">
+                    
+                        <span class="icon is-small mx-1">
+                            <i class="fas fa-star"></i>
+                        </span>
+                    
+                    About
+                </a>
+            
+        
+            
+                <a class="navbar-item" href="https://twitter.com/dyzdyz010">
+                    
+                        <span class="icon is-small mx-1">
+                            <i class="fab fa-twitter"></i>
+                        </span>
+                    
+                    Twitter
+                </a>
+            
+        
+            
+                <a class="navbar-item" href="https://dyzdyz010.sarahah.com/">
+                    
+                    Leave me a message!
+                </a>
+            
+        
+            
+                <div class="navbar-item">
+                    <div class="dropdown">
+                        <div class="dropdown-trigger">
+                            <a class="navbar-item" aria-haspopup="true" aria-controls="dropdown-menu-more">
+                                <span>More </span>
+                                <span class="icon is-small"><i class="fas fa-angle-down" aria-hidden="true"></i></span>
+                            </a>
+                        </div>
+                        <div class="dropdown-menu" id="dropdown-menu-more" role="menu">
+                            <div class="dropdown-content">
+                                
+                                <a class="dropdown-item" href="https://forum.hemifuture.cn">Hemifuture</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+        
+        <span class="navbar-item">
+        <a class="button is-primary is-inverted">
+            <span class="icon">
+            <i class="fab fa-github"></i>
+            </span>
+            <span>Github</span>
+        </a>
+        </span>
+    </div>
+    </div>
+      </div>
+    </nav>
+  </div>
+  
+  
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title">
+          Wonderland
+      </h1>
+      <h2 class="subtitle">
+          Personal Blog
+      </h2>
+    </div>
+  </div>
+  
+  
+  <div class="hero-foot">
+    <nav class="tabs">
+      <div class="container">
+        <ul>
+          <li class="is-active"><a>Posts</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</section>
+
+
+<div class="container">
+
+  <div class="content">
+    
+<section class="section">
+  <div class="post container">
+    <h2 class="post-title title is-3">
+      <a class="has-text-grey-dark" href="https://duyizhuo.com/amp/post/bulletproof-task-management-priority-formula/">重建 Bulletproof Task Management in Notion 中的 Priority Formula</a>
+    </h2>
+    <div class="post-meta">
+      <span class="post-date">
+        <span class="icon has-text-danger">
+          <i class="fas fa-calendar"></i>
+        </span>
+        <a class="has-text-grey">Sat, Dec 5, 2020</a>
+      </span>
+      &nbsp;
+      <span class="post-author">
+        <span class="icon has-text-info">
+          <i class="fas fa-user"></i>
+        </span>
+        <a class="has-text-grey">
+          
+            dyzdyz010
+          
+        </a>
+      </span>
+    </div>
+
+    
+    <div class="post-tags">
+      <div class="field is-grouped is-grouped-multiline">
+        
+        <div class="control">
+          <div class="tags has-addons">
+              <span class="tag is-dark">#</span>
+              <span class="tag is-success">
+                <a class="is-success" href="https://duyizhuo.com/tags/notion/">notion</a>
+              </span>
+          </div>
+        </div>
+        
+        <div class="control">
+          <div class="tags has-addons">
+              <span class="tag is-dark">#</span>
+              <span class="tag is-success">
+                <a class="is-success" href="https://duyizhuo.com/tags/life/">life</a>
+              </span>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+
+    
+
+    <div class="post-content">
+      <p>昨天看了 <a href="https://www.notion.vip/bulletproof-task-management-in-notion/">Bulletproof Task Management in Notion</a>，其中 <em>Tasks</em> 数据库中有一个字段叫做 <code>Priority</code>，用于根据 <code>Urgency</code>, <code>Impact</code>, <code>Workload</code>, <code>Enjoyment</code> 四个字段来计算一项任务的优先级：</p>
+<p><img src="/img/projects_database__task_prioritizer.png" alt="Projects Database Task Prioritizer"></p>
+<p>根据视频及<a href="https://www.notion.vip/bulletproof-tasks/#the-prioritizer">原文</a>中提到的<a href="https://todoist.com/productivity-methods/eisenhower-matrix">The Eisenhower Matrix</a>可以知道，作者将 Matrix 中的两个维度共四种情况分为 4 个优先级：1, 2, 3, 4，数字越小优先级越高：</p>
+<p><img src="/img/productivity-methods_eisenhower-matrix.png" alt="Eisenhower Matrix"></p>
+<p>根据Task Database中的设置，优先级共分为四个维度：</p>
+<ul>
+<li>Urgency</li>
+<li>Impact</li>
+<li>Workload</li>
+<li>Enjoyment</li>
+</ul>
+<p>每个维度均有 <code>High</code>, <code>Medium</code>, <code>Low</code> 三种程度。四个维度各有权重，最终计算出 <code>Priority</code> 项的值。</p>
+<p>原文及视频中没有给出具体的计算方式，但根据视频中已有的 5 条记录，我们可以利用解方程的方式计算出每个维度的权重：</p>
+<p><img src="/img/bulletproof-task-management-priority-formula.png" alt="Prioritizer"></p>
+<p>假设 <code>High</code>的优先级为 1，<code>Medium</code>的优先级为 2，<code>Low</code>的优先级为 3，设四个维度的权重分别为\(a, b, c, d\)。我们可以看到图中有几个特殊的<code>Priority</code>值：<strong>1.67</strong>、<strong>1.83</strong>、<strong>2.67</strong>，显然这是分数没有除尽而造成的截取误差。我们可以得到：</p>
+<p>$$
+\begin{aligned}
+\begin{array}{l}
+1.67 &amp;\approx&amp; 1.6666666666&hellip; &amp;=&amp; \frac{5}{3} \\[2ex]
+1.83 &amp;\approx&amp; 1.8333333333&hellip; &amp;=&amp; \frac{11}{6} \\[2ex]
+2.67 &amp;\approx&amp; 2.6666666666&hellip; &amp;=&amp; \frac{8}{3}
+\end{array}
+\end{aligned}
+$$</p>
+<p>如此一来，由前四行我们可以得到方程组：</p>
+<p>$$
+\begin{aligned}
+\left\{
+\begin{array}{l}
+2a &amp;+&amp; b &amp;+&amp; 2c &amp;+&amp; 3d &amp;=&amp; \frac{3}{2} \\[2ex]
+3a &amp;+&amp; b &amp;+&amp; c &amp;+&amp; 3d &amp;=&amp; \frac{5}{3} \\[2ex]
+a &amp;+&amp; 2b &amp;+&amp; 3c &amp;+&amp; 2d &amp;=&amp; \frac{11}{6} \\[2ex]
+3a &amp;+&amp; 2b &amp;+&amp; 3c &amp;+&amp; 2d &amp;=&amp; \frac{5}{2}
+\end{array}
+\right.
+\end{aligned}
+$$</p>
+<p>求解可得：
+$$
+\begin{aligned}
+\left\{
+\begin{array}{l}
+a &amp;=&amp; \frac{1}{3} \\[1ex]
+b &amp;=&amp; \frac{1}{2} \\[1ex]
+c &amp;=&amp; \frac{1}{6} \\[1ex]
+d &amp;=&amp; 0
+\end{array}
+\right.
+\end{aligned}
+$$</p>
+<p>看样子作者认为享受程度不影响任务的完成🤣</p>
+<p>总之，有了权重之后，我们就可以将 <code>Priority</code> 的计算方式写进 formula：</p>
+<pre><code>round(
+  (
+    if(
+      prop(&quot;Urgency&quot;) == &quot;Low&quot;, 
+      3, 
+      if(
+        prop(&quot;Urgency&quot;) == &quot;Medium&quot;, 
+        2, 
+        1
+      )
+    ) / 3 + 
+    if(
+      prop(&quot;Impact&quot;) == &quot;Low&quot;, 
+      3, 
+      if(
+        prop(&quot;Impact&quot;) == &quot;Medium&quot;, 
+        2, 
+        1
+      )
+    ) / 2 + 
+    if(
+      prop(&quot;Workload&quot;) == &quot;Low&quot;, 
+      3, 
+      if(
+        prop(&quot;Workload&quot;) == &quot;Medium&quot;, 
+        2, 
+        1
+      )
+    ) / 6
+  )* 100
+) / 100
+</code></pre><p>单行版本：</p>
+<pre><code>round((if(prop(&quot;Urgency&quot;) == &quot;Low&quot;, 3, if(prop(&quot;Urgency&quot;) == &quot;Medium&quot;, 2, 1)) / 3 + if(prop(&quot;Impact&quot;) == &quot;Low&quot;, 3, if(prop(&quot;Impact&quot;) == &quot;Medium&quot;, 2, 1)) / 2 + if(prop(&quot;Workload&quot;) == &quot;Low&quot;, 3, if(prop(&quot;Workload&quot;) == &quot;Medium&quot;, 2, 1)) / 6) * 100) / 100
+</code></pre><p>完成！🎉</p>
+
+    </div>
+
+    <aside><nav id="TableOfContents"></nav></aside>
+
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "blog-disqus-com-1" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+  </div>
+</section>
+
+  </div>
+</div>
+
+
+  <footer class="footer">
+  <div class="content has-text-centered">
+    <div class="copyright has-text-centered">
+      <p>
+        © 2020 Powered by <a href="//gohugo.io" class="has-text-danger">Hugo</a>
+      </p>
+      <p>
+        <a class="has-text-success">Wonderland</a>, a theme made by <a href="//github.com/dyzdyz010">dyzdyz010</a>
+      </p>
+      <p>
+        <a href="https://bulma.io" target="_blank">
+          <img src="https://wikiki.github.io/images/made-with-bulma.png" alt="Made with Bulma" width="128" height="24">
+        </a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://duyizhuo.com/js/main.js"></script>
+<script src="https://duyizhuo.com/js/dropdown.js"></script>
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-33561194-4', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?347e8228dda7c86e9d2fa69021de893d";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+
+
+</body>
+</html>

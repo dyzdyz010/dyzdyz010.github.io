@@ -6,11 +6,7 @@
     <description>Recent content in web on Wonderland</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 09 Jan 2020 17:20:01 +0800</lastBuildDate>
-    
-	<atom:link href="https://duyizhuo.com/tags/web/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 09 Jan 2020 17:20:01 +0800</lastBuildDate><atom:link href="https://duyizhuo.com/tags/web/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Wonderland - Blog Theme, Redesigned</title>
       <link>https://duyizhuo.com/post/new-theme-wonderland/</link>
@@ -32,7 +28,7 @@ Simple, colorful, clear. 凑合着看吧。</description>
       <guid>https://duyizhuo.com/post/hugo-with-github-pages/</guid>
       <description>This tutorial is to teach you how to make youre own hugo-generated static site served by Github Pages, within a single repo.
 Prerequisites  Github &amp;amp; CircleCI account Newly-generated SSH key pair for safety reasons(see here) Hugo installed locally  Dive in Generate site source with hugo command:
-hugo new site &amp;lt;SITE_NAME&amp;gt; Create a repo for your site: &amp;lt;SITE_NAME&amp;gt;.github.io**(Be aware: this tutorial uses *User/Organization Pages* rather than *Project Pages*, see here)**, clone it, and create a new branch called source(whatever you like):</description>
+hugo new site &amp;lt;SITE_NAME&amp;gt; Create a repo for your site: &amp;lt;SITE_NAME&amp;gt;.github.io(Be aware: this tutorial uses User/Organization Pages rather than Project Pages, see here), clone it, and create a new branch called source(whatever you like):</description>
     </item>
     
     <item>
