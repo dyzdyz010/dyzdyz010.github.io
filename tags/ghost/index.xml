@@ -13,9 +13,7 @@
       <pubDate>Tue, 01 Aug 2017 20:48:43 +0800</pubDate>
       
       <guid>https://duyizhuo.com/post/wonderland-ghost-theme/</guid>
-      <description>灵感来自于一个朋友，特此实现为 Ghost 主题。目前具备的功能有：
- 首页 文章页 标签归档页  欢迎喜欢的朋友下载使用，顺便再加个 star 就更好了。
-项目地址：Wonderland</description>
+      <description>灵感来自于一个朋友，特此实现为 Ghost 主题。目前具备的功能有：</description>
     </item>
     
     <item>
@@ -24,8 +22,7 @@
       <pubDate>Sat, 29 Jul 2017 17:31:01 +0800</pubDate>
       
       <guid>https://duyizhuo.com/post/migrating-ghost-to-1-0-on-centos7/</guid>
-      <description>Ghost has released 1.0, with breaking changes so there&amp;rsquo;s no smooth upgrading method but to take a fresh install. Here&amp;rsquo;s my migration of this blog to Ghost 1.0.
-There&amp;rsquo;s already an official tutorial to help you walk this through, but since it only supports Ubuntu officially, so I have to explore my own way on my CentOS 7 server. It turns out that there&amp;rsquo;s not much modifications compared to Ubuntu version, so I&amp;rsquo;m just writing this down as a record of my migration.</description>
+      <description>Ghost has released 1.</description>
     </item>
     
   </channel>

@@ -13,11 +13,7 @@
       <pubDate>Thu, 09 Jan 2020 17:20:01 +0800</pubDate>
       
       <guid>https://duyizhuo.com/post/new-theme-wonderland/</guid>
-      <description>我用的博客方案就像我的情绪一样多变，如今又用回了静态网页托管 Hugo。果然折腾是一时的，省心才是永远的。
-Bulma是一个CSS库，有漂亮的默认风格，以及符合常识的样式组织体系，我很喜欢。所以就以这个库为基础，重新做一个简单的主题。
-由于还没有完全完工，所以还有很多问题，比如在我写下这篇文章的时候，右上角的菜单还是写死的假菜单……
-我也不敢保证这个主题最终能够完工，毕竟折腾的心还没有完全死去，说不定什么时候有新的更好用的博客方案出现，我也丝毫不会犹豫就切换过去，然后重新开始折腾。
-Simple, colorful, clear. 凑合着看吧。</description>
+      <description>我用的博客方案就像我的情绪一样多变，如今又用回了静态网页托管 Hugo。果然折腾是一时的，省心才是永远的。</description>
     </item>
     
     <item>
@@ -26,9 +22,7 @@ Simple, colorful, clear. 凑合着看吧。</description>
       <pubDate>Tue, 01 Aug 2017 20:48:43 +0800</pubDate>
       
       <guid>https://duyizhuo.com/post/wonderland-ghost-theme/</guid>
-      <description>灵感来自于一个朋友，特此实现为 Ghost 主题。目前具备的功能有：
- 首页 文章页 标签归档页  欢迎喜欢的朋友下载使用，顺便再加个 star 就更好了。
-项目地址：Wonderland</description>
+      <description>灵感来自于一个朋友，特此实现为 Ghost 主题。目前具备的功能有：</description>
     </item>
     
   </channel>

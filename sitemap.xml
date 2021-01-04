@@ -3,6 +3,48 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://duyizhuo.com/post/rhel-8-with-sas2008-raid-controllers/</loc>
+    <lastmod>2021-01-03T23:00:59+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://duyizhuo.com/tags/linux/</loc>
+    <lastmod>2021-01-03T23:00:59+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://duyizhuo.com/post/</loc>
+    <lastmod>2021-01-03T23:00:59+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://duyizhuo.com/tags/rhel/</loc>
+    <lastmod>2021-01-03T23:00:59+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://duyizhuo.com/tags/</loc>
+    <lastmod>2021-01-03T23:00:59+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://duyizhuo.com/</loc>
+    <lastmod>2021-01-03T23:00:59+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://duyizhuo.com/tags/life/</loc>
     <lastmod>2020-12-05T10:34:56+08:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -11,27 +53,6 @@
   
   <url>
     <loc>https://duyizhuo.com/tags/notion/</loc>
-    <lastmod>2020-12-05T10:34:56+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://duyizhuo.com/post/</loc>
-    <lastmod>2020-12-05T10:34:56+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://duyizhuo.com/tags/</loc>
-    <lastmod>2020-12-05T10:34:56+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://duyizhuo.com/</loc>
     <lastmod>2020-12-05T10:34:56+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -53,13 +74,6 @@
   
   <url>
     <loc>https://duyizhuo.com/tags/issue/</loc>
-    <lastmod>2020-03-14T20:32:10+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://duyizhuo.com/tags/linux/</loc>
     <lastmod>2020-03-14T20:32:10+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

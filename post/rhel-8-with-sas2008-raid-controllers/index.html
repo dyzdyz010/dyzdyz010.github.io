@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Install RHEL 8 With SAS 2008 Raid Controllers :: Wonderland — Personal Blog</title>
+  
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="Reference: RHEL8. Install to DELL server with RAID (SAS2008) by Ruslan Gainanov"/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+
+<link href="https://duyizhuo.com/fontawesome-free-5.12.0-web/css/all.css" rel="stylesheet"> 
+<link rel="stylesheet" href="https://duyizhuo.com/css/bulma.min.css">
+<link rel="stylesheet" href="https://duyizhuo.com/css/highlight.css">
+<link rel="stylesheet" href="https://duyizhuo.com/css/style.css">
+</head>
+<body class="">
+
+<section class="hero is-success is-medium is-bold">
+  
+  <div class="hero-head">
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="/">
+  <div class="logo">
+    Wonderland
+  </div>
+</a>
+          <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+            <span>Home</span>
+            <span>Examples</span>
+            <span>Documentation</span>
+          </span>
+        </div>
+        <div id="navbarMenuHeroA" class="navbar-menu">
+    <div class="navbar-end">
+        
+        
+            
+                <a class="navbar-item" href="/about">
+                    
+                        <span class="icon is-small mx-1">
+                            <i class="fas fa-star"></i>
+                        </span>
+                    
+                    About
+                </a>
+            
+        
+            
+                <a class="navbar-item" href="https://twitter.com/dyzdyz010">
+                    
+                        <span class="icon is-small mx-1">
+                            <i class="fab fa-twitter"></i>
+                        </span>
+                    
+                    Twitter
+                </a>
+            
+        
+            
+                <a class="navbar-item" href="https://dyzdyz010.sarahah.com/">
+                    
+                    Leave me a message!
+                </a>
+            
+        
+            
+                <div class="navbar-item">
+                    <div class="dropdown">
+                        <div class="dropdown-trigger">
+                            <a class="navbar-item" aria-haspopup="true" aria-controls="dropdown-menu-more">
+                                <span>More </span>
+                                <span class="icon is-small"><i class="fas fa-angle-down" aria-hidden="true"></i></span>
+                            </a>
+                        </div>
+                        <div class="dropdown-menu" id="dropdown-menu-more" role="menu">
+                            <div class="dropdown-content">
+                                
+                                <a class="dropdown-item" href="https://forum.hemifuture.cn">Hemifuture</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+        
+        <span class="navbar-item">
+        <a class="button is-primary is-inverted">
+            <span class="icon">
+            <i class="fab fa-github"></i>
+            </span>
+            <span>Github</span>
+        </a>
+        </span>
+    </div>
+    </div>
+      </div>
+    </nav>
+  </div>
+  
+  
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title">
+          Wonderland
+      </h1>
+      <h2 class="subtitle">
+          Personal Blog
+      </h2>
+    </div>
+  </div>
+  
+  
+  <div class="hero-foot">
+    <nav class="tabs">
+      <div class="container">
+        <ul>
+          <li class="is-active"><a>Posts</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</section>
+
+
+<div class="container">
+
+  <div class="content">
+    
+<section class="section">
+  <div class="post container">
+    <h2 class="post-title title is-3">
+      <a class="has-text-grey-dark" href="https://duyizhuo.com/post/rhel-8-with-sas2008-raid-controllers/">Install RHEL 8 With SAS 2008 Raid Controllers</a>
+    </h2>
+    <div class="post-meta">
+      <span class="post-date">
+        <span class="icon has-text-danger">
+          <i class="fas fa-calendar"></i>
+        </span>
+        <a class="has-text-grey">Sun, Jan 3, 2021</a>
+      </span>
+      &nbsp;
+      <span class="post-author">
+        <span class="icon has-text-info">
+          <i class="fas fa-user"></i>
+        </span>
+        <a class="has-text-grey">
+          
+            dyzdyz010
+          
+        </a>
+      </span>
+    </div>
+
+    
+    <div class="post-tags">
+      <div class="field is-grouped is-grouped-multiline">
+        
+        <div class="control">
+          <div class="tags has-addons">
+              <span class="tag is-dark">#</span>
+              <span class="tag is-success">
+                <a class="is-success" href="https://duyizhuo.com/tags/linux/">linux</a>
+              </span>
+          </div>
+        </div>
+        
+        <div class="control">
+          <div class="tags has-addons">
+              <span class="tag is-dark">#</span>
+              <span class="tag is-success">
+                <a class="is-success" href="https://duyizhuo.com/tags/rhel/">rhel</a>
+              </span>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+
+    
+
+    <div class="post-content">
+      <p>Reference: <a href="https://gainanov.pro/eng-blog/linux/rhel8-install-to-dell-raid/">RHEL8. Install to DELL server with RAID (SAS2008) by Ruslan Gainanov</a></p>
+<p>In RHEL 8 <a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/considerations_in_adopting_rhel_8/hardware-enablement_considerations-in-adopting-rhel-8#removed-adapters_hardware-enablement">many hardware drivers are removed</a>, including the <code>SAS 2008 RAID bus Controller</code> I&rsquo;m using. I tried to install RHEL 8 on my machine, and only got an <strong>empty</strong> list of available disks in <code>Installation Destination</code> section.</p>
+<p>To install the OS we need to acquire this hardware&rsquo;s driver, luckily we got <a href="https://elrepo.org/linux/dud/el8/x86_64/">DUD(Driver Update Disk) from ELRepo</a>, thus we can get the missing drive from there. Next I&rsquo;ll show you how I managed to install RHEL 8 on my server with SAS 2008 RAID Controller.</p>
+<h2 id="figure-out-device-id">Figure out Device ID</h2>
+<p>First we gotta figure out what device ID of my hardware is. When get into the installer GUI, get a shell by <code>Ctrl + Alt + F2</code>, type in the command below:</p>
+<pre><code>lspci -nn
+</code></pre><p>You may want to filter out with some keywords to make the output more clean and readable. Here&rsquo;s what I got:</p>
+<p><img src="/img/photo_2021-01-04_18-29-35.jpg" alt=""></p>
+<p>So the device I&rsquo;m looking for is:</p>
+<pre><code>05:00.0 RAID bus Controller [0104]: Broadcom / LSI MegaRAID SAS 2008 [Falcon] [1000:0073] (rev 03)
+</code></pre><p>And the Device ID of this hardware is <code>1000:0073</code>.</p>
+<h2 id="get-the-driver">Get the driver</h2>
+<p>Now we need to go to the <a href="http://elrepo.org/tiki/DeviceIDs">Device ID Parings</a> page of ELRepo to get the driver name. In this case, mine is <code>megaraid_sas</code>.</p>
+<p>Go to <a href="https://elrepo.org/linux/dud/el8/x86_64/">DUD List Page</a> and find the driver by name:</p>
+<p><img src="/img/202101041837.png" alt=""></p>
+<p>I&rsquo;m installing RHEL 8.3 so I&rsquo;ll use the last match: <code>dd-megaraid_sas-07.714.04.00-1.el8_3.elrepo.iso</code>.</p>
+<p>Follow <a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/performing_an_advanced_rhel_installation/updating-drivers-during-installation_installing-rhel-as-an-experienced-user">RedHat&rsquo;s documentation</a> for how to use this driver. In my case I just copied the <code>iso</code> file to another USB drive.</p>
+<h2 id="patch-the-driver">Patch the driver</h2>
+<p>I&rsquo;ll just show what I did, for full usage documentation check that <code>RedHat link</code> above.</p>
+<p>Run the installation process using BIOS(I didn&rsquo;t find a boot window where I can press the <code>Tab</code> key) and press <code>Tab</code>:</p>
+<p><img src="/img/boot-menu.png" alt=""></p>
+<p>In that command at the bottom, append the <code>inst.dd</code> option and hit <code>Enter</code>.</p>
+<p>Follow the interactive prompt and select your driver to install. When you&rsquo;re done, you&rsquo;ll get into the normal installation GUI.</p>
+<p>Now go to <code>Installation Destination</code> section, you&rsquo;ll find that your disks show up!</p>
+<p><img src="destination-with-raid.png" alt=""></p>
+<p>Now you can tap in to normal installation process. When the installation is complete and reboot the system, that driver will be included in the system you just installed. Enjoy🌞</p>
+
+    </div>
+
+    <aside><nav id="TableOfContents">
+  <ul>
+    <li><a href="#figure-out-device-id">Figure out Device ID</a></li>
+    <li><a href="#get-the-driver">Get the driver</a></li>
+    <li><a href="#patch-the-driver">Patch the driver</a></li>
+  </ul>
+</nav></aside>
+
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "blog-disqus-com-1" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+  </div>
+</section>
+
+  </div>
+</div>
+
+
+  <footer class="footer">
+  <div class="content has-text-centered">
+    <div class="copyright has-text-centered">
+      <p>
+        © 2020 Powered by <a href="//gohugo.io" class="has-text-danger">Hugo</a>
+      </p>
+      <p>
+        <a class="has-text-success">Wonderland</a>, a theme made by <a href="//github.com/dyzdyz010">dyzdyz010</a>
+      </p>
+      <p>
+        <a href="https://bulma.io" target="_blank">
+          <img src="https://wikiki.github.io/images/made-with-bulma.png" alt="Made with Bulma" width="128" height="24">
+        </a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://duyizhuo.com/js/main.js"></script>
+<script src="https://duyizhuo.com/js/dropdown.js"></script>
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-33561194-4', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?347e8228dda7c86e9d2fa69021de893d";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+
+
+</body>
+</html>

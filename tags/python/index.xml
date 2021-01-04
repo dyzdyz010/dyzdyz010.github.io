@@ -13,7 +13,7 @@
       <pubDate>Wed, 09 May 2018 08:09:33 +0800</pubDate>
       
       <guid>https://duyizhuo.com/post/using-virtualenv-in-jupyter-notebook/</guid>
-      <description>OS: macOS High Sierra 10.13.4 Default Python version: 3.6.5  Prerequisites  Have your Jupyter Notebook and virtualenv installed with your default python version Have one virtual env created which you want to use  Walkthrough Activate your virtualenv source &amp;lt;envpath&amp;gt;/bin/activate Install ipykernel inside your env $(yourenv)&amp;gt; pip install ipykernel Create kernel using your env $(yourenv)&amp;gt; python -m ipykernel install --user --name myenv --display-name &amp;#34;Python (myenv)&amp;#34; Go ahead and enjoy Now open your jupyter notebook and you&amp;rsquo;ll notice your kernel just created appears along with your default kernel.</description>
+      <description>OS: macOS High Sierra 10.</description>
     </item>
     
     <item>
@@ -22,17 +22,7 @@
       <pubDate>Wed, 28 Jun 2017 07:49:11 +0800</pubDate>
       
       <guid>https://duyizhuo.com/post/logistic-regression-model-with-tensorflow-from-scratch/</guid>
-      <description>TensorFlow 是一个基于 python 的机器学习框架。在 Coursera 上学习了逻辑回归的课程内容后，想把在 MATLAB 中实现了的内容用 TensorFlow 重新实现一遍，当做学习 Python 和框架的敲门砖。
-目标读者 知道逻辑回归是什么，懂一点 Python，听说过 TensorFlow
-数据集 来自 Coursera 上 Andrew 的机器学习课程中的ex2data1.txt，根据学生的两次考试成绩判断该学生是否会被录取。
-环境 Python 2.7 - 3.x
-pandas, matplotlib, numpy
-安装 TensorFlow 在自己的电脑上安装 TensorFlow 框架，安装方法过程不赘述，CPU 版相对更容易一点，GPU 版需要 CUDA 支持，各位看官看情况安装就好。
-开始 创建一个文件夹（比如就叫做tensorflow），在文件夹中创建一个 Python 文件main.py，并将数据集文件放到这个文件夹下：
-数据形式:
-前两列分别为两次考试成绩（x1, x2），最后一列为是否被录取（y），1代表被录取，0则反之。
-在源文件main.py中，我们首先引入需要的包：
-import pandas as pd # 用于读取数据文件 import tensorflow as tf import matplotlib.pyplot as plt # 用于画图 import numpy as np # 用于后续计算 pandas是一个数据处理相关的包，可以对数据集进行读取和其他各种操作；matplotlib可以用来把我们的数据集绘成图表展示出来。</description>
+      <description>TensorFlow 是一个基于 python 的机器学习框架。在 Coursera 上学习了逻辑回归的课程内容后，想把在 MATLAB 中实现了的内容用 TensorFlow 重新实现一遍，当做学习 Python 和框架的敲门砖。</description>
     </item>
     
   </channel>

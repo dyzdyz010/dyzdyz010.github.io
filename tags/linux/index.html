@@ -141,6 +141,77 @@
   
   <div class="container post">
     <h2 class="post-title title is-3">
+      <a class="has-text-grey-dark" href="https://duyizhuo.com/post/rhel-8-with-sas2008-raid-controllers/">Install RHEL 8 With SAS 2008 Raid Controllers</a>
+    </h2>
+    <div class="post-meta">
+      <span class="post-date">
+        <span class="icon has-text-danger">
+          <i class="fas fa-calendar"></i>
+        </span>
+        <a class="has-text-grey">Sun, Jan 3, 2021</a>
+      </span>
+      &nbsp;
+      <span class="post-author">
+        <span class="icon has-text-info">
+          <i class="fas fa-user"></i>
+        </span>
+        <a class="has-text-grey">
+          
+            dyzdyz010
+          
+        </a>
+      </span>
+    </div>
+
+    
+    <div class="post-tags">
+      <div class="field is-grouped is-grouped-multiline">
+        
+        <div class="control">
+          <div class="tags has-addons">
+              <span class="tag is-dark">#</span>
+              <span class="tag is-success">
+                <a class="is-success" href="https://duyizhuo.com/tags/linux/">linux</a>
+              </span>
+          </div>
+        </div>
+        
+        <div class="control">
+          <div class="tags has-addons">
+              <span class="tag is-dark">#</span>
+              <span class="tag is-success">
+                <a class="is-success" href="https://duyizhuo.com/tags/rhel/">rhel</a>
+              </span>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+
+    
+
+    <div class="post-content">
+      
+        Reference: RHEL8. Install to DELL server with RAID (SAS2008) by Ruslan Gainanov
+        
+        
+      
+    </div>
+
+    
+      <div>
+        <a class="read-more has-text-danger"
+          href="/post/rhel-8-with-sas2008-raid-controllers/">Read more →</a>
+      </div>
+    
+
+  </div>
+
+  <hr class="hr">
+  
+  <div class="container post">
+    <h2 class="post-title title is-3">
       <a class="has-text-grey-dark" href="https://duyizhuo.com/post/wsl-elixir-observer/">解决在 Windows WSL 中使用 Elixir 的 Observer 时遇到的乱码问题</a>
     </h2>
     <div class="post-meta">
@@ -202,15 +273,17 @@
 
     <div class="post-content">
       
-      
+        OS: Windows 10 WSL: Ubuntu 18.
+        
+        
       
     </div>
 
     
-    <div>
-      <a class="read-more has-text-danger"
-        href="/post/wsl-elixir-observer/">Read more →</a>
-    </div>
+      <div>
+        <a class="read-more has-text-danger"
+          href="/post/wsl-elixir-observer/">Read more →</a>
+      </div>
     
 
   </div>
@@ -271,22 +344,18 @@
 
     <div class="post-content">
       
-      
-      本文用到的组件和系统版本：
-OS: Ubuntu 18.04 LTS MySQL: 5.7.22 gcc: 7.3.0 g++: 7.3.0 Python: 3.6.5  首先安装各种依赖：
-sudo apt-get update sudo apt-get install libssl-dev mysql-server libmysqld-dev mysql-client libmysqlclient-dev gcc g++ python3 编译引擎 下面从官方仓库下载引擎源码，本人下载的是当时最新版本1.1.8：
-wget <a href="https://github.com/kbengine/kbengine/archive/v1.1.8.tar.gz">https://github.com/kbengine/kbengine/archive/v1.1.8.tar.gz</a> tar -xzvf v1.1.8.tar.gz 接着就可以对代码进行编译了：
-cd kbengine-1.1.8/kbe/src chmod -R 755 . make 我在编译过程中出现了以下错误：
-/usr/lib/gcc/x86_64-linux-gnu/7/include/mm_malloc.h:34:16: error: declaration of ‘int posix_memalign(void**, size_t, size_t) throw ()’ has a different exception specifier extern &quot;C&quot; int posix_memalign (void **, size_t, size_t) throw (); ^~~~~~~~~~~~~~ In file included from /home/dyz/kbengine-1.
-      
+        本文用到的组件和系统版本：
+ OS: Ubuntu 18.
+        
+        
       
     </div>
 
     
-    <div>
-      <a class="read-more has-text-danger"
-        href="/post/install-kbengine-on-ubuntu-18-04-lts/">Read more →</a>
-    </div>
+      <div>
+        <a class="read-more has-text-danger"
+          href="/post/install-kbengine-on-ubuntu-18-04-lts/">Read more →</a>
+      </div>
     
 
   </div>
@@ -365,24 +434,17 @@ cd kbengine-1.1.8/kbe/src chmod -R 755 . make 我在编译过程中出现了以�
 
     <div class="post-content">
       
-      
-      <p>Befor you continue</p>
-<ol>
-<li>Get a VPS from Linode/Vultr/whatever 2. Pick a linux distribution and make it running(I use CentOS 7). 3. Install Apache/MySQL/PHP 7.1 Get yourself a non-root sudo user adduser USERNAME passwd USERNAME usermod -aG wheel USERNAME su USERNAME Install and configure Apache Check this out
-First install it.
-sudo yum update sudo yum -y install httpd sudo systemctl enable httpd.service Then create directory structure.
-sudo mkdir /etc/httpd/sites-available sudo mkdir /etc/httpd/sites-enabled Open config file:</li>
-</ol>
-
-      
+        Befor you continue
+        
+        
       
     </div>
 
     
-    <div>
-      <a class="read-more has-text-danger"
-        href="/post/set-up-flarum-from-scratch/">Read more →</a>
-    </div>
+      <div>
+        <a class="read-more has-text-danger"
+          href="/post/set-up-flarum-from-scratch/">Read more →</a>
+      </div>
     
 
   </div>
@@ -452,18 +514,17 @@ sudo mkdir /etc/httpd/sites-available sudo mkdir /etc/httpd/sites-enabled Open c
 
     <div class="post-content">
       
-      
-      Ghost has released 1.0, with breaking changes so there’s no smooth upgrading method but to take a fresh install. Here’s my migration of this blog to Ghost 1.0.
-There’s already an official tutorial to help you walk this through, but since it only supports Ubuntu officially, so I have to explore my own way on my CentOS 7 server. It turns out that there’s not much modifications compared to Ubuntu version, so I’m just writing this down as a record of my migration.
-      
+        Ghost has released 1.
+        
+        
       
     </div>
 
     
-    <div>
-      <a class="read-more has-text-danger"
-        href="/post/migrating-ghost-to-1-0-on-centos7/">Read more →</a>
-    </div>
+      <div>
+        <a class="read-more has-text-danger"
+          href="/post/migrating-ghost-to-1-0-on-centos7/">Read more →</a>
+      </div>
     
 
   </div>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>rhel on Wonderland</title>
+    <link>https://duyizhuo.com/tags/rhel/</link>
+    <description>Recent content in rhel on Wonderland</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 03 Jan 2021 23:00:59 +0800</lastBuildDate><atom:link href="https://duyizhuo.com/tags/rhel/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Install RHEL 8 With SAS 2008 Raid Controllers</title>
+      <link>https://duyizhuo.com/post/rhel-8-with-sas2008-raid-controllers/</link>
+      <pubDate>Sun, 03 Jan 2021 23:00:59 +0800</pubDate>
+      
+      <guid>https://duyizhuo.com/post/rhel-8-with-sas2008-raid-controllers/</guid>
+      <description>Reference: RHEL8. Install to DELL server with RAID (SAS2008) by Ruslan Gainanov</description>
+    </item>
+    
+  </channel>
+</rss>
