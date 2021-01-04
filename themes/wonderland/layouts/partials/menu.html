@@ -21,7 +21,14 @@
                     </div>
                 </div>
             {{ else }}
-                <a class="navbar-item" href="{{ .URL }}">{{ .Name }}</a>
+                <a class="navbar-item" href="{{ .URL }}">
+                    {{ if .Pre }}
+                        <span class="icon is-small mx-1">
+                            <i class="{{ .Pre }}"></i>
+                        </span>
+                    {{ end }}
+                    {{ .Name }}
+                </a>
             {{ end }}
         {{ end }}
         <span class="navbar-item">
@@ -29,7 +36,7 @@
             <span class="icon">
             <i class="fab fa-github"></i>
             </span>
-            <span>Download</span>
+            <span>Github</span>
         </a>
         </span>
     </div>

@@ -1,16 +1,10 @@
-version: 2.0
-
-workflows:
-  version: 2
-  main:
-    jobs:
-    - build:
-        filters:
-          branches:
-            only: source
+version: 2
 
 jobs:
     build:
+        branches:
+            ignore:
+                - master
         docker:
             - image: cibuilds/hugo:latest
         working_directory: ~/dyzdyz010.github.io
@@ -25,7 +19,6 @@ jobs:
                 command: |
                     git clone -b master git@github.com:dyzdyz010/dyzdyz010.github.io.git public
                     cd public
-                    git rm -rf .
                     git checkout HEAD -- CNAME
             - run:
                 name: Generate site

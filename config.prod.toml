@@ -6,13 +6,16 @@ copyright = ""
 baseurl = "https://duyizhuo.com"
 languageCode = "en-us"
 theme = "wonderland"
-paginate = 5
+paginate = 10
 
 summaryLength = 2
 
 disqusShortname = "blog-disqus-com-1"
 
 googleAnalytics = "UA-33561194-4"
+
+[markup.goldmark.renderer]
+  unsafe= true
 
 [markup]
   [markup.highlight]
@@ -34,14 +37,28 @@ googleAnalytics = "UA-33561194-4"
     identifier = "about"
     name = "About"
     url = "/about"
+    weight = 1
+    pre = "fas fa-star"
   [[menu.main]]
-    identifier = "github"
-    name = "Github"
-    url = "https://github.com/dyzdyz010"
+    identifier = "twitter"
+    name = "Twitter"
+    url = "https://twitter.com/dyzdyz010"
+    weight = 2
+    pre = "fab fa-twitter"
   [[menu.main]]
     identifier = "sarahah"
     name = "Leave me a message!"
     url = "https://dyzdyz010.sarahah.com/"
+    weight = 3
+  [[menu.main]]
+    identifier = "more"
+    name = "More"
+    weight = 4
+  [[menu.main]]
+    identifier = "hemifuture"
+    name = "Hemifuture"
+    url = "https://forum.hemifuture.cn"
+    parent = "more"
 
 [sitemap]
   changefreq = "monthly"
@@ -65,6 +82,6 @@ googleAnalytics = "UA-33561194-4"
   centerTheme = true
   # set a custom favicon (default is a `themeColor` square)
   # favicon = "favicon.ico"
-    [params.logo]
-      logoText = "Wonderland"
-      logoHomeLink = "/"
+  [params.logo]
+    logoText = "Wonderland"
+    logoHomeLink = "/"
