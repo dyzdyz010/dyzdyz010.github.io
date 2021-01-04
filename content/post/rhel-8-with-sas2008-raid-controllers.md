@@ -50,7 +50,7 @@ Follow [RedHat's documentation](https://access.redhat.com/documentation/en-us/re
 
 I'll just show what I did, for full usage documentation check that `RedHat link` above.
 
-Run the installation process using BIOS(I didn't find a boot window where I can press the `Tab` key) and press `Tab`:
+Run the installation process using BIOS(I didn't find a boot window using UEFI where I can press the `Tab` key) and press `Tab`:
 
 ![](/img/boot-menu.png)
 
