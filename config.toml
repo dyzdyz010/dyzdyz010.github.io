@@ -8,6 +8,8 @@ languageCode = "en-us"
 theme = "wonderland"
 paginate = 10
 
+summaryLength = 2
+
 disqusShortname = "blog-disqus-com-1"
 
 [markup.goldmark.renderer]

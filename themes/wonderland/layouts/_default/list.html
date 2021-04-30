@@ -61,21 +61,21 @@
 
     <div class="post-content">
       {{ if .Params.showFullContent }}
-      {{ .Content | markdownify }}
+        {{ .Content | markdownify }}
       {{ else if .Description }}
-      {{ .Description | markdownify }}
+        {{ .Description | markdownify }}
       {{ else }}
-      {{ if .Truncated }}
-      {{ .Summary | markdownify }}
-      {{ end }}
+        {{ .Summary }}
+        {{ if .Truncated }}
+        {{ end }}
       {{ end }}
     </div>
 
     {{ if not .Params.showFullContent }}
-    <div>
-      <a class="read-more has-text-danger"
-        href="{{.RelPermalink}}">{{ $.Site.Params.ReadMore }} →</a>
-    </div>
+      <div>
+        <a class="read-more has-text-danger"
+          href="{{.RelPermalink}}">{{ $.Site.Params.ReadMore }} →</a>
+      </div>
     {{ end }}
 
   </div>
