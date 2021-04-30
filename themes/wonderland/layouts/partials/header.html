@@ -5,11 +5,11 @@
       <div class="container">
         <div class="navbar-brand">
           {{ partial "logo.html" . }}
-          <span class="navbar-burger burger" data-target="navbarMenuHeroA">
-            <span>Home</span>
-            <span>Examples</span>
-            <span>Documentation</span>
-          </span>
+          <div id="navbarBurger" class="navbar-burger burger" data-target="navbarMenuHeroA" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
         {{ partial "menu.html" . }}
       </div>
