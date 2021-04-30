@@ -3,7 +3,7 @@ name: blog
 on:
   # trigger deployment on every push to main branch
   push:
-    branches: [main]
+    branches: [source]
   # trigger deployment manually
   workflow_dispatch:
 
