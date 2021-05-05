@@ -35,9 +35,9 @@ categories:
 $$
 \begin{aligned}
 \begin{array}{l}
-1.67 &\approx& 1.6666666666... &=& \frac{5}{3} \\[2ex]
-1.83 &\approx& 1.8333333333... &=& \frac{11}{6} \\[2ex]
-2.67 &\approx& 2.6666666666... &=& \frac{8}{3}
+1.67 &\approx& 1.6666666666... &=& \dfrac{5}{3} \\[3ex]
+1.83 &\approx& 1.8333333333... &=& \dfrac{11}{6} \\[3ex]
+2.67 &\approx& 2.6666666666... &=& \dfrac{8}{3}
 \end{array}
 \end{aligned}
 $$
@@ -48,10 +48,10 @@ $$
 \begin{aligned}
 \left\{
 \begin{array}{l}
-2a &+& b &+& 2c &+& 3d &=& \frac{3}{2} \\[2ex]
-3a &+& b &+& c &+& 3d &=& \frac{5}{3} \\[2ex]
-a &+& 2b &+& 3c &+& 2d &=& \frac{11}{6} \\[2ex]
-3a &+& 2b &+& 3c &+& 2d &=& \frac{5}{2}
+2a &+& b &+& 2c &+& 3d &=& \dfrac{3}{2} \\[3ex]
+3a &+& b &+& c &+& 3d &=& \dfrac{5}{3} \\[3ex]
+a &+& 2b &+& 3c &+& 2d &=& \dfrac{11}{6} \\[3ex]
+3a &+& 2b &+& 3c &+& 2d &=& \dfrac{5}{2}
 \end{array}
 \right.
 \end{aligned}
@@ -63,9 +63,9 @@ $$
 \begin{aligned}
 \left\{
 \begin{array}{l}
-a &=& \frac{1}{3} \\[1ex]
-b &=& \frac{1}{2} \\[1ex]
-c &=& \frac{1}{6} \\[1ex]
+a &=& \dfrac{1}{3} \\[3ex]
+b &=& \dfrac{1}{2} \\[3ex]
+c &=& \dfrac{1}{6} \\[3ex]
 d &=& 0
 \end{array}
 \right.
