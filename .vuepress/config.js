@@ -18,9 +18,18 @@ module.exports = {
       }
     ]
   ],
+  plugins: {
+    '@maginapp/vuepress-plugin-katex': {
+      delimiters: 'dollars'
+    }
+  }, 
   "theme": "reco",
   "themeConfig": {
     subSidebar: 'auto',
+    valineConfig: {
+      appId: 'fabnimoCtR7KyV8WAH3ATVzP-gzGzoHsz',// your appId
+      appKey: 'z5oqBYJ8trkMG286yw5gAQte', // your appKey
+    },
     "nav": [
       {
         "text": "Home",
@@ -87,12 +96,12 @@ module.exports = {
         "link": "https://vuepress-theme-reco.recoluan.com"
       }
     ],
-    "logo": "/logo.png",
+    "logo": "/images/avatar.jpg",
     "search": true,
     "searchMaxSuggestions": 10,
     "lastUpdated": "Last Updated",
     "author": "dyzdyz010",
-    "authorAvatar": "/avatar.png",
+    "authorAvatar": "/images/avatar.jpg",
     "record": "xxxx",
     "startYear": "2017"
   },
