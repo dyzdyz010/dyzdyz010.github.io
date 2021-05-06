@@ -41,16 +41,16 @@ module.exports = {
         "link": "/timeline/",
         "icon": "reco-date"
       },
-      {
-        "text": "Docs",
-        "icon": "reco-message",
-        "items": [
-          {
-            "text": "vuepress-reco",
-            "link": "/docs/theme-reco/"
-          }
-        ]
-      },
+      // {
+      //   "text": "Docs",
+      //   "icon": "reco-message",
+      //   "items": [
+      //     {
+      //       "text": "vuepress-reco",
+      //       "link": "/docs/theme-reco/"
+      //     }
+      //   ]
+      // },
       {
         "text": "Contact",
         "icon": "reco-message",
@@ -80,7 +80,10 @@ module.exports = {
       "tag": {
         "location": 3,
         "text": "Tag"
-      }
+      },
+      socialLinks: [
+        { icon: 'reco-github', link: 'https://github.com/dyzdyz010' }
+      ]
     },
     "friendLink": [
       {
@@ -107,5 +110,12 @@ module.exports = {
   },
   "markdown": {
     "lineNumbers": true
+  },
+  configureWebpack: {
+    resolve: {
+      alias: {
+        '@blogimg': '/blogs/assets/img'
+      }
+    }
   }
 }

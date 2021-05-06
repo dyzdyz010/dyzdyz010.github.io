@@ -7,7 +7,7 @@ tags:
   - latex
 author: dyzdyz010
 categories: 
- - latex
+ - productivity
 ---
 
 Emacs version: GNU Emacs 26.1(Also works in Emacs 24 or maybe even in earlier versions)
