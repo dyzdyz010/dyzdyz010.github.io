@@ -37,7 +37,7 @@ jobs:
       # install dependencies if the cache did not hit
       - name: Install dependencies
         if: steps.npm-cache.outputs.cache-hit != 'true'
-        run: npm --frozen-lockfile
+        run: npm ci
 
       # run build script
       - name: Build VuePress site
