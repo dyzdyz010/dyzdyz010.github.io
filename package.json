@@ -6,8 +6,10 @@
     "dev": "vuepress dev . --open --host \"localhost\"",
     "build": "vuepress build ."
   },
+  "dependencies": {
+    "@maginapp/vuepress-plugin-katex": "^1.0.11"
+  },
   "devDependencies": {
-    "@maginapp/vuepress-plugin-katex": "^1.0.11",
     "vuepress": "1.8.2",
     "vuepress-theme-reco": "1.6.6"
   },
