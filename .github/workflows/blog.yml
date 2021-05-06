@@ -26,17 +26,17 @@ jobs:
       # cache node_modules
       - name: Cache dependencies
         uses: actions/cache@v2
-        id: npm-cache
+        id: yarn-cache
         with:
           path: |
             **/node_modules
-          key: ${{ runner.os }}-npm-${{ hashFiles('**/npm.lock') }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
-            ${{ runner.os }}-npm-
+            ${{ runner.os }}-yarn-
 
       # install dependencies if the cache did not hit
       - name: Install dependencies
-        if: steps.npm-cache.outputs.cache-hit != 'true'
+        if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: npm ci
 
       # run build script
