@@ -4,6 +4,7 @@ date: 2017-07-31T16:09:35+08:00
 tags:
   - acg
   - share
+  - wallpaper
 author: dyzdyz010
 categories: 
  - recommendations

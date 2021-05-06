@@ -1,7 +1,7 @@
 {
-  "name": "Wonderland",
+  "name": "wonderland",
   "version": "1.0.0",
-  "author": "reco_luan",
+  "author": "dyzdyz010",
   "scripts": {
     "dev": "vuepress dev . --open --host \"localhost\"",
     "build": "vuepress build ."
