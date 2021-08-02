@@ -15,7 +15,7 @@ categories:
 系统：Windows 10
 代理软件：Clash for Windows
 
-Windows下的代理真的难搞……Git不走代理市场抽风，克隆仓库用了一晚上……后来找到上面这个链接，设置之后Git总算是能用了。再次吐槽Windows的代理设置，辣鸡。
+Windows下的代理真的难搞……Git不走代理时常抽风，克隆仓库用了一晚上……后来找到上面这个链接，设置之后Git总算是能用了。再次吐槽Windows的代理设置，辣鸡。
 
 ```toml
 [core]
