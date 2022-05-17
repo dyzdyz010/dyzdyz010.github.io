@@ -1,0 +1,160 @@
+@import url('./vars.scss');
+@import url('./code.scss');
+@import url('./custom-block.scss');
+@import url('./katex.scss');
+
+
+.post {
+    font-family: Ubuntu, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    @apply leading-[1.4];
+
+    @apply text-gray-600 !important;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply m-0;
+        @apply leading-5;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong,
+    b {
+        @apply font-semibold;
+    }
+
+    h1:hover .header-anchor,
+    h1:focus .header-anchor,
+    h2:hover .header-anchor,
+    h2:focus .header-anchor,
+    h3:hover .header-anchor,
+    h3:focus .header-anchor,
+    h4:hover .header-anchor,
+    h4:focus .header-anchor,
+    h5:hover .header-anchor,
+    h5:focus .header-anchor,
+    h6:hover .header-anchor,
+    h6:focus .header-anchor {
+        opacity: 1;
+    }
+
+    h1 {
+        @apply text-[1.9rem] sm:text-[2.2rem];
+        @apply mt-6;
+    }
+
+    h2 {
+        @apply mt-10 mb-4;
+        @apply border border-x-0 border-t-0 border-gray-300;
+        @apply leading-5;
+        @apply pb-4;
+        @apply text-[1.65rem];
+    }
+
+    h2+h3 {
+        @apply mt-6;
+    }
+
+    h3 {
+        @apply mt-8;
+        @apply text-[1.35rem];
+    }
+
+    h4 {
+        @apply text-[1.15rem];
+    }
+
+    p,
+    ol,
+    ul {
+        @apply mx-0 my-4;
+        @apply leading-[1.7];
+
+        line-height: 1.7;
+    }
+
+    a,
+    area,
+    button,
+    [role='button'],
+    input,
+    label,
+    select,
+    summary,
+    textarea {
+        @apply touch-manipulation;
+    }
+
+    a {
+        @apply text-sky-600 font-medium !important;
+        @apply hover:text-sky-800 !important;
+
+        &.header-anchor {
+            @apply float-left;
+            @apply -ml-[0.87em] pr-[0.23em];
+            @apply opacity-0;
+            @apply align-bottom;
+            @apply text-[0.85em];
+        }
+    }
+
+    figure {
+        @apply m-0;
+    }
+
+    img {
+        @apply max-w-full;
+    }
+
+    ul,
+    ol {
+        @apply pl-5;
+    }
+
+    li>ul,
+    li>ol {
+        @apply m-0;
+    }
+
+    table {
+        @apply block border-collapse my-4 mx-0 overflow-auto;
+
+        tr {
+            @apply border border-x-0 border-b-0 border-[#dfe2e5];
+
+            &:nth-child(2n) {
+                @apply bg-[#f6f8fa];
+            }
+        }
+
+        th,
+        td {
+            @apply border border-[#dfe2e5];
+            @apply py-[0.6em] px-4;
+        }
+    }
+
+    blockquote {
+        @apply my-4 mx-0;
+        @apply border-l-[0.2rem] border-l-[#dfe2e5];
+        @apply py-1 pr-0 pl-4;
+        @apply text-[1rem];
+        @apply text-[#999];
+
+        &>p {
+            @apply m-0;
+        }
+    }
+
+    form {
+        @apply m-0;
+    }
+}
