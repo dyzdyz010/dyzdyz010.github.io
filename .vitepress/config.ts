@@ -1,6 +1,16 @@
 import { defineConfig } from "vitepress"
 import { getPosts, getPostLength, getCollections, getTags } from "./theme/helpers/serverUtils.ts";
 
+const mathTags = [
+  "math", "annotation", "semantics",
+  "mtext", "mn", "mo", "mi", "mspace",
+  "mover", "munder", "munderover", "msup", "msub", "msubsup",
+  "mfrac", "mroot", "msqrt",
+  "mtable", "mtr", "mtd", "mlabeledtr",
+  "mrow", "menclose",
+  "mstyle", "mpadded", "mphantom", "mglyph"
+]
+
 async function config() {
   return {
     lang: "en-US",
@@ -29,12 +39,7 @@ async function config() {
         },
 
       ],
-      [
-        'link',
-        {
-          rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css',
-        }
-      ],
+
     ],
     themeConfig: {
       // repo: "clark-cui/homeSite",
@@ -94,6 +99,13 @@ async function config() {
       config: (md) => {
         md.use(require('./theme/helpers/markdown-it-katex.ts'));
       },
+    },
+    vue: {
+      template: {
+        compilerOptions: {
+            isCustomElement: tag => mathTags.includes(tag)
+        }
+      }
     },
   }
 }
