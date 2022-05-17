@@ -32,7 +32,7 @@ jobs:
 
       # run build script
       - name: Build VitePress site
-        run: yarn build
+        run: chmod +x build.sh & sh build.sh
 
       # please check out the docs of the workflow for more details
       # @see https://github.com/crazy-max/ghaction-github-pages
