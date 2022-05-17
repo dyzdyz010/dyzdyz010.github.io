@@ -98,8 +98,6 @@ const router = useRouter()
 const { site, theme, localePath } = useData()
 
 const navigation = theme.value.nav
-console.log(navigation);
-
 
 const postLength = useData().theme.value.postLength
 const collections = [{ name: '', count: postLength }].concat(useData().theme.value.collectionss)
