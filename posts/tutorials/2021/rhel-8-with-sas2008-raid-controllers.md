@@ -25,7 +25,7 @@ lspci -nn
 
 You may want to filter out with some keywords to make the output more clean and readable. Here's what I got:
 
-![](@blogimg/2021/01/photo_2021-01-04_18-29-35.jpg)
+![](/posts/assets/img/2021/01/photo_2021-01-04_18-29-35.jpg)
 
 So the device I'm looking for is:
 
@@ -41,7 +41,7 @@ Now we need to go to the [Device ID Parings](http://elrepo.org/tiki/DeviceIDs) p
 
 Go to [DUD List Page](https://elrepo.org/linux/dud/el8/x86_64/) and find the driver by name:
 
-![](@blogimg/2021/01/202101041837.png)
+![](/posts/assets/img/2021/01/202101041837.png)
 
 I'm installing RHEL 8.3 so I'll use the last match: `dd-megaraid_sas-07.714.04.00-1.el8_3.elrepo.iso`.
 
@@ -54,7 +54,7 @@ I'll just show what I did, for full usage documentation check that `RedHat link`
 
 Run the installation process using BIOS(I didn't find a boot window using UEFI where I can press the `Tab` key) and press `Tab`:
 
-![](@blogimg/2021/01/boot-menu.png)
+![](/posts/assets/img/2021/01/boot-menu.png)
 
 In that command at the bottom, append the `inst.dd` option and hit `Enter`.
 
@@ -62,6 +62,6 @@ Follow the interactive prompt and select your driver to install. When you're don
 
 Now go to `Installation Destination` section, you'll find that your disks show up!
 
-![](@blogimg/2021/01/destination-with-raid.png)
+![](/posts/assets/img/2021/01/destination-with-raid.png)
 
 Now you can tap in to normal installation process. When the installation is complete and reboot the system, that driver will be included in the system you just installed. Enjoy🌞

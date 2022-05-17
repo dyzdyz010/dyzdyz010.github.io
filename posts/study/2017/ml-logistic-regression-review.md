@@ -23,7 +23,7 @@ $$P(y=1|x;\theta) = h_\theta(x) = g(\theta^Tx)$$
 $$g(z) = \frac{1}{1+e^{-z}}$$
 
 $g(z)$的函数图像如下：
-![Sigmoid函数图像](@blogimg/2017/04/006tNc79ly1fezs1eute2j30hk0bo3z6.jpg)
+![Sigmoid函数图像](/posts/assets/img/2017/04/006tNc79ly1fezs1eute2j30hk0bo3z6.jpg)
 
 可以看出，这个函数的取值范围是$[0, 1]$，正好符合概率的定义，即**一个事件发生的概率最大为1（绝对发生），最小为0（绝不发生）**。而在分类中，一个样本总是属于一个类别（$y=1 || y=0$)，不存在中间值，因此我们规定：
 
@@ -38,7 +38,7 @@ $$
 
 为了满足这个条件(即$\theta^Tx \geq 0$)，引入 **决策边界(Decision Boundary)** 的概念。以课程中的例子为例：
 
-![](@blogimg/2017/05/006tNc79ly1fezv6qgjh4j30ik0fw0uz.jpg)
+![](/posts/assets/img/2017/05/006tNc79ly1fezv6qgjh4j30ik0fw0uz.jpg)
 
 在有两个特征($x_1, x_2$)的情况下，令$z = \theta_0 + \theta_1x_1 + \theta_2x_2 = 0$，可以在上图中得到一条直线(决策边界)，将分别取属于两个类别的样本划分开来。
 
@@ -54,7 +54,7 @@ $$
 
 与之前的线性回归中的代价函数不同，如果直接拿来用的话，会导致 $J(\theta)$ 为非凸函数，不能保证其收敛到全局最优解：
 
-![](@blogimg/2017/04/006tNc79ly1fezvqbwo05j30oq0fswfl.jpg)
+![](/posts/assets/img/2017/04/006tNc79ly1fezvqbwo05j30oq0fswfl.jpg)
 
 因此为了保证代价函数 $J(\theta)$ 能够经过迭代取得全局最小值，我们将逻辑回归的 $J(\theta)$ 定义为如下形式： *(其中 $m$ 为样本数，下同)*
 
@@ -71,7 +71,7 @@ $$
 
 当$y = 0$时，$Cost(h_\theta(x), y)$的函数图像形状如下图：
 
-![](@blogimg/2017/04/006tNc79ly1fezwnnpeuuj30nk0keta5.jpg)
+![](/posts/assets/img/2017/04/006tNc79ly1fezwnnpeuuj30nk0keta5.jpg)
 
 可以看到，当$h_\theta(x) = 0$时，代价函数$J(\theta)$的值也为0，意味着没有代价，完全符合；同样当$h_\theta(x) = 1$时，代价函数$J(\theta) = \infty$，意味着此时预测函数取得了与实际结果完全相反的值，因此代价无限大。当$y = 1$时也是同理。
 
@@ -128,7 +128,7 @@ $$
 
 对于需要区分不止两个类别的问题，我们可以将问题 **分解为多个二分类** 来进行实现，即为每一个类别都实现一个假设函数$h_\theta(x)$。套用课程中的例子：
 
-![](@blogimg/2017/04/006tNc79ly1ff0505j5irj30l60i2jsa.jpg)
+![](/posts/assets/img/2017/04/006tNc79ly1ff0505j5irj30l60i2jsa.jpg)
 
 此时不同的形状代表不同的分类，我们规定：**样本属于`三角形`分类时，$y=1$；样本属于`矩形`分类时，$y=2$；样本属于`叉号`分类时，$y=3$。**。如此假设函数表示为：
 
@@ -140,11 +140,11 @@ $$
 
 在最开始的例子中，我们用一条直线就可以将不同类别的样本区分开来：
 
-![](@blogimg/2017/05/006tNc79ly1fezv6qgjh4j30ik0fw0uz.jpg)
+![](/posts/assets/img/2017/05/006tNc79ly1fezv6qgjh4j30ik0fw0uz.jpg)
 
 但是在其他问题中还存在这样的样本分布：
 
-![](@blogimg/2017/05/006tNc79ly1ff07vikxvbj30si0m6dhz.jpg)
+![](/posts/assets/img/2017/05/006tNc79ly1ff07vikxvbj30si0m6dhz.jpg)
 
 这时候的决策边界是一条不规则曲线，我们需要将决策边界修改为类似以下形式：
 
@@ -154,7 +154,7 @@ $$
 
 在这里面，特征数量增长为4个($x_1, x_2, x_1^2, x_2^2$)。随着特征数量的增多，决策边界有可能会变成这种样子：
 
-![](@blogimg/2017/04/006tNc79ly1ff0do3wk0kj30sk0mw40s.jpg)
+![](/posts/assets/img/2017/04/006tNc79ly1ff0do3wk0kj30sk0mw40s.jpg)
 
 这种情况显然不是我们想要的，所以这种情况被称作**过拟合(Overfitting)**，这种情况的特点在于过于拟合训练数据集，但是对预测新的样本没有帮助甚至有反作用，因此我们要避免这种情况的发生。课程中介绍了一种方法可以有效解决这种情况，叫做**正规化(Regularization)**。正规化的原理在于在代价函数后添加一项，该项为待求$\theta$的倍数，目的在于提高代价函数在某处$\theta$的值，使得最终求得的$\theta$尽可能小，从而避免决策边界变得鬼畜( ´▽｀)。使用正规化方法后的代价函数$J(\theta)$形式为：
 
