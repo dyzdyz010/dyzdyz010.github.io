@@ -6,7 +6,7 @@ tags:
   - thoughts
   - medical
 collection: Thoughts
-draft: false
+draft: true
 ---
 
 最近几次去医院，一次体检，一次急诊，让我更坚定了我的想法，那就是，医疗不是我们日常生活中理所应当能够指望的东西，而是类似一种奢侈品和随机性服务，不能在大问题上指望。
