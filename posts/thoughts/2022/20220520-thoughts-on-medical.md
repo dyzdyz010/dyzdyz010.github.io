@@ -8,3 +8,6 @@ tags:
 collection: Thoughts
 draft: true
 ---
+
+在去过几次医院之后，我越发悲观了。
+
