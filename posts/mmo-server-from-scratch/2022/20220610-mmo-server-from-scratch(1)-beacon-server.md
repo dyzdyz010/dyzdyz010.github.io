@@ -8,7 +8,7 @@ tags:
   - server
   - elixir
 collection: MMO Server From Scratch
-draft: false
+draft: true
 ---
 
 今天来实现服务器的第一个部件 - **beacon_server**。
