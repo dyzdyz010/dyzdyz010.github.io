@@ -11,7 +11,7 @@ categories:
   - tutorials
 ---
 
-** 参考链接： ** [WSL2 连接 Windows 防火墙问题解决方案](https://zhuanlan.zhihu.com/p/365058237)
+**参考链接：** [WSL2 连接 Windows 防火墙问题解决方案](https://zhuanlan.zhihu.com/p/365058237)
 
 执行以下命令创建一条防火墙规则：
 
