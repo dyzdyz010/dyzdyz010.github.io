@@ -1,15 +1,37 @@
 {
-  "name": "wonderland",
-  "version": "1.0.0",
-  "author": "dyzdyz010",
-  "scripts": {
-    "dev": "vuepress dev . --open --host \"localhost\"",
-    "build": "vuepress build ."
-  },
+  "name": "vitepress-theme-oblivion",
+  "version": "0.0.1",
+  "description": "A blog theme for vitepress",
+  "main": "index.js",
+  "repository": "https://github.com/dyzdyz010/vitepress-theme-oblivion.git",
+  "author": "Du Yizhuo <dyzdyz010@gmail.com>",
+  "license": "MIT",
+  "private": true,
   "devDependencies": {
-    "@maginapp/vuepress-plugin-katex": "^1.0.11",
-    "vuepress": "1.8.2",
-    "vuepress-theme-reco": "1.6.6"
+    "@headlessui/vue": "^1.6.1",
+    "@heroicons/vue": "^1.0.6",
+    "autoprefixer": "^10.4.7",
+    "fs-extra": "^10.1.0",
+    "globby": "^11.1.0",
+    "gray-matter": "^4.0.3",
+    "postcss": "^8.4.13",
+    "postcss-import": "^14.1.0",
+    "prompt-sync": "^4.2.0",
+    "sass": "^1.51.0",
+    "tailwindcss": "^3.0.24",
+    "vitepress": "^0.22.3"
   },
-  "description": "My personal blog"
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs",
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "serve": "vitepress serve",
+    "newpost": "node commands.ts newpost"
+  },
+  "dependencies": {
+    "katex": "^0.15.3",
+    "valine": "^1.4.18"
+  }
 }
