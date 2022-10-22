@@ -76,7 +76,28 @@ end
 
 如此一来，整个 `scene_server` 的监督树目前变成了这样：
 
-![AOI监督树](/posts/assets/img/2022/20221022_aoi_supervision_tree.png)
+```mermaid
+flowchart TD
+
+A[SceneServer] --> B[InterfaceSup]
+A --> C[PlayerSup]
+A --> D[AoiSup]
+B --> E[Interface]
+
+subgraph Player
+C --> F[PlayerManager]
+C --> G[PlayerCharacterSup]
+G -- 1:N --> J[PlayerCharacter]
+end
+
+subgraph AOI
+D --> H[AoiManager]
+D --> I[AoiItemSup]
+I -- 1:N --> K[AoiItem]
+end
+
+J -.-> K
+```
 
 其中：
 
